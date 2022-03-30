@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "axios": "^0.26.1",
-    "chokidar": "^3.5.3",
-    "ora": "^6.1.0"
-  },
-  "type": "module"
-}
