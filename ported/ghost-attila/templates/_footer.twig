@@ -1,0 +1,16 @@
+<div class="nav-footer">
+    <nav class="nav-wrapper" aria-label="{{ 'footer' | lang }}">
+        <span class="nav-copy">{{ _blog.name }} &copy; {{ 'now' | date('Y') }}  <a class="nav-rss" title="RSS" href="{{ _blog.url }}/feed/" target="_blank"><i class="icon icon-rss" aria-hidden="true"></i></a></span>
+
+        {% include '_nav.twig' with {'navs': _blog.nav_footer} %}
+
+        <span class="nav-credits">
+            <a class="menu-item js-theme" onclick="changeTheme()">
+                <span class="theme-icon"></span>
+                <span class="theme-text os">System theme</span>
+                <span class="theme-text light">Light theme</span>
+                <span class="theme-text dark">Dark theme</span>
+            </a>
+        </span>
+    </nav>
+</div>

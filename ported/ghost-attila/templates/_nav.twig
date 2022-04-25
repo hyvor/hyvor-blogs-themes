@@ -1,0 +1,12 @@
+{# DEPENDING ON navs variable #}
+
+<ul>
+    {% for nav in navs %}
+        <li
+                class="nav-{{ nav.name | slug }}{% if nav.current %} active{% endif %}">
+            <a href="{{ nav.url }}">
+                <span>{{ nav.name }}</span>
+            </a>
+        </li>
+    {% endfor %}
+</ul>

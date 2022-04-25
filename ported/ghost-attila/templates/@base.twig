@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+
+<head>
+
+    {{ _head | template }}
+
+    <script src="{{ 'script.js' | asset_url }}"></script>
+
+</head>
+
+<body>
+
+    {% include '_header.twig' %}
+
+    <section class="page-wrapper">
+        {% block body %}{% endblock %}
+
+        {% include '_footer.twig' %}
+    </section>
+
+</body>

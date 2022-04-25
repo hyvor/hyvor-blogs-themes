@@ -1,0 +1,379 @@
+.nav-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 400;
+    transition: all ease-out 0.3s;
+    @media only screen and (max-width: $breakpoint-medium) {
+        transform: translate3d(0,-100%,0);
+    }
+}
+
+.menu-active .nav-header {
+    transform: translate3d(0,0,0);
+}
+
+.nav-close {
+    position: fixed;
+    z-index: 350;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: var(--color-background-overlay);
+}
+
+.menu-active .nav-close {
+    @media only screen and (max-width: $breakpoint-medium) {
+        display: block;
+    }
+}
+
+.nav-header .nav-wrapper-control {
+    position: absolute;
+    z-index: 500;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    cursor: pointer;
+    display: none;
+    color: var(--color-content-secondary);
+    border-top: 1px solid transparent;
+    box-sizing: border-box;
+    transition: all linear 0.1s;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+        display: block;
+    }
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 2rem 0;
+        font-size: 2em;
+        line-height: 2rem;
+        color: inherit;
+        transition: all ease-out 0.1s;
+
+        i {
+            display: inline-block;
+            width: 4rem;
+        }
+
+        &.nav-search {
+            width: auto;
+            text-align: right;
+        }
+
+        &:focus,
+        &:hover {
+            color: var(--color-content-main);
+        }
+    }
+}
+
+.cover-active .nav-header .nav-wrapper-control {
+    color: white;
+}
+
+.menu-active .nav-header .nav-wrapper-control {
+    background: #222426;
+    color: var(--color-content-secondary);
+    border-color: #3B3D40;
+    @supports (-webkit-backdrop-filter: blur(2rem)) {
+        background: rgba(34,36,38,0.9);
+        -webkit-backdrop-filter: blur(2rem);
+    }
+
+    a {
+        &:focus,
+        &:hover {
+            color: var(--color-content-main-dark);
+        }
+    }
+}
+
+.nav-header .nav-wrapper {
+    display: flex;
+    max-height: calc(100vh - 6rem);
+    padding: 2rem 4rem;
+    overflow-y: auto;
+    @media only screen and (max-width: $breakpoint-medium) {
+        background: #222426;
+        flex-direction: column;
+        @supports (-webkit-backdrop-filter: blur(2rem)) {
+            background: rgba(34,36,38,0.9);
+            -webkit-backdrop-filter: blur(2rem);
+        }
+    }
+}
+
+.nav-header .logo {
+    margin-right: 3rem;
+    @media only screen and (max-width: $breakpoint-medium) {
+        display: none;
+    }
+
+    a {
+        display: block;
+        height: 4rem;
+        padding: 0;
+
+        img {
+            display: block;
+            width: auto;
+            height: 4rem;
+        }
+    }
+}
+
+.nav-header ul {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    @media only screen and (max-width: $breakpoint-medium) {
+        flex-direction: column;
+        flex-shrink: 0;
+        padding: 2rem 0;
+    }
+
+    &.nav-meta {
+        width: auto;
+        justify-content: flex-end;
+
+        @media only screen and (max-width: $breakpoint-medium) {
+            width: 100%;
+            flex-direction: row !important;
+            padding: 0;
+        }
+    }
+}
+
+.nav-header li {
+    position: relative;
+    margin-right: 3rem;
+
+    &.active {
+        a:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 3px;
+            left: 0;
+            top: 0;
+            padding: 0 1rem;
+            margin-left: -1rem;
+            margin-top: -2rem;
+            background: var(--ghost-accent-color);
+            @media only screen and (max-width: $breakpoint-medium) {
+                left: 0;
+                top: 50%;
+                width: 1.5rem;
+                height: 2px;
+                margin-left: 6px;
+                margin-top: -1px;
+                border-radius: 2px;
+                padding: 0;
+            }
+        }
+
+        a {
+            color: var(--color-content-main);
+            font-weight: 500;
+
+            @media only screen and (max-width: $breakpoint-medium) {
+                color: white;
+            }
+        }
+    }
+
+
+    &.nav-subscribe,
+    &.nac-account {
+
+        a {
+            display: block;
+            border-radius: 2rem;
+            margin: 0.125rem 0;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid var(--color-background-contrast);
+            background: transparent;
+            white-space: nowrap;
+            font-size: 1.5em;
+            line-height: 2rem;
+            color: var(--color-content-secondary);
+            font-weight: 500;
+            text-align: center;
+
+            &:focus,
+            &:hover {
+                color: var(--color-content-main);
+                border-color: var(--ghost-accent-color);
+            }
+
+            @media only screen and (max-width: $breakpoint-medium) {
+                border-color: #3B3D40;
+
+                &:focus,
+                &:hover {
+                    color: #E1E3E6;
+                }
+            }
+
+            &:before {
+                display: none !important;
+            }
+        }
+    }
+
+    a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1.6em;
+        line-height: 2rem;
+        color: var(--color-content-secondary);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-decoration: none;
+        font-weight: 400;
+        cursor: pointer;
+        transition: color linear 0.1s;
+
+        @media only screen and (max-width: $breakpoint-medium) {
+            font-size: 2em;
+            padding-left: 4rem;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 1.5rem;
+                height: 2px;
+                margin-left: 6px;
+                margin-top: -1px;
+                border-radius: 2px;
+                background: #3B3D40;
+            }
+        }
+
+        &:focus,
+        &:hover {
+            color: var(--color-content-main);
+
+            @media only screen and (max-width: $breakpoint-medium) {
+                color: #C4C7CC;
+            }
+        }
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.nav-meta {
+
+    li {
+        margin-right: 1rem;
+        @media only screen and (max-width: $breakpoint-medium) {
+            flex-grow: 1;
+        }
+
+        &.nav-twitter,
+        &.nav-facebook {
+            @media only screen and (max-width: $breakpoint-medium) {
+                display: none;
+            }
+        }
+
+        a {
+            font-size: 1.75em;
+        }
+
+        span {
+            display: none;
+        }
+    }
+}
+
+.has-search {
+
+    .nav-meta {
+
+        li.nav-search {
+            display: block !important;
+
+            @media only screen and (max-width: $breakpoint-medium) {
+                display: none !important;
+            }
+        }
+    }
+    .nav-wrapper-control .nav-search {
+        display: block !important;
+    }
+}
+
+.cover-active {
+
+    .nav-wrapper-control a {
+        color: rgba(255,255,255,0.8);
+
+        &:focus,
+        &:hover {
+            color: white;
+        }
+    }
+
+    .nav-header li {
+        a {
+            @media only screen and (min-width: $breakpoint-medium) {
+                color: rgba(255,255,255,0.8);
+                border-color: rgba(255,255,255,0.8);
+            }
+
+            &:focus,
+            &:hover {
+                @media only screen and (min-width: $breakpoint-medium) {
+                    color: white;
+                    border-color: white;
+                }
+            }
+        }
+
+        &.nav-subscribe,
+        &.nac-account {
+
+            a{
+                @media only screen and (min-width: $breakpoint-medium) {
+                    color: #222426;
+                    background-color: rgba(255,255,255,0.8);
+                }
+
+                &:focus,
+                &:hover {
+                    @media only screen and (min-width: $breakpoint-medium) {
+                        background-color: white;
+                    }
+                }
+            }
+        }
+
+        &.active a {
+            @media only screen and (min-width: $breakpoint-medium) {
+                color: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+    <header class="blog-header {% if _blog.cover_url %} has-cover{% endif %}">
+        <div class="inner">
+            <div class="box blog-box">
+                <h1 class="blog-name">{{ _blog.name }}</h1>
+                {% if _blog.description %}
+                    <span class="blog-description">{{ _blog.description }}</span>
+                {% endif %}
+            </div>
+            {% if _blog.cover_url %}
+                <div class="blog-cover cover">
+                    <img src="{{ _blog.cover_url }}" alt="{{ _blog.name }}" />
+                </div>
+            {% endif %}
+        </div>
+    </header>
+
+    <div id="index" class="container">
+        <main class="content" role="main">
+            {%  include '_loop.twig' %}
+        </main>
+    </div>
+
+{% endblock %}
