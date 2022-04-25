@@ -10,7 +10,7 @@
                     <i class="icon icon-arrow-left"></i> <span class="pagination-label">{{ 'newer_posts' | lang }}</span>
                 </a>
             {% endif %}
-            <span class="pagination-info">{{ 'page_of_pages' | lang(page=_pagination.page, pages=_pagination.total) }}</span>
+            <span class="pagination-info">{{ 'page_of_pages' | lang(page=_pagination.page, pages=_pagination.pages) }}</span>
             {% if _pagination.page_next %}
                 <a
                     title="{{ 'older_posts' | lang }}"

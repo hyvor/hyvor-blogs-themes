@@ -1,3 +1,7 @@
+:root {
+    --color-primary: #d95736;
+}
+
 .mode-light:root {
     --color-background-main: #FFF;
     --color-background-secondary: #F7F8FA;
@@ -7,6 +11,7 @@
     --color-content-main: #222426;
     --color-content-secondary: #73777D;
 }
+
 .mode-dark:root {
     --color-background-main: #222426;
     --color-background-secondary: #1D1F20;
