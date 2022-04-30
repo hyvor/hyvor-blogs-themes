@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', prlx)
     window.addEventListener('resize', prlx)
     window.addEventListener('orientationchange', prlx);
+    document.addEventListener('flashload:navigationEnded', prlx)
 })
 
 
@@ -122,9 +123,51 @@ function initSearch() {
     var searchResult = document.querySelector('.search-result');
     var popular = document.querySelector('.popular-wrapper');
 
+    var lastXhr;
+
     searchInput.addEventListener('keyup', function (e) {
 
-        console.log(e.target.value)
+        if (e.target.value.trim() === "") {
+            searchResult.innerHTML = '';
+            popular.style.display = 'block'
+        }
+
+        lastXhr && lastXhr.abort();
+
+        lastXhr = _hb.dataApi('v0', 'posts/search', {
+            search: e.target.value,
+            keys: "title, url, description"
+        }, function(response) {
+            var posts = response.data;
+            var output = '';
+            posts.forEach(function(post) {
+                output +=
+                    '<div class="search-result-row">' +
+                    '<a class="search-result-row-link" href="' +
+                    post.url +
+                    '">' +
+                    '<div class="search-result-row-title">' +
+                    post.title +
+                    '</div><div class="search-result-row-excerpt">' +
+                    post.description +
+                    '</div></a>' +
+                    '</div>';
+            })
+
+            searchResult.innerHTML = output;
+
+            if (e.target.value.length > 0) {
+                searchButton.classList.add('search-button-clear');
+            } else {
+                searchButton.classList.remove('search-button-clear');
+            }
+
+            if (posts.length > 0) {
+                popular.style.display = 'none'
+            } else {
+                popular.style.display = 'block'
+            }
+        })
 
     });
 

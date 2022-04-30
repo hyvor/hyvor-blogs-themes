@@ -1,3 +1,5 @@
+// Libre Baskerville
+// Downloading woff2 from Google Fonts didn't work
 @font-face {
     font-family: 'Libre Baskerville';
     font-weight: 400;
@@ -16,20 +18,20 @@
     src: url('./assets/LibreBaskerville-Italic.ttf') format('truetype');
 }
 
+
+// Fira Sans
 @font-face {
     font-family: 'Fira Sans';
     font-style: normal;
     font-weight: 400;
     src: url('./assets/font-fira-sans-latin-regular.woff2') format('woff2');
 }
-/* fira-sans-500 - latin */
 @font-face {
     font-family: 'Fira Sans';
     font-style: normal;
     font-weight: 500;
     src: url('./assets/font-fira-sans-latin-500.woff2') format('woff2');
 }
-/* fira-sans-700 - latin */
 @font-face {
     font-family: 'Fira Sans';
     font-style: normal;
