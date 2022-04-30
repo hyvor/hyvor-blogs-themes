@@ -1,0 +1,100 @@
+.pagination {
+    position: relative;
+    margin: 0;
+
+    .pagination-box {
+        padding-top: calc(2rem + 1vw);
+        padding-bottom: calc(2rem + 1vw);
+
+        &:after {
+            clear: both;
+            content: '';
+            display: table;
+        }
+    }
+}
+
+.pagination a {
+    position: relative;
+    display: block;
+    height: 4rem;
+    margin: -1px 0;
+    padding: 0 2rem;
+    z-index: 100;
+    border: 1px solid var(--color-background-contrast);
+    font-size: 1.6em;
+    line-height: 4rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-content-secondary);
+    transition: all ease 0.2s;
+    border-radius: 4rem;
+    box-sizing: border-box;
+
+    &:focus,
+    &:hover {
+        color: var(--color-content-main);
+        border-color: var(--color-primary);
+    }
+}
+
+.pagination .pagination-prev {
+    float: right;
+    padding-right: 1.5rem;
+}
+
+.pagination .pagination-next {
+    float: left;
+    padding-left: 1.5rem;
+}
+
+.pagination .pagination-label {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    @media only screen and (max-width: $breakpoint-small) {
+        display: none;
+    }
+}
+
+.pagination a i {
+    position: relative;
+    top: 1px;
+    width: auto;
+    margin: auto 4px;
+    color: inherit;
+    font-size: 1.33334em;
+    line-height: 0.75em;
+
+    &:before {
+        position: relative;
+        width: auto;
+        margin: auto;
+    }
+}
+
+.pagination .pagination-info {
+    position: absolute;
+    width: 100%;
+    font-size: 1.6em;
+    line-height: 4rem;
+    height: 4rem;
+    left: 0;
+    z-index: 50;
+    display: block;
+    text-align: center;
+    color: var(--color-content-secondary);
+}
+
+.extra-pagination {
+    display: none;
+}
+
+.paged .extra-pagination {
+    display: block;
+
+    .pagination-box {
+        border-bottom: 1px solid var(--color-background-contrast);
+    }
+}

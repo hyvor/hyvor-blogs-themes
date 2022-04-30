@@ -1,0 +1,30 @@
+// lists = index, tag, author
+
+.container {
+    position: relative;
+
+    .post .post-box {
+        padding-top: calc(4rem + 2vw);
+        padding-bottom: calc(4rem + 2vw);
+        border-bottom: 1px solid var(--color-background-contrast);
+    }
+
+    #results .post:first-child .post-box {
+        border-top: 1px solid var(--color-background-contrast);
+    }
+}
+
+.container .post.featured .post-title:after {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    left: -4rem;
+    top: 0;
+    font-family: 'icon';
+    font-size: 0.5em;
+    font-style: normal;
+    font-weight: normal;
+    content: '\e800';
+    color: #FFC336;
+    text-align: center;
+}

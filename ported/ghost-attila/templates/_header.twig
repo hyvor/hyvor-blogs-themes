@@ -30,9 +30,9 @@
                 </a>
             </li>
             {#{{/if}}#}
-            <li class="nav-search" style="display: none;">
+            <li class="nav-search" {#style="display: none;"#}>
                 <a title="{{ 'search' | lang }}">
-                    <i aria-hidden="true">{{ icon('fontawesome', 'magnifying-glass-solid') }}</i>
+                    <i aria-hidden="true">{{ icon('fontawesome', 'magnifying-glass-solid', 14) }}</i>
                     <span>{{ 'search' | lang }}</span>
                 </a>
             </li>
@@ -42,11 +42,12 @@
 
     <div class="nav-wrapper-control">
         <div class="inner">
-            <a class="nav-menu" role="button"><i aria-hidden="true">{{ icon('fontawesome', 'bars-solid') }}</i>{{ 'menu' | lang }}</a>
+            <a class="nav-menu" onclick="menu()" role="button"><i aria-hidden="true">{{ icon('fontawesome', 'bars-solid') }}</i>{{ 'menu' | lang }}</a>
             <a class="nav-search" style="display: none;" title="{{ 'search' | lang }}" role="button"><i aria-hidden="true">{{ icon('fontawesome', 'magnifying-glass-solid') }}</i></a>
         </div>
     </div>
-
-
-    <div class="nav-close" role="button" aria-label="{{ 'close' | lang }}"></div>
 </div>
+
+
+
+<div class="nav-close" onclick="menu()" role="button" aria-label="{{ 'close' | lang }}"></div>

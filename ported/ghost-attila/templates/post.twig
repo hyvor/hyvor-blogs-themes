@@ -156,6 +156,15 @@
 
     <script>
 
+        function selfRemovingWindowEvent(on, func) {
+            var remover = function() {
+                window.removeEventListener(on, func);
+                window.removeEventListener('flashload:navigationStarted', remover)
+            }
+            window.addEventListener(on, func);
+            window.addEventListener('flashload:navigationStarted', remover)
+        }
+
         function readingProgress() {
 
             var post = document.querySelector('.post-content');
@@ -182,9 +191,9 @@
 
         readingProgress();
 
-        window.addEventListener("scroll", readingProgress)
-        window.addEventListener("resize", readingProgress)
-        window.addEventListener("orientationchange", readingProgress)
+        selfRemovingWindowEvent('scroll', readingProgress);
+        selfRemovingWindowEvent('resize', readingProgress);
+        selfRemovingWindowEvent('orientationchange', readingProgress);
 
     </script>
 

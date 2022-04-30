@@ -1,0 +1,117 @@
+
+.nav-footer {
+    position: relative;
+    z-index: 20;
+    padding-top: calc(12rem + 8vw);
+    padding-bottom: 4rem;
+    margin-top: auto;
+
+    .inner {
+        max-width: none;
+        padding: 0 4rem;
+    }
+
+    a {
+        display: inline-block;
+        color: var(--color-content-secondary);
+        text-decoration: none;
+        font-weight: 400;
+        cursor: pointer;
+
+        &:focus,
+        &:hover {
+            color: var(--color-content-main);
+        }
+    }
+}
+
+.nav-footer .nav-wrapper {
+    display: flex;
+    padding: 0 4rem;
+    @media only screen and (max-width: $breakpoint-medium) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.nav-footer ul {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @media only screen and (max-width: $breakpoint-medium) {
+        margin-bottom: 3rem;
+        justify-content: center;
+    }
+
+    &:last-child {
+        justify-content: flex-end;
+    }
+}
+
+.nav-footer li {
+    position: relative;
+    margin-right: 3rem;
+
+    &.active a {
+        color: var(--color-content-main);
+        font-weight: 500;
+    }
+
+    a {
+        display: block;
+        margin: 0;
+        font-size: 1.6em;
+        line-height: 2rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-decoration: none;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.nav-copy {
+    display: block;
+    font-size: 1.6em;
+    line-height: 2rem;
+    color: var(--color-content-secondary);
+    white-space: nowrap;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+        margin-bottom: 3rem;
+    }
+
+    .nav-rss {
+        margin: 0 3rem;
+
+        @media only screen and (max-width: $breakpoint-medium) {
+            margin: 0 0 0 1rem;
+        }
+    }
+}
+
+.nav-credits {
+    flex-shrink: 0;
+    display: block;
+    margin-left: auto;
+    font-size: 1.6em;
+    line-height: 2rem;
+    color: var(--color-content-secondary);
+
+    @media only screen and (max-width: $breakpoint-medium) {
+        margin-right: auto;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        font-weight: 500;
+    }
+}

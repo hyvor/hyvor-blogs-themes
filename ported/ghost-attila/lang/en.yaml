@@ -4,6 +4,11 @@ theme_system: System Theme
 theme_dark: Dark Theme
 theme_light: Light Theme
 
+# search
+search: Search
+topics: Topics
+close: Close
+
 # index
 by: By
 in: in

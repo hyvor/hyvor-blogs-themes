@@ -1,0 +1,27 @@
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: 1em;
+    line-height: 1.75em;
+    font-weight: 400;
+    color: var(--color-content-main);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    background: var(--color-background-main);
+    &.menu-active {
+        overflow-y: hidden;
+    }
+}
+
+button,
+input,
+select,
+textarea {
+    transition: all ease-out 0.2s;
+}

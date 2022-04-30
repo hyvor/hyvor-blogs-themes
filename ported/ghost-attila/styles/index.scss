@@ -1,41 +1,22 @@
+// dependencies
 @import '_normalize.scss';
-@import '_variables.scss';
-@import '_colors.scss';
-// @import '_icon.scss';
-@import '_font.scss';
-//@import 'header.scss';
-// @import 'page.scss';
-@import 'post.scss';
-@import '_theme.scss';
-/*
 
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
+// config
+@import 'variables.scss';
+@import 'font.scss';
+@import 'basic.scss';
 
-.menu-active body,
-html.menu-active {
-    overflow-y: hidden;
-}
+// routes
+@import 'list.scss'; // index, tag, author
+@import 'post.scss'; // post, page
 
-body {
-    font-family: var(--font-primary);
-    font-size: 1em;
-    line-height: 1.75em;
-    font-weight: 400;
-    color: var(--color-content-main);
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-    background: var(--color-background-main);
-}
+// components
+@import 'content.scss';
+@import 'header.scss';
+@import 'footer.scss';
+@import 'theme.scss';
+@import 'search.scss';
+@import 'pagination.scss';
 
-button,
-input,
-select,
-textarea {
-    transition: all ease-out 0.2s;
-}
-*/
+// misc
+@import 'misc.scss';
