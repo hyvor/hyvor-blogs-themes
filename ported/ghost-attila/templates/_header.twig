@@ -17,7 +17,7 @@
             {#{#}{#if @site.twitter}}#}
             <li class="nav-twitter">
                 <a aria-label="Twitter" href="https://twitter.com/HyvorBlogs" title="HyvorBlogs" target="_blank">
-                    <i class="icon icon-twitter" aria-hidden="true"></i>
+                    <i aria-hidden="true">{{ icon('fontawesome', 'twitter') }}</i>
                     <span>HyvorBlogs</span>
                 </a>
             </li>
@@ -25,14 +25,14 @@
             {# {#}{#if @site.facebook}}#}
             <li class="nav-facebook">
                 <a aria-label="Facebook" href="https://facebook.com/HyvorBlogs" title="HyvorBlogs" target="_blank">
-                    <i class="icon icon-facebook" aria-hidden="true"></i>
+                    <i aria-hidden="true">{{ icon('fontawesome', 'facebook-f') }}</i>
                     <span>HyvorBlogs</span>
                 </a>
             </li>
             {#{{/if}}#}
             <li class="nav-search" style="display: none;">
                 <a title="{{ 'search' | lang }}">
-                    <i class="icon icon-search" aria-hidden="true"></i>
+                    <i aria-hidden="true">{{ icon('fontawesome', 'magnifying-glass-solid') }}</i>
                     <span>{{ 'search' | lang }}</span>
                 </a>
             </li>
@@ -42,8 +42,8 @@
 
     <div class="nav-wrapper-control">
         <div class="inner">
-            <a class="nav-menu" role="button"><i class="icon icon-menu" aria-hidden="true"></i>{{ 'menu' | lang }}</a>
-            <a class="nav-search" style="display: none;" title="{{ 'search' | lang }}" role="button"><i class="icon icon-search" aria-hidden="true"></i></a>
+            <a class="nav-menu" role="button"><i aria-hidden="true">{{ icon('fontawesome', 'bars-solid') }}</i>{{ 'menu' | lang }}</a>
+            <a class="nav-search" style="display: none;" title="{{ 'search' | lang }}" role="button"><i aria-hidden="true">{{ icon('fontawesome', 'magnifying-glass-solid') }}</i></a>
         </div>
     </div>
 

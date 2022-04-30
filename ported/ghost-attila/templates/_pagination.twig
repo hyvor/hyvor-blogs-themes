@@ -7,7 +7,7 @@
                     class="pagination-next"
                     href="{{ _pagination.page_prev | pagination_page_url }}"
                 >
-                    <i class="icon icon-arrow-left"></i> <span class="pagination-label">{{ 'newer_posts' | lang }}</span>
+                    <i>{{ icon('fontawesome', 'arrow-left-solid') }}</i> <span class="pagination-label">{{ 'newer_posts' | lang }}</span>
                 </a>
             {% endif %}
             <span class="pagination-info">{{ 'page_of_pages' | lang(page=_pagination.page, pages=_pagination.pages) }}</span>
@@ -17,7 +17,7 @@
                     class="pagination-prev"
                     href="{{ _pagination.page_next | pagination_page_url }}"
                 >
-                    <span class="pagination-label">{{ 'older_posts' | lang }}</span> <i class="icon icon-arrow-right"></i>
+                    <span class="pagination-label">{{ 'older_posts' | lang }}</span> <i>{{ icon('fontawesome', 'arrow-right-solid') }}</i>
                 </a>
             {% endif %}
         </div>
