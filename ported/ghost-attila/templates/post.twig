@@ -19,11 +19,11 @@
                 <div class="post-meta-avatars">
                     {% for author in _post.authors %}
                         <figure class="post-meta-avatar avatar">
-                            {% if author.profile_image_url %}
+                            {% if author.picture_url %}
                             <a href="{{ author.url }}" class="author-avatar">
                                 <img
                                         class="author-profile-image"
-                                        src="{{ author.profile_image_url }}"
+                                        src="{{ author.picture_url }}"
                                         alt="{{ author.name }}"
                                 />
                             </a>
@@ -31,7 +31,11 @@
                         </figure>
                     {% endfor %}
                 </div>
-                <h4 class="post-meta-author">{{ _post.authors | map(author => author.name) | join(', ') }}</h4>
+                <h4 class="post-meta-author">
+                    {% for author in _post.authors %}
+                        <a href="{{ author.url }}">{{ author.name }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </h4>
                 <time datetime="{{ post.published_at | date('d-m-Y') }}">
                     {{ post.published_at | date('d M Y') }}
                 </time> &bull; 1 min read

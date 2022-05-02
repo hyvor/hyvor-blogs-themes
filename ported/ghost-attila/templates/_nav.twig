@@ -2,9 +2,8 @@
 
 <ul>
     {% for nav in navs %}
-        <li
-                class="nav-{{ nav.name | slug }}{% if nav.current %} active{% endif %}">
-            <a href="{#{{ nav.url }}#}/">
+        <li class="nav-{{ nav.name | slug }}{% if is_current_url(nav.url) %} active{% endif %}">
+            <a href="{{ nav.url }}">
                 <span>{{ nav.name }}</span>
             </a>
         </li>

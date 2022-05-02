@@ -1,6 +1,8 @@
-<div class="extra-pagination">
-    {#{{pagination}}#}
-</div>
+{% if _pagination.page > 1 %}
+    <div class="extra-pagination">
+        {% include '_pagination.twig' %}
+    </div>
+{% endif %}
 
 {% for post in _posts %}
 
@@ -12,7 +14,9 @@
                 <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
                 <span class="post-meta">
                     {{ 'by' | lang }}
-                    {{ post.authors | map(author => author.name) | join(', ') }}
+                    {% for author in post.authors %}
+                        <a href="{{ author.url }}">{{ author.name }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
                     {{ 'in' | lang }} <a class="post-meta-tag" href="{{ primary_tag.url }}">
                         {{ primary_tag.name }}
                     </a>

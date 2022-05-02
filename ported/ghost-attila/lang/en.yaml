@@ -28,3 +28,7 @@ prev_post: Previous Post
 posts_num_zero: No Posts
 posts_num_one: 1 Post
 posts_num_multi: "* Posts"
+
+# author
+author: Author
+website: Website

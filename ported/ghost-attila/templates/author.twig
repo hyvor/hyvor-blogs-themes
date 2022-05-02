@@ -1,0 +1,50 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+    <header class="blog-header">
+        <div class="inner">
+            <div class="archive archive-author box archive-box">
+			<span class="archive-info">
+				<span class="archive-type">{{ 'author' | lang }}</span>
+				<span class="archive-count">
+                    {{ _pagination.total | lang_by_number(
+                        zero="posts_num_zero",
+                        one="posts_num_one",
+                        multi="posts_num_multi"
+                    ) }}
+                </span>
+			</span>
+                <figure class="archive-avatar avatar">
+                    {% if _author.picture_url %}
+                        <img src="{{ _author.picture_url }}" alt="{{ _author.name }}" />
+                    {% endif %}
+                </figure>
+                <h2 class="archive-title">{{ _author.name }}</h2>
+                {% if _author.bio %}
+                    <span class="archive-description">{{ _author.bio }}</span>
+                {% endif %}
+                <div class="archive-links">
+                    <ul>
+                        {% if _author.website_url %}
+                            <li>
+                                <a target="_blank"
+                                   href="{{ _author.website_url }}"
+                                   title="{{ 'website' | lang }}">
+                                    <i class="icon">{{ icon('fontawesome', 'earth-americas-solid', 18) }}</i><span>{{ 'website' | lang }}</span>
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% include '_social.twig' with {'social': _author.social} %}
+                    </ul>
+			    </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="index" class="container">
+        <main class="content" role="main">
+            {% include '_loop.twig' %}
+        </main>
+    </div>
+{% endblock %}

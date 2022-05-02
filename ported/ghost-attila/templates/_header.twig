@@ -14,23 +14,26 @@
         {% include '_nav.twig' with {'navs': _blog.nav_header} %}
 
         <ul class="nav-meta">
-            {#{#}{#if @site.twitter}}#}
-            <li class="nav-twitter">
-                <a aria-label="Twitter" href="https://twitter.com/HyvorBlogs" title="HyvorBlogs" target="_blank">
-                    <i aria-hidden="true">{{ icon('fontawesome', 'twitter') }}</i>
-                    <span>HyvorBlogs</span>
-                </a>
-            </li>
-            {#{{/if}}#}
-            {# {#}{#if @site.facebook}}#}
-            <li class="nav-facebook">
-                <a aria-label="Facebook" href="https://facebook.com/HyvorBlogs" title="HyvorBlogs" target="_blank">
-                    <i aria-hidden="true">{{ icon('fontawesome', 'facebook-f') }}</i>
-                    <span>HyvorBlogs</span>
-                </a>
-            </li>
-            {#{{/if}}#}
-            <li class="nav-search" {#style="display: none;"#}>
+
+            {% if _blog.languages | length > 1 %}
+                <li class="nav-lang">
+                    <a class="lang-label" role="label" onclick="toggleLanguageDropdown()">{{ _lang.code }}</a>
+                    <div class="lang-selector">
+                        {% for lang in _blog.languages %}
+                            <a
+                                href="{{ language_variant_url(lang.code) }}"
+                                class="{% if lang.code == _lang.code %}active{% endif %}"
+                            >{{ lang.name }}</a>
+                        {% endfor %}
+                    </div>
+                    <div class="lang-selector-closer" onclick="toggleLanguageDropdown()"></div>
+                </li>
+            {% endif %}
+
+            {% include '_social.twig' with {'social': _blog.social} %}
+
+
+            <li class="nav-search">
                 <a title="{{ 'search' | lang }}">
                     <i aria-hidden="true">{{ icon('fontawesome', 'magnifying-glass-solid', 14) }}</i>
                     <span>{{ 'search' | lang }}</span>

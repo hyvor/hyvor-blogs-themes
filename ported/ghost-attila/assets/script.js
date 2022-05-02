@@ -27,6 +27,7 @@ function menuRemove() {
 document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', menuRemove)
     window.addEventListener('orientationchange', menuRemove)
+    window.addEventListener('flashload:navigationEnded', menuRemove)
 })
 
 /**
@@ -173,6 +174,17 @@ function initSearch() {
 
 }
 
-
 document.addEventListener('flashload:navigationEnded', initSearch)
 document.addEventListener('DOMContentLoaded', initSearch)
+
+/**
+ * Language
+ */
+function toggleLanguageDropdown() {
+    document.querySelector('.lang-selector').classList.toggle('open');
+    document.querySelector('.lang-selector-closer').classList.toggle('open');
+}
+document.addEventListener('flashload:navigationEnded', function() {
+    document.querySelector('.lang-selector').classList.remove('open');
+    document.querySelector('.lang-selector-closer').classList.remove('open');
+});

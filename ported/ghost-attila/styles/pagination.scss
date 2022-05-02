@@ -88,13 +88,12 @@
 }
 
 .extra-pagination {
-    display: none;
+    .pagination-box {
+        border-bottom: 1px solid var(--color-background-contrast);
+    }
 }
 
 .paged .extra-pagination {
     display: block;
 
-    .pagination-box {
-        border-bottom: 1px solid var(--color-background-contrast);
-    }
 }
