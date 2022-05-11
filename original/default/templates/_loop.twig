@@ -1,0 +1,34 @@
+
+
+<div class="posts-loop">
+    {% for post in _posts %}
+
+        {% set primary_tag = post.tags[0] %}
+
+        <a class="article" href="{{ post.url }}">
+            <div class="left">
+                <h2>{{ post.title }}</h2>
+                <p class="description">{{ post.description }}&hellip;</p>
+                <div class="post-meta">
+                    {{ 'by' | lang }}
+                    {% for author in post.authors %}
+                        <span href="{{ author.url }}">{{ author.name }}</span>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                    {{ 'in' | lang }} <span class="post-meta-tag" href="{{ primary_tag.url }}">
+                    {{ primary_tag.name }}
+                </span>
+                    {{ 'on' | lang }}
+                    <time datetime="{{ post.published_at | date('d-m-Y') }}">
+                        {{ post.published_at | date('d M Y') }}
+                    </time>
+                </div>
+            </div>
+            <div class="right">
+                {% if post.featured_image_url %}
+                    <img src="{{ post.featured_image_url }}" alt="{{ post.title }}" />
+                {% endif %}
+            </div>
+        </a>
+
+    {% endfor %}
+</div>
