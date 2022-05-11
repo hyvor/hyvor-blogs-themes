@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ _lang.code }}">
+<head>
+
+    <style>
+        :root {
+            --color-accent: {{ _config.colors.accent }};
+            --font-size: {{ _config.font.size }}px;
+            --font-family: {{ _config.font.family }};
+            --line-height: {{ _config.line_height }}px;
+
+            --box-radius: {{ _config.box.radius }}px;
+            --box-shadow: {{ _config.box.shadow }};
+        }
+        .mode-light:root {
+            --color-background-body: {{ _config.colors.light.background_body }};
+            --color-background-box: {{ _config.colors.light.background_box }};
+            --color-background-contrast: {{ _config.colors.light.background_contrast }};
+            --color-text-content: {{ _config.colors.light.text_content }};
+            --color-text-content-secondary: {{ _config.colors.light.text_content_secondary }};
+        }
+    </style>
+
+    {{ _head | template }}
+
+    <script src="{{ 'script.js' | asset_url }}"></script>
+
+</head>
+
+<body>
+
+{% include '_header.twig' %}
+
+<div></div>
+{% block body %}{% endblock %}
+
+{% include '_footer.twig' %}
+
+{{ _foot | template }}
+
+</body>

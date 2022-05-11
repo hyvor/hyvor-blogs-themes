@@ -1,0 +1,44 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+    <main role="main">
+
+        <article class="post-box">
+
+
+            <h1>{{ _post.title }}</h1>
+
+
+            {% if _post.featured_image_url and _config.show_post_featured_image %}
+                <img
+                    src="{{ _post.featured_image_url }}" alt="{{ _post.title }}"
+                    class="featured-image"
+                >
+            {% endif %}
+
+            <section class="post-content">
+                {{ _post.content | raw }}
+            </section>
+
+        </article>
+
+        {% if _newsletter %}
+            <section class="newsletter-box">
+                <h3>{{ 'newsletter' | lang }}</h3>
+                <div>
+                    {{ _newsletter | template }}
+                </div>
+            </section>
+        {% endif %}
+
+        {% if _comments %}
+            <section class="comments-box">
+                <h3>{{ 'comments' | lang }}</h3>
+                <div>{{ _comments | template }}</div>
+            </section>
+        {% endif %}
+
+    </main>
+
+{% endblock %}

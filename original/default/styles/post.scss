@@ -1,9 +1,13 @@
-.post-box {
 
+.post-box, .comments-box, .newsletter-box {
     padding: 30px 50px;
+    margin-bottom: 40px;
     background: var(--color-background-box);
     border-radius: var(--box-radius);
     box-shadow: var(--box-shadow);
+}
+
+.post-box {
 
     .featured-image {
         display: block;
@@ -224,4 +228,24 @@
 
     }
 
+}
+
+.comments-box, .newsletter-box {
+    h3 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        position: relative;
+        &:after {
+            position: absolute;
+            content: "";
+            top: 100%;
+            margin-top: 2px;
+            left: 0;
+            width: 100px;
+            max-width: 100%;
+            height: 2px;
+            background: var(--color-accent);
+        }
+    }
 }
