@@ -1,0 +1,39 @@
+footer {
+
+    padding: 40px 0;
+
+    .container {
+        display: flex;
+        width: 1140px;
+        max-width: 100%;
+        padding: 0 35px;
+        margin: auto;
+        align-items: center;
+    }
+
+    .social {
+        flex: 1;
+        a {
+            text-decoration: none;
+            margin-right: 8px;
+            color: inherit;
+            &:hover {
+                color: var(--color-accent);
+            }
+        }
+    }
+
+    nav {
+        a {
+            margin-left: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            padding: 8px;
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+}

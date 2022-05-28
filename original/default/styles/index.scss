@@ -1,6 +1,7 @@
 @import '_normalize.scss';
 @import 'variables.scss';
 @import 'header.scss';
+@import 'footer.scss';
 @import 'post.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
@@ -9,6 +10,7 @@ body {
     font-family: var(--font-family);
     font-size: var(--font-size);
     background-color: var(--color-background-body);
+    color: var(--color-text-content);
 }
 
 main {
@@ -25,7 +27,7 @@ main {
         box-shadow: var(--box-shadow);
         text-decoration: none;
         color: inherit;
-        transition: .3s box-shadow;
+        transition: .1s box-shadow;
 
         .left {
             flex: 1;
@@ -43,7 +45,7 @@ main {
         .right {
             img {
                 width: 300px;
-                border-radius: 20px;
+                border-radius: var(--box-radius);
             }
         }
 
@@ -51,5 +53,21 @@ main {
             box-shadow: var(--box-shadow), 0 0 20px rgba(0,0,0,0.05);
         }
 
+    }
+}
+
+
+// shared
+.page-data {
+    margin-bottom: 40px;
+    text-align: center;
+    .page-title {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+    .page-description {
+        color: var(--color-text-content-secondary);
+        margin: 5px 0;
+        font-size: 1.2rem;
     }
 }

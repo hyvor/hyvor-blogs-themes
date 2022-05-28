@@ -44,4 +44,19 @@ header {
             }
         }
     }
+
+    .color-mode-toggler {
+        margin-left: 15px;
+        a {
+            cursor: pointer;
+        }
+    }
+
+}
+
+.mode-light .color-mode-toggler a:first-child {
+    display:none;
+}
+.mode-dark .color-mode-toggler a:last-child {
+    display:none;
 }

@@ -1,5 +1,6 @@
-theme_name: Default
-theme_version: 1.0
+VERSION: 1.0.0
+POSTS_PER_PAGINATION: 10
+COLOR_MODES: both
 
 colors:
   accent: "#896c6b"
@@ -9,6 +10,12 @@ colors:
     background_contrast: "#E1E3E6"
     text_content: "#000000"
     text_content_secondary: "#777"
+  dark:
+    background_body: "#0a0a0a"
+    background_box: "#222222"
+    background_contrast: "#666666"
+    text_content: "#ffffff"
+    text_content_secondary: "#ffffff"
 
 font:
   size: 16

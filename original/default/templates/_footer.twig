@@ -1,0 +1,19 @@
+<footer>
+
+    <div class="container">
+
+        <div class="social">
+            {% include '_social.twig' with { social: _blog.social } %}
+        </div>
+
+        <nav>
+            {% for nav in _blog.nav_footer %}
+                <a class="nav" href="{{ nav.url }}">
+                    <span>{{ nav.name }}</span>
+                </a>
+            {% endfor %}
+        </nav>
+
+    </div>
+
+</footer>

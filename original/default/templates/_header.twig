@@ -19,5 +19,13 @@
                 </a>
             {% endfor %}
         </div>
+
+        {% if (_blog.color_modes == 'both') %}
+            <div class="color-mode-toggler">
+                <a onclick="_hb.changeColorMode('light')">{{ icon('fontawesome', 'sun-solid', 18) }}</a>
+                <a onclick="_hb.changeColorMode('dark')">{{ icon('fontawesome', 'moon-solid', 18) }}</a>
+            </div>
+        {% endif %}
+
     </nav>
 </header>

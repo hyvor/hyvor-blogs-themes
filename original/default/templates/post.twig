@@ -23,20 +23,24 @@
 
         </article>
 
-        {% if _newsletter %}
-            <section class="newsletter-box">
-                <h3>{{ 'newsletter' | lang }}</h3>
-                <div>
-                    {{ _newsletter | template }}
-                </div>
-            </section>
-        {% endif %}
+        {% if _route != 'page' %}
 
-        {% if _comments %}
-            <section class="comments-box">
-                <h3>{{ 'comments' | lang }}</h3>
-                <div>{{ _comments | template }}</div>
-            </section>
+            {% if _newsletter %}
+                <section class="newsletter-box">
+                    <h3>{{ 'newsletter' | lang }}</h3>
+                    <div>
+                        {{ _newsletter | template }}
+                    </div>
+                </section>
+            {% endif %}
+
+            {% if _comments %}
+                <section class="comments-box">
+                    <h3>{{ 'comments' | lang }}</h3>
+                    <div>{{ _comments | template }}</div>
+                </section>
+            {% endif %}
+
         {% endif %}
 
     </main>

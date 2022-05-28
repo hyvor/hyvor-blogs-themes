@@ -21,7 +21,7 @@
                     <div class="lang-selector">
                         {% for lang in _blog.languages %}
                             <a
-                                href="{{ language_variant_url(lang.code) }}"
+                                href="{{ lang.code | language_variant_url }}"
                                 class="{% if lang.code == _lang.code %}active{% endif %}"
                             >{{ lang.name }}</a>
                         {% endfor %}
