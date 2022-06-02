@@ -1,6 +1,6 @@
-VERSION: 1.0.0
+THEME_NAME: default
+THEME_VERSION: 1.0.0
 POSTS_PER_PAGINATION: 10
-COLOR_MODES: both
 
 colors:
   accent: "#896c6b"
