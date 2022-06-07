@@ -31,18 +31,51 @@ main {
 
         .left {
             flex: 1;
-            padding-right: 25px;
             h2 {
                 margin:0;
                 font-size: 22px;
+                line-height: 24px;
             }
             p.description {
                 margin-top:10px;
+                margin-bottom: 10px;
                 color: var(--color-text-content-secondary);
+            }
+            .date {
+                font-size: 0.8rem;
+                margin-top: 8px;
+            }
+            .post-authors {
+                margin-top: 10px;
+                font-size: 0.85rem;
+                img, .avatar-placeholder {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+
+                    &:not(:first-child) {
+                        margin-left: -25px;
+                    }
+                }
+                .avatar-placeholder {
+                    display: inline-block;
+                    background-color: var(--color-background-contrast);
+                }
+                span {
+                    vertical-align: middle;
+                }
+                .author-names {
+                    margin-left: 5px;
+                    font-weight: 600;
+                }
+            }
+            .post-tags {
+                margin-top: 10px;
             }
         }
 
         .right {
+            padding-left: 25px;
             img {
                 width: 300px;
                 border-radius: var(--box-radius);
@@ -70,4 +103,17 @@ main {
         margin: 5px 0;
         font-size: 1.2rem;
     }
+}
+
+.global-tag {
+    padding: 4px 15px;
+    display: inline-block;
+    background-color: var(--color-tag-bg);
+    color: var(--color-tag-fg);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.global-avatar-placeholder {
+
 }

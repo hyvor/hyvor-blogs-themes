@@ -10,12 +10,18 @@ colors:
     background_contrast: "#E1E3E6"
     text_content: "#000000"
     text_content_secondary: "#777"
+    tag:
+      bg: "#f3f3f3"
+      fg: "#000000"
   dark:
     background_body: "#0a0a0a"
     background_box: "#222222"
     background_contrast: "#666666"
     text_content: "#ffffff"
     text_content_secondary: "#ffffff"
+    tag:
+      bg: "#424242"
+      fg: "#ffffff"
 
 font:
   size: 16
@@ -27,4 +33,10 @@ box:
   radius: 20
   shadow: "0 0 30px rgba(0,0,0,0.05)"
 
-show_post_featured_image: true
+settings:
+  loop:
+    authors: true
+    tags: true
+    featured_image: true
+  post:
+    featured_image: true

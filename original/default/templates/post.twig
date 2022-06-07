@@ -6,11 +6,9 @@
 
         <article class="post-box">
 
-
             <h1>{{ _post.title }}</h1>
 
-
-            {% if _post.featured_image_url and _config.show_post_featured_image %}
+            {% if _post.featured_image_url and _config.settings.post.featured_image %}
                 <img
                     src="{{ _post.featured_image_url }}" alt="{{ _post.title }}"
                     class="featured-image"
