@@ -1,4 +1,7 @@
 
+{% if _pagination.page_prev %}
+    {%  include '_pagination.twig' %}
+{% endif %}
 
 <div class="posts-loop">
     {% for post in _posts %}
@@ -49,3 +52,5 @@
 
     {% endfor %}
 </div>
+
+{%  include '_pagination.twig' %}

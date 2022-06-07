@@ -1,0 +1,105 @@
+.posts-loop {
+
+    a.article {
+        display: flex;
+        padding: 30px;
+        background: var(--color-background-box);
+        margin-bottom: 30px;
+        border-radius: var(--box-radius);
+        box-shadow: var(--box-shadow);
+        text-decoration: none;
+        color: inherit;
+        transition: .1s box-shadow;
+
+        .left {
+            flex: 1;
+
+            h2 {
+                margin: 0;
+                font-size: 22px;
+                line-height: 24px;
+            }
+
+            p.description {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: var(--color-text-content-secondary);
+            }
+
+            .date {
+                font-size: 0.8rem;
+                margin-top: 8px;
+            }
+
+            .post-authors {
+                margin-top: 10px;
+                font-size: 0.85rem;
+
+                img, .avatar-placeholder {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+
+                    &:not(:first-child) {
+                        margin-left: -25px;
+                    }
+                }
+
+                .avatar-placeholder {
+                    display: inline-block;
+                    background-color: var(--color-background-contrast);
+                }
+
+                span {
+                    vertical-align: middle;
+                }
+
+                .author-names {
+                    margin-left: 5px;
+                    font-weight: 600;
+                }
+            }
+
+            .post-tags {
+                margin-top: 10px;
+            }
+        }
+
+        .right {
+            padding-left: 25px;
+
+            img {
+                width: 300px;
+                border-radius: var(--box-radius);
+            }
+        }
+
+        &:hover {
+            box-shadow: var(--box-shadow), 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+    }
+
+}
+
+nav.pagination {
+    text-align: center;
+    margin: 30px 0;
+    .pagination-info {
+        color: var(--color-text-content-secondary);
+        vertical-align: middle;
+    }
+    a {
+        margin: 0 3px;
+        padding: 10px;
+        display: inline-block;
+        color: var(--color-accent);
+        transition: .3s transform ease-out;
+        &.hidden {
+            visibility: hidden;
+        }
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+}

@@ -11,7 +11,6 @@
             <span class="name">{{ _blog.name }}</span>
         </a>
 
-
         <div class="nav-links">
             {% for nav in _blog.nav_header %}
                 <a class="nav-{{ nav.name | lower | slug }}{% if is_current_url(nav.url) %} active{% endif %}" href="{{ nav.url }}">
@@ -19,6 +18,7 @@
                 </a>
             {% endfor %}
         </div>
+
 
         {% if (_blog.color_modes == 'both') %}
             <div class="color-mode-toggler">

@@ -14,6 +14,25 @@
             {% endfor %}
         </nav>
 
+
+
+        {% if _blog.languages | length > 1 %}
+            <div class="nav-lang">
+                <a class="lang-label" role="label" onclick="toggleLanguageDropdown()">
+                    {{ _lang.name }}&nbsp;{{ icon('fontawesome', 'earth-asia-solid', 18) }}
+                </a>
+                <div id="lang-selector">
+                    {% for lang in _blog.languages %}
+                        <a
+                            href="{{ lang.code | language_variant_url }}"
+                            class="{% if lang.code == _lang.code %}active{% endif %}"
+                        >{{ lang.name }}{% if _lang.code == lang.code %}<span class="bull">&bull;</span>{% endif %}</a>
+                    {% endfor %}
+                </div>
+                <div id="lang-selector-closer" onclick="toggleLanguageDropdown()"></div>
+            </div>
+        {% endif %}
+
     </div>
 
 </footer>

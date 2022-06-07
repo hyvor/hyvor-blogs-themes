@@ -1,4 +1,9 @@
 
+# loop
+pagination: Pagination
+previous_page: Previous Page
+next_page: Next Page
+of: of
 
 # post
 newsletter: Newsletter
