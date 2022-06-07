@@ -4,6 +4,7 @@
 @import 'footer.scss';
 @import 'post.scss';
 @import 'loop.scss';
+@import 'author.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
@@ -45,6 +46,10 @@ main {
     font-size: 0.8rem;
     font-weight: 600;
 }
-.global-avatar-placeholder {
-
+.global-scaling-link {
+    display: inline-block;
+    transition: .3s transform;
+    &:hover {
+        transform: scale(1.035);
+    }
 }

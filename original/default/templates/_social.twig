@@ -1,58 +1,11 @@
 {# DEPENDING ON social variable #}
 
-{% if social.twitter %}
-    <a
-            target="_blank"
-            href="{{ social.twitter }}"
-            title="{{ 'twitter' | lang }}">
-        <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'twitter', 20) }}</i>
-    </a>
-{% endif %}
-{% if social.facebook %}
-    <a
-            target="_blank"
-            href="{{ social.facebook }}"
-            title="{{ 'facebook' | lang }}">
-        <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'facebook', 20) }}</i>
-    </a>
-{% endif %}
-{% if social.linkedin %}
-    <a
-            target="_blank"
-            href="{{ social.linkedin }}"
-            title="{{ 'linkedin' | lang }}">
-        <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'linkedin', 20) }}</i>
-    </a>
-{% endif %}
-{% if social.youtube %}
-    <a
-            target="_blank"
-            href="{{ social.youtube }}"
-            title="{{ 'youtube' | lang }}">
-        <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'youtube', 20) }}</i>
-    </a>
-{% endif %}
-{% if social.tiktok %}
-    <a
-            target="_blank"
-            href="{{ social.tiktok }}"
-            title="{{ 'tiktok' | lang }}">
-        <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'tiktok', 20) }}</i>
-    </a>
-{% endif %}
-{% if social.instagram %}
-    <a
-            target="_blank"
-            href="{{ social.instagram }}"
-            title="{{ 'instagram' | lang }}">
-        <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'instagram', 20) }}</i>
-    </a>
-{% endif %}
-{% if social.github %}
-    <a
-            target="_blank"
-            href="{{ social.github }}"
-            title="{{ 'github' | lang }}">
-        <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'github', 20) }}</i>
-    </a>
-{% endif %}
+{% import "_macro.twig" as macro %}
+
+{% if social.twitter %}{{ macro.social_icon("Twitter", social.twitter, 'twitter') }}{% endif %}
+{% if social.facebook %}{{ macro.social_icon("Facebook", social.facebook, 'facebook') }}{% endif %}
+{% if social.linkedin %}{{ macro.social_icon("Linkedin", social.linkedin, 'linkedin') }}{% endif %}
+{% if social.youtube %}{{ macro.social_icon("Youtube", social.youtube, 'youtube') }}{% endif %}
+{% if social.tiktok %}{{ macro.social_icon("Tiktok", social.tiktok, 'tiktok') }}{% endif %}
+{% if social.instagram %}{{ macro.social_icon("Instagram", social.instagram, 'instagram') }}{% endif %}
+{% if social.github %}{{ macro.social_icon("Github", social.github, 'github') }}{% endif %}

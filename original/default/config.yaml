@@ -40,3 +40,5 @@ settings:
     featured_image: true
   post:
     featured_image: true
+  footer:
+    feed_icon: true

@@ -1,20 +1,22 @@
+
+{% import "_macro.twig" as macro %}
+
 <footer>
 
     <div class="container">
 
         <div class="social">
             {% include '_social.twig' with { social: _blog.social } %}
+            {% if _config.settings.footer.feed_icon %}{{ macro.social_icon("feed" | lang, _blog.url ~ "/feed", 'rss-solid') }}{% endif %}
         </div>
 
         <nav>
             {% for nav in _blog.nav_footer %}
-                <a class="nav" href="{{ nav.url }}">
+                <a class="nav global-scaling-link" href="{{ nav.url }}">
                     <span>{{ nav.name }}</span>
                 </a>
             {% endfor %}
         </nav>
-
-
 
         {% if _blog.languages | length > 1 %}
             <div class="nav-lang">

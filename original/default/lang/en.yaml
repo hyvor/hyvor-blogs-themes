@@ -5,6 +5,15 @@ previous_page: Previous Page
 next_page: Next Page
 of: of
 
+# footer
+feed: RSS Feed
+
 # post
 newsletter: Newsletter
 comments: Comments
+
+# author/tag
+posts_num_zero: No Posts
+posts_num_one: 1 Post
+posts_num_multi: "* Posts"
+website: Website

@@ -1,0 +1,19 @@
+{% extends '@base.twig' %}
+
+
+{% block body %}
+
+    <main role="main" class="tag-page">
+        <section class="page-data">
+            <div class="page-title">{{ _tag.name }}</div>
+            <div class="page-description">{{ _tag.description }}</div>
+            <div class="posts-count">{{ _tag.posts_count | lang_by_number(
+                    zero="posts_num_zero",
+                    one="posts_num_one",
+                    multi="posts_num_multi"
+                ) }}</div>
+        </section>
+        {%  include '_loop.twig' %}
+    </main>
+
+{% endblock %}
