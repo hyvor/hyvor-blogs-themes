@@ -1,6 +1,6 @@
 <div class="nav-footer">
     <nav class="nav-wrapper" aria-label="{{ 'footer' | lang }}">
-        <span class="nav-copy">{{ _blog.name }} &copy; {{ 'now' | date('Y') }}  <a class="nav-rss" title="RSS" href="{{ _blog.url }}/feed/" target="_blank"><i aria-hidden="true">{{ icon('fontawesome', 'rss-solid') }}</i></a></span>
+        <span class="nav-copy">{{ _blog.name }} &copy; {{ 'now' | date('Y') }}  <a class="nav-rss" title="RSS" href="{{ _blog.url }}/feed" target="_blank"><i aria-hidden="true">{{ icon('fontawesome', 'rss-solid') }}</i></a></span>
 
         {% include '_nav.twig' with {'navs': _blog.nav_footer} %}
 
