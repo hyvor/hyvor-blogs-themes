@@ -1,16 +1,3 @@
- {# <!DOCTYPE html>
-<html>
-<head>
-
-<title>{{ _post.title }}</title>
-
-{{ _head | template }}
-</head>
-<body>
-
-    <div style="outline:none" tabindex="-1">
-        <div class="global-wrapper" data-is-root-path="true"> #}
-
 {% extends '@base.twig' %}
 
 {% block body %}
@@ -65,12 +52,6 @@
                                                 {% endif %}
                                         </a>
                                     {% endfor %}
-
-                                {# <a href="/es/before-you-memo/">Español</a> 
-                                • <a href="/pt-br/before-you-memo/">Português do Brasil</a> 
-                                • <a href="/zh-hans/before-you-memo/">简体中文</a> 
-                                • <a href="/zh-hant/before-you-memo/">繁體中文</a> 
-                                • <a href="/ko/before-you-memo/">한국어</a> #}
                             </span>
                         </p>
                     </div>
@@ -96,13 +77,3 @@
              </main>
 
 {% endblock %}
-
-            {# {% include('_footer.twig') %}
-        </div>
-    </div>
-
-{{ _foot | raw }}
-
-
-</body>
-</html> #}

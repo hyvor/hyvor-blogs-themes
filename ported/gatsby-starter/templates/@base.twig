@@ -12,32 +12,11 @@
             --color-accent: {{ _config.colors.accent }};
             --color-background: {{ _config.colors.background }};
 
-            /* Must think wheather we need this section to be edited or not */
-            /* --spacing-0: {{ _config.spacing.spacing_0 }};
-            --spacing-1: {{ _config.spacing.spacing_1 }};
-            --spacing-2: {{ _config.spacing.spacing_2 }};
-            --spacing-3: {{ _config.spacing.spacing_3 }};
-            --spacing-4: {{ _config.spacing.spacing_4 }};
-            --spacing-5: {{ _config.spacing.spacing_5 }};
-            --spacing-6: {{ _config.spacing.spacing_6 }};
-            --spacing-8: {{ _config.spacing.spacing_8 }};
-            --spacing-10: {{ _config.spacing.spacing_10 }};
-            --spacing-12: {{ _config.spacing.spacing_12 }};
-            --spacing-16: {{ _config.spacing.spacing_16 }};
-            --spacing-20: {{ _config.spacing.spacing_20 }};
-            --spacing-24: {{ _config.spacing.spacing_24 }};
-            --spacing-32: {{ _config.spacing.spacing_32 }}; */
 
             --fontWeight-bold: {{ _config.font.fontWeight_bold }};
             --fontWeight-black: {{ _config.font.fontWeight_black }};
             --fontSize-root: {{ _config.font.fontSize_root }};
 
-            /* --fontSize-1: {{ _config.font.fontSize_1 }};
-            --fontSize-2: {{ _config.font.fontSize_2 }};
-            --fontSize-3: {{ _config.font.fontSize_3 }};
-            --fontSize-4: {{ _config.font.fontSize_4 }};
-            --fontSize-5: {{ _config.font.fontSize_5 }};
-            --fontSize-6: {{ _config.font.fontSize_6 }}; */
         }
         .mode-light:root {
             --color-primary: {{ _config.colors.light.primary }};
@@ -63,20 +42,9 @@
     </head>
 
     <body>
-        {# 
-            main theme - https://gatsbystarterblogsource.gatsbyjs.io/
-            development docs - http://blogs.hyvor.test/docs/themes-styles 
-            domain - http://dev.hyvorblogs.test/
-            gatsby github - https://github.com/gatsbyjs/gatsby-starter-blog/blob/master/src/style.css
-            overreacted - https://overreacted.io/
-        #}
+
         <div style="outline:none" tabindex="-1">
             <div class="global-wrapper" data-is-root-path="true">
-
-            {# <div class="mode-toggler">
-                <button class="toggle-dark" onclick="_hb.changeColorMode('dark')">DARK </button>
-                <button class="toggle-light" onclick="_hb.changeColorMode('light')">LIGHT</button>
-            </div> #}
 
                 <div></div>
                 {% block body %}{% endblock %}
