@@ -1,0 +1,21 @@
+{# <div class="card">
+    <div>Card head</div>
+</div> #}
+
+<li>
+    <article class="post-list-item" itemscope="" itemtype="http://schema.org/Article">
+        <header>
+            <h2>
+                <a itemprop="url" href="{{ post.url }}">
+                    <span itemprop="headline">{{ post.title }}</span>
+                </a>
+            </h2>
+            <small>{{ post.published_at | date('F j, Y') }}</small>
+        </header>
+        <section>
+            <p itemprop="description">
+                {{ post.description }}
+            </p>
+        </section>
+    </article>
+</li>

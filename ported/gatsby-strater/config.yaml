@@ -1,0 +1,55 @@
+theme_name: GatsbyStarter
+theme_version: 1.0
+
+colors:
+  primary: "#005b99"
+  text: "#2e353f"
+  text_light: "#4f5969"
+  heading: "#1a202c"
+  heading_black: "#black"
+  accent: "#d1dce5"
+  background: "#fff"
+  light:
+    primary: "#005b99"
+    text: "#2e353f"
+    text_light: "#4f5969"
+    heading: "#1a202c"
+    heading_black: "#black"
+    accent: "#d1dce5"
+    background: "#fff"
+  dark:
+    primary: "#fff"
+    text: "#fff"
+    text_light: "#fff"
+    heading: "#fff"
+    heading_black: "#fff"
+    accent: "#fff"
+    background: "#000"
+
+# spacing:
+#   spacing_0: "0"
+#   spacing_1: "0.25rem"
+#   spacing_2: "0.5rem"
+#   spacing_3: "0.75rem"
+#   spacing_4: "1rem"
+#   spacing_5: "1.25rem"
+#   spacing_6: "1.5rem"
+#   spacing_8: "2rem"
+#   spacing_10: "2.5rem"
+#   spacing_12: "3rem"
+#   spacing_16: "4rem"
+#   spacing_20: "5rem"
+#   spacing_24: "6rem"
+#   spacing_32: "8rem"
+
+font:
+  fontWeight_bold: "700"
+  fontWeight_black: "900"
+  fontSize_root: "16px"
+  # fontSize_1: "1rem"
+  # fontSize_2: "1.2rem"
+  # fontSize_3: "1.44rem"
+  # fontSize_4: "1.728rem"
+  # fontSize_5: "2.074rem"
+  # fontSize_6: "2.488rem"
+
