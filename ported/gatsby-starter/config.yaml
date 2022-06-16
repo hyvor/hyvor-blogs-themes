@@ -1,4 +1,4 @@
-theme_name: GatsbyStarter
+theme_name: NewTheme
 theme_version: 1.0
 
 colors:
@@ -24,7 +24,7 @@ colors:
     heading: "#fff"
     heading_black: "#fff"
     accent: "#fff"
-    background: "#000"
+    background: "#282C35"
 
 font:
   fontWeight_bold: "700"

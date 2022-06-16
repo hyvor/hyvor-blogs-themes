@@ -278,7 +278,7 @@ a:focus {
   display: inline-block;
 //   width: 60px;
 //   height: 34px;
-  width: 50px;
+  width: 55px;
   height: 25px;
 }
 
@@ -295,7 +295,7 @@ a:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: #000;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -306,12 +306,12 @@ a:focus {
   height: 26px;
   width: 26px;
   // left: 4px;
-  left: -1px;
+  left: 1px;
   // bottom: 4px;
   background-color: var(--color-background);
   -webkit-transition: .4s;
   transition: .4s;
-  box-shadow: 0 0 2px 3px #ffa7c4;
+  box-shadow: 0 0 2px 3px var(--color-accent);;
 }
 
 input:checked + .slider {
@@ -404,6 +404,13 @@ input:checked + .slider:before {
 .bio p {
   margin-bottom: var(--spacing-0);
 }
+
+// .bio-avatar {
+//   margin-right: var(--spacing-4);
+//   margin-bottom: var(--spacing-0);
+//   min-width: 50px;
+//   border-radius: 100%;
+// }
 
 .blog-post header h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
