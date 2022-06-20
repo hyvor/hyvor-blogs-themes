@@ -12,10 +12,9 @@
             --color-accent: {{ _config.colors.accent }};
             --color-background: {{ _config.colors.background }};
 
-
-            --fontWeight-bold: {{ _config.font.fontWeight_bold }};
-            --fontWeight-black: {{ _config.font.fontWeight_black }};
-            --fontSize-root: {{ _config.font.fontSize_root }};
+            --fontWeight-bold: {{ _config.font.font_weight_bold }};
+            --fontWeight-black: {{ _config.font.font_weight_black }};
+            --fontSize-root: {{ _config.font.font_size_root }};
 
         }
         .mode-light:root {
@@ -42,10 +41,15 @@
     </head>
 
     <body>
-
+        {# 
+            main theme - https://gatsbystarterblogsource.gatsbyjs.io/
+            development docs - http://blogs.hyvor.test/docs/themes-styles 
+            domain - http://dev.hyvorblogs.test/
+            gatsby github - https://github.com/gatsbyjs/gatsby-starter-blog/blob/master/src/style.css
+            overreacted - https://overreacted.io/
+        #}
         <div style="outline:none" tabindex="-1">
             <div class="global-wrapper" data-is-root-path="true">
-
                 <div></div>
                 {% block body %}{% endblock %}
                 <div class="footer-wrapper">

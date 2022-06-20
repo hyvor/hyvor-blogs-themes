@@ -1,4 +1,3 @@
-welcome: Welcome
-hellO: WHEllo
-WOW: wow
-num: "* Users"
+byAuthor: "Written by {authorName}"
+blogDescription: "{blogDescription}"
+followUs: "You should follow them on Twitter"
