@@ -311,7 +311,7 @@ a:focus {
   background-color: var(--color-background);
   -webkit-transition: .4s;
   transition: .4s;
-  box-shadow: 0 0 2px 3px var(--color-accent);;
+  box-shadow: 0 0 2px 3px var(--color-accent);
 }
 
 input:checked + .slider {
@@ -462,4 +462,38 @@ input:checked + .slider:before {
   a{
     color:black;
   }
+}
+
+img {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.75rem;
+}
+
+ul {
+  margin-left: 1.75rem;
+  margin-right: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.75rem;
+  list-style-position: outside;
+  list-style-image: none;
+  list-style: disc;
+}
+
+ul li {
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: calc(1.75rem / 2);
 }

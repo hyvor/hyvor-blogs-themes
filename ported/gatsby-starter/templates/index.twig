@@ -34,12 +34,17 @@
         </header>
     </div>
 
+<br/>
+{{dump(_author.name)}}
+        <br/>
+
     <main>
         <div class="bio">
-            <p>{{ 'byAuthor' | lang(authorName=_author.name) }}
-                <!-- -->
+        
+            <p>
+                {# <!-- --> #}
                 {{ 'blogDescription' | lang(blogDescription=_blog.description) }}
-                <!-- --> <!-- -->
+                {# <!-- --> #}
                 <a href={{ _blog.social.twitter }}>{{ 'followUs' | lang}}</a>
             </p>
         </div>

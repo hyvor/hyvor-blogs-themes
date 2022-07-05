@@ -64,9 +64,9 @@
                     <hr>
                     <div class="bio">
                         <p>{{ 'byAuthor' | lang(authorName=_author.name) }}
-                            <!-- -->
+                            {# <!-- --> #}
                             {{ 'blogDescription' | lang(blogDescription=_blog.description) }}
-                            <!-- --> <!-- -->
+                            {# <!-- --> <!-- --> #}
                             <a href={{ _blog.social.twitter }}>{{ 'followUs' | lang}}</a>
                         </p>
                     </div>
