@@ -1,4 +1,4 @@
-THEME_NAME: default
+THEME_NAME: hello
 THEME_VERSION: 1.0.0
 POSTS_PER_PAGINATION: 10
 
@@ -39,6 +39,8 @@ settings:
     tags: true
     featured_image: true
   post:
+    authors: true
+    tags: true
     featured_image: true
   footer:
     feed_icon: true

@@ -1,12 +1,12 @@
 @import '_normalize.scss';
+@import 'font.scss';
 @import 'variables.scss';
 @import 'header.scss';
 @import 'footer.scss';
 @import 'post.scss';
 @import 'loop.scss';
 @import 'author.scss';
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import 'mobile.scss';
 
 body {
     font-family: var(--font-family);
@@ -38,6 +38,7 @@ main {
 }
 
 .global-tag {
+    text-decoration: none;
     padding: 4px 15px;
     display: inline-block;
     background-color: var(--color-tag-bg);
@@ -52,4 +53,48 @@ main {
     &:hover {
         transform: scale(1.035);
     }
+}
+
+.global-post-authors {
+    margin-top: 10px;
+    font-size: 0.85rem;
+
+    img, .avatar-placeholder {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        vertical-align: middle;
+
+        &:not(:first-child) {
+            margin-left: -25px;
+        }
+    }
+
+    .avatar-placeholder {
+        display: inline-block;
+        background-color: var(--color-background-contrast);
+    }
+
+    span {
+        vertical-align: middle;
+    }
+
+    .author-names {
+        margin-left: 5px;
+        font-weight: 600;
+    }
+
+    .authors {
+        margin-bottom: 20px;
+        .author {
+            margin-right: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            color: inherit;
+            .author-name {
+                margin-left: 3px;
+            }
+        }
+    }
+
 }
