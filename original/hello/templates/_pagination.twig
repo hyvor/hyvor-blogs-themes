@@ -1,0 +1,17 @@
+<nav class="pagination" aria-label="{{ 'pagination' | lang }}">
+    <a
+            title="{{ 'previous_page' | lang }}"
+            class="pagination-next{% if not _pagination.page_prev %} hidden{% endif %}"
+            href="{{ _pagination.page_prev | pagination_page_url }}"
+    >
+        <i>{{ icon('fontawesome', 'arrow-left-solid') }}</i>
+    </a>
+    <span class="pagination-info">{{ _pagination.page }} {{ 'of' | lang }} {{ _pagination.pages }}</span>
+    <a
+            title="{{ 'next_page' | lang }}"
+            class="pagination-prev{% if not _pagination.page_next %} hidden{% endif %}"
+            href="{{ _pagination.page_next | pagination_page_url }}"
+    >
+        <i>{{ icon('fontawesome', 'arrow-right-solid') }}</i>
+    </a>
+</nav>

@@ -4,7 +4,7 @@
         {% if _blog.logo_url %}
             <span class="logo">
                 <a
-                    href="{{ _blog.logo_url }}"
+                    href="{{ _blog.url }}"
                     title="{{ 'home' | lang }}">
                     <img src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}" />
                 </a>
@@ -21,7 +21,7 @@
                     <div class="lang-selector">
                         {% for lang in _blog.languages %}
                             <a
-                                href="{{ language_variant_url(lang.code) }}"
+                                href="{{ lang.code | language_variant_url }}"
                                 class="{% if lang.code == _lang.code %}active{% endif %}"
                             >{{ lang.name }}</a>
                         {% endfor %}

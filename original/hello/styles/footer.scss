@@ -1,0 +1,105 @@
+footer {
+
+    padding: 40px 0;
+
+    .container {
+        display: flex;
+        width: 1140px;
+        max-width: 100%;
+        padding: 0 35px;
+        margin: auto;
+        align-items: center;
+    }
+
+    .social {
+        flex: 1;
+        a {
+            text-decoration: none;
+            margin-right: 8px;
+            color: inherit;
+            &:hover {
+                color: var(--color-accent);
+            }
+        }
+    }
+
+    nav {
+        a {
+            margin-left: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            padding: 8px;
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+
+
+
+    .nav-lang {
+        margin-left: 25px;
+        position: relative;
+
+        .lang-label {
+            cursor: pointer;
+        }
+
+        #lang-selector {
+            opacity: 0;
+            transition: .2s;
+            width: 200px;
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            background: var(--color-background-box);
+            border-radius: var(--box-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 15px;
+            transform: translateY(25px);
+            pointer-events: none;
+            padding: 20px;
+            z-index: 1;
+            a {
+                display: block;
+                color: inherit;
+                padding: 4px 10px;
+                text-decoration: none;
+                transition: .3s;
+                &:hover {
+                    transform: scale(1.02);
+                }
+                &.active {
+                    font-weight: 600;
+                    color: var(--color-accent);
+                }
+                .bull {
+                    margin-left: 4px;
+                }
+            }
+            &.open {
+                pointer-events: initial;
+                opacity: 1;
+                transform: translateY(0px);
+                a {
+                    height: initial;
+                }
+            }
+        }
+
+        #lang-selector-closer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            &.open {
+                display: block;
+            }
+        }
+    }
+
+}

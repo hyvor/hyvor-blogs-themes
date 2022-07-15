@@ -1,0 +1,76 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+    <main role="main">
+
+        <article class="post-box">
+
+            <h1>{{ _post.title }}</h1>
+
+            {% if (_config.settings.post.authors) %}
+                <div class="global-post-authors">
+                    <div class="authors">
+                        {% for author in _post.authors %}
+                            <a class="author" href="{{ author.url }}">
+                                {% if author.picture_url %}
+                                    <img alt="Profile picture of {{ author.name }}" src="{{ author.picture_url }}" />
+                                {% else %}
+                                    <span class="avatar-placeholder"></span>
+                                {% endif %}
+                                <span class="author-name">{{ author.name }}</span>
+                            </a>
+                        {% endfor %}
+                    </div>
+                    {#<span class="author-names">
+                            {% for author in _post.authors %}
+                                {{ author.name }}{% if not loop.last %}, {% endif %}
+                            {% endfor %}
+                    </span>#}
+                </div>
+            {% endif %}
+
+            {% if _post.featured_image_url and _config.settings.post.featured_image %}
+                <img
+                    src="{{ _post.featured_image_url }}" alt="{{ _post.title }}"
+                    class="featured-image"
+                >
+            {% endif %}
+
+            <section class="post-content">
+                {{ _post.content | raw }}
+            </section>
+
+            {% if (_config.settings.post.tags) %}
+                <div class="post-tags">
+                    {% for tag in _post.tags %}
+                        <a href="{{ tag.url }}" class="global-tag">{{ tag.name }}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+        </article>
+
+        {% if _route != 'page' %}
+
+            {% if _newsletter %}
+                <section class="newsletter-box">
+                    <h3>{{ 'newsletter' | lang }}</h3>
+                    <div>
+                        {{ _newsletter | template }}
+                    </div>
+                </section>
+            {% endif %}
+
+            {% if _comments %}
+                <section class="comments-box">
+                    <h3>{{ 'comments' | lang }}</h3>
+                    <div>{{ _comments | template }}</div>
+                </section>
+            {% endif %}
+
+        {% endif %}
+
+    </main>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+
+{% if _pagination.page_prev %}
+    {%  include '_pagination.twig' %}
+{% endif %}
+
+<div class="posts-loop">
+    {% for post in _posts %}
+
+        <a class="article" href="{{ post.url }}">
+            <div class="left">
+                <h2>{{ post.title }}</h2>
+                <div class="date">
+                    <time datetime="{{ post.published_at | date('d-m-Y') }}">
+                        {{ post.published_at | format_date('medium', locale=_lang.code) }}
+                    </time>
+                </div>
+                <p class="description">{{ post.description }}&hellip;</p>
+                {% if (_config.settings.loop.authors) %}
+                    <div class="global-post-authors">
+                        <span class="author-pictures">
+                            {% for author in post.authors %}
+                                {% if author.picture_url %}
+                                    <img src="{{ author.picture_url }}" />
+                                {% else %}
+                                    <span class="avatar-placeholder"></span>
+                                {% endif %}
+                            {% endfor %}
+                        </span>
+                        <span class="author-names">
+                            {% for author in post.authors %}
+                                {{ author.name }}{% if not loop.last %}, {% endif %}
+                            {% endfor %}
+                        </span>
+                    </div>
+                {% endif %}
+                {% if (_config.settings.loop.tags) %}
+                    <div class="post-tags">
+                        {% for tag in post.tags %}
+                            <span class="global-tag">{{ tag.name }}</span>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            {% if post.featured_image_url and _config.settings.loop.featured_image %}
+                <div class="right">
+                    <img src="{{ post.featured_image_url }}" alt="{{ post.title }}" />
+                </div>
+            {% endif %}
+
+        </a>
+
+    {% endfor %}
+</div>
+
+{%  include '_pagination.twig' %}

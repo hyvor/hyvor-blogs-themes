@@ -1,0 +1,33 @@
+
+.author-page {
+
+    .author-image {
+        img, .avatar-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .avatar-placeholder {
+            display: inline-block;
+            background-color: var(--color-background-contrast);
+        }
+    }
+
+    .social {
+        a {
+            display: inline-block;
+            color: var(--color-accent);
+            margin: 10px 4px;
+        }
+    }
+
+}
+
+.author-page, .tag-page {
+    .posts-count {
+        margin: 10px 0;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}

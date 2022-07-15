@@ -1,0 +1,11 @@
+{# DEPENDING ON social variable #}
+
+{% import "_macro.twig" as macro %}
+
+{% if social.twitter %}{{ macro.social_icon("Twitter", social.twitter, 'twitter') }}{% endif %}
+{% if social.facebook %}{{ macro.social_icon("Facebook", social.facebook, 'facebook') }}{% endif %}
+{% if social.linkedin %}{{ macro.social_icon("Linkedin", social.linkedin, 'linkedin') }}{% endif %}
+{% if social.youtube %}{{ macro.social_icon("Youtube", social.youtube, 'youtube') }}{% endif %}
+{% if social.tiktok %}{{ macro.social_icon("Tiktok", social.tiktok, 'tiktok') }}{% endif %}
+{% if social.instagram %}{{ macro.social_icon("Instagram", social.instagram, 'instagram') }}{% endif %}
+{% if social.github %}{{ macro.social_icon("Github", social.github, 'github') }}{% endif %}

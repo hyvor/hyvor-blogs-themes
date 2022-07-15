@@ -131,6 +131,7 @@
             display: block;
             max-width: 100%;
             height: auto;
+            margin:auto;
             border-radius: var(--box-radius);
         }
 
@@ -214,8 +215,8 @@
         }
 
         :not(pre) code {
-            background: rgb(234 234 234);
-            color: #EB5757;
+            background-color: var(--inline-code-bg);
+            color: var(--inline-code-color);
             border-radius: 3px;
             font-size: 0.8rem;
             padding: 0.2em 0.4em;
@@ -226,6 +227,10 @@
             background-color: #fffbd4;
         }
 
+    }
+
+    .post-tags {
+        margin-top: 20px;
     }
 
 }
