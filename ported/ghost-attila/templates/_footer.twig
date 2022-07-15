@@ -5,12 +5,14 @@
         {% include '_nav.twig' with {'navs': _blog.nav_footer} %}
 
         <span class="nav-credits">
-            <a class="menu-item js-theme" onclick="changeTheme()">
-                <span class="theme-icon"></span>
-                <span class="theme-text os">System theme</span>
-                <span class="theme-text light">Light theme</span>
-                <span class="theme-text dark">Dark theme</span>
-            </a>
+            {% if (_blog.color_modes == 'both') %}
+                <a class="menu-item js-theme" onclick="changeTheme()">
+                    <span class="theme-icon"></span>
+                    <span class="theme-text os">System theme</span>
+                    <span class="theme-text light">Light theme</span>
+                    <span class="theme-text dark">Dark theme</span>
+                </a>
+            {% endif %}
         </span>
     </nav>
 </div>
