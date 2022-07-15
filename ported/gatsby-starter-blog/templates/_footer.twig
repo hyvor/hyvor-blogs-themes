@@ -1,0 +1,31 @@
+<footer>
+    <footer style="padding-top: 1.75rem;">
+        <div style="float: right;">
+            <a href="{{ _blog.base_url }}/feed" target="_blank">rss</a>
+        </div>
+
+        <div class="social-links">
+            {% if (_blog.social.twitter) %}
+                <a href="{{ _blog.social.twitter }}" target="_blank" rel="noopener noreferrer">twitter</a>
+            {% endif %}
+            {% if (_blog.social.linkedin) %}
+                <a href="{{ _blog.social.linkedin }}" target="_blank" rel="noopener noreferrer">linkedin</a>
+            {% endif %}
+            {% if (_blog.social.facebook) %}
+                <a href="{{ _blog.social.facebook }}" target="_blank" rel="noopener noreferrer">facebook</a>
+            {% endif %}
+            {% if (_blog.social.youtube) %}
+                <a href="{{ _blog.social.youtube }}" target="_blank" rel="noopener noreferrer">youtube</a>
+            {% endif %}
+            {% if (_blog.social.instagram) %}
+                <a href="{{ _blog.social.instagram }}" target="_blank" rel="noopener noreferrer">instagram</a>
+            {% endif %}
+            {% if (_blog.social.github) %}
+                <a href="{{ _blog.social.github }}" target="_blank" rel="noopener noreferrer">github</a>
+            {% endif %}
+            {% if (_blog.social.tiktok) %}
+                <a href="{{ _blog.social.tiktok }}" target="_blank" rel="noopener noreferrer">tiktok</a>
+            {% endif %}
+        </div>
+    </footer>
+</footer>

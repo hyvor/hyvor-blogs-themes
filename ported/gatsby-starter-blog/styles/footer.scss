@@ -1,0 +1,15 @@
+footer {
+    padding: 1.5rem 0;
+
+    .social-links a:not(:last-child) {
+        margin-right: 10px;
+        position: relative;
+        &:after {
+            content: "•";
+            position: absolute;
+            right: -10px;
+            pointer-events: none;
+            color: var(--color-text);
+        }
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ _lang.code }}">
+    <head>
+
+        <style>
+            :root {
+                --fontSize-root: {{ _config.font.size }};
+                --fontFamily-sans: {{ _config.font.family_sans | raw }};
+                --fontFamily-serif: {{ _config.font.family_serif | raw }};
+            }
+            .mode-light:root {
+                --color-primary: {{ _config.colors.light.primary }};
+                --color-text: {{ _config.colors.light.text }};
+                --color-text-light: {{ _config.colors.light.text_light }};
+                --color-heading: {{ _config.colors.light.heading }};
+                --heading-black: {{ _config.colors.light.heading_black }};
+                --color-accent: {{ _config.colors.light.accent }};
+                --color-background: {{ _config.colors.light.background }};
+            }
+            .mode-dark:root {
+                --color-primary: {{ _config.colors.dark.primary }};
+                --color-text: {{ _config.colors.dark.text }};
+                --color-text-light: {{ _config.colors.dark.text_light }};
+                --color-heading: {{ _config.colors.dark.heading }};
+                --heading-black: {{ _config.colors.dark.heading_black }};
+                --color-accent: {{ _config.colors.dark.accent }};
+                --color-background: {{ _config.colors.dark.background }};
+            }
+        </style>
+
+        {{ _head | template }}
+    </head>
+
+    <body>
+        <div style="outline:none" tabindex="-1">
+            <div class="global-wrapper" data-is-root-path="true">
+                <div></div>
+                {% block body %}{% endblock %}
+                <div class="footer-wrapper">
+                    {% include '_footer.twig' %}
+                </div>
+                {{ _foot | template }}
+            </div>
+        </div>
+    </body>
+</html>
