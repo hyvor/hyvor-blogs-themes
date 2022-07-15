@@ -2,3 +2,129 @@
     background-color: #FFFAE2;
     border-radius: 15px;
 }
+
+.author-bio {
+    padding-top: 30px;
+    display: flex;
+    .picture {
+        float: left;
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    }
+    .author-details {
+        flex: 1;
+        padding-left: 15px;
+        .desc {
+            margin-top: 6px;
+        }
+    }
+}
+
+.comments, .newsletter {
+    margin: 40px 0;
+}
+
+
+// HB STYLES
+main #post-content {
+
+    img {
+        margin-bottom: 0;
+    }
+
+    mark {
+        background: #e1e1ff;
+    }
+
+    aside {
+        display: flex;
+        padding: 20px;
+        span {
+            user-select: none;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        div {
+            padding-top: 2px;
+        }
+    }
+
+    figure {
+        img, x-embed {
+            display: block;
+            margin-bottom: 15px;
+        }
+        figcaption {
+            text-align: center;
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+    }
+
+    pre {
+        padding: 1rem 0;
+        font-size: 0.85rem;
+        overflow: auto;
+        .line {
+            padding: 1px 1rem;
+        }
+        .line-number {
+            margin-right: 1rem;
+        }
+        code {
+            display: block;
+            width: max-content;
+        }
+    }
+
+    a.bookmark {
+        color: inherit;
+        display: flex;
+        text-decoration: none;
+        overflow: hidden;
+        margin: 2rem;
+        background: var(--color-accent);
+        .bookmark-details {
+            padding: 1rem 1.5rem;
+            flex: 2;
+            .bookmark-title {
+                font-weight: 600;
+            }
+            .bookmark-description {
+                color: var(--color-text-light);
+                font-size: 0.9rem;
+                margin: 5px 0;
+            }
+            .bookmark-domain {
+                font-size: 0.8rem;
+                font-weight: 600;
+            }
+        }
+        .bookmark-thumbnail {
+            flex:1;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        @media screen and (max-width: $mobile) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    blockquote, aside, figure, a.bookmark, pre {
+        margin-left: -2.5rem;
+        margin-right: -2.5rem;
+
+        @media screen and (max-width: $mobile) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+}

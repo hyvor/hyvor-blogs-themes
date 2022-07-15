@@ -13,38 +13,53 @@
                     </header>
 
 
-                     {% if _blog.languages | length > 1 %}
-                    <div class="translations">
-                        <p>
-                            <span>
-                                <span>Translated by readers into: </span>
-                                    {% for lang in _blog.languages %}
-                                        <a href="{{ lang.code | language_variant_url }}"
-                                            class="{% if lang.code == _lang.code %}active{% endif %}">
-                                            {{ lang.name }}
-                                                {% if _lang.code == lang.code %}
-                                                <span class="bull">&bull;</span>
-                                                {% endif %}
-                                        </a>
-                                    {% endfor %}
-                            </span>
-                        </p>
-                    </div>
+                     {% if _post.variants | length > 1 %}
+                        <div class="translations">
+                            <p>
+                                <span>
+                                    <span>{{ 'translated' | lang }}: </span>
+                                        {% for variant in _post.variants %}
+                                            <a href="{{ variant.url }}">
+                                                {{ variant.language.name }}
+                                            </a>
+                                            {% if not loop.last %}&nbsp;&bull;&nbsp;{% endif %}
+                                        {% endfor %}
+                                </span>
+                            </p>
+                        </div>
                     {% endif %}
 
 
-                    <section itemprop="articleBody">
+                    <section id="post-content" itemprop="articleBody">
                         {{ _post.content | raw }}
                     </section>
+
+                    {% if _newsletter %}
+                        <section class="newsletter">
+                            {{ _newsletter | template }}
+                        </section>
+                    {% endif %}
+
+                    {% if _comments %}
+                        <section class="comments">
+                            {{ _comments | template }}
+                        </section>
+                    {% endif %}
+
                     <hr>
-                    <div class="bio">
-                        <p>{{ 'byAuthor' | lang(authorName=_author.name) }}
-                            {# <!-- --> #}
-                            {{ 'blogDescription' | lang(blogDescription=_blog.description) }}
-                            {# <!-- --> <!-- --> #}
-                            <a href={{ _blog.social.twitter }}>{{ 'followUs' | lang}}</a>
-                        </p>
+
+                    <div class="author-bio">
+                        {% if (_post.authors[0].picture_url) %}
+                            <div class="picture">
+                                <img src="{{ _post.authors[0].picture_url }}" alt="Profile Picture" />
+                            </div>
+                        {% endif %}
+                        <div class="author-details">
+                            {{ 'byAuthor' | lang(name=_post.authors[0].name) }}
+                            <div class="desc">{{ _post.authors[0].bio }}</div>
+                        </div>
                     </div>
+
                 </article>
 
              </main>

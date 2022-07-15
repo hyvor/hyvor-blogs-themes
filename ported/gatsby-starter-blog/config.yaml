@@ -1,20 +1,13 @@
-theme_name: NewTheme
+theme_name: gatsby-starter-blog
 theme_version: 1.0
 
 colors:
-  primary: "#005b99"
-  text: "#2e353f"
-  text_light: "#4f5969"
-  heading: "#1a202c"
-  heading_black: "#black"
-  accent: "#d1dce5"
-  background: "#fff"
   light:
     primary: "#005b99"
     text: "#2e353f"
     text_light: "#4f5969"
     heading: "#1a202c"
-    heading_black: "#black"
+    heading_black: "#000"
     accent: "#d1dce5"
     background: "#fff"
   dark:
@@ -27,6 +20,6 @@ colors:
     background: "#282C35"
 
 font:
-  family_sans:
-  family_serif:
+  family_sans: 'Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+  family_serif: '"Merriweather", "Georgia", Cambria, "Times New Roman", Times, serif'
   size: 16

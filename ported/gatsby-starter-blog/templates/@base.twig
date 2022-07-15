@@ -3,49 +3,35 @@
     <head>
 
         <style>
-        :root {
-            --color-primary: {{ _config.colors.primary }};
-            --color-text: {{ _config.colors.text }};
-            --color-text-light: {{ _config.colors.text_light }};
-            --color-heading: {{ _config.colors.heading }};
-            --heading-black: {{ _config.colors.heading_black }};
-            --color-accent: {{ _config.colors.accent }};
-            --color-background: {{ _config.colors.background }};
-
-            --fontSize-root: {{ _config.font.size }};
-
-        }
-        .mode-light:root {
-            --color-primary: {{ _config.colors.light.primary }};
-            --color-text: {{ _config.colors.light.text }};
-            --color-text-light: {{ _config.colors.light.text_light }};
-            --color-heading: {{ _config.colors.light.heading }};
-            --heading-black: {{ _config.colors.light.heading_black }};
-            --color-accent: {{ _config.colors.light.accent }};
-            --color-background: {{ _config.colors.light.background }};
-        }
-        .mode-dark:root {
-            --color-primary: {{ _config.colors.dark.primary }};
-            --color-text: {{ _config.colors.dark.text }};
-            --color-text-light: {{ _config.colors.dark.text_light }};
-            --color-heading: {{ _config.colors.dark.heading }};
-            --heading-black: {{ _config.colors.dark.heading_black }};
-            --color-accent: {{ _config.colors.dark.accent }};
-            --color-background: {{ _config.colors.dark.background }};
-        }
-    </style>
+            :root {
+                --fontSize-root: {{ _config.font.size }};
+                --fontFamily-sans: {{ _config.font.family_sans | raw }};
+                --fontFamily-serif: {{ _config.font.family_serif | raw }};
+            }
+            .mode-light:root {
+                --color-primary: {{ _config.colors.light.primary }};
+                --color-text: {{ _config.colors.light.text }};
+                --color-text-light: {{ _config.colors.light.text_light }};
+                --color-heading: {{ _config.colors.light.heading }};
+                --heading-black: {{ _config.colors.light.heading_black }};
+                --color-accent: {{ _config.colors.light.accent }};
+                --color-background: {{ _config.colors.light.background }};
+            }
+            .mode-dark:root {
+                --color-primary: {{ _config.colors.dark.primary }};
+                --color-text: {{ _config.colors.dark.text }};
+                --color-text-light: {{ _config.colors.dark.text_light }};
+                --color-heading: {{ _config.colors.dark.heading }};
+                --heading-black: {{ _config.colors.dark.heading_black }};
+                --color-accent: {{ _config.colors.dark.accent }};
+                --color-background: {{ _config.colors.dark.background }};
+            }
+        </style>
 
         {{ _head | template }}
     </head>
 
     <body>
-        {# 
-            main theme - https://gatsbystarterblogsource.gatsbyjs.io/
-            development docs - http://blogs.hyvor.test/docs/themes-styles 
-            domain - http://dev.hyvorblogs.test/
-            gatsby github - https://github.com/gatsbyjs/gatsby-starter-blog/blob/master/src/style.css
-            overreacted - https://overreacted.io/
-        #}
         <div style="outline:none" tabindex="-1">
             <div class="global-wrapper" data-is-root-path="true">
                 <div></div>
