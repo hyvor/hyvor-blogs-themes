@@ -1,0 +1,26 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+    <div class="header-wrapper">
+        {% include '_header.twig' %}
+    </div>
+
+    <main>
+        {% if _blog.description %}
+            <div class="bio">
+                <p>
+                    {{ _blog.description }}
+                </p>
+            </div>
+        {% endif %}
+
+        <ol style="list-style:none">
+            {% for post in _posts %}
+                {% include '_card.twig'  %}
+            {% endfor %}
+        </ol>
+        
+    </main>
+
+{% endblock %}

@@ -1,3 +1,4 @@
+@import 'font.scss';
 @import 'footer.scss';
 @import 'post.scss';
 
@@ -39,7 +40,9 @@
     --fontWeight-normal: 400;
     --fontWeight-medium: 500;
     --fontWeight-semibold: 600;
+    --fontWeight-bold: 700;
     --fontWeight-extrabold: 800;
+    --fontWeight-black: 900;
     --lineHeight-none: 1;
     --lineHeight-tight: 1.1;
     --lineHeight-normal: 1.5;
@@ -73,6 +76,7 @@ body {
     font-size: var(--fontSize-1);
     color: var(--color-text);
     background-color: var(--color-background);
+    transition: .3s background-color;
 }
 
 hr {
@@ -250,123 +254,105 @@ a:focus {
   }
 }
 
-.toggle-light{
-  background-color:#282c35;;
-  border: none;
-  border-radius: 20px;
-  font-size: 12px;
-  padding: 5px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  cursor: pointer;
+.color-mode-toggler {
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    button {
+        border: none;
+        cursor: pointer;
+        background: transparent;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000;
+        border-radius: 34px;
+        &:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 1px;
+            top: 1px;
+            background-color: var(--color-background);
+            transition: .4s transform;
+            border-radius: 50%;
+            z-index: 1;
+        }
+    }
+
+
+    button:focus .slider:before {
+        box-shadow: 0 0 2px 3px var(--color-accent);
+    }
+
+
+    input:checked {
+
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px var(--color-background);
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(26px);
+    }
+
+
+    .react-toggle-track-check {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        left: 5px;
+        top: 2px;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 0;
+        opacity: 0;
+        transition: .5s opacity;
+    }
+
+    .react-toggle-track-x {
+        position: absolute;
+        width: 17px;
+        height: 17px;
+        right: 5px;
+        top: 2px;
+        bottom: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 0;
+        opacity: 1;
+        transition: .5s opacity;
+    }
+
+    input:checked + .slider >.react-toggle-track-x {
+        opacity: 0;
+    }
+    input:checked + .slider > .react-toggle-track-check {
+        opacity: 1;
+    }
+
+
 }
-
-.toggle-dark{
-  background-color: #fff;
-  border: none;
-  border-radius: 20px;
-  font-size: 12px;
-  padding: 5px;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-//   width: 60px;
-//   height: 34px;
-  width: 55px;
-  height: 25px;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #000;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  // left: 4px;
-  left: 1px;
-  // bottom: 4px;
-  background-color: var(--color-background);
-  -webkit-transition: .4s;
-  transition: .4s;
-  box-shadow: 0 0 2px 3px var(--color-accent);
-}
-
-input:checked + .slider {
-  background-color: #000;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--color-background);
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-.react-toggle-track-check {
-  position: absolute;
-  width: 17px;
-  height: 17px;
-  left: 5px;
-  top: 2px;
-  bottom: 0;
-  margin-top: auto;
-  margin-bottom: auto;
-  line-height: 0;
-  // opacity: 0;
-  // transition: opacity .25s ease;
-}
-
-.react-toggle-track-x {
-  position: absolute;
-  width: 17px;
-  height: 17px;
-  right: 5px;
-  top: 2px;
-  bottom: 0;
-  margin-top: auto;
-  margin-bottom: auto;
-  line-height: 0;
-}
-
-
-
-
-
 
 
 .post-list-item {
@@ -496,4 +482,8 @@ ul li {
 
 li {
   margin-bottom: calc(1.75rem / 2);
+}
+
+main {
+    margin-top: 60px;
 }

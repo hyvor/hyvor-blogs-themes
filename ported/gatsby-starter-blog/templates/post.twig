@@ -1,0 +1,52 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+    <div class="header-wrapper">
+        {% include '_header.twig' %}
+
+        </div>   
+             <main>
+                <article class="blog-post" itemscope="" itemtype="http://schema.org/Article">
+                    <header>
+                        <h1 itemprop="headline">{{ _post.title }}</h1>
+                        <p>{{ post.published_at | date('F j, Y') }}</p>
+                    </header>
+
+
+                     {% if _blog.languages | length > 1 %}
+                    <div class="translations">
+                        <p>
+                            <span>
+                                <span>Translated by readers into: </span>
+                                    {% for lang in _blog.languages %}
+                                        <a href="{{ lang.code | language_variant_url }}"
+                                            class="{% if lang.code == _lang.code %}active{% endif %}">
+                                            {{ lang.name }}
+                                                {% if _lang.code == lang.code %}
+                                                <span class="bull">&bull;</span>
+                                                {% endif %}
+                                        </a>
+                                    {% endfor %}
+                            </span>
+                        </p>
+                    </div>
+                    {% endif %}
+
+
+                    <section itemprop="articleBody">
+                        {{ _post.content | raw }}
+                    </section>
+                    <hr>
+                    <div class="bio">
+                        <p>{{ 'byAuthor' | lang(authorName=_author.name) }}
+                            {# <!-- --> #}
+                            {{ 'blogDescription' | lang(blogDescription=_blog.description) }}
+                            {# <!-- --> <!-- --> #}
+                            <a href={{ _blog.social.twitter }}>{{ 'followUs' | lang}}</a>
+                        </p>
+                    </div>
+                </article>
+
+             </main>
+
+{% endblock %}

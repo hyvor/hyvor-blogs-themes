@@ -27,6 +27,6 @@ colors:
     background: "#282C35"
 
 font:
-  font_weight_bold: "700"
-  font_weight_black: "900"
-  font_size_root: "16px"
+  family_sans:
+  family_serif:
+  size: 16
