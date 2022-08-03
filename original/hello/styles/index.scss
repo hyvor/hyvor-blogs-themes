@@ -8,6 +8,10 @@
 @import 'author.scss';
 @import 'mobile.scss';
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--font-family);
     font-size: var(--font-size);
