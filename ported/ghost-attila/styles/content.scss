@@ -220,7 +220,6 @@
     pre {
         position: relative;
         margin: 0 0 4rem;
-        padding: 1em;
         overflow: hidden;
         font-family: monospace, sans-serif;
         white-space: pre;
@@ -229,27 +228,13 @@
         box-sizing: border-box;
     }
 
-    pre .lines {
-        position: absolute;
-        width: 2.66667em;
-        height: 100%;
-        left: 0;
-        top: 0;
-        padding: 1.33334em 0;
-        border-right: 1px solid var(--color-background-contrast);
-        color: var(--color-content-secondary);
-        font-size: 0.75em;
-        line-height: 2em;
-        text-align: right;
-        box-sizing: border-box;
-        background: var(--color-background-secondary);
-        user-select: none;
-        -webkit-user-select: none;
-    }
-
-    pre .lines .line {
+    pre .line {
         display: block;
         padding-right: 0.33334em;
+    }
+
+    pre .line-number {
+        padding: 0 6px;
     }
 
     pre code,
@@ -257,8 +242,7 @@
         display: block;
         position: static;
         top: auto;
-        margin: -1.33334em -1.33334em -1.33334em 1.33334em;
-        padding: 1.33334em;
+        padding: 1.33334em 0;
         overflow-x: auto;
         font-size: 0.75em;
         line-height: 2em;
@@ -323,7 +307,6 @@
         display: block;
         max-width: 100%;
         height: auto;
-        margin: 0 0 4rem;
     }
 
 
@@ -332,31 +315,112 @@
 
 // cards
 .post-content {
-    figure figcaption {
-        position: relative;
-        color: var(--color-content-secondary);
-        max-width: $inner;
-        margin: auto;
-        font-size: 0.75em;
-        line-height: 2em;
-        padding: 2rem 0;
+    figure {
+        margin: 0 0 4rem;
+        figcaption {
+            position: relative;
+            color: var(--color-content-secondary);
+            max-width: $inner;
+            margin: auto;
+            font-size: 0.75em;
+            line-height: 2em;
+            padding: 2rem 0;
 
-        &:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 8rem;
-            height: 1px;
-            background: var(--color-background-contrast);
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 8rem;
+                height: 1px;
+                background: var(--color-background-contrast);
+            }
+
+            a {
+                box-shadow: inset 0 -1px 0 var(--color-background-contrast);
+
+                &:focus,
+                &:hover {
+                    box-shadow: inset 0 -2px 0 var(--color-background-contrast);
+                }
+            }
         }
+    }
 
-        a {
-            box-shadow: inset 0 -1px 0 var(--color-background-contrast);
+    aside {
+        padding: 3rem;
+        padding-right: 6rem;
+        margin: 0 0 4rem;
+        position: relative;
+        span {
+            position: absolute;
+            right: 3rem;
+            font-size: 3rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
 
-            &:focus,
-            &:hover {
-                box-shadow: inset 0 -2px 0 var(--color-background-contrast);
+    a.bookmark {
+        width: 100%;
+        margin: 0 0 4rem;
+        display: flex;
+        text-decoration: none;
+        min-height: 8em;
+        background: var(--color-background-secondary);
+        border: 1px solid var(--color-background-contrast);
+        box-shadow: none !important;
+        overflow: hidden;
+        .bookmark-details {
+            text-rendering: optimizeLegibility;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            align-items: flex-start;
+            justify-content: start;
+            padding: 1.5em;
+            color: var(--color-content-secondary);
+            .bookmark-title {
+                color: var(--color-content-main);
+                font-size: 0.75em;
+                line-height: 1.66667em;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+            }
+            .bookmark-description {
+                display: -webkit-box;
+                font-size: 0.75em;
+                line-height: 1.66667em;
+                font-weight: 400;
+                margin-top: 0.33334em;
+                max-height: 3.33334em;
+                overflow-y: hidden;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            .bookmark-domain {
+                text-rendering: optimizeLegibility;
+                display: flex;
+                align-items: center;
+                font-size: 0.75em;
+                line-height: 1.66667em;
+                color: var(--color-content-main);
+                font-weight: 400;
+                margin-top: 1em;
+                flex-wrap: wrap;
+            }
+        }
+        .bookmark-thumbnail {
+            position: relative;
+            min-width: 33%;
+            max-height: 100%;
+        }
+        
+        @media screen and (max-width: $breakpoint-medium) {
+            flex-direction: column-reverse;
+            .bookmark-thumbnail {
+                width: 100%;
+                min-height: 160px;
             }
         }
     }
