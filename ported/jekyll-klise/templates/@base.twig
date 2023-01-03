@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ _lang.code }}">
+
+	<head>
+
+		{{ _head | template }}
+
+		<script src="{{ 'script.js' | asset_url }}"></script>
+
+	</head>
+
+	<body data-theme="{{ site.mode }}" class="notransition">
+
+		{% include '_header.twig'  with {'navs': _blog.nav_header} %}
+
+		<div class="wrapper">
+			<main aria-label="Content">
+				{%- block body -%}
+			{%- endblock -%}
+		</main>
+		{% include '_footer.twig' %}
+
+		{{ _foot | template }}
+	</div>
+</body></html>

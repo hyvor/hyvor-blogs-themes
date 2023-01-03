@@ -1,0 +1,19 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+	<header class="header">
+		<h1 class="header-title center" itemprop="headline">{{ 'tags' | lang }}.</h1>
+	</header>
+
+	<main role="main" class="page-content">
+		<section class="page-data archive-tags">
+			<a class="tag-item" href="#{{ _tag.name }}">{{ _tag.name }}</a>
+		</section>
+		<h2 id="{{ _tag.url }}">{{ _tag.name | upper }}</h2>
+
+		{%  include '_loop.twig' %}
+		{%  include '_pagination.twig' %}
+	</main>
+
+{% endblock %}

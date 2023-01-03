@@ -1,0 +1,42 @@
+.mode-light:root {
+    --color-text-base-color: #434648;
+    --color-text-link-blue: #003fff;
+    --color-text-link-blue-active: #0036c7;
+
+    --color-black: #0d122b;
+    --color-light: #ececec;
+    --color-smoke: #d2c7c7;
+    --color-gray: #6b7886;
+    --color-white: #fff;
+}
+
+.mode-dark:root {
+    --color-text-base-color: #c7bebe;
+    --color-text-link-blue: #ff5277;
+    --color-text-link-blue-active: #ff2957;
+
+    --color-black: #131418;
+    --color-white: #eaeaea;
+    --color-light: #1b1d25;
+    --color-smoke: #4a4d56;
+    --color-gray: #767f87;
+}
+
+.mode-preference-dark {
+    .menu a#mode {
+        .mode-sunny {
+            display: block;
+        }
+        .mode-moon {
+            display: none;
+        }
+    }
+}
+
+.mode-preference-light {
+    .menu a#mode {
+        .mode-moon {
+            display: block;
+        }
+    }
+}

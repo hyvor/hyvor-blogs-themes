@@ -1,0 +1,12 @@
+{% if (_author.picture_url or _author.bio) %}
+	<div class="author">
+		{% if _author.picture_url %}
+			<img class="author-avatar" src="{{ _author.picture_url }}" alt="{{ _author.name }}"/>
+		{% endif %}
+
+		<h2 class="author-name">{{ _author.name }}</h2>
+		{% if _author.bio %}
+			<span class="author-bio">{{ _author.bio }}</span>
+		{% endif %}
+	</div>
+{% endif %}
