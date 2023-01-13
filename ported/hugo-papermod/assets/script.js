@@ -91,3 +91,27 @@ function initSearch() {
 }
 document.addEventListener('flashload:navigationEnded', initSearch);
 document.addEventListener('DOMContentLoaded', initSearch);
+
+// Tags
+function renderTags() {
+    let allTags = document.querySelector('.terms-tags');
+    let data;
+    if(allTags){
+        data = _hb.dataApi('v0', 'tags', {
+            keys: "name, url",
+            limit: 250,
+        }, (response) => {
+            let tagsdata = response.data;
+            let outputtags = '';
+            tagsdata.forEach((tag) => {
+                outputtags +=
+                    `<li>
+                    <a href="${tag.url}">${tag.name}</a>
+                    </li>`
+            });
+            allTags.innerHTML = outputtags;
+        });
+    }
+}
+document.addEventListener('flashload:navigationEnded', renderTags);
+document.addEventListener('DOMContentLoaded', renderTags);
