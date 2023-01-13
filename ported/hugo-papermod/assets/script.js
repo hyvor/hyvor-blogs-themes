@@ -30,3 +30,34 @@ window.onscroll = () => {
         toplink.style.opacity = "0";
     }
 };
+
+// Archive
+function renderArchivePosts() {
+    let archivePosts = document.querySelector('.archive-posts');
+    let data;
+    if(archivePosts){
+        data = _hb.dataApi('v0', 'posts', {
+            keys: "title, url, published_at, authors",
+            limit: 250,
+        }, (response) => {
+            let postsdata = response.data;
+            let outputcontent = '';
+            postsdata.forEach((post) => {
+                const postauthors = post.authors;
+                postauthors.forEach(author => authorname = author.name );
+                const options = {year: 'numeric', month: 'short', day: 'numeric'};
+                publishedDate = new Intl.DateTimeFormat('en-US', options).format(new Date(post.published_at*1000));
+        
+                outputcontent +=
+                    `<div class="archive-entry">
+                        <h3 class="archive-entry-title">${post.title}</h3>
+                        <div class="archive-meta"><span title="${publishedDate}">${publishedDate}</span>&nbsp;·&nbsp;${authorname}</div>
+                        <a class="entry-link" aria-label="post link to ${post.title}" href="${post.url}"></a>
+                    </div>`
+            });
+            archivePosts.innerHTML = outputcontent;
+        });
+    }
+}
+document.addEventListener('flashload:navigationEnded', renderArchivePosts);
+document.addEventListener('DOMContentLoaded', renderArchivePosts);
