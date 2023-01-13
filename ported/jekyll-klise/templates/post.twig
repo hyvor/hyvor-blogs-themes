@@ -10,7 +10,7 @@
 						<div class="tags">
 							<span itemprop="keywords">
 								{% for tag in _post.tags %}
-									<a class="tag" href="{{ tag.url }}">{{ tag.name }}</a>,
+									<a class="tag" href="{{ tag.url }}">{{ tag.name }}</a>
 								{% endfor %}
 							</span>
 						</div>
@@ -22,9 +22,12 @@
 							{{ post.published_at | date('M d, Y') }}
 						</time>
 						{% for author in _post.authors %}
-							<span itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-								<span itemprop="name">{{ author.name }}</span>
-							</span>
+
+							<a href="{{ author.url }}" class="author-avatar">
+								<span itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+									<span itemprop="name">{{ author.name }}</span>
+								</span>
+							</a>
 							{% if not loop.last %}
 								,
 							{% endif %}
@@ -38,11 +41,25 @@
 						<span hidden itemprop="image">{{ _post.image }}</span>
 						<span hidden itemprop="mainEntityOfPage">{{ _post.excerpt }}</span>
 					</div>
+
+					{% if _post.featured_image_url %}
+						<div class="post-cover cover">
+							<img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}"/>
+						</div>
+					{% endif %}
 				</header>
 
 				<div class="page-content" itemprop="articleBody">
 					{{ _post.content | raw }}
 				</div>
+
+				<section class="post-comments">
+					{{ _comments | template }}
+				</section>
+
+				<section class="post-subscribe">
+					{{ _newsletter | template }}
+				</section>
 			</article>
 
 			{% if _post.comments %}

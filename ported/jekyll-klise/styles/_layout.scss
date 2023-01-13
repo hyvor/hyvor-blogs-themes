@@ -337,8 +337,36 @@
 // Footer
 .footer {
     margin-top: 8em;
-    margin-bottom: 2em;
     text-align: center;
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    justify-content: center;
+
+    ul {
+        display: flex;
+        gap: 10px;
+        margin: 0;
+
+        li {
+            &::before {
+                display: none;
+            }
+
+            &:hover {
+                a {
+                    opacity: 1;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--text_content_secondary);
+                opacity: 0.8;
+                transition: all 0.3s;
+            }
+        }
+    }
 
     @include media-query($on-mobile) {
         margin-top: 3em;
@@ -348,18 +376,6 @@
         opacity: 0.8;
         font-weight: $bold-weight;
         font-size: $small-font-size;
-    }
-    a.footer_item {
-        color: var(--color-black);
-        opacity: 0.8;
-        text-decoration: none;
-
-        &:not(:last-child) {
-            margin-right: 10px;
-            &:hover {
-                opacity: 1;
-            }
-        }
     }
 
     .footer_copyright {
@@ -435,6 +451,50 @@
     text-align: center;
     li {
         text-align: left;
+    }
+}
+
+.archive {
+    &.archive-author {
+        display: flex;
+        gap: 30px;
+        border-bottom: 1px solid var(--color-light);
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        margin-top: 80px;
+
+        .archive-avatar {
+            border-radius: 8rem;
+            overflow: hidden;
+            width: 8rem;
+            height: 8rem;
+        }
+
+        > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    .archive-title {
+        font-size: 32px;
+        line-height: 1;
+    }
+
+    .archive-count {
+        position: relative;
+        margin-left: 35px;
+
+        &:after {
+            content: "";
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            width: 24px;
+            height: 2px;
+            background: var(--color-light);
+        }
     }
 }
 
