@@ -61,3 +61,33 @@ function renderArchivePosts() {
 }
 document.addEventListener('flashload:navigationEnded', renderArchivePosts);
 document.addEventListener('DOMContentLoaded', renderArchivePosts);
+
+// Search
+function initSearch() {
+    let searchInput = document.querySelector('#searchInput');
+    let searchResult = document.querySelector('#searchResults');
+    let searchXhr;
+    searchInput.addEventListener('keyup', (e) => {
+        if (e.target.value.trim() === "") {
+            searchResult.innerHTML = '';
+        }
+        searchXhr && searchXhr.abort();
+        searchXhr = _hb.dataApi('v0', 'posts/search', {
+            search: e.target.value,
+            keys: "title, url"
+        }, (response) => {
+            let posts = response.data;
+            let output = '';
+            posts.forEach((post) => {
+                output +=
+                    `<li class="post-entry">
+					<header class="entry-header">${post.title}&nbsp;»</header>
+					<a href="${post.url}" aria-label="${post.title}"></a>
+				    </li>`
+            })
+            searchResult.innerHTML = output;
+        })
+    });
+}
+document.addEventListener('flashload:navigationEnded', initSearch);
+document.addEventListener('DOMContentLoaded', initSearch);
