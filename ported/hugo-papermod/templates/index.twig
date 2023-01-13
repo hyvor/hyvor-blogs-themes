@@ -1,0 +1,36 @@
+{% extends "@base.twig" %}
+
+{% block body %}
+
+{% import "_macro.twig" as macro %}
+
+<main class="main"> 
+
+    <article class="first-entry home-info">
+
+        <header class="entry-header">
+            <h1>{{ _blog.name }}</h1>
+        </header>
+
+        <div class="entry-content">
+            <p>{{ _blog.description }}</p>
+        </div>
+
+        <footer class="entry-footer">
+            <div class="social-icons">
+                {% include '_social.twig' with {social: _blog.social} %}
+                {% if _config.settings.footer.feed_icon %}
+                {{ macro.social_icon("feed" | lang, _blog.url ~ "/feed", 'rss-solid') }}
+                {% endif %}
+            </div>
+        </footer>
+
+    </article>
+
+    {% include "_loop.twig" %}
+
+    {% include "_pagination.twig" %}
+
+</main>
+
+{% endblock %}

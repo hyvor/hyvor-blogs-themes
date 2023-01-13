@@ -1,0 +1,10 @@
+<footer class="page-footer">
+    <nav class="pagination">
+        {% if _pagination.page_prev %}
+        <a class="prev" href="{{ _pagination.page_prev | pagination_page_url }}">«&nbsp;{{ 'prev' | lang }}&nbsp;</a>
+        {% endif %}
+        {% if _pagination.page_next %}
+        <a class="next" href="{{ _pagination.page_next | pagination_page_url }}">{{ 'next' | lang }}&nbsp;&nbsp;»</a>
+        {% endif %}
+    </nav>
+</footer>
