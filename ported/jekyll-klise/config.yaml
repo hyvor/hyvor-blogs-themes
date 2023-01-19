@@ -4,33 +4,24 @@ POSTS_PER_PAGINATION: 5
 
 colors:
     light:
-        background_body: "#ffffff"
-        background_box: "#ffffff"
-        background_contrast: "#ececec"
-        text_content: "#434648"
-        text_content_secondary: "#0d122b"
-        tag:
-            bg: "#f3f3f3"
-            fg: "#000000"
+        text_base_color: "#434648"
+        text_link_blue: "#003fff"
+        text_link_blue_active: "#0036c7"
+        black: "#0d122b"
+        light: "#ececec"
+        smoke: "#d2c7c7"
+        gray: "#6b7886"
+        white: "#fff"
+
     dark:
-        background_body: "#0a0a0a"
-        background_box: "#222222"
-        background_contrast: "#666666"
-        text_content: "#ffffff"
-        text_content_secondary: "#ffffff"
-        tag:
-            bg: "#424242"
-            fg: "#ffffff"
-
-font:
-    size: 16
-    family: "Roboto, sans-serif"
-
-line_height: 24
-
-box:
-    radius: 20
-    shadow: "0 0 30px rgba(0,0,0,0.05)"
+        text_base_color: "#c7bebe"
+        text_link_blue: "#ff5277"
+        text_link_blue_active: "#ff2957"
+        black: "#131418"
+        white: "#eaeaea"
+        light: "#1b1d25"
+        smoke: "#4a4d56"
+        gray: "#767f87"
 
 settings:
     loop:

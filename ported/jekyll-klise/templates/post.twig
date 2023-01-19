@@ -17,30 +17,51 @@
 					{% endif %}
 
 					<h1 class="header-title" itemprop="headline">{{ _post.title }}</h1>
-					<div class="post-meta">
-						<time itemprop="datePublished" datetime="{{ post.published_at | date('d-m-Y') }}">
-							{{ post.published_at | date('M d, Y') }}
-						</time>
-						{% for author in _post.authors %}
 
-							<a href="{{ author.url }}" class="author-avatar">
-								<span itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-									<span itemprop="name">{{ author.name }}</span>
+					{% if not _post.is_page %}
+						<div class="post-meta">
+							<time itemprop="datePublished" datetime="{{ post.published_at | date('d-m-Y') }}">
+								{{ post.published_at | date('M d, Y') }}
+							</time>
+
+							{% for author in _post.authors %}
+								<a href="{{ author.url }}" class="author-avatar">
+									<span itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+										<span itemprop="name">{{ author.name }}</span>
+									</span>
+								</a>
+								{% if not loop.last %}
+									,
+								{% endif %}
+							{% endfor %}
+
+							<span itemprop="author" itemscope itemtype="https://schema.org/Person">
+								<span itemprop="name">{{ site.author.name }}</span>
+							</span>
+
+							<span hidden itemprop="publisher" itemtype="Person">{{ site.author.name }}</span>
+							<span hidden itemprop="image">{{ _post.image }}</span>
+							<span hidden itemprop="mainEntityOfPage">{{ _post.excerpt }}</span>
+						</div>
+					{% endif %}
+
+					{% if _post.variants | length > 1 %}
+						<div class="translated-wrapper">
+							<p>
+								<span>
+									<span>{{ 'translated' | lang }}:
+									</span>
+									{% for variant in _post.variants %}
+										<a href="{{ variant.url }}">
+											{{ variant.language.name }}
+										</a>
+										{% if not loop.last %}&nbsp;&bull;&nbsp;
+										{% endif %}
+									{% endfor %}
 								</span>
-							</a>
-							{% if not loop.last %}
-								,
-							{% endif %}
-						{% endfor %}
-
-						<span itemprop="author" itemscope itemtype="https://schema.org/Person">
-							<span itemprop="name">{{ site.author.name }}</span>
-						</span>
-
-						<span hidden itemprop="publisher" itemtype="Person">{{ site.author.name }}</span>
-						<span hidden itemprop="image">{{ _post.image }}</span>
-						<span hidden itemprop="mainEntityOfPage">{{ _post.excerpt }}</span>
-					</div>
+							</p>
+						</div>
+					{% endif %}
 
 					{% if _post.featured_image_url %}
 						<div class="post-cover cover">
@@ -53,18 +74,20 @@
 					{{ _post.content | raw }}
 				</div>
 
-				<section class="post-comments">
-					{{ _comments | template }}
-				</section>
+				{% if not _post.is_page %}
+					{% if _comments %}
+						<section class="post-comments">
+							<h4>Comments</h4>
+							{{ _comments | template }}
+						</section>
+					{% endif %}
 
-				<section class="post-subscribe">
-					{{ _newsletter | template }}
-				</section>
+					<section class="post-subscribe">
+						<h4>Newsletter</h4>
+						{{ _newsletter | template }}
+					</section>
+				{% endif %}
 			</article>
-
-			{% if _post.comments %}
-				{% include comments.html %}
-			{% endif %}
 		</main>
 
 		<aside class="post-nav">

@@ -26,6 +26,11 @@
             padding-left: 20px;
         }
 
+        .logo img {
+            height: 30px;
+            object-fit: contain;
+        }
+
         .lang-label {
             cursor: pointer;
         }

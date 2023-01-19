@@ -2,6 +2,45 @@
 <html lang="{{ _lang.code }}">
 
 	<head>
+		<style>
+			.mode-light:root {
+				--color-text-base-color: {{_config.colors.light.text_base_color}}
+				;
+				--color-text-link-blue: {{_config.colors.light.text_link_blue}}
+				;
+				--color-text-link-blue-active: {{_config.colors.light.text_link_blue_active}}
+				;
+				--color-black: {{_config.colors.light.black}}
+				;
+				--color-light: {{_config.colors.light.light}}
+				;
+				--color-smoke: {{_config.colors.light.smoke}}
+				;
+				--color-gray: {{_config.colors.light.gray}}
+				;
+				--color-white: {{_config.colors.light.white}}
+				;
+			}
+
+			.mode-dark:root {
+				--color-text-base-color: {{_config.colors.dark.text_base_color}}
+				;
+				--color-text-link-blue: {{_config.colors.dark.text_link_blue}}
+				;
+				--color-text-link-blue-active: {{_config.colors.dark.text_link_blue_active}}
+				;
+				--color-black: {{_config.colors.dark.black}}
+				;
+				--color-light: {{_config.colors.dark.light}}
+				;
+				--color-smoke: {{_config.colors.dark.smoke}}
+				;
+				--color-gray: {{_config.colors.dark.gray}}
+				;
+				--color-white: {{_config.colors.dark.white}}
+				;
+			}
+		</style>
 
 		{{ _head | template }}
 
