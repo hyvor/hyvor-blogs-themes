@@ -237,34 +237,37 @@
         white-space: pre;
         box-sizing: border-box;
         padding: 0;
-    }
 
-    pre .line {
-        display: block;
-        padding-right: 0.33334em;
-    }
+        .line {
+            display: block;
+            padding-right: 0.33334em;
+        }
 
-    pre .line-number {
-        padding: 0 6px;
-    }
+        .line-number {
+            padding: 0 6px;
+            margin-right: 1rem;
+            position: absolute;
+            left: 1rem;
+        }
 
-    pre code,
-    pre tt {
-        display: block;
-        position: static;
-        top: auto;
-        padding: 1.33334em 0;
-        overflow-x: auto;
-        font-size: 0.75em;
-        line-height: 2em;
-        white-space: pre;
-        background: transparent;
-        border: none;
-        vertical-align: inherit;
-    }
+        code,
+        tt {
+            display: block;
+            position: static;
+            top: auto;
+            padding: 1.33334em 0;
+            overflow-x: auto;
+            font-size: 0.75em;
+            line-height: 2em;
+            white-space: pre;
+            background: transparent;
+            border: none;
+            vertical-align: inherit;
+        }
 
-    pre code.language-text {
-        margin-left: -1.33334em;
+        code.language-text {
+            margin-left: -1.33334em;
+        }
     }
 
     a {

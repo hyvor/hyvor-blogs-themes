@@ -2,63 +2,52 @@
 <html lang="{{ _lang.code }}">
 
 	<head>
-		<style>
-			.mode-light:root {
-				--color-text-base-color: {{_config.colors.light.text_base_color}}
-				;
-				--color-text-link-blue: {{_config.colors.light.text_link_blue}}
-				;
-				--color-text-link-blue-active: {{_config.colors.light.text_link_blue_active}}
-				;
-				--color-black: {{_config.colors.light.black}}
-				;
-				--color-light: {{_config.colors.light.light}}
-				;
-				--color-smoke: {{_config.colors.light.smoke}}
-				;
-				--color-gray: {{_config.colors.light.gray}}
-				;
-				--color-white: {{_config.colors.light.white}}
-				;
-			}
+	<style>
+		:root {
+			--fontSize-root: {{ _config.fonts.base_font_size }}px;
+			--fontFamily-mono: {{ _config.fonts.family_mono | raw }};
+			--fontFamily-sans: {{ _config.fonts.family_sans | raw }};
+		}
 
-			.mode-dark:root {
-				--color-text-base-color: {{_config.colors.dark.text_base_color}}
-				;
-				--color-text-link-blue: {{_config.colors.dark.text_link_blue}}
-				;
-				--color-text-link-blue-active: {{_config.colors.dark.text_link_blue_active}}
-				;
-				--color-black: {{_config.colors.dark.black}}
-				;
-				--color-light: {{_config.colors.dark.light}}
-				;
-				--color-smoke: {{_config.colors.dark.smoke}}
-				;
-				--color-gray: {{_config.colors.dark.gray}}
-				;
-				--color-white: {{_config.colors.dark.white}}
-				;
-			}
-		</style>
+		.mode-light:root {
+			--color-text-base-color: {{ _config.colors.light.text_base_color }};
+			--color-text-link-blue: {{ _config.colors.light.text_link_blue }};
+			--color-text-link-blue-active: {{ _config.colors.light.text_link_blue_active }};
+			--color-black: {{ _config.colors.light.black }};
+			--color-light: {{ _config.colors.light.light }};
+			--color-smoke: {{ _config.colors.light.smoke }};
+			--color-gray: {{ _config.colors.light.gray }};
+			--color-white: {{ _config.colors.light.white }};
+		}
 
-		{{ _head | template }}
+		.mode-dark:root {
+			--color-text-base-color: {{ _config.colors.dark.text_base_color }};
+			--color-text-link-blue: {{ _config.colors.dark.text_link_blue }};
+			--color-text-link-blue-active: {{ _config.colors.dark.text_link_blue_active }};
+			--color-black: {{ _config.colors.dark.black }};
+			--color-light: {{ _config.colors.dark.light }};
+			--color-smoke: {{ _config.colors.dark.smoke }};
+			--color-gray: {{ _config.colors.dark.gray }};
+			--color-white: {{ _config.colors.dark.white }};
+		}
+	</style>
 
-		<script src="{{ 'script.js' | asset_url }}"></script>
+	{{ _head | template }}
 
-	</head>
+	<script src="{{ 'script.js' | asset_url }}"></script>
 
-	<body data-theme="{{ site.mode }}" class="notransition">
+</head>
 
-		{% include '_header.twig'  with {'navs': _blog.nav_header} %}
+<body data-theme="{{ site.mode }}" class="notransition">
 
-		<div class="wrapper">
-			<main aria-label="Content">
-				{%- block body -%}
-			{%- endblock -%}
-		</main>
-		{% include '_footer.twig' %}
+	{% include '_header.twig'  with {'navs': _blog.nav_header} %}
 
-		{{ _foot | template }}
-	</div>
-</body></html>
+	<div class="wrapper">
+		<main aria-label="Content">
+			{%- block body -%}
+		{%- endblock -%}
+	</main>
+	{% include '_footer.twig' %}
+
+	{{ _foot | template }}
+</div></body></html>

@@ -23,6 +23,11 @@ colors:
         smoke: "#4a4d56"
         gray: "#767f87"
 
+fonts:
+    family_sans: "Roboto, sans-serif"
+    family_mono: "Consolas, monospace"
+    base_font_size: 16
+
 settings:
     loop:
         authors: true

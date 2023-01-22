@@ -1,9 +1,6 @@
 // Fonts preferences
-$sans-family: Roboto, sans-serif;
-$mono-family: Consolas, monospace;
-$base-font-size: 16px;
-$medium-font-size: $base-font-size * 0.938;
-$small-font-size: $base-font-size * 0.875;
+$medium-font-size: var(--fontSize-root) * 0.938;
+$small-font-size: var(--fontSize-root) * 0.875;
 $base-line-height: 1.85;
 
 // Font weight
@@ -33,5 +30,5 @@ $on-widescreen: 1152px;
 }
 
 @mixin relative-font-size($ratio) {
-    font-size: $base-font-size * $ratio;
+    font-size: var(--fontSize-root) * $ratio;
 }

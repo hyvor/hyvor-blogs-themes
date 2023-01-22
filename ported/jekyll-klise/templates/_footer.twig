@@ -1,5 +1,7 @@
 <footer class="footer">
 
+	{% include '_social.twig' with {'social': _blog.social} %}
+	
 	{% include '_nav.twig' with {'navs': _blog.nav_footer} %}
 
 	<span class="footer_item">&copy;

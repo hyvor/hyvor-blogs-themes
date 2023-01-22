@@ -7,60 +7,35 @@
 
 @font-face {
     font-family: "Ubuntu mono";
-    src: url("./assets/ubuntumono-bold-webfont.eot");
-    src: url("./assets/ubuntumono-bold-webfont.eot?#iefix") format("embedded-opentype"),
-        url("./assets/ubuntumono-bold-webfont.woff2") format("woff2"),
-        url("./assets/ubuntumono-bold-webfont.woff") format("woff"),
-        url("./assets/ubuntumono-bold-webfont.ttf") format("truetype"),
-        url("./assets/ubuntumono-bold-webfont.svg#ubuntu_monobold") format("svg");
+    src: url("./assets/ubuntumono-bold-webfont.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Ubuntu mono";
-    src: url("./assets/ubuntumono-bolditalic-webfont.eot");
-    src: url("./assets/ubuntumono-bolditalic-webfont.eot?#iefix") format("embedded-opentype"),
-        url("./assets/ubuntumono-bolditalic-webfont.woff2") format("woff2"),
-        url("./assets/ubuntumono-bolditalic-webfont.woff") format("woff"),
-        url("./assets/ubuntumono-bolditalic-webfont.ttf") format("truetype"),
-        url("./assets/ubuntumono-bolditalic-webfont.svg#ubuntu_monobold_italic") format("svg");
+    src: url("./assets/ubuntumono-bolditalic-webfont.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Ubuntu mono";
-    src: url("./assets/ubuntumono-italic-webfont.eot");
-    src: url("./assets/ubuntumono-italic-webfont.eot?#iefix") format("embedded-opentype"),
-        url("./assets/ubuntumono-italic-webfont.woff2") format("woff2"),
-        url("./assets/ubuntumono-italic-webfont.woff") format("woff"),
-        url("./assets/ubuntumono-italic-webfont.ttf") format("truetype"),
-        url("./assets/ubuntumono-italic-webfont.svg#ubuntu_monoitalic") format("svg");
+    src: url("./assets/ubuntumono-italic-webfont.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Ubuntu mono";
-    src: url("./assets/ubuntumono-regular-webfont.eot");
-    src: url("./assets/ubuntumono-regular-webfont.eot?#iefix") format("embedded-opentype"),
-        url("./assets/ubuntumono-regular-webfont.woff2") format("woff2"),
-        url("./assets/ubuntumono-regular-webfont.woff") format("woff"),
-        url("./assets/ubuntumono-regular-webfont.ttf") format("truetype"),
-        url("./assets/ubuntumono-regular-webfont.svg#ubuntu_monoregular") format("svg");
+    src: url("./assets/ubuntumono-regular-webfont.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/Roboto-BlackItalic.eot");
-    src: url("./assets/Roboto-BlackItalic.eot?#iefix") format("embedded-opentype"),
-        url("./assets/Roboto-BlackItalic.woff2") format("woff2"),
-        url("./assets/Roboto-BlackItalic.woff") format("woff"),
-        url("./assets/Roboto-BlackItalic.ttf") format("truetype"),
-        url("./assets/Roboto-BlackItalic.svg#Roboto-BlackItalic") format("svg");
+    src: url("./assets/Roboto-BlackItalic.woff2") format("woff2");
     font-weight: 900;
     font-style: italic;
     font-display: swap;
@@ -68,12 +43,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/Roboto-BoldItalic.eot");
-    src: url("./assets/Roboto-BoldItalic.eot?#iefix") format("embedded-opentype"),
-        url("./assets/Roboto-BoldItalic.woff2") format("woff2"),
-        url("./assets/Roboto-BoldItalic.woff") format("woff"),
-        url("./assets/Roboto-BoldItalic.ttf") format("truetype"),
-        url("./assets/Roboto-BoldItalic.svg#Roboto-BoldItalic") format("svg");
+    src: url("./assets/Roboto-BoldItalic.woff2") format("woff2");
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -81,12 +51,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/Roboto-Light.eot");
-    src: url("./assets/Roboto-Light.eot?#iefix") format("embedded-opentype"),
-        url("./assets/Roboto-Light.woff2") format("woff2"),
-        url("./assets/Roboto-Light.woff") format("woff"),
-        url("./assets/Roboto-Light.ttf") format("truetype"),
-        url("./assets/Roboto-Light.svg#Roboto-Light") format("svg");
+    src: url("./assets/Roboto-Light.woff2") format("woff2");
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -94,12 +59,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/Roboto-LightItalic.eot");
-    src: url("./assets/Roboto-LightItalic.eot?#iefix") format("embedded-opentype"),
-        url("./assets/Roboto-LightItalic.woff2") format("woff2"),
-        url("./assets/Roboto-LightItalic.woff") format("woff"),
-        url("./assets/Roboto-LightItalic.ttf") format("truetype"),
-        url("./assets/Roboto-LightItalic.svg#Roboto-LightItalic") format("svg");
+    src: url("./assets/Roboto-LightItalic.woff2") format("woff2");
     font-weight: 300;
     font-style: italic;
     font-display: swap;
@@ -107,12 +67,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/Roboto-Black.eot");
-    src: url("./assets/Roboto-Black.eot?#iefix") format("embedded-opentype"),
-        url("./assets/Roboto-Black.woff2") format("woff2"),
-        url("./assets/Roboto-Black.woff") format("woff"),
-        url("./assets/Roboto-Black.ttf") format("truetype"),
-        url("./assets/Roboto-Black.svg#Roboto-Black") format("svg");
+    src: url("./assets/Roboto-Black.woff2") format("woff2");
     font-weight: 900;
     font-style: normal;
     font-display: swap;
@@ -120,12 +75,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/Roboto-Bold.eot");
-    src: url("./assets/Roboto-Bold.eot?#iefix") format("embedded-opentype"),
-        url("./assets/Roboto-Bold.woff2") format("woff2"),
-        url("./assets/Roboto-Bold.woff") format("woff"),
-        url("./assets/Roboto-Bold.ttf") format("truetype"),
-        url("./assets/Roboto-Bold.svg#Roboto-Bold") format("svg");
+    src: url("./assets/Roboto-Bold.woff2") format("woff2");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -133,12 +83,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/Roboto-Italic.eot");
-    src: url("./assets/Roboto-Italic.eot?#iefix") format("embedded-opentype"),
-        url("./assets/Roboto-Italic.woff2") format("woff2"),
-        url("./assets/Roboto-Italic.woff") format("woff"),
-        url("./assets/Roboto-Italic.ttf") format("truetype"),
-        url("./assets/Roboto-Italic.svg#Roboto-Italic") format("svg");
+    src: url("./assets/Roboto-Italic.woff2") format("woff2");
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -146,12 +91,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/Roboto-Medium.eot");
-    src: url("./assets/Roboto-Medium.eot?#iefix") format("embedded-opentype"),
-        url("./assets/Roboto-Medium.woff2") format("woff2"),
-        url("./assets/Roboto-Medium.woff") format("woff"),
-        url("./assets/Roboto-Medium.ttf") format("truetype"),
-        url("./assets/Roboto-Medium.svg#Roboto-Medium") format("svg");
+    src: url("./assets/Roboto-Medium.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -159,12 +99,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/Roboto-MediumItalic.eot");
-    src: url("./assets/Roboto-MediumItalic.eot?#iefix") format("embedded-opentype"),
-        url("./assets/Roboto-MediumItalic.woff2") format("woff2"),
-        url("./assets/Roboto-MediumItalic.woff") format("woff"),
-        url("./assets/Roboto-MediumItalic.ttf") format("truetype"),
-        url("./assets/Roboto-MediumItalic.svg#Roboto-MediumItalic") format("svg");
+    src: url("./assets/Roboto-MediumItalic.woff2") format("woff2");
     font-weight: 500;
     font-style: italic;
     font-display: swap;
@@ -172,12 +107,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/Roboto-ThinItalic.eot");
-    src: url("./assets/Roboto-ThinItalic.eot?#iefix") format("embedded-opentype"),
-        url("./assets/Roboto-ThinItalic.woff2") format("woff2"),
-        url("./assets/Roboto-ThinItalic.woff") format("woff"),
-        url("./assets/Roboto-ThinItalic.ttf") format("truetype"),
-        url("./assets/Roboto-ThinItalic.svg#Roboto-ThinItalic") format("svg");
+    src: url("./assets/Roboto-ThinItalic.woff2") format("woff2");
     font-weight: 100;
     font-style: italic;
     font-display: swap;
@@ -185,12 +115,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/Roboto-Thin.eot");
-    src: url("./assets/Roboto-Thin.eot?#iefix") format("embedded-opentype"),
-        url("./assets/Roboto-Thin.woff2") format("woff2"),
-        url("./assets/Roboto-Thin.woff") format("woff"),
-        url("./assets/Roboto-Thin.ttf") format("truetype"),
-        url("./assets/Roboto-Thin.svg#Roboto-Thin") format("svg");
+    src: url("./assets/Roboto-Thin.woff2") format("woff2");
     font-weight: 100;
     font-style: normal;
     font-display: swap;
@@ -198,12 +123,7 @@
 
 @font-face {
     font-family: "Roboto";
-    src: url("./assets/Roboto-Regular.eot");
-    src: url("./assets/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
-        url("./assets/Roboto-Regular.woff2") format("woff2"),
-        url("./assets/Roboto-Regular.woff") format("woff"),
-        url("./assets/Roboto-Regular.ttf") format("truetype"),
-        url("./assets/Roboto-Regular.svg#Roboto-Regular") format("svg");
+    src: url("./assets/Roboto-Regular.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;

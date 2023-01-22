@@ -292,7 +292,7 @@
 
 // Content
 .posts-item-note {
-    font-size: $base-font-size;
+    font-size: var(--fontSize-root);
     font-weight: 700;
     margin-bottom: 5px;
     color: var(--color-black);
@@ -324,7 +324,7 @@
         margin: 0;
         border: 0;
         padding: 0;
-        font-size: $base-font-size;
+        font-size: var(--fontSize-root);
         font-weight: normal;
         letter-spacing: 0.1px;
 
@@ -345,6 +345,7 @@
     text-align: center;
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
     align-items: baseline;
     justify-content: center;
 
@@ -352,6 +353,11 @@
         display: flex;
         gap: 10px;
         margin: 0;
+
+        &.social-wrapper {
+            flex-basis: 100%;
+            justify-content: center;
+        }
 
         li {
             &::before {
@@ -439,7 +445,7 @@
         padding: 10px 10px 10px 35px;
         color: var(--color-text-base-color);
         -webkit-appearance: none;
-        font-size: $base-font-size;
+        font-size: var(--fontSize-root);
         background-color: rgba(128, 128, 128, 0.1);
         border: 1px solid rgba(128, 128, 128, 0.1);
         &::-webkit-input-placeholder {
