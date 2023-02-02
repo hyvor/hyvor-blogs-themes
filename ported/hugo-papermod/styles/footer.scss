@@ -23,6 +23,26 @@
     }
 }
 
+#footer-menu {
+    align-items: center;
+    display: flex;
+    margin: auto var(--gap);
+    justify-content: center;
+    list-style: none;
+    margin: 1rem auto;
+    word-break: keep-all;
+    overflow-x: auto;
+    white-space: nowrap;
+    li + li {
+        margin-inline-start: var(--gap);
+    }
+    a {
+        font-size: 14px;
+        display: block;
+        border-bottom: none;
+    }
+}
+
 .top-link {
     font-size: 12px;
     color: var(--secondary);

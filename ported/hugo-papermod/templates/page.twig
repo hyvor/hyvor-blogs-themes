@@ -21,6 +21,7 @@
                 {{ _post.description }}
             </div>
             <div class="post-meta">
+            {% if _post.variants | length > 1 %}
             {{ 'translations' | lang }}:
             <ul class="i18n_list">
                 <li>
@@ -32,6 +33,7 @@
                     {% endfor %}
                 </li>
             </ul>
+            {% endif %}
             </div>
         </header>
 

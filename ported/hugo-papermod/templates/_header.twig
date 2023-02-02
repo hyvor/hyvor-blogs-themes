@@ -32,14 +32,15 @@
                 {% endif %}
                 
                 {% if _route %}
+                {% if _blog.languages | length > 1 %}
                 <ul class="lang-switch"><li>|</li>
                 {% for lang in _blog.languages %}
                     <li>
                         <a href="{{ lang.code | language_variant_url }}" class="{% if lang.code == _lang.code %}active{% endif %}">{{ lang.name }}{% if _lang.code == lang.code %}{% endif %}</a>
                     </li>
                 {% endfor %}
-                
                 </ul>
+                {% endif %}
                 {% endif %}
             </div>
         </div>

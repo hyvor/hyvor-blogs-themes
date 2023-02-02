@@ -1,10 +1,6 @@
 <footer class="footer">
+    {% include '_nav-footer.twig' %}
     <span>© 2022 <a href="{{ _blog.url }}">{{ _blog.name }}</a></span>
-    <span>
-        {{ 'powered by' | lang }}
-        <a href="https://hyvor.com/" rel="noopener noreferrer" target="_blank">Hyvor</a> &amp;
-        <a href="{{ _blog.url }}" rel="noopener" target="_blank">PaperMod</a>
-    </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g" style="">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">

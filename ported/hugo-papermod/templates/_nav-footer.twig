@@ -1,0 +1,9 @@
+<ul id="footer-menu">
+    {% for nav in _blog.nav_footer %}
+    <li>
+        <a class="nav-{{ nav.name | lower | slug }}" href="{{ nav.url }}">
+            <span class="{% if _route %}{% if is_current_url(nav.url) %}active{% endif %}{% endif %}">{{ nav.name }}</span>
+        </a>
+    </li>
+    {% endfor %}
+</ul>

@@ -47,5 +47,6 @@ settings:
   post:
     authors: true
     tags: true
+    featured_image: true
   footer:
     feed_icon: true

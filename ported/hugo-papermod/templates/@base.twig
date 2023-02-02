@@ -49,26 +49,13 @@
 
     {{ _head | template }}    
 </head>
-<body class="list" id="top">
+<body class="body" id="top">
 
     {% include "_header.twig" %}
 
     {% block body %}{% endblock %}
 
     {% include "_footer.twig" %}
-    
-    <script>
-    // External links
-    function externalLinks() {
-        for (
-            let links_collection = document.getElementsByTagName("a"), link = 0; link < links_collection.length; link++) {
-            let links = links_collection[link];
-            is_external = links.getAttribute("href") && links.hostname !== location.hostname;
-            is_external && (links.classList.add('external'));
-        }
-    };
-    externalLinks();
-    </script>
 
     <script src="{{ 'script.js' | asset_url }}"></script>
 

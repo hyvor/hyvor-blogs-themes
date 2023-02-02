@@ -4,7 +4,7 @@
 }
 
 .post-title {
-    margin-bottom: 2px;
+    margin: 1rem 0;
     font-size: 40px;
 }
 
@@ -25,11 +25,19 @@
     display: inline-flex;
     list-style: none;
     margin: auto 3px;
+}
+
+.post-meta .i18n_list li a {
     box-shadow: 0 1px 0 var(--secondary);
 }
 
 .breadcrumbs a {
     font-size: 16px;
+}
+
+.featured-image {
+    border-radius: 4px;
+    margin: 1rem 0;
 }
 
 .post-content {
@@ -176,21 +184,30 @@
     }
     code {
         margin: auto 4px;
-        padding: 4px 6px;
         font-size: 0.78em;
         line-height: 1.5;
-        background: var(--code-bg);
         border-radius: 2px;
     }
-    pre code {
-        display: block;
-        margin: auto 0;
-        padding: 10px;
-        color: rgb(213, 213, 214);
-        background: var(--hljs-bg) !important;
+    pre {
         border-radius: var(--radius);
-        overflow-x: auto;
-        word-break: break-all;
+        background: var(--code-bg);
+        font-size: 1.412em;
+        padding: 1rem 0;
+        code {
+            display: block;
+            margin: auto 0;
+            color: rgb(213, 213, 214);
+            border-radius: var(--radius);
+            overflow-x: auto;
+            word-break: break-all;
+            .line {
+                padding: 1px 1rem;
+            }
+            .line.highlight {
+                border-radius: 0;
+                margin: 0;
+            }
+        }
     }
     blockquote {
         margin: 20px 0;
@@ -225,6 +242,55 @@
             color: var(--secondary);
             font-size: 14px;
             font-weight: normal;
+        }
+    }
+    aside {
+        display: flex;
+        border-radius: 4px;
+        padding: 1em;
+    }
+    aside span {
+        margin-right: 0.5rem;
+    }
+    a.bookmark {
+        background-color: #f1f1ef;
+        box-shadow: none;
+        border-radius: 4px;
+        color: #000000;
+        display: flex;
+        overflow: hidden;
+        .bookmark-details {
+            flex: 2;
+            padding: 1rem 1.2rem;
+            .bookmark-title {
+                font-weight: 600;
+            }
+            .bookmark-description {
+                font-size: 0.9rem;
+                margin: 6px 0;
+            }
+            .bookmark-domain {
+                font-size: 0.8rem;
+                font-weight: 600;
+            }
+        }
+        .bookmark-thumbnail {
+            flex: 1;
+            img {
+                border-radius: 0;
+                height: 100%;
+                margin: 0;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post-content {
+        a.bookmark {
+            flex-direction: column-reverse;
         }
     }
 }
