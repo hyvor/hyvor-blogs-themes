@@ -29,10 +29,6 @@ fonts:
     base_font_size: 16
 
 settings:
-    loop:
-        authors: true
-        tags: true
-        featured_image: true
     post:
         authors: true
         tags: true

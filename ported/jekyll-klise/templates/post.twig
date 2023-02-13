@@ -6,14 +6,16 @@
 		<main class="page-content" aria-label="Content">
 			<article itemscope itemtype="https://schema.org/BlogPosting">
 				<header class="header">
-					{% if _post.tags %}
-						<div class="tags">
-							<span itemprop="keywords">
-								{% for tag in _post.tags %}
-									<a class="tag" href="{{ tag.url }}">{{ tag.name }}</a>
-								{% endfor %}
-							</span>
-						</div>
+					{% if (_config.settings.post.tags) %}
+						{% if _post.tags %}
+							<div class="tags">
+								<span itemprop="keywords">
+									{% for tag in _post.tags %}
+										<a class="tag" href="{{ tag.url }}">{{ tag.name }}</a>
+									{% endfor %}
+								</span>
+							</div>
+						{% endif %}
 					{% endif %}
 
 					<h1 class="header-title" itemprop="headline">{{ _post.title }}</h1>
@@ -24,20 +26,23 @@
 								{{ post.published_at | date('M d, Y') }}
 							</time>
 
-							{% for author in _post.authors %}
-								<a href="{{ author.url }}" class="author-avatar">
-									<span itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-										<span itemprop="name">{{ author.name }}</span>
-									</span>
-								</a>
-								{% if not loop.last %}
-									,
-								{% endif %}
-							{% endfor %}
 
-							<span itemprop="author" itemscope itemtype="https://schema.org/Person">
-								<span itemprop="name">{{ site.author.name }}</span>
-							</span>
+							{% if (_config.settings.post.authors) %}
+								{% for author in _post.authors %}
+									<a href="{{ author.url }}" class="author-avatar">
+										<span itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+											<span itemprop="name">{{ author.name }}</span>
+										</span>
+									</a>
+									{% if not loop.last %}
+										,
+									{% endif %}
+								{% endfor %}
+
+								<span itemprop="author" itemscope itemtype="https://schema.org/Person">
+									<span itemprop="name">{{ site.author.name }}</span>
+								</span>
+							{% endif %}
 
 							<span hidden itemprop="publisher" itemtype="Person">{{ site.author.name }}</span>
 							<span hidden itemprop="image">{{ _post.image }}</span>
@@ -63,10 +68,12 @@
 						</div>
 					{% endif %}
 
-					{% if _post.featured_image_url %}
-						<div class="post-cover cover">
-							<img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}"/>
-						</div>
+					{% if (_config.settings.post.featured_image) %}
+						{% if _post.featured_image_url %}
+							<div class="post-cover cover">
+								<img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}"/>
+							</div>
+						{% endif %}
 					{% endif %}
 				</header>
 

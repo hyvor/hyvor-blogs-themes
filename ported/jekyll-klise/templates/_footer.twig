@@ -1,7 +1,9 @@
 <footer class="footer">
 
-	{% include '_social.twig' with {'social': _blog.social} %}
-	
+	{% if (_config.settings.footer.feed_icon) %}
+		{% include '_social.twig' with {'social': _blog.social} %}
+	{% endif %}
+
 	{% include '_nav.twig' with {'navs': _blog.nav_footer} %}
 
 	<span class="footer_item">&copy;
