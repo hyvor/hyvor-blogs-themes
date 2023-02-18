@@ -1,0 +1,73 @@
+{# DEPENDING ON social variable #}
+<ul class="social-wrapper"/>
+    {% if social.twitter %}
+        <li class="social">
+                <a
+                target="_blank"
+                href="{{ social.twitter }}"
+                title="{{ 'twitter' | lang }}">
+                <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'twitter', 18) }}</i>
+            </a>
+        </li>
+    {% endif %}
+    {% if social.facebook %}
+        <li class="social">
+            <a
+                target="_blank"
+                href="{{ social.facebook }}"
+                title="{{ 'facebook' | lang }}">
+                <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'facebook', 18) }}</i>
+            </a>
+        </li>
+    {% endif %}
+    {% if social.linkedin %}
+        <li class="social">
+            <a
+                target="_blank"
+                href="{{ social.linkedin }}"
+                title="{{ 'linkedin' | lang }}">
+                <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'linkedin', 18) }}</i>
+            </a>
+        </li>
+    {% endif %}
+    {% if social.youtube %}
+        <li class="social">
+            <a
+                target="_blank"
+                href="{{ social.youtube }}"
+                title="{{ 'youtube' | lang }}">
+                <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'youtube', 18) }}</i>
+            </a>
+        </li>
+    {% endif %}
+    {% if social.tiktok %}
+        <li class="social">
+            <a
+                    target="_blank"
+                    href="{{ social.tiktok }}"
+                    title="{{ 'tiktok' | lang }}">
+                <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'tiktok', 18) }}</i>
+            </a>
+        </li>
+    {% endif %}
+    {% if social.instagram %}
+        <li class="social">
+            <a
+                target="_blank"
+                href="{{ social.instagram }}"
+                title="{{ 'instagram' | lang }}">
+                <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'instagram', 18) }}</i>
+            </a>
+        </li>
+    {% endif %}
+    {% if social.github %}
+        <li class="social">
+            <a
+                target="_blank"
+                href="{{ social.github }}"
+                title="{{ 'github' | lang }}">
+                <i class="icon" aria-hidden="true">{{ icon('fontawesome', 'github', 18) }}</i>
+            </a>
+        </li>
+    {% endif %}
+</ul>

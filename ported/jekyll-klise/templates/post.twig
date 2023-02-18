@@ -1,0 +1,139 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+	<div class="wrapper post" role="main">
+		<main class="page-content" aria-label="Content">
+			<article itemscope itemtype="https://schema.org/BlogPosting">
+				<header class="header">
+					{% if (_config.settings.post.tags) %}
+						{% if _post.tags %}
+							<div class="tags">
+								<span itemprop="keywords">
+									{% for tag in _post.tags %}
+										<a class="tag" href="{{ tag.url }}">{{ tag.name }}</a>
+									{% endfor %}
+								</span>
+							</div>
+						{% endif %}
+					{% endif %}
+
+					<h1 class="header-title" itemprop="headline">{{ _post.title }}</h1>
+
+					{% if not _post.is_page %}
+						<div class="post-meta">
+							<time itemprop="datePublished" datetime="{{ post.published_at | date('d-m-Y') }}">
+								{{ post.published_at | date('M d, Y') }}
+							</time>
+
+
+							{% if (_config.settings.post.authors) %}
+								{% for author in _post.authors %}
+									<a href="{{ author.url }}" class="author-avatar">
+										<span itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+											<span itemprop="name">{{ author.name }}</span>
+										</span>
+									</a>
+									{% if not loop.last %}
+										,
+									{% endif %}
+								{% endfor %}
+
+								<span itemprop="author" itemscope itemtype="https://schema.org/Person">
+									<span itemprop="name">{{ site.author.name }}</span>
+								</span>
+							{% endif %}
+
+							<span hidden itemprop="publisher" itemtype="Person">{{ site.author.name }}</span>
+							<span hidden itemprop="image">{{ _post.image }}</span>
+							<span hidden itemprop="mainEntityOfPage">{{ _post.excerpt }}</span>
+						</div>
+					{% endif %}
+
+					{% if _post.variants | length > 1 %}
+						<div class="translated-wrapper">
+							<p>
+								<span>
+									<span>{{ 'translated' | lang }}:
+									</span>
+									{% for variant in _post.variants %}
+										<a href="{{ variant.url }}">
+											{{ variant.language.name }}
+										</a>
+										{% if not loop.last %}&nbsp;&bull;&nbsp;
+										{% endif %}
+									{% endfor %}
+								</span>
+							</p>
+						</div>
+					{% endif %}
+
+					{% if (_config.settings.post.featured_image) %}
+						{% if _post.featured_image_url %}
+							<div class="post-cover cover">
+								<img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}"/>
+							</div>
+						{% endif %}
+					{% endif %}
+				</header>
+
+				<div class="page-content" itemprop="articleBody">
+					{{ _post.content | raw }}
+				</div>
+
+				{% if not _post.is_page %}
+					{% if _comments %}
+						<section class="post-comments">
+							<h4>Comments</h4>
+							{{ _comments | template }}
+						</section>
+					{% endif %}
+
+					<section class="post-subscribe">
+						<h4>Newsletter</h4>
+						{{ _newsletter | template }}
+					</section>
+				{% endif %}
+			</article>
+		</main>
+
+		<aside class="post-nav">
+
+			{% set keys = "url,title" %}
+
+			{% set next_post = data(
+                        endpoint="posts",
+                        filter="published_at>#{_post.published_at}",
+                        sort="published_at ASC",
+                        limit=1,
+                        keys=keys
+                    ).data.0 %}
+
+			{% set prev_post = data(
+                        endpoint="posts",
+                        filter="published_at<#{_post.published_at}",
+                        sort="published_at DESC",
+                        limit=1,
+                        keys=keys
+                    ).data.0 %}
+
+
+			{% if prev_post %}
+				<a class="post-nav-item post-nav-prev" href="{{ prev_post.url }}">
+					<div class="nav-arrow">Previous</div>
+					<span class="post-title">{{ prev_post.title }}</span>
+				</a>
+			{% endif %}
+
+			{% if next_post %}
+				<a class="post-nav-item post-nav-next" href="{{ next_post.url }}">
+					<div class="nav-arrow">Next</div>
+					<span class="post-title">{{ next_post.title }}</span>
+				</a>
+			{% endif %}
+
+			<div class="clear"></div>
+		</aside>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+	<div class="author">
+		{% if _blog.cover_url %}
+			<img class="author-avatar" src="{{ _blog.cover_url }}" alt="{{ _blog.name }}"/>
+		{% endif %}
+
+		<h2 class="author-name">{{ _blog.name }}</h2>
+
+		{% if _blog.description %}
+			<p class="author-bio">{{ _blog.description }}</P>
+		{% endif %}
+	</div>
+
+	<div id="index" class="container">
+		<main class="content" role="main">
+			<h3 class="posts-item-note" aria-label="Recent Posts">{{ 'recent_posts' | lang }}</h3>
+
+			{% include '_loop.twig' with {'_posts': _posts} %}
+		</main>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+// Fonts preferences
+$medium-font-size: var(--fontSize-root) * 0.938;
+$small-font-size: var(--fontSize-root) * 0.875;
+$base-line-height: 1.85;
+
+// Font weight
+// $light-weight: 300; // uncomment if necessary
+$normal-weight: 400;
+$bold-weight: 700;
+// $black-weight: 900; // uncomment if necessary
+
+// Width of the content area
+$wide-size: 890px;
+$narrow-size: 720px;
+
+// Padding unit
+$spacing-full: 30px;
+$spacing-half: $spacing-full / 2;
+
+// State of devices
+$on-mobile: 768px;
+$on-tablet: 769px;
+$on-desktop: 1024px;
+$on-widescreen: 1152px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@mixin relative-font-size($ratio) {
+    font-size: var(--fontSize-root) * $ratio;
+}

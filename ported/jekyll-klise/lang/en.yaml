@@ -1,0 +1,47 @@
+# common
+footer: Footer
+theme_system: System Theme
+theme_dark: Dark Theme
+theme_light: Light Theme
+
+# search
+search: Find some articles here
+topics: Topics
+close: Close
+
+# index
+by: By
+in: in
+newer_posts: Newer Posts
+older_posts: Older Posts
+page_of_pages: Page {page} of {pages}
+
+# post
+archive: Archive
+article: Article
+share: Share
+topic: Topic
+newsletter_title: Get the latest posts delivered right to your inbox.
+next_post: Next Post
+prev_post: Previous Post
+translated: This post is also available in
+
+# tag
+posts_num_zero: No Posts
+posts_num_one: 1 Post
+posts_num_multi: "* Posts"
+
+# author
+author: Author
+website: Website
+recent_posts: Recent Posts
+
+# footer
+ack: ack
+resume: resume
+rss: rss
+
+# tags
+tags: Tags
+error_phrase: 😕 Hmm... Seems you lost from my journey.
+back_home: back home

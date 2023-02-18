@@ -1,0 +1,19 @@
+{% for post in _posts %}
+	{% set primary_tag = post.tags[0] %}
+	{% set currDate = post.published_at | date('Y') %}
+	{% if oldDate != currDate %}
+		<h2>
+			{{currDate}}
+		</h2>
+	{% endif %}
+	<article class="post-item">
+		<time class="post-item-date" datetime="{{ post.published_at | date('d-m-Y') }}">
+			{{ post.published_at | date('M d, Y') }}
+		</time>
+		<h4 class="post-item-title">
+			<a href="{{ post.url }}">{{ post.title | escape }}</a>
+		</h4>
+	</article>
+	{% set oldDate = post.published_at | date('Y') %}
+
+{% endfor %}

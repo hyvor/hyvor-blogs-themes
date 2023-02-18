@@ -1,0 +1,18 @@
+.mode-preference-dark {
+    .menu a#mode {
+        .mode-sunny {
+            display: block;
+        }
+        .mode-moon {
+            display: none;
+        }
+    }
+}
+
+.mode-preference-light {
+    .menu a#mode {
+        .mode-moon {
+            display: block;
+        }
+    }
+}
