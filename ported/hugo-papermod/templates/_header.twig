@@ -1,0 +1,50 @@
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+
+        {% if _blog.logo_url %}
+        <a href="{{ _blog.url }}" accesskey="h" title="{{ _blog.name }} (Alt + H)"><img class="site-logo" src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}" /></a>
+        {% else %}
+        <a href="{{ _blog.url }}" accesskey="h" title="{{ _blog.name }} (Alt + H)">{{ _blog.name }}</a>
+        {% endif %}
+            
+            <div class="logo-switches mode-toggler">
+
+                {% if (_blog.color_modes == 'both') %}
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" class="toggle-dark" onclick="_hb.changeColorMode('dark')">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" class="toggle-light" onclick="_hb.changeColorMode('light')">
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                {% endif %}
+                
+                {% if _route %}
+                {% if _blog.languages | length > 1 %}
+                <ul class="lang-switch"><li>|</li>
+                {% for lang in _blog.languages %}
+                    <li>
+                        <a href="{{ lang.code | language_variant_url }}" class="{% if lang.code == _lang.code %}active{% endif %}">{{ lang.name }}{% if _lang.code == lang.code %}{% endif %}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+        {% include '_nav.twig' %}
+        
+    </nav>
+</header>

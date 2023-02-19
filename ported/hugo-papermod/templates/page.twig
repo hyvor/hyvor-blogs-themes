@@ -1,0 +1,48 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+<main class="main">
+
+    <article class="post-single">
+
+        <header class="post-header">
+            <div class="breadcrumbs">
+                <a href="{{ _blog.url }}">{{ 'home' | lang }}</a>&nbsp;»&nbsp;
+                {% if (_config.settings.post.tags) %}
+                {% for tag in _post.tags %}
+                <a href="{{ tag.url }}">{{ tag.name }}</a>&nbsp;»&nbsp;
+                {% endfor %}
+                {% endif %}
+                {{ _post.title }}
+            </div>
+            <h1 class="post-title">{{ _post.title }}</h1>
+            <div class="post-description">
+                {{ _post.description }}
+            </div>
+            <div class="post-meta">
+            {% if _post.variants | length > 1 %}
+            {{ 'translations' | lang }}:
+            <ul class="i18n_list">
+                <li>
+                    {% for variant in _post.variants %}
+                        <a href="{{ variant.url }}">
+                            {{ variant.language.name }}
+                        </a>
+                        {% if not loop.last %}&nbsp;&bull;&nbsp;{% endif %}
+                    {% endfor %}
+                </li>
+            </ul>
+            {% endif %}
+            </div>
+        </header>
+
+        <div class="post-content">
+            {{ _post.content | raw }}
+        </div>
+
+    </article>
+
+</main> 
+
+{% endblock %}

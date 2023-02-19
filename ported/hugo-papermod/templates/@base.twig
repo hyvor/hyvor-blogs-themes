@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="{{ _lang.code }}">
+<head>
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+    </style>
+</noscript>
+
+<style>
+:root {
+    --font-family: {{ _config.font.family }};
+    --font-size: {{ _config.font.size }};
+    --gap: {{ _config.gap.gap }};
+    --content-gap: {{ _config.gap.content_gap }};
+    --nav-width: {{ _config.height_width.nav_width }};
+    --main-width: {{ _config.height_width.main_width }};
+    --header-height: {{ _config.height_width.header_height }};
+    --footer-height: {{ _config.height_width.footer_height }};
+    --radius: {{ _config.box.radius }};
+}
+.mode-light:root {
+    --theme: {{ _config.colors.light.theme }};
+    --entry: {{ _config.colors.light.entry }};
+    --primary: {{ _config.colors.light.primary }};
+    --secondary: {{ _config.colors.light.secondary }};
+    --tertiary: {{ _config.colors.light.tertiary }};
+    --content: {{ _config.colors.light.content }};
+    --hljs-bg: {{ _config.colors.light.hljs_bg }};
+    --code-bg: {{ _config.colors.light.code_bg }};
+    --border: {{ _config.colors.light.border }};
+}
+.mode-dark:root {
+    --theme: {{ _config.colors.dark.theme }};
+    --entry: {{ _config.colors.dark.entry }};
+    --primary: {{ _config.colors.dark.primary }};
+    --secondary: {{ _config.colors.dark.secondary }};
+    --tertiary: {{ _config.colors.dark.tertiary }};
+    --content: {{ _config.colors.dark.content }};
+    --hljs-bg: {{ _config.colors.dark.hljs_bg }};
+    --code-bg: {{ _config.colors.dark.code_bg }};
+    --border: {{ _config.colors.dark.border }};
+}
+
+</style>
+
+    {{ _head | template }}    
+</head>
+<body class="body" id="top">
+
+    {% include "_header.twig" %}
+
+    {% block body %}{% endblock %}
+
+    {% include "_footer.twig" %}
+
+    <script src="{{ 'script.js' | asset_url }}"></script>
+
+    {{ _foot | template }}
+</body>

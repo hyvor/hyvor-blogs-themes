@@ -1,0 +1,120 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: calc(var(--nav-width) + var(--gap) * 2);
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    line-height: var(--header-height);
+    a {
+        display: block;
+    }
+}
+
+.logo {
+    display: flex;
+    margin: auto var(--gap);
+    flex-wrap: inherit;
+    a {
+        font-size: 24px;
+        font-weight: 700;
+        img {
+            display: inline;
+            vertical-align: middle;
+            pointer-events: none;
+            transform: translate(0, -10%);
+            border-radius: 6px;
+            margin-inline-end: 8px;
+        }
+        svg {
+            display: inline;
+            vertical-align: middle;
+            pointer-events: none;
+            transform: translate(0, -10%);
+            border-radius: 6px;
+            margin-inline-end: 8px;
+        }
+    }
+    .site-logo {
+        max-height: 30px;
+        width: auto;
+    }
+}
+
+button#theme-toggle {
+    font-size: 26px;
+    margin: auto 4px;
+}
+
+.mode-dark {
+    .toggle-dark {
+        display:none;
+    }
+}
+
+.mode-light {
+    .toggle-light {
+        display:none;
+    }
+}
+
+#menu {
+    display: flex;
+    margin: auto var(--gap);
+    list-style: none;
+    word-break: keep-all;
+    overflow-x: auto;
+    white-space: nowrap;
+    li + li {
+        margin-inline-start: var(--gap);
+    }
+    a {
+        font-size: 16px;
+        display: block;
+    }
+    .active {
+        font-weight: 500;
+        border-bottom: 2px solid currentColor;
+    }
+    .icon-link {
+        display: none;
+        overflow: hidden;
+    }
+    .external {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        .icon-link {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.lang-switch {
+    display: flex;
+    flex-wrap: inherit;
+    ul {
+        display: inline-flex;
+        margin: auto 4px;
+    }
+    li {
+        display: inline-flex;
+        margin: auto 4px;
+    }
+    a {
+        margin: auto 3px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.logo-switches {
+    display: inline-flex;
+    margin: auto 4px;
+    flex-wrap: inherit;
+}
+
+:focus {
+    outline: 0;
+} 

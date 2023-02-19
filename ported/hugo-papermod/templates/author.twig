@@ -1,0 +1,19 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+<main class="main"> 
+
+    <header class="page-header"><div class="breadcrumbs"><a href="{{ _blog.url }}">{{ 'home' | lang }}</a></div>
+    <h1>
+        {{ _author.name }}
+    </h1>
+    </header>
+
+    {% include '_loop.twig' %}
+
+    {% include "_pagination.twig" %}
+
+</main>
+
+{% endblock %}

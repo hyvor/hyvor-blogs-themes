@@ -1,0 +1,18 @@
+.terms-tags {
+    li {
+        display: inline-block;
+        margin: 10px;
+        font-weight: 500;
+        &:active {
+            background: var(--tertiary);
+            transform: scale(0.96);
+        }
+        a {
+            display: block;
+            padding: 3px 10px;
+            background: var(--tertiary);
+            border-radius: 6px;
+            transition: transform 0.1s;
+        }
+    }
+} 

@@ -1,0 +1,17 @@
+{% set _meta = _meta|merge({'title': 'Tags', 'description': 'Tags', 'link': '/tags'}) %}
+
+{% extends '@base.twig' %}
+
+{% block body %}
+
+<main class="main tags-main"> 
+
+    <header class="page-header">
+    <h1>Tags</h1>
+    </header>
+
+    <ul class="terms-tags"></ul>
+
+</main>
+
+{% endblock %}

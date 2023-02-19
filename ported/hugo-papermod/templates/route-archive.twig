@@ -1,0 +1,17 @@
+{% set _meta = _meta|merge({'title': 'Archive', 'description': 'Archive', 'link': '/archive'}) %}
+
+{% extends '@base.twig' %}
+
+{% block body %}
+
+<main class="main archive-main"> 
+
+    <header class="page-header">
+    <h1>Archive</h1>
+    </header>
+
+    <div class="archive-posts"></div>
+
+</main>
+
+{% endblock %}

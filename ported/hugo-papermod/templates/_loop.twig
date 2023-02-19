@@ -1,0 +1,24 @@
+{% for post in _posts %}
+<article class="post-entry"> 
+
+    <header class="entry-header">
+        <h2>{{ post.title }}</h2>
+    </header>
+
+    <div class="entry-content">
+        <p>{{ post.description }}</p>
+    </div>
+
+    <footer class="entry-footer">
+        <span title="{{ post.published_at | format_date('long', locale=_lang.code)}}">{{ post.published_at | format_date('long', locale=_lang.code)}}</span>&nbsp;·&nbsp;
+        {% if (_config.settings.loop.authors) %}
+            {% for author in post.authors %}
+                {{ author.name }}
+            {% endfor %}
+        {% endif %}
+    </footer>
+
+    <a class="entry-link" aria-label="post link to Installation | Update" href="{{ post.url }}"></a>
+
+</article>
+{% endfor %}
