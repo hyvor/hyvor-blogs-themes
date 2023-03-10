@@ -164,16 +164,23 @@
             padding: 1rem 0;
             border-radius: var(--box-radius);
             font-size: 0.85rem;
+            position: relative;
             .line {
                 padding: 1px 1rem;
             }
             .line-number {
                 margin-right: 1rem;
+                position: absolute;
+                left: 1rem;
             }
             code {
                 display: block;
                 width: max-content;
                 min-width: 100%;
+                tab-size: 4;
+            }
+            &.has-line-numbers .line {
+                padding-left: 2.4rem;
             }
         }
 
