@@ -1,0 +1,23 @@
+<header id="gh-head" class="gh-head gh-outer">
+    <div class="gh-head-inner gh-inner">
+        <div class="gh-head-brand">
+            <div class="gh-head-brand-wrapper">
+                <h1 class="gh-head-logo">
+                <a href="{{ _blog.url }}">{{ _blog.name }}</a>
+                </h1>
+            </div>
+            <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </button>
+            <button class="gh-burger"></button>
+        </div>
+
+        {% include '_nav.twig' %}
+
+        <div class="gh-head-actions">
+            <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </button>
+        </div>
+    </div>
+</header>

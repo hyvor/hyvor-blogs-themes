@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ _lang.code }}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --hyvor-accent-color: #{{ _config.colors.accent_color }}
+        }
+    </style>
+    {{ _head | template }}    
+</head>
+<body class="home-template is-head-stacked has-serif-body is-dropdown-loaded" data-new-gr-c-s-check-loaded="14.1098.0" data-gr-ext-installed="" cz-shortcut-listen="true" data-new-gr-c-s-loaded="14.1098.0">
+
+    <div class="gh-site">
+
+    {% include "_header.twig" %}
+
+    {% block body %}{% endblock %}
+
+    {% include "_footer.twig" %}
+
+    </div>
+
+    <script src="{{ 'script.js' | asset_url }}"></script>
+
+    {{ _foot | template }}
+</body>

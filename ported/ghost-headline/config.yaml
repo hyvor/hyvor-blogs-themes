@@ -1,0 +1,40 @@
+THEME_NAME: Headline
+THEME_VERSION: 0.1.0
+POSTS_PER_PAGINATION: 6
+
+colors: 
+  accent_color: f51919
+
+home:
+  tag_1:
+    show: true
+    slug: autem
+  tag_2:
+    show: true
+    slug: deserunt
+  tag_3:
+    show: true
+    slug: enim
+  tag_4:
+    show: true
+    slug: laboriosam
+  tag_5:
+    show: true
+    slug: nulla
+  tag_6: 
+    show: true
+    slug: welcome
+
+footer: 
+  copy_year: 2023
+
+settings:
+  loop:
+    authors: true
+    featured_image: true
+  post:
+    authors: true
+    tags: true
+    featured_image: true
+  footer:
+    feed_icon: true
