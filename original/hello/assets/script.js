@@ -82,6 +82,7 @@ function initSearch() {
         if (e.target.value.trim() === "") {
             searchResult.innerHTML = '';
             popular.style.display = 'block'
+            return;
         }
 
         lastXhr && lastXhr.abort();

@@ -89,8 +89,6 @@ main {
     }
 
     .authors {
-        margin-right: 10px;
-
         .author {
             margin-right: 10px;
             text-decoration: none;
@@ -102,15 +100,6 @@ main {
         }
     }
 
-}
-
-.time-author-wrapper {
-    display: flex;
-    align-items: center;
-
-    time {
-        margin-left: 20px;
-    }
 }
 
 .translated-wrapper {

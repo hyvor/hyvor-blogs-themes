@@ -9,6 +9,7 @@ of: of
 feed: RSS Feed
 
 # post
+published: Published
 newsletter: Newsletter
 comments: Comments
 translated: This post is also available in
@@ -21,4 +22,4 @@ website: Website
 
 # search 
 search: Search
-topics: Topics
+tags: Tags

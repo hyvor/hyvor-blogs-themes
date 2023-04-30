@@ -21,8 +21,8 @@
         position: absolute;
         right: 0;
         top: 0;
-        width: 4rem;
-        height: 4rem;
+        width: 2.5rem;
+        height: 2.5rem;
         margin: 2rem;
         background: transparent;
         border: 0;
@@ -72,15 +72,17 @@
 
 .search {
     position: relative;
-    top: calc(12rem + 4vw);
+    top: 50px;
     max-height: 80vh;
-    width: 100%;
-    max-width: $inner;
+    width: 650px;
+    max-width: 100%;
     margin: auto;
     background: var(--color-background-box);
-    border-radius: 4px;
-    box-shadow: 0 8px 24px -2px rgba(0,0,0,0.4);
+    border-radius: var(--box-radius);
+    box-shadow: var(--box-shadow);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
     @media only screen and (max-width: 960px) {
         top: 6rem;
     }
@@ -88,7 +90,6 @@
 
 .search-form {
     position: relative;
-    padding: 1rem 0;
     border-bottom: 1px solid var(--color-background-contrast);
 
     @media only screen and (max-width: 640px) {
@@ -96,11 +97,10 @@
     }
 
     .search-field {
-        font-size: 2em;
+        font-size: 1.2rem;
         width: 100%;
-        height: 5rem;
         margin: 0;
-        padding: 0 2rem;
+        padding: 1.2rem 2rem;
         border: 0;
         background: transparent;
         box-sizing: border-box;
@@ -126,12 +126,13 @@
 
         &.search-button-clear {
             display: block;
-            width: 2rem;
-            height: 2rem;
-            margin: 2.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 1.3rem;
             padding: 0;
             border-radius: 4rem;
             background: var(--color-background-contrast);
+
 
             &:focus,
             &:hover {
@@ -167,9 +168,9 @@
 }
 
 .search-result {
-    overflow-y: scroll;
-    max-height: 50vh;
-    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    overflow: auto;
+    max-height: 80vh;
 
     @media only screen and (max-width: 640px) {
         max-height: 75vh;
@@ -184,7 +185,7 @@
 
         .search-result-row-link {
             display: block;
-            padding: 2rem;
+            padding: 1rem 2rem;
             color: inherit;
             text-decoration: none;
             transition: all ease-out 0.05s;
@@ -195,17 +196,17 @@
             }
 
             .search-result-row-title {
-                font-size: 2em;
-                line-height: 1.25em;
+                font-size: 1.2em;
+                line-height: 1.2em;
                 font-weight: 700;
                 text-indent: -1px;
                 color: var(--color-accent);
             }
 
             .search-result-row-excerpt {
-                margin: 0.5rem 0 0;
-                font-size: 1.25em;
-                line-height: 2em;
+                margin: 0.4rem 0 0;
+                font-size: 1em;
+                line-height: 1.5em;
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
@@ -222,17 +223,13 @@
 
 .popular-wrapper {
     .popular-title {
-        font-size: 2em;
+        font-size: 1.2em;
         line-height: 1.25em;
         font-weight: 700;
         text-indent: -1px;
         color: var(--color-accent);
         margin-top: 0;
-        margin-bottom: 30px;
-
-        @media only screen and (max-width: 640px) {
-            margin-bottom: 10px;
-        }
+        margin-bottom: 10px;
     }
 
     .popular-tags {
