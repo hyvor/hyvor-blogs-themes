@@ -10,8 +10,9 @@
     </div>
 
     <footer class="entry-footer">
-        <span title="{{ post.published_at | format_date('long', locale=_lang.code)}}">{{ post.published_at | format_date('long', locale=_lang.code)}}</span>&nbsp;·&nbsp;
+        <span title="{{ post.published_at | format_date('long', locale=_lang.code)}}">{{ post.published_at | format_date('long', locale=_lang.code)}}</span>
         {% if (_config.settings.loop.authors) %}
+            &nbsp;·&nbsp;
             {% for author in post.authors %}
                 {{ author.name }}
             {% endfor %}
