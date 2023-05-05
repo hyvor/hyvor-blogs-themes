@@ -1,0 +1,96 @@
+colors:  
+  $name: Colors
+  light:
+    $name: Light Scheme
+    text_base_color:
+      $name: Text Color
+      $type: color
+    text_link_blue:
+      $name: Link Color
+      $type: color
+    text_link_blue_active:
+      $name: Link Active Color
+      $type: color
+    black:
+      $name: Black
+      $type: color
+    light:
+      $name: Light
+      $type: color
+    smoke:
+      $name: Smoke
+      $type: color
+    gray:
+      $name: Gray
+      $type: color
+    white:
+      $name: White
+      $type: color
+      
+  dark:
+    $name: Dark Scheme
+    text_base_color:
+      $name: Text Color
+      $type: color
+    text_link_blue:
+      $name: Link Color
+      $type: color
+    text_link_blue_active:
+      $name: Link Active Color
+      $type: color
+    black:
+      $name: Black
+      $type: color
+    light:
+      $name: Light
+      $type: color
+    smoke:
+      $name: Smoke
+      $type: color
+    gray:
+      $name: Gray
+      $type: color
+    white:
+      $name: White
+      $type: color
+      
+fonts:
+  $name: Fonts
+  
+  family_sans:
+    $name: Font Family Sans
+    
+  family_mono:
+    $name: Font Family Mono
+    
+  base_font_size:
+    $name: Base Font Size
+    $description: in px
+    $type: number
+      
+settings:
+  $name: Settings
+
+  post:
+    $name: Post Page
+
+    authors:
+      $name: Authors
+      $type: checkbox
+        
+    tags:
+      $name: Tags
+      $type: checkbox
+      
+    featured_image:
+      $name: Featured Image
+      $type: checkbox
+      
+  footer:
+    $name: Footer
+    
+    feed_icon:
+      $name: Feed Icon
+      $type: checkbox
+    
+    
