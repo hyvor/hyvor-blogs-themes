@@ -1,0 +1,114 @@
+colors:
+  $name: Colors
+  
+  light:
+    $name: Light Scheme
+    
+    theme:
+      $name: Theme
+      $type: color
+    entry:
+      $name: Entry
+      $type: color
+    primary:
+      $name: Primary
+      $type: color
+    secondary:
+      $name: Secondary
+      $type: color
+    tertiary:
+      $name: Tertiary
+      $type: color
+    content:
+      $name: Content
+      $type: color
+    hljs_bg:
+      $name: HighlightJS Background
+    code_bg:
+      $name: Code Background
+    border:
+      $name: Border
+    
+  dark:
+    $name: Dark Scheme
+    
+    theme:
+      $name: Theme
+      $type: color
+    entry:
+      $name: Entry
+      $type: color
+    primary:
+      $name: Primary
+      $type: color
+    secondary:
+      $name: Secondary
+      $type: color
+    tertiary:
+      $name: Tertiary
+      $type: color
+    content:
+      $name: Content
+      $type: color
+    hljs_bg:
+      $name: HighlightJS Background
+    code_bg:
+      $name: Code Background
+    border:
+      $name: Border
+      
+gap:
+  $name: Gap
+  gap:
+    $name: Gap
+  content_gap:
+    $name: Content Gap
+    
+height_width:
+  nav_width: 
+    $name: Navigation Width
+  main_width:
+    $name: Main Width
+  header_height:
+    $name: Header Height
+  footer_height:
+    $name: Footer Height
+    
+box:
+  $name: Box
+  radius:
+    $name: Box Radius
+  
+font:
+  $name: Font
+  family:
+    $name: Font Family
+  size:
+    $name: Font Size
+    
+settings:
+  $name: Settings
+  loop:
+    $name: Loop
+    $description: Posts list on index pages
+    authors:
+      $name: Authors
+      $type: checkbox
+    
+  post:
+    $name: Post Page
+    authors:
+      $name: Authors
+      $type: checkbox
+    tags:
+      $name: Tags
+      $type: checkbox
+    featured_image:
+      $name: Featured Image
+      $type: checkbox
+      
+  footer:
+    $name: Footer
+    feed_icon:
+      $name: Feed Icon
+      $type: checkbox
