@@ -1,0 +1,15 @@
+# generate workflow
+
+name: Publish
+
+on:
+  workflow_dispatch:
+
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Send HTTP Request
+      run: |
+        curl -X POST \
+          -h "X-Key: ${{ secrets.PUBLISH_KEY }}" \
+        https://blogs.hyvor.com/special/themes/ping
