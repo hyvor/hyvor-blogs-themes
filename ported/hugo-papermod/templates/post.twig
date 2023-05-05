@@ -20,7 +20,7 @@
             <div class="post-description">
                 {{ _post.description }}
             </div>
-            <div class="post-meta"><span title="{{ post.published_at | format_date('long', locale=_lang.code)}}">{{ post.published_at | format_date('long', locale=_lang.code)}}</span>&nbsp;·&nbsp;
+            <div class="post-meta"><span title="{{ _post.published_at | format_date('long', locale=_lang.code)}}">{{ _post.published_at | format_date('long', locale=_lang.code)}}</span>&nbsp;·&nbsp;
             {% if (_config.settings.loop.authors) %}
                 {% for author in _post.authors %}
                     <a href="{{ author.url }}">{{ author.name }}</a>
