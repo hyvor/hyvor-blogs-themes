@@ -10,10 +10,23 @@
 .post-box {
 
     .featured-image {
+        margin-top: 1rem;
         display: block;
         width: 100%;
         border-radius: var(--box-radius);
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .time-author-wrapper {
+        display: flex;
+        align-items: center;
+        font-size: .85rem;
+        .time-wrap {
+            margin-left: 10px;
+        }
+        time {
+
+        }
     }
 
     h1 {
@@ -164,16 +177,23 @@
             padding: 1rem 0;
             border-radius: var(--box-radius);
             font-size: 0.85rem;
+            position: relative;
             .line {
                 padding: 1px 1rem;
             }
             .line-number {
                 margin-right: 1rem;
+                position: absolute;
+                left: 1rem;
             }
             code {
                 display: block;
                 width: max-content;
                 min-width: 100%;
+                tab-size: 4;
+            }
+            &.has-line-numbers .line {
+                padding-left: 2.4rem;
             }
         }
 

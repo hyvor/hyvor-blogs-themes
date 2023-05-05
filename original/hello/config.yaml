@@ -1,5 +1,5 @@
 THEME_NAME: hello
-THEME_VERSION: 1.0.1
+THEME_VERSION: 1.0.2
 POSTS_PER_PAGINATION: 10
 
 colors:
@@ -34,6 +34,7 @@ box:
   shadow: "0 0 30px rgba(0,0,0,0.05)"
 
 settings:
+  search: true
   loop:
     authors: true
     tags: true
@@ -42,5 +43,6 @@ settings:
     authors: true
     tags: true
     featured_image: true
+    variants: true
   footer:
     feed_icon: true

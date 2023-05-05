@@ -9,11 +9,17 @@ of: of
 feed: RSS Feed
 
 # post
+published: Published
 newsletter: Newsletter
 comments: Comments
+translated: This post is also available in
 
 # author/tag
 posts_num_zero: No Posts
 posts_num_one: 1 Post
 posts_num_multi: "* Posts"
 website: Website
+
+# search 
+search: Search
+tags: Tags
