@@ -65,6 +65,7 @@ gap:
     $name: Content Gap
     
 height_width:
+  $name: Height & Width
   nav_width: 
     $name: Navigation Width
   main_width:
