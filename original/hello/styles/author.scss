@@ -1,8 +1,7 @@
-
 .author-page {
-
     .author-image {
-        img, .avatar-placeholder {
+        img,
+        .avatar-placeholder {
             width: 120px;
             height: 120px;
             border-radius: 50%;
@@ -21,10 +20,10 @@
             margin: 10px 4px;
         }
     }
-
 }
 
-.author-page, .tag-page {
+.author-page,
+.tag-page {
     .posts-count {
         margin: 10px 0;
         font-size: 18px;

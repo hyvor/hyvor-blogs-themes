@@ -40,7 +40,7 @@
 
         &:before,
         &:after {
-            content: '';
+            content: "";
             position: absolute;
             left: 20%;
             top: 50%;
@@ -79,7 +79,7 @@
     margin: auto;
     background: var(--color-background-box);
     border-radius: 4px;
-    box-shadow: 0 8px 24px -2px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 24px -2px rgba(0, 0, 0, 0.4);
     overflow: hidden;
     @media only screen and (max-width: 960px) {
         top: 6rem;
@@ -109,59 +109,50 @@
     }
 
     .search-button {
-        display: none;
-        position: relative;
         font-size: 1.6em;
         position: absolute;
         right: 0;
         top: 0;
-        height: 4rem;
-        margin: 1.5rem;
-        padding: 0 1.5rem;
         border: 0;
-        border-radius: 4px;
         color: white;
-        background: var(--color-accent);
         transition: background ease-out 0.2s;
+        z-index: 20;
+        display: none;
+        width: 2rem;
+        height: 2rem;
+        margin: 2.5rem;
+        padding: 0;
+        border-radius: 4rem;
+        background: var(--color-background-contrast);
 
-        &.search-button-clear {
-            display: block;
-            width: 2rem;
-            height: 2rem;
-            margin: 2.5rem;
-            padding: 0;
-            border-radius: 4rem;
-            background: var(--color-background-contrast);
+        &:focus,
+        &:hover {
+            background: var(--color-text-content);
+        }
 
-            &:focus,
-            &:hover {
-                background: var(--color-text-content);
-            }
+        i {
+            display: none;
+        }
 
-            i {
-                display: none;
-            }
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            left: 20%;
+            top: 50%;
+            width: 60%;
+            height: 2px;
+            margin-top: -1px;
+            border-radius: 1px;
+            background: var(--color-background-box);
+        }
 
-            &:before,
-            &:after {
-                content: '';
-                position: absolute;
-                left: 20%;
-                top: 50%;
-                width: 60%;
-                height: 2px;
-                margin-top: -1px;
-                border-radius: 1px;
-                background: var(--color-background-box);
-            }
+        &:before {
+            transform: rotate(-45deg);
+        }
 
-            &:before {
-                transform: rotate(-45deg);
-            }
-
-            &:after {
-                transform: rotate(45deg);
-            }
+        &:after {
+            transform: rotate(45deg);
         }
     }
 }
@@ -213,11 +204,20 @@
                 text-overflow: ellipsis;
             }
         }
+
+        .tags-wrapper {
+            margin-top: 10px;
+        }
     }
 }
 
 .popular-wrapper {
     padding: 2rem;
+}
+
+.no-results {
+    padding: 2rem;
+    display: none;
 }
 
 .popular-wrapper {
