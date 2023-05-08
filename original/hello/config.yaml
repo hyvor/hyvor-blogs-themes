@@ -34,6 +34,7 @@ box:
   shadow: "0 0 30px rgba(0,0,0,0.05)"
 
 settings:
+  search: true
   loop:
     authors: true
     tags: true
@@ -42,5 +43,6 @@ settings:
     authors: true
     tags: true
     featured_image: true
+    variants: true
   footer:
     feed_icon: true

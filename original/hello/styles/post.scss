@@ -10,10 +10,23 @@
 .post-box {
 
     .featured-image {
+        margin-top: 1rem;
         display: block;
         width: 100%;
         border-radius: var(--box-radius);
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .time-author-wrapper {
+        display: flex;
+        align-items: center;
+        font-size: .85rem;
+        .time-wrap {
+            margin-left: 10px;
+        }
+        time {
+
+        }
     }
 
     h1 {

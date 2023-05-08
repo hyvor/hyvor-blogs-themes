@@ -8,6 +8,7 @@ of: of
 feed: RSS Feed
 
 # post
+published: Published
 newsletter: Newsletter
 comments: Comments
 translated: This post is also available in
@@ -22,3 +23,4 @@ website: Website
 search: Search
 topics: Topics
 no_results: No Results
+tags: Tags

@@ -25,12 +25,16 @@
 					</div>
 				{% endif %}
 				|
-				<time itemprop="datePublished" datetime="{{ post.published_at | date('d-m-Y') }}">
-					{{ post.published_at | date('M d, Y') }}
-				</time>
+
+				<span class="time-wrap">
+					{{ 'published' | lang }}
+					<time itemprop="datePublished" datetime="{{ _post.published_at | date('d-m-Y') }}">
+						{{ _post.published_at | date('M d, Y') }}
+					</time>
+				</span>
 			</div>
 
-			{% if _post.variants | length > 1 %}
+			{% if _config.settings.post.variants and _post.variants | length > 0 %}
 				<div class="translated-wrapper">
 					<p>
 						<span>

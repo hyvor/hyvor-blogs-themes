@@ -80,8 +80,9 @@ function initSearch() {
 
     searchInput.addEventListener("keyup", function (e) {
         if (e.target.value.trim() === "") {
-            searchResult.innerHTML = "";
-            popular.style.display = "block";
+            searchResult.innerHTML = '';
+            popular.style.display = 'block'
+            return;
         }
 
         lastXhr && lastXhr.abort();
