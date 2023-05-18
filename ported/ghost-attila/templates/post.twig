@@ -15,37 +15,46 @@
             {% endif %}
 		</span>
             <h1 class="post-title">{{ _post.title }}</h1>
+
+            {% if (_config.settings.post.authors) or (_config.settings.post.date) %}
             <div class="post-meta">
-                <div class="post-meta-avatars">
-                    {% for author in _post.authors %}
-                        <figure class="post-meta-avatar avatar">
-                            {% if author.picture_url %}
-                            <a href="{{ author.url }}" class="author-avatar">
-                                <img
-                                        class="author-profile-image"
-                                        src="{{ author.picture_url }}"
-                                        alt="{{ author.name }}"
-                                />
-                            </a>
-                            {% endif %}
-                        </figure>
-                    {% endfor %}
-                </div>
-                <h4 class="post-meta-author">
-                    {% for author in _post.authors %}
-                        <a href="{{ author.url }}">{{ author.name }}</a>{% if not loop.last %}, {% endif %}
-                    {% endfor %}
-                </h4>
-                <time datetime="{{ post.published_at | date('d-m-Y') }}">
-                    {{ post.published_at | date('d M Y') }}
-                </time>{# &bull; 1 min read TODO #}
+                {% if (_config.settings.post.authors) %}
+                    <div class="post-meta-avatars">
+                        {% for author in _post.authors %}
+                            <figure class="post-meta-avatar avatar">
+                                {% if author.picture_url %}
+                                <a href="{{ author.url }}" class="author-avatar">
+                                    <img
+                                            class="author-profile-image"
+                                            src="{{ author.picture_url }}"
+                                            alt="{{ author.name }}"
+                                    />
+                                </a>
+                                {% endif %}
+                            </figure>
+                        {% endfor %}
+                    </div>
+                    <h4 class="post-meta-author">
+                        {% for author in _post.authors %}
+                            <a href="{{ author.url }}">{{ author.name }}</a>{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </h4>
+                {% endif %}
+                {% if (_config.settings.post.date) %}
+                    <time datetime="{{ post.published_at | date('d-m-Y') }}">
+                        {{ post.published_at | date('d M Y') }}
+                    </time>{# &bull; 1 min read TODO #}
+                {% endif %}
             </div>
-            {% if _post.featured_image_url %}
-                <div class="post-cover cover">
-                    <img
-                        src="{{ _post.featured_image_url }}"
-                        alt="{{ _post.title }}" />
-                </div>
+            {% endif %}
+            {% if (_config.settings.post.featured_image) %}
+                {% if _post.featured_image_url %}
+                    <div class="post-cover cover">
+                        <img
+                            src="{{ _post.featured_image_url }}"
+                            alt="{{ _post.title }}" />
+                    </div>
+                {% endif %}
             {% endif %}
         </div>
     </header>
@@ -77,13 +86,16 @@
                         </a>
                     </div>
 
-                    {% if _post.tags %}
-                        <aside class="post-tags">
-                            <span class="post-info-label">{{ 'topic' | lang }}</span>
-                            {% for tag in _post.tags %}
-                                <a href="{{ tag.url }}">{{ tag.name }}</a>
-                            {% endfor %}
-                        </aside>
+
+                    {% if (_config.settings.post.tags) %}
+                        {% if _post.tags %}
+                            <aside class="post-tags">
+                                <span class="post-info-label">{{ 'topic' | lang }}</span>
+                                {% for tag in _post.tags %}
+                                    <a href="{{ tag.url }}">{{ tag.name }}</a>
+                                {% endfor %}
+                            </aside>
+                        {% endif %}
                     {% endif %}
 
                 </section>
