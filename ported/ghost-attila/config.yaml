@@ -1,33 +1,33 @@
 THEME_NAME: ghost-attila
-THEME_VERSION: 0.0.2
+THEME_VERSION: 0.0.3
 
 colors:
-    light:
-        background_main: "#fff"
-        background_secondary: "#f7f8fa"
-        background_contrast: "#e1e3e6"
-        background_overlay: "rgba(37, 40, 43, 0.9)"
-        content_lead: "#000"
-        content_main: "#222426"
-        content_secondary: "#73777d"
+  primary: "#d95736"
+  light:
+    background_main: "#fff"
+    background_secondary: "#f7f8fa"
+    background_contrast: "#e1e3e6"
+    background_overlay: "rgba(37, 40, 43, 0.9)"
+    content_lead: "#000"
+    content_main: "#222426"
+    content_secondary: "#73777d"
 
-    dark:
-        background_main: "#222426"
-        background_secondary: "#1d1f20"
-        background_contrast: "#3b3d40"
-        background_overlay: "rgba(9, 10, 13, 0.9)"
-        content_lead: "#fff"
-        content_main: "#e1e3e6"
-        content_secondary: "#909499"
+  dark:
+    background_main: "#222426"
+    background_secondary: "#1d1f20"
+    background_contrast: "#3b3d40"
+    background_overlay: "rgba(9, 10, 13, 0.9)"
+    content_lead: "#fff"
+    content_main: "#e1e3e6"
+    content_secondary: "#909499"
 
 fonts:
-    family_primary: "'Fira Sans', sans-serif"
-    family_secondary: "'Libre Baskerville', serif"
-    color_primary: "#d95736"
+  family_primary: "'Fira Sans', sans-serif"
+  family_secondary: "'Libre Baskerville', serif"
 
 settings:
-    post:
-        authors: true
-        date: true
-        tags: true
-        featured_image: true
+  post:
+    authors: true
+    date: true
+    tags: true
+    featured_image: true

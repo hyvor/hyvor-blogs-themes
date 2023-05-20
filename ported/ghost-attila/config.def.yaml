@@ -1,78 +1,82 @@
 colors:
-    light:
-        $name: Light
-        $description: All the properties below are when the website is on light mode
-        background_main:
-            $name: Background main
-            $description: Main background color of the blog
-            $type: color
-        background_secondary:
-            $name: Background secondary
-            $description: Secondary background color of the blog
-            $type: color
-        background_contrast:
-            $name: Background contrast
-            $description: Background contrast color of the blog
-            $type: color
-        background_overlay:
-            $name: Background overlay
-            $description: Background overlay color of the blog
-            $type: color
-        content_lead:
-            $name: Content lead
-            $description: Lead color of the content of the blog
-            $type: color
-        content_main:
-            $name: Content main
-            $description: Main color of the content of the blog
-            $type: color
-        content_secondary:
-            $name: Content secondary
-            $description: Secondary color of the content of the blog
-            $type: color
+  $name: Colors
+  primary:
+    $name: Primary Color
+    $type: color
+  light:
+    $name: Light
+    $description: Light color scheme
+    background_main:
+      $name: Background - Main
+      $type: color
+    background_secondary:
+      $name: Background - Secondary
+      $type: color
+    background_contrast:
+      $name: Background Contrast
+      $type: color
+    background_overlay:
+      $name: Background Overlay
+      $type: color
+    content_lead:
+      $name: Content Lead
+      $type: color
+    content_main:
+      $name: Content Main
+      $type: color
+    content_secondary:
+      $name: Content Secondary
+      $type: color
 
-    dark:
-        $name: Dark
-        $description: All the properties below are when the website is on dark mode
-        background_main:
-            $name: Background main
-            $description: Main background color of the blog
-            $type: color
-        background_secondary:
-            $name: Background secondary
-            $description: Secondary background color of the blog
-            $type: color
-        background_contrast:
-            $name: Background contrast
-            $description: Background contrast color of the blog
-            $type: color
-        background_overlay:
-            $name: Background overlay
-            $description: Background overlay color of the blog
-            $type: color
-        content_lead:
-            $name: Content lead
-            $description: Lead color of the content of the blog
-            $type: color
-        content_main:
-            $name: Content main
-            $description: Main color of the content of the blog
-            $type: color
-        content_secondary:
-            $name: Content secondary
-            $description: Secondary color of the content of the blog
-            $type: color
+  dark:
+    $name: Dark
+    $description: Dark color scheme
+    background_main:
+      $name: Background - Main
+      $type: color
+    background_secondary:
+      $name: Background - Secondary
+      $type: color
+    background_contrast:
+      $name: Background Contrast
+      $type: color
+    background_overlay:
+      $name: Background Overlay
+      $type: color
+    content_lead:
+      $name: Content Lead
+      $type: color
+    content_main:
+      $name: Content Main
+      $type: color
+    content_secondary:
+      $name: Content Secondary
+      $type: color
 
 fonts:
-    family_primary:
-        $name: Font Primary
-        $description: Main font of the blog
-        $type: font
-    family_secondary:
-        $name: Font Secondary
-        $description: Secondary font of the blog
-        $type: font
-    color_primary:
-        $name: Color Primary
-        $description: Main font color of the blog
-        $type: color
+  family_primary:
+    $name: Primary Font
+    $type: text
+  family_secondary:
+    $name: Secondary Font
+    $type: text
+
+settings:
+  $name: Settings
+  post:
+    $name: Post
+    $description: Post settings
+    authors:
+      $name: Authors
+      $description: Show author names
+      $type: checkbox
+    date:
+      $name: Date
+      $type: checkbox
+    tags:
+      $name: Tags
+      $description: Show post tags
+      $type: checkbox
+    featured_image:
+      $name: Featured Image
+      $type: checkbox
