@@ -1,0 +1,82 @@
+colors:
+  $name: Colors
+  primary:
+    $name: Primary Color
+    $type: color
+  light:
+    $name: Light
+    $description: Light color scheme
+    background_main:
+      $name: Background - Main
+      $type: color
+    background_secondary:
+      $name: Background - Secondary
+      $type: color
+    background_contrast:
+      $name: Background Contrast
+      $type: color
+    background_overlay:
+      $name: Background Overlay
+      $type: color
+    content_lead:
+      $name: Content Lead
+      $type: color
+    content_main:
+      $name: Content Main
+      $type: color
+    content_secondary:
+      $name: Content Secondary
+      $type: color
+
+  dark:
+    $name: Dark
+    $description: Dark color scheme
+    background_main:
+      $name: Background - Main
+      $type: color
+    background_secondary:
+      $name: Background - Secondary
+      $type: color
+    background_contrast:
+      $name: Background Contrast
+      $type: color
+    background_overlay:
+      $name: Background Overlay
+      $type: color
+    content_lead:
+      $name: Content Lead
+      $type: color
+    content_main:
+      $name: Content Main
+      $type: color
+    content_secondary:
+      $name: Content Secondary
+      $type: color
+
+fonts:
+  family_primary:
+    $name: Primary Font
+    $type: text
+  family_secondary:
+    $name: Secondary Font
+    $type: text
+
+settings:
+  $name: Settings
+  post:
+    $name: Post
+    $description: Post settings
+    authors:
+      $name: Authors
+      $description: Show author names
+      $type: checkbox
+    date:
+      $name: Date
+      $type: checkbox
+    tags:
+      $name: Tags
+      $description: Show post tags
+      $type: checkbox
+    featured_image:
+      $name: Featured Image
+      $type: checkbox

@@ -2,7 +2,33 @@
 <html lang="{{ _lang.code }}">
 
 <head>
+	<style>
+		:root {
+            --font-primary: {{ _config.fonts.family_primary | raw }};
+            --font-secondary: {{ _config.fonts.family_secondary | raw }};
+            --color-primary: {{ _config.colors.primary }};
+		}
 
+        .mode-light:root {
+            --color-background-main: {{ _config.colors.light.background_main }};
+            --color-background-secondary: {{ _config.colors.light.background_secondary }};
+            --color-background-contrast: {{ _config.colors.light.background_contrast }};
+            --color-background-overlay: {{ _config.colors.light.background_overlay }};
+            --color-content-lead: {{ _config.colors.light.content_lead }};
+            --color-content-main: {{ _config.colors.light.content_main }};
+            --color-content-secondary: {{ _config.colors.light.content_secondary }};
+        }
+
+        .mode-dark:root {
+            --color-background-main: {{ _config.colors.dark.background_main }};
+            --color-background-secondary: {{ _config.colors.dark.background_secondary }};
+            --color-background-contrast: {{ _config.colors.dark.background_contrast }};
+            --color-background-overlay: {{ _config.colors.dark.background_overlay }};
+            --color-content-lead: {{ _config.colors.dark.content_lead }};
+            --color-content-main: {{ _config.colors.dark.content_main }};
+            --color-content-secondary: {{ _config.colors.dark.content_secondary }};
+        }
+	</style>
     {{ _head | template }}
 
     <script src="{{ 'script.js' | asset_url }}"></script>
