@@ -1,0 +1,64 @@
+<!-- begin header -->
+<header class="header">
+
+  <div class="container">
+    <div class="row">
+      <div class="header__inner col col-12">
+
+        <div class="logo">
+          <a class="logo__link" href="{{ _blog.url }}">
+            {% if _blog.logo_url %}
+              <img class="logo__image" src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}"/>
+            {% else %}
+              <span class="logo__name">{{ _blog.name }}</span>
+            {% endif %}
+          </a>
+        </div>
+
+        <div class="hamburger" onclick="menuToggle()" id="hamburger">
+          <div></div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main menu" id="menuList">
+          <div class="main-nav__box">
+            <ul class="nav__list list-reset">
+              {% for nav in _blog.nav_header %}
+                <li class="nav__item">
+                  <a href="{{ nav.url }}" class="nav__link nav__{{ nav.name | lower | slug }}{% if is_current_url(nav.url) %} active-link{% endif %}">{{ nav.name }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="nav-button">
+            {% if (_blog.color_modes == 'both') %}
+            <div class="color-mode-toggler">
+              <a onclick="_hb.changeColorMode('light')">{{ icon('fontawesome', 'sun-solid', 14) }} <span>Light</span></a>
+              <a onclick="_hb.changeColorMode('dark')">{{ icon('fontawesome', 'moon-solid', 14) }} <span>Dark</span></a>
+            </div>
+            {% endif %}
+
+            {% if _blog.languages | length > 1 %}
+            <div class="nav-lang">
+              <a class="lang-label" role="label" onclick="toggleLanguageDropdown()">
+                {{ icon('fontawesome', 'earth-asia-solid', 14) }}&nbsp;{{ _lang.name }}
+              </a>
+              <div id="lang-selector">
+              {% for lang in _blog.languages %}
+                <a href="{{ lang.code | language_variant_url }}" class="{% if lang.code == _lang.code %}active{% endif %}">{{ lang.name }}
+                </a>
+              {% endfor %}
+              </div>
+              <div id="lang-selector-closer" onclick="toggleLanguageDropdown()"></div>
+            </div>
+            {% endif %}
+          </div>
+
+        </nav>
+
+      </div>
+    </div>
+  </div>
+
+</header>
+<!-- end header -->

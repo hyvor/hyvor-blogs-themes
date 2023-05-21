@@ -1,0 +1,54 @@
+THEME_NAME: zing
+THEME_VERSION: 1.0.0
+POSTS_PER_PAGINATION: 4
+
+font:
+  family: -apple-system, BlinkMacSystemFont, Segoe UI, Ubuntu, Cantarell, Helvetica, Arial, sans-serif
+  size: 18px
+  style: normal
+  weight: normal
+
+line_height: 1.6
+
+colors:
+  light:
+    accent: "#2821fb"
+    background_color: "#fff"
+    background_alt_color: "#b5b5c2"
+    text_color: "#151a3d"
+    text_alt_color: "#6c7a8a"
+    heading_font_color: "#151a3d"
+    link_color: "#151a3d"
+    link_alt_color: "#fff"
+    link_color_hover: "#151a3d"
+    border_color: "#ddd"
+    border_alt_color: "#fff"
+    code_color: "#eb5757"
+    code_background_color: "#eaeaea"
+  dark:
+    accent: "#f0a55c"
+    background_color: "#181818"
+    background_alt_color: "#212121"
+    text_color: "#9e9e9e"
+    text_alt_color: "#9e9e9e"
+    heading_font_color: "#f0f0f0"
+    link_color: "#f0f0f0"
+    link_alt_color: "#181818"
+    link_color_hover: "#181818"
+    border_color: "#525252"
+    border_alt_color: "#181818"
+    code_color: "#ababab"
+    code_background_color: "#454545"
+
+
+settings:
+  loop:
+    authors: true
+    tags: true
+    featured_image: true
+  post:
+    authors: true
+    tags: true
+    featured_image: true
+  footer:
+    feed_icon: true

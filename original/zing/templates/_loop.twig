@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+
+    {% for post in _posts %}
+      {% if not (post.featured_image_url and _config.settings.loop.featured_image) %}
+        {% set class = " no-image" %}
+      {% endif %}
+      <div class="article col col-6 col-t-12{{ class }} animate">
+        <div class="article__inner">
+
+          {% if post.is_featured %}
+            <span class="featured">{{ icon('fontawesome', 'star-solid', 12) }} Pinned</span>
+          {% endif %}
+
+          <a href="{{ post.url }}" class="article__image">
+            {% if post.featured_image_url and _config.settings.loop.featured_image %}
+              <img src="{{ post.featured_image_url }}" alt="{{ post.title }}" loading="lazy">
+            {% endif %}
+          </a>
+
+          <div class="article__content">
+
+            {% if (_config.settings.loop.tags) %}
+            <div class="article__tags">
+              {% for tag in post.tags %}
+                <a class="article__tag" href="{{ tag.url }}">{{ tag.name }}</a>
+              {% endfor %}
+            </div>
+            {% endif %}
+
+            <h2 class="article__title">{{ post.title }}</h2>
+
+            {% if (_config.settings.loop.authors) %}
+            <div class="article__authors">
+              {% for author in post.authors %}
+                {% if loop.first %}<span>{{ 'by' | lang }}</span>{% endif %}
+                <a href="{{ author.url }}" class="article__author">{{ author.name }}</a>{% if not loop.last %}, {% endif %}
+              {% endfor %}
+            </div>
+            {% endif %}
+
+          </div>
+
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% include '_pagination.twig' %}
