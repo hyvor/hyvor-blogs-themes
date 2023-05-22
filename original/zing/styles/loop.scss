@@ -62,6 +62,11 @@
   svg {
     margin-right: 4px;
   }
+
+  @media (max-width: $mobile) {
+    top: 28px;
+    left: 20px;
+  }
 }
 
 .mode-dark {
@@ -167,7 +172,7 @@
     font-weight: normal;
     opacity: .7;
   }
-  
+
   .article__author {
     text-decoration: underline;
     text-decoration-thickness: 1px;
