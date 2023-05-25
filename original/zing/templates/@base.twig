@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{ _lang.code }}">
+<head>
+
+  <style>
+    :root {
+      --base-font-family: {{ _config.font.family }};
+      --base-font-size: {{ _config.font.size }}px;
+      --base-font-style: {{ _config.font.style }};
+      --base-font-weight: {{ _config.font.weight }};
+      --base-line-height: {{ _config.line_height }};
+    }
+    .mode-light:root {
+      --color-accent: {{ _config.colors.light.accent }};
+      --background-color: {{ _config.colors.light.background_color }};
+      --background-alt-color: {{ _config.colors.light.background_alt_color }};
+      --text-color: {{ _config.colors.light.text_color }};
+      --text-alt-color: {{ _config.colors.light.text_alt_color }};
+      --heading-font-color: {{ _config.colors.light.heading_font_color }};
+      --link-color: {{ _config.colors.light.link_color }};
+      --link-alt-color: {{ _config.colors.light.link_alt_color }};
+      --link-color-hover: {{ _config.colors.light.link_color_hover }};
+      --border-color: {{ _config.colors.light.border_color }};
+      --border-alt-color: {{ _config.colors.light.border_alt_color }};
+      --code-color: {{ _config.colors.light.code_color }};
+      --code-background-color: {{ _config.colors.light.code_background_color }};
+    }
+    .mode-dark:root {
+      --color-accent: {{ _config.colors.dark.accent }};
+      --background-color: {{ _config.colors.dark.background_color }};
+      --background-alt-color: {{ _config.colors.dark.background_alt_color }};
+      --text-color: {{ _config.colors.dark.text_color }};
+      --text-alt-color: {{ _config.colors.dark.text_alt_color }};
+      --heading-font-color: {{ _config.colors.dark.heading_font_color }};
+      --link-color: {{ _config.colors.dark.link_color }};
+      --link-alt-color: {{ _config.colors.dark.link_alt_color }};
+      --link-color-hover: {{ _config.colors.dark.link_color_hover }};
+      --border-color: {{ _config.colors.dark.border_color }};
+      --border-alt-color: {{ _config.colors.dark.border_alt_color }};
+      --code-color: {{ _config.colors.dark.code_color }};
+      --code-background-color: {{ _config.colors.dark.code_background_color }};
+    }
+  </style>
+
+  {{ _head | template }}
+
+  <script src="{{ 'script.js' | asset_url }}"></script>
+
+</head>
+
+<body>
+
+{% include '_header.twig' %}
+
+{% block body %}{% endblock %}
+
+{% include '_footer.twig' %}
+
+{{ _foot | template }}
+
+</body>

@@ -1,0 +1,50 @@
+/* Tag */
+.tag-head {
+  max-width: 560px;
+  margin: 32px auto 80px;
+  text-align: center;
+
+  .tag-title {
+    margin-bottom: 12px;
+    font-size: 48px;
+    text-transform: capitalize;
+  }
+
+  .tag-posts-count {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    svg {
+      margin-right: 2px;
+    }
+  }
+
+  .tag-description {
+    margin-top: 20px;
+    font-size: 20px;
+    color: var(--text-alt-color);
+  }
+
+  @media (max-width: $tablet) {
+    margin: 32px auto 64px;
+
+    .tag-title {
+      font-size: 36px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    margin: 32px auto;
+
+    .tag-title {
+      font-size: 32px;
+    }
+
+    .tag-description {
+      margin-top: 16px;
+      font-size: inherit;
+    }
+  }
+}

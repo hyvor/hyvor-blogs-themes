@@ -1,0 +1,25 @@
+
+# loop
+pagination: Pagination
+previous_page: Prev
+next_page: Next
+of: of
+
+# footer
+about: About
+feed: RSS Feed
+recent_posts: Recent Posts
+tags: Explore Tags
+top: Back to top
+
+# post
+newsletter: Newsletter
+comments: Comments
+translated: This post is also available in
+by: by
+
+# author/tag
+posts_num_zero: No Posts
+posts_num_one: 1 Post
+posts_num_multi: "* Posts"
+website: Website

@@ -1,0 +1,123 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+  <main role="main">
+
+    <div class="post-head{% if not _post.featured_image_url and _config.settings.post.featured_image %} post-no-image{% endif %}">
+
+      <div class="container">
+        <div class="row">
+          {% if _post.featured_image_url and _config.settings.post.featured_image %}
+          <div class="col col-6 col-d-12">
+            <div class="image-box">
+              <img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}" class="post-image" loading="lazy">
+            </div>
+          </div>
+          {% endif %}
+
+          <div class="col col-6 col-d-12">
+            <div class="post-head__inner">
+
+              {% if (_config.settings.post.tags) %}
+                <div class="post-tags">
+                  {% for tag in _post.tags %}
+                    <a href="{{ tag.url }}" class="post-tag">{{ tag.name }}</a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+
+              <h1 class="post-title">{{ _post.title }}</h1>
+
+              {% if _post.description %}
+                <p class="post-description">{{ _post.description }}</p>
+              {% endif %}
+
+              {% if (_config.settings.post.authors) %}
+                <div class="post-authors">
+                  <div class="authors">
+                    {% for author in _post.authors %}
+                      <a class="post-author" href="{{ author.url }}">
+                        {% if author.picture_url %}
+                          <img class="post-author-image" alt="Profile picture of {{ author.name }}" src="{{ author.picture_url }}" loading="lazy">
+                        {% else %}
+                          <span class="avatar-placeholder"></span>
+                        {% endif %}
+                      </a>
+                    {% endfor %}
+                  </div>
+                  <div class="post-author-meta">
+                    <div class="post-author-names">
+                      {% for author in _post.authors %}
+                        <a href="{{ author.url }}" class="post-author-link">{{ author.name }}{% if not loop.last %}, {% endif %}</a>
+                      {% endfor %}
+                    </div>
+                    <div class="post-date">
+                      <time datetime="{{ post.published_at | date('d-m-Y') }}">
+                        {{ post.published_at | format_date('medium', locale=_lang.code) }}
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+
+              {% if _config.settings.post.variants and _post.variants | length > 0 %}
+                <div class="translated-wrapper">
+                  <p>
+                    <span>
+                      <span>{{ 'translated' | lang }}:
+                      </span>
+                      {% for variant in _post.variants %}
+                        <a href="{{ variant.url }}">
+                          {{ variant.language.name }}
+                        </a>
+                        {% if not loop.last %}&nbsp;&bull;&nbsp;
+                        {% endif %}
+                      {% endfor %}
+                    </span>
+                  </p>
+                </div>
+              {% endif %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container animate">
+      <!-- begin post -->
+      <article class="post">
+
+        <section class="post-content">
+          {{ _post.content | raw }}
+        </section>
+
+        {% if _route.name != 'page' %}
+
+          {% if _newsletter %}
+            <section class="newsletter-box">
+              <h3>{{ 'newsletter' | lang }}</h3>
+              <div>
+                {{ _newsletter | template }}
+              </div>
+            </section>
+          {% endif %}
+
+          {% if _comments %}
+            <section class="comments-box">
+              <h3>{{ 'comments' | lang }}</h3>
+              <div>{{ _comments | template }}</div>
+            </section>
+          {% endif %}
+
+        {% endif %}
+      </article>
+      <!-- end post -->
+
+    </div>
+
+  </main>
+
+{% endblock %}

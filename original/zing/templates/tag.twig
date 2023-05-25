@@ -1,0 +1,22 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+<main role="main" class="tag-page">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <section class="tag-head">
+          <h1 class="tag-title">{{ _tag.name }}</h1>
+          <div class="tag-posts-count">{{ icon('fontawesome', 'bookmark-solid', 16) }}{{ _tag.posts_count | lang_by_number( zero="posts_num_zero", one="posts_num_one", multi="posts_num_multi" ) }}</div>
+          {% if _tag.description %}
+          <div class="tag-description">{{ _tag.description }}</div>
+          {% endif %}
+        </section>
+      </div>
+    </div>
+  </div>
+  {% include '_loop.twig' %}
+</main>
+
+{% endblock %}

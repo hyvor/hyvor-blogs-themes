@@ -1,0 +1,23 @@
+<!-- begin hero -->
+<section class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="hero__inner">
+        {% if _blog.name %}
+          <span class="hero__subtitle">Welcome to {{ _blog.name }}</span>
+        {% endif %}
+        {% if _blog.description %}
+          <h1 class="hero__title">{{ _blog.description }}</h1>
+        {% endif %}
+        </div>
+        {% if _blog.cover_url %}
+          <div class="hero__image animate">
+            <img src="{{ _blog.cover_url }}" alt="{{ _blog.name }}" loading="lazy">
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end hero -->
