@@ -55,7 +55,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 6px;
-  
+
     .post-tag {
       display: inline-block;
       margin: 0 6px 6px 0;
@@ -70,13 +70,13 @@
       color: var(--link-alt-color);
       background: var(--color-accent);
       transition: $global-transition;
-  
+
       &:hover {
         color: var(--color-accent);
         background: transparent;
       }
     }
-  
+
     @media (max-width: $mobile) {
       .post-tag {
         margin: 0 4px 4px 0;
@@ -84,12 +84,12 @@
       }
     }
   }
-  
+
   .post-title {
     font-size: 58px;
     margin-bottom: 0;
   }
-  
+
   .post-description {
     margin: 20px 0 0;
     font-size: 20px;
@@ -102,12 +102,12 @@
     flex-wrap: wrap;
     margin-top: 20px;
     line-height: 1;
-  
+
     .authors {
       display: flex;
       align-items: center;
       margin-right: 12px;
-  
+
       .post-author {
         display: inline-block;
         transform: translate(0);
@@ -125,19 +125,19 @@
         &:nth-child(1) {
           z-index: 5;
         }
-  
+
         &:nth-child(2) {
           z-index: 4;
         }
-  
+
         &:nth-child(3) {
           z-index: 3;
         }
-  
+
         &:nth-child(4) {
           z-index: 2;
         }
-  
+
         &:nth-child(5) {
           z-index: 1;
         }
@@ -145,7 +145,7 @@
         &:hover {
           transform: translateY(-2px);
         }
-  
+
         img {
           position: absolute;
           top: 0;
@@ -248,7 +248,7 @@
     .post-authors {
       .authors {
         margin-right: 12px;
-  
+
         .post-author {
           width: 44px;
           height: 44px;
@@ -269,6 +269,12 @@
     }
 
   }
+}
+
+.translated-wrapper {
+  margin-top: 12px;
+  font-size: inherit;
+  color: var(--text-alt-color);
 }
 
 .post {
