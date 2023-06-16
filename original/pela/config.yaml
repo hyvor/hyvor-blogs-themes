@@ -1,0 +1,52 @@
+THEME_NAME: pela
+THEME_VERSION: 1.0.0
+POSTS_PER_PAGINATION: 6
+
+fonts:
+  base_font_family: "-apple-system, BlinkMacSystemFont, Segoe UI, Ubuntu, Cantarell, Helvetica, Arial, sans-serif"
+  heading_font_family: "'EB Garamond', serif"
+
+size: 18
+style: normal
+weight: normal
+line_height: 1.6
+
+colors:
+  light:
+    accent: "#f6bf3e"
+    background_color: "#fff"
+    background_alt_color: "#f3f1f3"
+    text_color: "#04070b"
+    text_alt_color: "#6b757d"
+    heading_font_color: "#04070b"
+    link_color: "#04070b"
+    link_color_hover: "#e5e5e8"
+    border_color: "#eaeaea"
+    code_color: "#eb5757"
+    code_background_color: "#eaeaea"
+  dark:
+    accent: "#e40e14"
+    background_color: "#111016"
+    background_alt_color: "#1e1e23"
+    text_color: "#f0f0f0"
+    text_alt_color: "#9e9e9e"
+    heading_font_color: "#f0f0f0"
+    link_color: "#f0f0f0"
+    link_color_hover: "#2b2b32"
+    border_color: "#26262f"
+    code_color: "#ababab"
+    code_background_color: "#454545"
+
+
+settings:
+  loop:
+    authors: true
+    tags: true
+    featured_image: true
+  post:
+    authors: true
+    tags: true
+    featured_image: true
+    variants: true
+  footer:
+    feed_icon: true
