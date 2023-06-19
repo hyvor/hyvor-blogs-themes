@@ -72,7 +72,7 @@
     &:hover {
       transform: translateY(-3px);
     }
-  
+
     img {
       position: absolute;
       top: 0;
@@ -212,18 +212,43 @@
     line-height: 1;
     font-weight: 500;
     color: var(--link-color);
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 5px;
-    text-decoration-color: transparent;
+    // text-decoration: underline;
+    // text-decoration-thickness: 1px;
+    // text-underline-offset: 5px;
+    // text-decoration-color: transparent;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 6px;
+      top: 9px;
+      right: -6px;
+      height: 6px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .2s;
+      border-radius: 50%;
+      background: var(--link-color);
+    }
 
     &:last-child {
       margin-right: 0;
     }
 
-    &:hover,
+    &:hover {
+      &::before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
     &.active-link {
-      text-decoration-color: var(--link-color);
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        background: var(--color-accent);
+      }
     }
   }
 

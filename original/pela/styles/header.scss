@@ -89,6 +89,11 @@
           font-size: 16px;
           text-align: right;
           transition: color .25s;
+
+          &::before {
+            content: "";
+            top: -6px;
+          }
         }
       }
     }
@@ -130,18 +135,35 @@
       line-height: 1;
       font-weight: 500;
       color: var(--link-color);
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 5px;
-      text-decoration-color: transparent;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 6px;
+        top: 9px;
+        right: -6px;
+        height: 6px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .2s;
+        border-radius: 50%;
+        background: var(--link-color);
+      }
 
       &:hover {
-        text-decoration-color: var(--link-color);
+        &::before {
+          opacity: 1;
+          visibility: visible;
+        }
       }
 
       &.active-link {
-        color: var(--link-color);
-        text-decoration-color: var(--link-color);
+        &::before {
+          opacity: 1;
+          visibility: visible;
+          background: var(--color-accent);
+        }
       }
     }
   }
@@ -173,19 +195,6 @@
   font-weight: 500;
   color: var(--link-color);
   cursor: pointer;
-
-  &:hover {
-    span {
-      text-decoration-color: var(--link-color);
-    }
-  }
-
-  span {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 5px;
-    text-decoration-color: transparent;
-  }
 
   svg {
     margin-right: 2px;
@@ -228,28 +237,47 @@
     background: var(--background-alt-color);
 
     a {
-      display: block;
+      position: relative;
+      display: inline-block;
       margin-bottom: 8px;
       padding-bottom: 8px;
       font-size: 16px;
       font-weight: 500;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 5px;
-      text-decoration-color: transparent;
       color: var(--link-color);
+
+      &:hover {
+        &::before {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 6px;
+        top: -6px;
+        right: -6px;
+        height: 6px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .2s;
+        border-radius: 50%;
+        background: var(--link-color);
+      }
 
       &:last-child {
         margin-bottom: 0;
         padding-bottom: 0;
       }
 
-      &:hover {
-        text-decoration-color: var(--link-color);
-      }
-
       &.active {
-        text-decoration-color: var(--link-color);
+        &::before {
+          opacity: 1;
+          visibility: visible;
+          background: var(--color-accent);
+        }
       }
     }
 
@@ -287,6 +315,8 @@
 
     #lang-selector {
       position: relative;
+      display: flex;
+      flex-direction: column;
       width: auto;
       padding: 0;
       border: none;

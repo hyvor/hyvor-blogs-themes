@@ -5,7 +5,7 @@
       {% if post.featured_image_url and _config.settings.loop.featured_image %}
       <a href="{{ post.url }}" class="article__image">
         {% if post.is_featured %}
-          <span class="featured">{{ icon('fontawesome', 'star-solid', 12) }} {{ 'featured' | lang }}</span>
+          <span class="featured">{{ icon('ionicons', 'star', 12) }} {{ 'featured' | lang }}</span>
         {% endif %}
         <img src="{{ post.featured_image_url }}" alt="{{ post.title }}" loading="lazy">
       </a>
