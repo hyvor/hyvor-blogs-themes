@@ -33,20 +33,20 @@
           <div class="nav-button">
             {% if (_blog.color_modes == 'both') %}
             <div class="color-mode-toggler">
-              <a onclick="_hb.changeColorMode('light')">{{ icon('fontawesome', 'sun-solid', 14) }} <span>Light</span></a>
-              <a onclick="_hb.changeColorMode('dark')">{{ icon('fontawesome', 'moon-solid', 14) }} <span>Dark</span></a>
+              <a onclick="_hb.changeColorMode('light')">{{ icon('ionicons', 'sunny', 14) }} <span>Light</span></a>
+              <a onclick="_hb.changeColorMode('dark')">{{ icon('ionicons', 'moon', 14) }} <span>Dark</span></a>
             </div>
             {% endif %}
 
             <div class="top-search nav-search">
-              <a class="nav-search-button"><i aria-hidden="true">{{ icon('fontawesome', 'magnifying-glass-solid', 14) }}</i> <span>{{ 'search' | lang }}</span>
+              <a class="nav-search-button"><i aria-hidden="true">{{ icon('ionicons', 'search', 15) }}</i> <span>{{ 'search' | lang }}</span>
               </a>
             </div>
 
             {% if _blog.languages | length > 1 %}
             <div class="nav-lang">
               <a class="lang-label" role="label" onclick="toggleLanguageDropdown()">
-                {{ icon('fontawesome', 'earth-asia-solid', 14) }}&nbsp;<span>{{ _lang.name }}</span>
+                {{ icon('ionicons', 'earth', 14) }}&nbsp;<span>{{ _lang.name }}</span>
               </a>
               <div id="lang-selector">
               {% for lang in _blog.languages %}

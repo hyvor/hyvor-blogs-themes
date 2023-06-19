@@ -19,10 +19,10 @@
           <h1 class="author-title">{{ _author.name }}</h1>
           <div class="author-social">
             {% if _author.location %}
-              <span class="author-location">{{ icon('fontawesome', 'location-arrow-solid', 22) }} {{ _author.location }}</span>
+              <span class="author-location">{{ icon('ionicons', 'navigate', 22) }} {{ _author.location }}</span>
             {% endif %}
             {% if _author.website_url %}
-              {{ macro.social_icon('website' | lang, _author.website_url, 'link-solid', 22) }}
+              {{ macro.social_icon('website' | lang, _author.website_url, 'link', 22) }}
             {% endif %}
             {% include '_social.twig' with {social: _author.social} %}
           </div>
