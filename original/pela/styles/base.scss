@@ -113,19 +113,3 @@ img {
   width: 1px;
   word-wrap: normal;
 }
-
-/* Animate */
-.animate {
-  animation: animateElement cubic-bezier(0.3, 0.45, 0.45, 0.95) .5s;
-  will-change: transform;
-
-  @keyframes animateElement {
-    0% {
-      transform: translate(0px, 50px);
-    }
-
-    100% {
-      transform: translate(0px, 0px);
-    }
-  }
-}
