@@ -46,8 +46,8 @@ $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
   flex: 0 1 auto;
   flex-direction: row;
   box-sizing: border-box;
-  margin-left: ($base-spacing-unit * -1);
-  margin-right: ($base-spacing-unit * -1);
+  margin-inline-start: ($base-spacing-unit * -1);
+  margin-inline-end: ($base-spacing-unit * -1);
 }
 
 .col {
@@ -68,13 +68,13 @@ $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
 
 @for $i from 0 through $columns {
   .push-#{$i} {
-    margin-left: calc(#{$i} / #{$columns} * 100%);
+    margin-inline-start: calc(#{$i} / #{$columns} * 100%);
   }
 }
 
 @for $i from 0 through $columns {
   .pull-#{$i} {
-    margin-right: calc(#{$i} / #{$columns} * 100%);
+    margin-inline-end: calc(#{$i} / #{$columns} * 100%);
   }
 }
 
@@ -93,13 +93,13 @@ $val in $mq {
 
     @for $i from 0 through $columns {
       .push-w-#{$i} {
-         margin-left: calc(#{$i} / #{$columns} * 100%);
+         margin-inline-start: calc(#{$i} / #{$columns} * 100%);
       }
     }
 
     @for $i from 0 through $columns {
       .pull-w-#{$i} {
-        margin-right: calc(#{$i} / #{$columns} * 100%);
+        margin-inline-end: calc(#{$i} / #{$columns} * 100%);
       }
     }
   }
@@ -115,13 +115,13 @@ $val in $mq {
 
     @for $i from 0 through $columns {
       .push-d-#{$i} {
-        margin-left: calc(#{$i} / #{$columns} * 100%);
+        margin-inline-start: calc(#{$i} / #{$columns} * 100%);
       }
     }
 
     @for $i from 0 through $columns {
       .pull-d-#{$i} {
-        margin-right: calc(#{$i} / #{$columns} * 100%);
+        margin-inline-end: calc(#{$i} / #{$columns} * 100%);
       }
     }
   }
@@ -137,13 +137,13 @@ $val in $mq {
 
     @for $i from 0 through $columns {
       .push-t-#{$i} {
-        margin-left: calc(#{$i} / #{$columns} * 100%);
+        margin-inline-start: calc(#{$i} / #{$columns} * 100%);
       }
     }
 
     @for $i from 0 through $columns {
       .pull-t-#{$i} {
-        margin-right: calc(#{$i} / #{$columns} * 100%);
+        margin-inline-end: calc(#{$i} / #{$columns} * 100%);
       }
     }
   }
@@ -159,13 +159,13 @@ $val in $mq {
 
     @for $i from 0 through $columns {
       .push-m-#{$i} {
-        margin-left: calc(#{$i} / #{$columns} * 100%);
+        margin-inline-start: calc(#{$i} / #{$columns} * 100%);
       }
     }
 
     @for $i from 0 through $columns {
       .pull-m-#{$i} {
-        margin-right: calc(#{$i} / #{$columns} * 100%);
+        margin-inline-end: calc(#{$i} / #{$columns} * 100%);
       }
     }
   }

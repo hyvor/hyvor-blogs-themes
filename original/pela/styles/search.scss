@@ -101,7 +101,7 @@
     font-size: 22px;
     line-height: 1;
     color: var(--heading-font-color);
-    
+
     svg {
       vertical-align: baseline !important;
     }
@@ -120,7 +120,7 @@
       font-weight: 500;
       color: var(--heading-font-color);
     }
-  
+
     &::-ms-clear {
       display: none;
     }
@@ -149,11 +149,11 @@
       &:hover {
         transform: translateY(-50%) rotate(90deg);
       }
-  
+
       i {
         display: none;
       }
-  
+
       &:before,
       &:after {
         content: '';
@@ -166,11 +166,11 @@
         border-radius: 1px;
         background: var(--link-color);
       }
-  
+
       &:before {
         transform: rotate(-45deg);
       }
-  
+
       &:after {
         transform: rotate(45deg);
       }
@@ -229,7 +229,7 @@
         }
       }
     }
-    
+
   }
 }
 
@@ -275,5 +275,17 @@
     @media (max-width: $mobile) {
       margin: 0 4px 4px 0;
     }
+  }
+}
+
+[dir="rtl"] {
+  .search-input-icon {
+    left: auto;
+    right: 24px;
+  }
+
+  .search-button {
+    left: 24px;
+    right: auto;
   }
 }

@@ -28,7 +28,7 @@
     flex-wrap: wrap;
     margin-top: -4px;
     margin-bottom: 4px;
-  
+
     .post-tag {
       display: inline-block;
       padding: 6px 16px;
@@ -39,18 +39,18 @@
       border-radius: 30px;
       background: var(--background-alt-color);
       transition: $global-transition;
-    
+
       &:hover {
         background: var(--link-color-hover);
       }
     }
   }
-  
+
   .post-title {
     font-size: 58px;
     margin-bottom: 0;
   }
-  
+
   .post-description {
     margin: 16px 0 0;
     font-size: 23px;
@@ -62,12 +62,12 @@
     flex-wrap: wrap;
     margin-top: 28px;
     line-height: 1;
-  
+
     .authors {
       display: flex;
       align-items: center;
-      margin-right: 8px;
-  
+      margin-inline-end: 8px;
+
       .post-author {
         display: inline-block;
         transform: translate(0);
@@ -80,25 +80,25 @@
         transition: transform .25s ease;
 
         &:not(:first-child) {
-          margin-left: -20px;
+          margin-inline-start: -20px;
         }
 
         &:nth-child(1) {
           z-index: 5;
         }
-  
+
         &:nth-child(2) {
           z-index: 4;
         }
-  
+
         &:nth-child(3) {
           z-index: 3;
         }
-  
+
         &:nth-child(4) {
           z-index: 2;
         }
-  
+
         &:nth-child(5) {
           z-index: 1;
         }
@@ -106,7 +106,7 @@
         &:hover {
           transform: translateY(-2px);
         }
-  
+
         img {
           position: absolute;
           top: 0;
@@ -189,7 +189,7 @@
 
 .translated-wrapper {
   font-family: var(--heading-font-family);
-  
+
   p {
     padding: 16px;
     font-weight: 500;
@@ -282,7 +282,7 @@
     border-radius: 8px;
 
     span {
-      margin-right: 8px;
+      margin-inline-end: 8px;
       font-size: 24px;
     }
   }
@@ -297,7 +297,7 @@
     }
 
     .line-number {
-      margin-right: 14px;
+      margin-inline-end: 14px;
     }
 
     code {
@@ -391,7 +391,7 @@ pre {
 ul, ol,
 dd {
   padding: 0;
-  margin-left: 16px;
+  margin-inline-start: 16px;
 }
 
 ul, ol {

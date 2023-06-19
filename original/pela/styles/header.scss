@@ -104,14 +104,27 @@
   }
 }
 
+[dir="rtl"] {
+  @media (max-width: $desktop) {
+    .main-nav {
+      left: $base-spacing-unit;
+      right: auto;
+    }
+
+    .nav-button {
+      align-items: flex-start;
+    }
+  }
+}
+
 .main-nav__box {
   display: flex;
   align-items: center;
-  margin-left: 80px;
+  margin-inline-start: 80px;
 
   @media (max-width: $desktop) {
     display: block;
-    margin-left: 0;
+    margin-inline-start: 0;
   }
 }
 
@@ -121,11 +134,11 @@
 
   .nav__item {
     display: inline-block;
-    margin-right: 36px;
+    margin-inline-end: 36px;
     margin-bottom: 0;
 
     &:last-child {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
 
     .nav__link {
@@ -172,7 +185,7 @@
 .nav-button {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  margin-inline-start: auto;
   line-height: 1;
 
   @media (max-width: $desktop) {
@@ -190,19 +203,19 @@
 .top-search {
   display: flex;
   align-items: center;
-  margin-right: 36px;
+  margin-inline-end: 36px;
   font-size: 16px;
   font-weight: 500;
   color: var(--link-color);
   cursor: pointer;
 
   svg {
-    margin-right: 2px;
+    margin-inline-end: 2px;
     vertical-align: bottom !important;
   }
 
   @media (max-width: $desktop) {
-    margin-right: 0;
+    margin-inline-end: 0;
   }
 }
 
@@ -218,7 +231,7 @@
   position: relative;
 
   .lang-label {
-    margin-right: 0;
+    margin-inline-end: 0;
   }
 
   #lang-selector {
@@ -304,7 +317,7 @@
 
   @media (max-width: $desktop) {
     width: 100%;
-    margin-left: 0;
+    margin-inline-start: 0;
     margin-bottom: 12px;
     padding-bottom: 12px;
     text-align: right;

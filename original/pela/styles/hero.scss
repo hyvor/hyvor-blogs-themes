@@ -9,13 +9,13 @@
 
   .hero__left {
     max-width: 585px;
-    margin-right: auto;
+    margin-inline-end: auto;
   }
 
   .hero__right {
     width: 50%;
   }
-  
+
   .hero__title {
     h1, span {
       display: inline;
@@ -84,7 +84,7 @@
     .hero__authors__inner {
       display: flex;
       align-items: center;
-      margin-right: 12px;
+      margin-inline-end: 12px;
     }
 
     .hero__author__image {
@@ -100,7 +100,7 @@
       transition: transform .25s ease;
 
       &:not(:first-child) {
-        margin-left: -30px;
+        margin-inline-start: -30px;
       }
 
       &:nth-child(1) {
@@ -221,7 +221,7 @@
         height: 68px;
 
         &:not(:first-child) {
-          margin-left: -26px;
+          margin-inline-start: -26px;
         }
       }
     }
