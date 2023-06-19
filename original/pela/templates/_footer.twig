@@ -87,7 +87,7 @@
 
         <div class="footer__info__right">
           {% include '_social.twig' with { social: _blog.social } %}
-          {% if _config.settings.footer.feed_icon %}{{ macro.social_icon("feed" | lang, _blog.url ~ "/feed", 'rss-solid') }}{% endif %}
+          {% if _config.settings.footer.feed_icon %}{{ macro.social_icon("feed" | lang, _blog.url ~ "/feed", 'logo-rss') }}{% endif %}
         </div>
 
       </div>
