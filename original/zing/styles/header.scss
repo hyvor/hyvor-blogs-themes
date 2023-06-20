@@ -100,11 +100,11 @@
 .main-nav__box {
   display: flex;
   align-items: center;
-  margin-left: 80px;
+  margin-inline-start: 80px;
 
   @media (max-width: $desktop) {
     display: block;
-    margin-left: 0;
+    margin-inline-start: 0;
   }
 }
 
@@ -114,11 +114,11 @@
 
   .nav__item {
     display: inline-block;
-    margin-right: 40px;
+    margin-inline-end: 40px;
     margin-bottom: 0;
 
     &:last-child {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
 
     .nav__link {
@@ -150,7 +150,7 @@
 .nav-button {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  margin-inline-start: auto;
   line-height: 1;
 
   @media (max-width: $desktop) {
@@ -173,14 +173,14 @@
   cursor: pointer;
 
   svg {
-    margin-right: 2px;
+    margin-inline-end: 2px;
     vertical-align: bottom !important;
   }
 }
 
 /* Nav Lang */
 .nav-lang {
-  margin-left: 20px;
+  margin-inline-start: 20px;
   position: relative;
 
   #lang-selector {
@@ -247,7 +247,7 @@
 
   @media (max-width: $desktop) {
     width: 100%;
-    margin-left: 0;
+    margin-inline-start: 0;
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid var(--border-color);

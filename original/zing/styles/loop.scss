@@ -60,7 +60,7 @@
   pointer-events: none;
 
   svg {
-    margin-right: 4px;
+    margin-inline-end: 4px;
   }
 
   @media (max-width: $mobile) {
@@ -252,13 +252,13 @@
 
 .pagination__next {
   i {
-    margin-left: 2px;
+    margin-inline-start: 2px;
   }
 }
 
 .pagination__prev {
   i {
-    margin-right: 2px;
+    margin-inline-end: 2px;
   }
 }
 

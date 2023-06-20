@@ -82,7 +82,7 @@
     transition: $global-transition;
 
     &:last-child {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
 
     &:hover {
@@ -111,7 +111,7 @@
     transform: translate(0);
     min-width: 180px;
     min-height: 140px;
-    margin-right: 20px;
+    margin-inline-end: 20px;
     border-radius: 16px;
     overflow: hidden;
     background: var(--background-alt-color);
@@ -179,7 +179,7 @@
     .recent-post__image {
       width: 100%;
       padding-bottom: 56.25%;
-      margin-right: 0;
+      margin-inline-end: 0;
       margin-bottom: 20px;
       border-radius: 24px;
     }
@@ -268,7 +268,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-right: auto;
+  margin-inline-end: auto;
 
   .footer__logo__link {
     font-size: 32px;
@@ -283,7 +283,7 @@
 
   @media (max-width: $tablet) {
     flex-direction: column;
-    margin-right: 0;
+    margin-inline-end: 0;
 
     .footer__logo {
       margin-bottom: 24px;
@@ -296,12 +296,12 @@
 }
 
 .footer__nav {
-  margin-left: 80px;
+  margin-inline-start: 80px;
 
   .footer__nav__link {
     position: relative;
     padding: 12px 0;
-    margin-right: 40px;
+    margin-inline-end: 40px;
     font-size: 16px;
     line-height: 1;
     font-weight: 500;
@@ -314,7 +314,7 @@
     transition: all 0.2s;
 
     &:last-child {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
 
     &:hover {
@@ -328,11 +328,11 @@
   }
 
   @media (max-width: $tablet) {
-    margin-left: 0;
+    margin-inline-start: 0;
     margin-bottom: 24px;
 
     .footer__nav__link {
-      margin-right: 24px;
+      margin-inline-end: 24px;
     }
   }
 }
@@ -348,7 +348,7 @@
     cursor: pointer;
 
     svg {
-      margin-right: 3px;
+      margin-inline-end: 3px;
     }
   }
 }

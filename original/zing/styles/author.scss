@@ -32,7 +32,7 @@
     line-height: 1;
 
     .author-location {
-      margin-right: 24px;
+      margin-inline-end: 24px;
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
@@ -40,16 +40,16 @@
       color: var(--link-color);
 
       svg {
-        margin-right: 2px;
+        margin-inline-end: 2px;
       }
     }
 
     .social-link {
-      margin-right: 20px;
+      margin-inline-end: 20px;
       transition: $global-transition;
 
       &:last-child {
-        margin-right: 0;
+        margin-inline-end: 0;
       }
 
       &:hover {
@@ -85,7 +85,7 @@
     .author-social {
       .author-location,
       .social-link {
-        margin-right: 16px;
+        margin-inline-end: 16px;
       }
     }
 

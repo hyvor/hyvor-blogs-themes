@@ -1,0 +1,34 @@
+[dir="rtl"] {
+    .footer__nav__link {
+        &:last-child {
+            margin-inline-end: 40px;
+        }
+        &:first-child {
+            margin-inline-end: 0;
+        }
+    }
+
+    .footer__inner::before {
+        right: 0;
+        left: auto;
+    }
+
+    .widget__title::before {
+        right: 0;
+        left: auto;
+    }
+
+    #lang-selector {
+        left: 0;
+        right: auto;
+    }
+
+    .featured {
+        right: 32px;
+        left: auto;
+    }
+
+    .pagination__prev i svg, .pagination__next i svg {
+        transform: rotate(180deg);
+    }
+}

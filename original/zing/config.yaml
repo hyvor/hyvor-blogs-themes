@@ -1,6 +1,6 @@
 THEME_NAME: zing
-THEME_VERSION: 1.0.0
-POSTS_PER_PAGINATION: 4
+THEME_VERSION: 1.0.1
+POSTS_PER_PAGINATION: 6
 
 font:
   family: -apple-system, BlinkMacSystemFont, Segoe UI, Ubuntu, Cantarell, Helvetica, Arial, sans-serif
