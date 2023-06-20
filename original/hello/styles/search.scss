@@ -110,7 +110,6 @@
 
     .search-button {
         display: none;
-        position: relative;
         font-size: 1.6em;
         position: absolute;
         right: 0;
@@ -240,4 +239,9 @@
         max-width: none;
         margin-bottom: 0;
     }
+}
+
+[dir="rtl"] .search-button {
+    left: 0;
+    right: initial;
 }

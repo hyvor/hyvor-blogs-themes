@@ -1,5 +1,11 @@
 ## [Unreleased]
 
+## [1.0.4] - 2023-06-20
+
+### Changed
+
+- Updated styles and some templates with RTL support
+
 ## [1.0.3] - 2023-05-06
 
 ### Added

@@ -22,7 +22,7 @@
         align-items: center;
         font-size: .85rem;
         .time-wrap {
-            margin-left: 10px;
+            margin-inline-start: 10px;
         }
         time {
 
@@ -107,7 +107,7 @@
         ul {
             font-family: var(--font-secondary);
             margin: 1rem 0;
-            padding-left: 2em;
+            padding-inline-start: 2em;
             ol, ul {
                 margin: 0;
             }
@@ -131,7 +131,7 @@
             font-family: var(--font-secondary);
             margin: 2rem 0;
             padding: 1em 1.5em;
-            border-left: 0.25em solid var(--color-accent);
+            border-inline-start: 0.25em solid var(--color-accent);
             > :first-child {
                 margin-top: 0;
             }
@@ -169,20 +169,20 @@
             margin: 2rem 0;
             span {
                 font-size: 1.5rem;
-                margin-right: 0.5rem;
+                margin-inline-end: 0.5rem;
             }
         }
-
         pre {
             padding: 1rem 0;
             border-radius: var(--box-radius);
             font-size: 0.85rem;
             position: relative;
+            direction: ltr;
             .line {
                 padding: 1px 1rem;
             }
             .line-number {
-                margin-right: 1rem;
+                margin-inline-end: 1rem;
                 position: absolute;
                 left: 1rem;
             }

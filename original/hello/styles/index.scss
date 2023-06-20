@@ -52,10 +52,10 @@ main {
     font-size: 0.8rem;
     font-weight: 600;
 }
+
 .global-scaling-link {
     display: inline-block;
-    transition: .3s transform;
-    &:hover {
+    &:not(.active):hover {
         transform: scale(1.035);
     }
 }
@@ -70,7 +70,7 @@ main {
         vertical-align: middle;
 
         &:not(:first-child) {
-            margin-left: -25px;
+            margin-inline-start: -25px;
         }
     }
 
@@ -84,18 +84,18 @@ main {
     }
 
     .author-names {
-        margin-left: 5px;
+        margin-inline-start: 5px;
         font-weight: 600;
     }
 
     .authors {
         .author {
-            margin-right: 10px;
+            margin-inline-end: 10px;
             text-decoration: none;
             font-weight: 600;
             color: inherit;
             .author-name {
-                margin-left: 3px;
+                margin-inline-start: 3px;
             }
         }
     }

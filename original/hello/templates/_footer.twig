@@ -21,7 +21,7 @@
         {% if _blog.languages | length > 1 %}
             <div class="nav-lang">
                 <a class="lang-label" role="label" onclick="toggleLanguageDropdown()">
-                    {{ _lang.name }}&nbsp;{{ icon('fontawesome', 'earth-asia-solid', 18) }}
+                    <span>{{ _lang.name }}&nbsp</span>{{ icon('fontawesome', 'earth-asia-solid', 18) }}
                 </a>
                 <div id="lang-selector">
                     {% for lang in _blog.languages %}

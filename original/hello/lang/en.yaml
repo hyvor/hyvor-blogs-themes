@@ -3,7 +3,7 @@
 pagination: Pagination
 previous_page: Previous Page
 next_page: Next Page
-of: of
+of: "{current} of {total}"
 
 # footer
 feed: RSS Feed

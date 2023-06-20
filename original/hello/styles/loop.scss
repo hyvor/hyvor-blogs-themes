@@ -37,7 +37,7 @@
         }
 
         .right {
-            padding-left: 25px;
+            padding-inline-start: 25px;
 
             img {
                 width: 300px;
@@ -66,11 +66,18 @@ nav.pagination {
         display: inline-block;
         color: var(--color-accent);
         transition: .3s transform ease-out;
+        vertical-align: middle;
         &.hidden {
             visibility: hidden;
         }
         &:hover {
             transform: scale(1.5);
         }
+    }
+}
+
+[dir="rtl"] nav.pagination {
+    a {
+        transform: rotate(180deg);
     }
 }
