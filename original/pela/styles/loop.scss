@@ -228,3 +228,20 @@
     margin: 0 8px;
   }
 }
+
+[dir="rtl"] {
+  .pagination__next,
+  .pagination__prev {
+    i {
+      transform: scaleX(-1);
+    }
+  }
+
+  .pagination__next {
+    border-radius: 22px 0 0 22px;
+  }
+
+  .pagination__prev {
+    border-radius: 0 22px 22px 0;
+  }
+}

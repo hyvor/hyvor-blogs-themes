@@ -282,6 +282,7 @@
   .search-input-icon {
     left: auto;
     right: 24px;
+    transform: translateY(-50%) scaleX(-1);
   }
 
   .search-button {

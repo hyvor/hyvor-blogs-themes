@@ -39,6 +39,7 @@
 
 /* Nav */
 .main-nav {
+  position: relative;
   display: flex;
   flex: 1 0;
   align-items: center;
@@ -105,11 +106,17 @@
 }
 
 [dir="rtl"] {
+  .nav-lang #lang-selector {
+    left: 0;
+    right: auto;
+  }
+
   @media (max-width: $desktop) {
     .main-nav {
       left: $base-spacing-unit;
       right: auto;
     }
+
 
     .nav-button {
       align-items: flex-start;
@@ -228,7 +235,7 @@
 
 /* Nav Lang */
 .nav-lang {
-  position: relative;
+  // position: relative;
 
   .lang-label {
     margin-inline-end: 0;

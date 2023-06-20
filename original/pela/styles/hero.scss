@@ -227,3 +227,15 @@
     }
   }
 }
+
+[dir="rtl"] {
+  .hero__search {
+    text-align: right;
+  }
+
+  .hero__search .hero__search__button {
+    left: 6px;
+    right: auto;
+    transform: scaleX(-1);
+  }
+}
