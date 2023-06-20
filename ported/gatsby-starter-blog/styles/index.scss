@@ -158,7 +158,7 @@ p {
 
 /*ul,
 ol {
-  margin-left: var(--spacing-0);
+  margin-inline-start: var(--spacing-0);
   margin-right: var(--spacing-0);
   padding: var(--spacing-0);
   margin-bottom: var(--spacing-8);
@@ -181,16 +181,16 @@ li *:last-child {
 }
 
 li > ul {
-  margin-left: var(--spacing-8);
+  margin-inline-start: var(--spacing-8);
   margin-top: calc(var(--spacing-8) / 2);
 }
 
 blockquote {
   color: var(--color-text-light);
-  margin-left: calc(-1 * var(--spacing-6));
-  margin-right: var(--spacing-8);
-  padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-6);
-  border-left: var(--spacing-1) solid var(--color-primary);
+  margin-inline-start: calc(-1 * var(--spacing-6));
+  margin-inline-end: var(--spacing-8);
+    padding-inline-start: var(--spacing-6);
+  border-inline-start: var(--spacing-1) solid var(--color-primary);
   font-size: var(--fontSize-2);
   font-style: italic;
   margin-bottom: var(--spacing-8);
@@ -411,7 +411,7 @@ a:focus {
 @media (max-width: 42rem) {
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
-    margin-left: var(--spacing-0);
+    margin-inline-start: var(--spacing-0);
   }
   ul,
   ol {
@@ -460,8 +460,8 @@ img {
 }
 
 ul {
-  margin-left: 1.75rem;
-  margin-right: 0;
+  margin-inline-start: 1.75rem;
+  margin-inline-end: 0;
   margin-top: 0;
   padding-bottom: 0;
   padding-left: 0;
@@ -473,8 +473,8 @@ ul {
   list-style: disc;
 }
 ol {
-    margin-left: 0;
-    margin-right: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
     margin-bottom: 2rem;
     padding: 0;
 }

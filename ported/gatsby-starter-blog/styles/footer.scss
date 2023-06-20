@@ -1,8 +1,12 @@
 footer {
     padding: 1.5rem 0;
 
+    .rss-wrap {
+        float: right;
+    }
+
     .social-links a:not(:last-child) {
-        margin-right: 10px;
+        margin-inline-end: 10px;
         position: relative;
         &:after {
             content: "•";
@@ -10,6 +14,18 @@ footer {
             right: -10px;
             pointer-events: none;
             color: var(--color-text);
+        }
+    }
+}
+
+[dir="rtl"] {
+    footer .rss-wrap {
+        float: left;
+    }
+    .social-links a:not(:last-child) {
+        &:after {
+            right: auto;
+            left: -10px;
         }
     }
 }
