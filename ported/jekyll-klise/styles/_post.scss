@@ -106,7 +106,7 @@
     margin-bottom: 3em;
 
     .tags {
-        margin-left: 3px;
+        margin-inline-start: 3px;
         letter-spacing: 0.5px;
 
         .tag {
@@ -155,7 +155,7 @@
 
     time {
         position: relative;
-        margin-right: 1.5em;
+        margin-inline-end: 1.5em;
 
         &::after {
             background: var(--color-light);
@@ -200,7 +200,7 @@
 
     aside {
         padding: 30px;
-        padding-right: 60px;
+        padding-inline-end: 60px;
         margin: 40px 0 40px;
         position: relative;
         span {
@@ -245,7 +245,7 @@
 
         .line-number {
             padding: 0 6px;
-            margin-right: 1rem;
+            margin-inline-end: 1rem;
             position: absolute;
             left: 1rem;
         }
@@ -266,7 +266,7 @@
         }
 
         code.language-text {
-            margin-left: -1.33334em;
+            margin-inline-start: -1.33334em;
         }
     }
 
@@ -306,7 +306,7 @@
         }
 
         li input[type="checkbox"] {
-            margin-right: 10px;
+            margin-inline-end: 10px;
         }
     }
 
@@ -479,14 +479,14 @@
         box-sizing: border-box;
 
         &:nth-child(odd) {
-            padding-left: 0;
-            padding-right: 20px;
+            padding-inline-start: 0;
+            padding-inline-end: 20px;
         }
 
         &:nth-child(even) {
             text-align: right;
-            padding-right: 0;
-            padding-left: 20px;
+            padding-inline-end: 0;
+            padding-inline-start: 20px;
         }
     }
 
@@ -501,7 +501,7 @@
 
         .post-nav-item:nth-child(even) {
             border-left: 0;
-            padding-left: 0;
+            padding-inline-start: 0;
             border-top: 1px solid var(--color-light);
         }
     }

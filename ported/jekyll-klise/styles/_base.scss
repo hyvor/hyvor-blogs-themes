@@ -147,7 +147,7 @@ ul {
         top: -1px;
         width: 1.2em;
         position: relative;
-        margin-left: -1.3em;
+        margin-inline-start: -1.3em;
         font-weight: 700;
     }
 }
@@ -162,8 +162,8 @@ ol {
             content: counter(li);
             display: inline-block;
             width: 1em;
-            margin-right: 0.5em;
-            margin-left: -1.6em;
+            margin-inline-end: 0.5em;
+            margin-inline-start: -1.6em;
             text-align: right;
             direction: rtl;
             font-weight: $bold-weight;
@@ -175,7 +175,7 @@ ol {
 ul,
 ol {
     margin-top: 0;
-    margin-left: $spacing-full;
+    margin-inline-start: $spacing-full;
 }
 
 li {
@@ -262,8 +262,8 @@ blockquote {
     border-top: 1px solid var(--color-light);
     border-bottom: 1px solid var(--color-light);
     padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
     font-size: 1em;
 
     > :last-child {
@@ -317,7 +317,7 @@ sup {
     left: 2px;
     font-size: small;
     position: relative;
-    margin-right: 2px;
+    margin-inline-end: 2px;
 }
 
 // Table

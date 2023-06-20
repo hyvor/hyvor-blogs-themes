@@ -1,0 +1,28 @@
+
+
+[dir="rtl"] {
+    .page-content aside span {
+        right: initial;
+        left: 30px;
+    }
+    .post-comments, .post-subscribe {
+        h4:after {
+            left: initial !important;
+            right: 0;
+        }
+    }
+    .post-nav-item {
+        &:nth-child(even) {
+            text-align: left;
+        }
+    }
+
+    .archive .archive-count:after {
+        left: initial;
+        right: -30px;
+    }
+
+    .pagination-box a svg {
+        transform: rotate(180deg);
+    }
+}

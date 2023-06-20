@@ -23,7 +23,7 @@
         margin: auto 0;
 
         @include media-query($on-mobile) {
-            padding-left: 20px;
+            padding-inline-start: 20px;
         }
 
         .logo img {
@@ -155,7 +155,7 @@
         }
 
         &:not(:last-child) {
-            margin-right: 5px;
+            margin-inline-end: 5px;
         }
 
         &.rss {
@@ -313,7 +313,7 @@
         min-width: 96px;
         color: var(--color-black);
         font-weight: 700;
-        padding-right: 10px;
+        padding-inline-end: 10px;
 
         @include media-query($on-mobile) {
             font-size: 16px;
@@ -495,7 +495,7 @@
 
     .archive-count {
         position: relative;
-        margin-left: 35px;
+        margin-inline-start: 35px;
 
         &:after {
             content: "";
@@ -527,7 +527,7 @@ ol {
         &::before {
             position: absolute;
             width: 1.5em;
-            margin-left: -2em;
+            margin-inline-start: -2em;
             font-size: 1em;
             font-weight: 500;
             line-height: 2em;
@@ -542,7 +542,7 @@ ol {
 
         ul,
         ol {
-            padding-left: 30px;
+            padding-inline-start: 30px;
             margin: 15px 0;
         }
     }

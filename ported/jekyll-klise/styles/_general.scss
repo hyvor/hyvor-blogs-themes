@@ -1,6 +1,6 @@
 // Fonts preferences
 $medium-font-size: var(--fontSize-root) * 0.938;
-$small-font-size: var(--fontSize-root) * 0.875;
+$small-font-size: calc(var(--fontSize-root) * 0.875);
 $base-line-height: 1.85;
 
 // Font weight
@@ -30,5 +30,5 @@ $on-widescreen: 1152px;
 }
 
 @mixin relative-font-size($ratio) {
-    font-size: var(--fontSize-root) * $ratio;
+    font-size: calc( var(--fontSize-root) * #{$ratio} );
 }
