@@ -53,7 +53,7 @@
 
 .nav-footer li {
     position: relative;
-    margin-right: 3rem;
+    margin-inline-end: 3rem;
 
     &.active a {
         color: var(--color-content-main);
@@ -73,7 +73,7 @@
     }
 
     &:last-child {
-        margin-right: 0;
+        margin-inline-end: 0;
     }
 }
 

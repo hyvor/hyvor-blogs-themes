@@ -94,7 +94,7 @@
     ul > li:before {
         position: absolute;
         width: 1.5em;
-        margin-left: -2em;
+        margin-inline-start: -2em;
         font-size: 1em;
         font-weight: 500;
         line-height: 2em;
@@ -136,7 +136,7 @@
         padding: 0.25em 1em;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        border-left: 0.25em solid var(--color-primary);
+        border-inline-start: 0.25em solid var(--color-primary);
         font-style: italic;
         font-weight: 400;
     }
@@ -226,6 +226,7 @@
         background: var(--color-background-secondary);
         border: 1px solid var(--color-background-contrast);
         box-sizing: border-box;
+        direction: ltr;
     }
 
     pre .line {
@@ -253,7 +254,7 @@
     }
 
     pre code.language-text {
-        margin-left: -1.33334em;
+        margin-inline-start: -1.33334em;
     }
 
     kbd {

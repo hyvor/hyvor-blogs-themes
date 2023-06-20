@@ -100,13 +100,15 @@
 
                 </section>
 
-                <section class="post-comments">
-                    {{ _comments | template }}
-                </section>
+                {% if _route.name != 'page' %}
+                    <section class="post-comments">
+                        {{ _comments | template }}
+                    </section>
 
-                <section class="post-subscribe">
-                    {{ _newsletter | template }}
-                </section>
+                    <section class="post-comments post-subscribe">
+                        {{ _newsletter | template }}
+                    </section>
+                {% endif %}
 
                 <aside class="post-nav">
 

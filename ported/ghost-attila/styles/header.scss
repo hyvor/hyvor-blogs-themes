@@ -113,7 +113,7 @@
 
         .archive-count {
             position: relative;
-            margin-left: 3.5rem;
+            margin-inline-start: 3.5rem;
             color: var(--color-content-secondary);
 
             &:after {
@@ -180,10 +180,10 @@
     }
 
     &.archive-author {
-        padding-left: 16rem;
+        padding-inline-start: 16rem;
         @media only screen and (max-width: $breakpoint-medium) {
-            padding-left: 0;
-            padding-right: 10rem;
+            padding-inline-start: 0;
+            padding-inline-end: 10rem;
         }
 
         .archive-avatar {
@@ -380,7 +380,7 @@
 }
 
 .nav-header .logo {
-    margin-right: 3rem;
+    margin-inline-end: 3rem;
     @media only screen and (max-width: $breakpoint-medium) {
         display: none;
     }
@@ -425,7 +425,7 @@
 
 .nav-header li {
     position: relative;
-    margin-right: 3rem;
+    margin-inline-end: 3rem;
 
     &.active {
         a:before {
@@ -542,20 +542,20 @@
     }
 
     &:last-child {
-        margin-right: 0;
+        margin-inline-end: 0;
     }
 }
 
 .nav-meta {
 
     li {
-        margin-right: 1rem;
+        margin-inline-end: 1rem;
         @media only screen and (max-width: $breakpoint-medium) {
             flex-grow: 1;
         }
 
         &.nav-lang {
-            margin-right: 20px;
+            margin-inline-end: 20px;
             position: relative;
 
             .lang-selector {
@@ -571,7 +571,7 @@
                 z-index:1;
                 a {
                     position: relative;
-                    margin-left: 25px;
+                    margin-inline-start: 25px;
                     &:before {
                         content: '';
                         position: absolute;
@@ -579,11 +579,11 @@
                         top: 50%;
                         width: 1.5rem;
                         height: 2px;
-                        margin-left: 6px;
+                        margin-inline-start: 6px;
                         margin-top: -1px;
                         border-radius: 2px;
                         background: #3B3D40;
-                        margin-right: 10px;
+                        margin-inline-end: 10px;
                     }
                     &:hover {
                         color: #C4C7CC;
@@ -622,7 +622,7 @@
                     top: 0;
                 }
                 .lang-selector a {
-                    margin-left: 0;
+                    margin-inline-start: 0;
                 }
             }
 
