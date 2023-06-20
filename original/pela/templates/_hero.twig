@@ -1,0 +1,52 @@
+<!-- begin hero -->
+<section class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="hero__inner">
+
+          <div class="hero__left">
+            {% if _blog.name %}
+            <div class="hero__title">
+              <span>{{ 'welcome' | lang }} </span>
+              <h1>{{ _blog.name }}</h1>
+            </div>
+            {% endif %}
+            {% if _blog.description %}
+              <div class="hero__description">{{ _blog.description }}</div>
+            {% endif %}
+            <div class="hero__search nav-search">
+              <span>{{ 'input_search' | lang }}…</span>
+              <span class="hero__search__button">
+                <i aria-hidden="true">{{ icon('ionicons', 'search', 18) }}</i>
+              </span>
+            </div>
+            <div class="hero__authors">
+              {% set all_authors = data(endpoint="authors", keys="picture_url,name,url", limit="5").data %}
+              <div class="hero__authors__inner">
+                {% for author in all_authors %}
+                  <a href="{{ author.url }}" class="hero__author__image">
+                    {% if author.picture_url %}
+                      <img src="{{ author.picture_url }}" alt="{{ author.name }}">
+                    {% endif %}
+                  </a>
+                {% endfor %}
+              </div>
+              <span>{{ 'authors' | lang }}</span>
+            </div>
+          </div>
+
+          {% if _blog.cover_url %}
+          <div class="hero__right">
+            <div class="hero__image">
+              <img src="{{ _blog.cover_url }}" alt="{{ _blog.name }}" loading="lazy">
+            </div>
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end hero -->

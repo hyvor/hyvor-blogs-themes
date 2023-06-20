@@ -1,0 +1,15 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+  <main class="content" role="main" aria-label="Content">
+    {% include '_hero.twig' %}
+    <div class="container">
+      <span class="section-title">{{ 'latest_posts' | lang }}</span>
+      <div class="row">
+        {% include '_loop.twig' %}
+      </div>
+    </div>
+  </main>
+
+{% endblock %}
