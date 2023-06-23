@@ -10,7 +10,7 @@
             <header class="gh-card-header"><h3 class="gh-card-title">{{ post.title }}</h3></header>
 
                 <div class="gh-card-excerpt">
-                    {{ post.description }}
+                {{ post.description }}
                 </div>
 
             <footer class="gh-card-footer">
@@ -21,7 +21,7 @@
                     {% endfor %}
                 {% endif %}
                 </span>
-                <time class="gh-card-date" datetime="2022-03-03">
+                <time class="gh-card-date" datetime="{{ post.published_at | format_date('long', locale=_lang.code)}}">
                 {{ post.published_at | format_date('long', locale=_lang.code)}}
                 </time>
             </footer>
