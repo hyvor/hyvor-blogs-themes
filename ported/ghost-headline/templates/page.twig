@@ -1,0 +1,20 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+<main class="page-template gh-main">
+
+<article class="gh-article post no-image">
+
+        <header class="gh-article-header gh-canvas">
+            <h1 class="gh-article-title">{{ _post.title }}</h1>
+        </header>
+
+        <section class="gh-content gh-canvas">
+        {{ _post.content | raw }}
+        </section>
+
+    </article>
+</main>
+
+{% endblock %}
