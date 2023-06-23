@@ -1,0 +1,30 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+	<main class="gh-main gh-outer">
+		<div class="gh-inner">
+
+            <section class="gh-pagehead">
+                {% if _author.picture_url %}
+                <figure class="gh-author-image">
+                        <img src="{{ _author.picture_url }}" alt="{{ _author.name }}">
+                </figure>
+                {% endif %}
+
+                <div class="gh-pagehead-content">
+                    <h1 class="gh-pagehead-title">{{ _author.name }}</h1>
+
+                </div>
+            </section>
+
+			<div class="gh-topic gh-topic-grid">
+				<div class="gh-topic-content gh-feed">
+                    {%  include '_loop.twig' %}
+				</div>
+			</div>
+            
+		</div>
+	</main>
+
+{% endblock %}

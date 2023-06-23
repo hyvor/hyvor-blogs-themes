@@ -1,0 +1,18 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+	<main class="gh-main gh-outer">
+		<div class="gh-inner">
+			<section class="gh-pagehead">
+				<h1 class="gh-pagehead-title">{{ _tag.name }}</h1>
+			</section>
+			<div class="gh-topic gh-topic-grid">
+				<div class="gh-topic-content gh-feed">
+                    {%  include '_loop.twig' %}
+				</div>
+			</div>
+		</div>
+	</main>
+
+{% endblock %}
