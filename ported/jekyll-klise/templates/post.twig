@@ -89,10 +89,12 @@
 						</section>
 					{% endif %}
 
-					<section class="post-subscribe">
-						<h4>Newsletter</h4>
-						{{ _newsletter | template }}
-					</section>
+					{% if _newsletter %}
+						<section class="post-subscribe">
+							<h4>Newsletter</h4>
+							{{ _newsletter | template }}
+						</section>
+					{% endif %}
 				{% endif %}
 			</article>
 		</main>

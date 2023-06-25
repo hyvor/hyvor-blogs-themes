@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+## [0.0.5] - 2023-06-25
+- Hide comments, newsletter when empty
+
 ## [0.0.4] - 2023-06-20
 - Added RTL support
 
