@@ -3,10 +3,10 @@
         <div class="gh-head-brand">
             <div class="gh-head-brand-wrapper">
                 <h1 class="gh-head-logo">
-                <a href="{{ _blog.url }}">{{ _blog.name }}</a>
+                <a href="{{ _blog.url }}">{% if _blog.logo_url %}<img src="{{ _blog.logo_url }}" alt="{{ _blog.name }}" />{% else %}{{ _blog.name }}{% endif %}</a>
                 </h1>
             </div>
-            <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search="">
+            <button class="nav-search gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search="">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </button>
             <button class="gh-burger"></button>
@@ -15,9 +15,40 @@
         {% include '_nav.twig' %}
 
         <div class="gh-head-actions">
-            <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search="">
+            <button class="nav-search gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search="">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </button>
+            {% if _route %}
+            {% if _blog.languages | length > 1 %}
+            <div class="gh-head-language">
+                {% for lang in _blog.languages %}
+                <a class="gh-head-link gh-portal-close" href="{{ lang.code | language_variant_url }}">{{ lang.name }}{% if _lang.code == lang.code %}{% endif %}</a>
+                {% endfor %}
+
+                {% if (_blog.color_modes == 'both') %}
+                <button accesskey="t" title="(Alt + T)" class="theme-toggle toggle-dark" onclick="_hb.changeColorMode('dark')">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button accesskey="t" title="(Alt + T)" class="theme-toggle toggle-light" onclick="_hb.changeColorMode('light')">
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                {% endif %}
+            </div>
+            {% endif %}
+            {% endif %}
+            
         </div>
     </div>
 </header>

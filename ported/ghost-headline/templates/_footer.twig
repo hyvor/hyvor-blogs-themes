@@ -3,6 +3,18 @@
 
         {% include '_nav-footer.twig' %}
 
-        <div class="gh-copyright">© {{ _config.footer.copy_year }} <a href="{{ _blog.url }}" target="_blank" rel="noopener">{{ _blog.name }}</a></div>
+        {% if _config.settings.social %}
+        <div class="gh-social-icons">
+            {% include '_social.twig' with {social: _blog.social} %}
+            {% import "_macro.twig" as macro %}
+            {% if _config.settings.feed %}
+            {{ macro.social_icon("feed" | lang, _blog.url ~ "/feed", 'rss-solid') }}
+            {% endif %}
+        </div>
+        {% endif %}
+
+        {% if _config.settings.copyright.show_hide %}
+        <div class="gh-copyright">{{ _config.settings.copyright.copy_text }}</div>
+        {% endif %}
     </div>
 </footer>

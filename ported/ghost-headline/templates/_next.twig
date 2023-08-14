@@ -1,16 +1,16 @@
-    <div class="gh-read-next gh-canvas">
-        <section class="gh-pagehead">
-            <h4 class="gh-pagehead-title">{{ 'latest' | lang }}</h4>
-        </section>
+<div class="gh-read-next gh-canvas">
+    <section class="gh-pagehead">
+        <h4 class="gh-pagehead-title">{{ 'latest' | lang }}</h4>
+    </section>
 
-        <div class="gh-topic gh-topic-grid">
-            <div class="gh-topic-content">
+    <div class="gh-topic gh-topic-grid">
+        <div class="gh-topic-content">
 
-                {% set large_post = data(endpoint="posts", sort="is_featured DESC", limit="3") %}
-                {% for post in large_post.data %}
-                    {% include '_card.twig' %}
-                {% endfor %}            
+            {% set large_post = data(endpoint="posts", sort="is_featured DESC", limit="3") %}
+            {% for post in large_post.data %}
+                {% include '_card.twig' %}
+            {% endfor %}            
 
-            </div>
         </div>
     </div>
+</div>

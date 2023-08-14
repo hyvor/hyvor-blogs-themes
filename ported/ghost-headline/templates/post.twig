@@ -43,6 +43,21 @@
                         <time class="gh-article-date" datetime="{{ _post.published_at | date('d-m-Y') }}">{{ _post.published_at | date('M d, Y') }}</time>
                     </div>
                 </div>
+                <div class="gh-article-lang">
+                {% if _post.variants | length > 1 %}
+                {{ 'translations' | lang }}:
+                <ul>
+                    {% for variant in _post.variants %}
+                    <li>
+                        <a href="{{ variant.url }}">
+                            {{ variant.language.name }}
+                        </a>
+                        {% if not loop.last %}{% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                </div>
             </aside>
 
             {% if _post.featured_image_url and _config.settings.post.featured_image %}
