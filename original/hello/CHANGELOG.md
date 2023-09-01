@@ -1,5 +1,14 @@
 ## [Unreleased]
 
+## [1.0.5] - 2023-09-01
+
+- Added heading anchor styles
+- Added table styles
+- Removed Nunito
+- Adapted Mulish using THEME_FONTS
+- Changed link styles
+- Added pinned icon
+
 ## [1.0.4] - 2023-06-20
 
 ### Changed
