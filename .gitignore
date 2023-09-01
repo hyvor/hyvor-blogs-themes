@@ -1,6 +1,7 @@
 .hb.cli.json
 .env
 .idea
+node_modules
 
 # temp files
 .DS_Store
