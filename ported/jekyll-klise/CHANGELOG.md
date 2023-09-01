@@ -1,4 +1,11 @@
 
+## [1.0.4] - 2023-09-01
+- Increased POSTS_PER_PAGINATION to 100
+- Added heading anchor styles
+- Added table styles
+- Show "Home" when logo is not set
+- Fixed ol numbering styles
+
 ## [1.0.3] - 2023-06-25
 - Hide newsletter when empty
 
