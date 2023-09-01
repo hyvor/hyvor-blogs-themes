@@ -102,6 +102,12 @@ privacy:
     $text: All assets (images, fonts, etc.) should be added from the assets folder. No external assets should be used.
 
 links:
+  header_navigation:
+    $status: required
+    $text: Header navigation should be added to the theme
+  footer_navigation:
+    $status: required
+    $text: Footer navigation should be added to the theme
   pagination:
     $status: required
     $text: Pagination should be added to all pages that displays a list of posts.

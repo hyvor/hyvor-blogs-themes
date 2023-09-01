@@ -48,6 +48,14 @@
                 </div>
             {% endif %}
 
+            {% if post.is_featured %}
+                <div class="pinned">
+                    <span class="pinned-icon">
+                        {{ icon('bootstrap', 'star-fill', 16, 16) }}
+                    </span>
+                </div>
+            {% endif %}
+
         </a>
 
     {% endfor %}

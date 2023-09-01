@@ -1,7 +1,12 @@
 <div class="search-wrapper">
 	<div class="search">
-		<form class="search-form">
-			<input class="search-field" type="text" placeholder="{{ 'search' | lang }}…">
+		<form class="search-form" onsubmit="event.preventDefault()">
+			<input 
+				class="search-field" 
+				type="text" 
+				placeholder="{{ 'search' | lang }}…"
+				autofocus="1"
+			>
 			<button class="search-button" type="submit">
 				<i aria-hidden="true">{{ icon('fontawesome', 'magnifying-glass-solid') }}</i>
 			</button>

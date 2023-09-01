@@ -17,9 +17,6 @@ footer {
             text-decoration: none;
             margin-inline-end: 8px;
             color: inherit;
-            &:hover {
-                color: var(--color-accent);
-            }
         }
     }
 
@@ -33,6 +30,9 @@ footer {
             padding: 8px;
             text-decoration: none;
             color: inherit;
+            &.active {
+                color: var(--color-accent);
+            }
         }
     }
 
@@ -69,12 +69,10 @@ footer {
                 color: inherit;
                 padding: 4px 10px;
                 text-decoration: none;
-                &:hover {
-                    transform: scale(1.02);
-                }
                 &.active {
                     font-weight: 600;
                     color: var(--color-accent);
+                    opacity: 1!important;
                 }
                 .bull {
                     margin-inline-start: 4px;

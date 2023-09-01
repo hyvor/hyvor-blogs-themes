@@ -12,7 +12,7 @@
 
         <nav>
             {% for nav in _blog.nav_footer %}
-                <a class="nav global-scaling-link" href="{{ nav.url }}">
+                <a class="nav global-opacity-link{% if is_current_url(nav.url) %} active{% endif %}" href="{{ nav.url }}">
                     <span>{{ nav.name }}</span>
                 </a>
             {% endfor %}
@@ -20,14 +20,14 @@
 
         {% if _blog.languages | length > 1 %}
             <div class="nav-lang">
-                <a class="lang-label" role="label" onclick="toggleLanguageDropdown()">
-                    <span>{{ _lang.name }}&nbsp</span>{{ icon('fontawesome', 'earth-asia-solid', 18) }}
+                <a class="lang-label global-opacity-link" role="label" onclick="toggleLanguageDropdown()">
+                    <span>{{ _lang.name }}&nbsp</span>{{ icon('fontawesome', 'earth-asia-solid', 16) }}
                 </a>
                 <div id="lang-selector">
                     {% for lang in _blog.languages %}
                         <a
                             href="{{ lang.code | language_variant_url }}"
-                            class="{% if lang.code == _lang.code %}active{% endif %}"
+                            class="global-opacity-link {% if lang.code == _lang.code %}active{% endif %}"
                         >{{ lang.name }}{% if _lang.code == lang.code %}<span class="bull">&bull;</span>{% endif %}</a>
                     {% endfor %}
                 </div>
