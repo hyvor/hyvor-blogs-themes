@@ -66,6 +66,22 @@
         margin: 24px 0 16px;
         font-size: 12px;
     }
+
+    h1,h2,h3,h4,h5,h6 {
+        a[href^="#"] {
+            color: inherit;
+            box-shadow: none;
+            position: relative;
+            &:hover:before {
+                content: "#";
+                position: absolute;
+                right: 100%;
+                margin-right: 5px;
+                color: var(--secondary);
+            }
+        }
+    }
+
     a {
         box-shadow: 0 1px 0;
         code {
@@ -124,6 +140,9 @@
         dd {
             margin-top: 10px;
         }
+    }
+    .table-container {
+        overflow-x: auto;
     }
     table {
         margin-bottom: 32px;

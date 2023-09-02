@@ -1,6 +1,5 @@
 $mobile: 640px;
 
-@import 'font.scss';
 @import 'footer.scss';
 @import 'post.scss';
 
@@ -137,6 +136,7 @@ h1 > a {
   text-decoration: none;
 }
 
+h1 > a,
 h2 > a,
 h3 > a,
 h4 > a,
@@ -203,6 +203,12 @@ blockquote > :last-child {
 blockquote > ul,
 blockquote > ol {
   list-style-position: inside;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: var(--spacing-8);
+  margin-bottom: var(--spacing-8);
 }
 
 table {

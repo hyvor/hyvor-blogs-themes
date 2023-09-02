@@ -10,6 +10,7 @@
         text-decoration: none;
         color: inherit;
         transition: .1s box-shadow;
+        position: relative;
 
         .left {
             flex: 1;
@@ -49,8 +50,33 @@
             box-shadow: var(--box-shadow), 0 0 20px rgba(0, 0, 0, 0.05);
         }
 
+        .pinned {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            transform: translateY(50%);
+            margin-left: 30px;
+            .pinned-icon {
+                display: inline-flex;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: var(--color-accent);
+                color: #fff;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
     }
 
+}
+
+[dir="rtl"] a.article .pinned {
+    left: auto;
+    right: 0;
+    margin-left: 0;
+    margin-right: 30px;
 }
 
 nav.pagination {
@@ -64,14 +90,14 @@ nav.pagination {
         margin: 0 3px;
         padding: 10px;
         display: inline-block;
-        color: var(--color-accent);
         transition: .3s transform ease-out;
         vertical-align: middle;
+        color: inherit;
         &.hidden {
             visibility: hidden;
         }
         &:hover {
-            transform: scale(1.5);
+            color: var(--color-accent);
         }
     }
 }

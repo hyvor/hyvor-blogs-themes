@@ -1,5 +1,6 @@
 THEME_NAME: ghost-attila
-THEME_VERSION: 0.0.5
+THEME_VERSION: 0.0.6
+THEME_FONTS: "fira-sans:400,500,700|libre-baskerville:400,400i,700"
 
 colors:
   primary: "#d95736"

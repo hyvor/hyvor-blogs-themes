@@ -165,7 +165,6 @@ ol {
             margin-inline-end: 0.5em;
             margin-inline-start: -1.6em;
             text-align: right;
-            direction: rtl;
             font-weight: $bold-weight;
             font-size: $small-font-size;
         }
@@ -322,6 +321,9 @@ sup {
 
 // Table
 .overflow-table {
+    overflow-x: auto;
+}
+.table-container {
     overflow-x: auto;
 }
 

@@ -3,13 +3,15 @@
 
 		<input type="checkbox" id="menu-trigger" class="menu-trigger"/>
 		<div class="actions">
-			{% if _blog.logo_url %}
 				<span class="logo">
 					<a href="{{ _blog.url }}" title="{{ 'home' | lang }}">
-						<img src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}"/>
+						{% if _blog.logo_url %}
+							<img src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}"/>
+						{% else %}
+							{{ 'home' | lang }}
+						{% endif %}
 					</a>
 				</span>
-			{% endif %}
 
 			{% if (_blog.color_modes == 'both') %}
 				<a id="mode" onclick="changeTheme()">

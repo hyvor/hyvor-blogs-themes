@@ -21,15 +21,20 @@
         display: flex;
         align-items: center;
         font-size: .85rem;
+        .global-post-authors {
+            margin-inline-end: 10px;
+            &::after {
+                content: " | ";
+            }
+        }
         .time-wrap {
-            margin-inline-start: 10px;
         }
         time {
 
         }
     }
 
-    h1 {
+    h1.post-title {
         font-size: 2rem;
         font-weight: 600;
         letter-spacing: -0.03em;
@@ -75,6 +80,20 @@
             margin-top: 2.5rem;
             margin-bottom: 0;
             text-rendering: optimizeLegibility;
+
+            a[href^="#"] {
+                color: inherit;
+                text-decoration: none;
+                box-shadow: none;
+                position: relative;
+                &:hover:before {
+                    content: "#";
+                    position: absolute;
+                    right: 100%;
+                    margin-right: 5px;
+                    color: var(--color-text-content-secondary);
+                }
+            }
         }
 
         h1 {
@@ -248,12 +267,49 @@
             background-color: #fffbd4;
         }
 
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+
+            table {
+                width: 100%;
+                border-collapse: initial;
+                border-spacing: 0 10px;
+                th {
+                    font-weight: 600;
+                    text-align: left;
+                    padding: 0.5rem 1.2rem;
+                    background-color: var(--color-tag-bg);
+                    color: var(--color-tag-fg);
+                    &:first-child {
+                        border-radius: 20px 0 0 20px;
+                    }
+                    &:last-child {
+                        border-radius: 0 20px 20px 0;
+                    }
+                    margin-bottom: 15px;
+                }
+                td {
+                    padding: 0.5rem 1.2rem;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+
+        }
+
     }
 
     .post-tags {
         margin-top: 20px;
     }
 
+}
+
+[dir="rtl"] h1::after {
+    left: initial;
+    right: 0;
 }
 
 .comments-box, .newsletter-box {

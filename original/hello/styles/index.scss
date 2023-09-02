@@ -1,5 +1,4 @@
 @import '_normalize.scss';
-@import 'font.scss';
 @import 'variables.scss';
 @import 'header.scss';
 @import 'footer.scss';
@@ -24,6 +23,7 @@ main {
     width: 720px;
     max-width: 100%;
     margin: 40px auto auto;
+    min-height: calc(100vh - 200px);
 }
 
 
@@ -53,10 +53,13 @@ main {
     font-weight: 600;
 }
 
-.global-scaling-link {
+.global-opacity-link {
     display: inline-block;
+    opacity: 1;
+    transition: .1s opacity, .1s color;
     &:not(.active):hover {
-        transform: scale(1.035);
+        opacity: 0.9;
+        color: var(--color-accent)!important;
     }
 }
 

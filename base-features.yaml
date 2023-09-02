@@ -1,0 +1,133 @@
+templates:
+  index:
+    $status: required
+    $text: index.twig - lists all posts
+  post:
+    $status: required
+    $text: post.twig - displays a single post
+  tag:
+    $status: required
+    $text: tag.twig - lists all posts of a tag
+  author:
+    $status: required
+    $text: author.twig - lists all posts of an author
+  404:
+    $status: required
+    $text: 404.twig - displays a 404 page
+  archive:
+    $status: optional
+    $text: archive.twig - lists all posts of a year
+
+multi_language:
+  internationalized:
+    $status: required
+    $text: All strings in template files are internationalized
+    $link: https://blogs.hyvor.com/docs/themes-internationalization
+  switcher:
+    $status: required
+    $text: To switch between languages.
+  post_variant_links:
+    $status: required
+    $text: "Links to other variants of the same post (only if available). A message like \"This post is also available in: ...\"."
+  html_attributes:
+    $status: required
+    $text: '<html lang="{{ _lang.code }}" dir="{{ _lang.direction }}"> is added'
+  rtl:
+    $status: required
+    $text: Right-to-left language support
+    $link: https://blogs.hyvor.com/docs/themes-publishing#rtl
+  
+color_modes:
+  support:
+    $status: required
+    $text: Light and dark modes are supported, with a toggle button
+  respect_settings:
+    $status: required
+    $text: "Respect the blog color settings. The toggle button should only be added if (_blog.color_modes == 'both')"
+
+placeholders:
+  head:
+    $status: required
+    $text: _head placeholder is added
+  foot:
+    $status: required
+    $text: _foot placeholder is added
+  comments:
+    $status: required
+    $text: _comments placeholder is added to posts
+  newsletter:
+    $status: required
+    $text: _newsletter placeholder is added to posts (optionally to index page)
+  hidden_in_pages:
+    $status: required
+    $text: _newsletter and _comments placeholders are not added to pages
+  hidden_when_empty:
+    $status: required
+    $text: _newsletter and _comments placeholders are not added if their values are empty
+
+
+config:
+  basic_configs:
+    $status: required
+    $text: Basic configs are added to config.yaml for colors, fonts, etc.
+    $link: https://blogs.hyvor.com/docs/themes-publishing#config
+  config_defs:
+    $status: required
+    $text: Config definitions are added to config.def.yaml
+    $link: https://blogs.hyvor.com/docs/themes-config#config-def
+  yaml_formatting:
+    $status: required
+    $text: YAML should use 2 spaces per indentation (not tabs, not 4 spaces).
+
+design:
+  responsive: 
+    $status: required
+    $text: The theme is responsive (mobile-friendly)
+  featured_post_icon: 
+    $status: optional
+    $text: Featured posts in the index page are marked with an icon (pin/star icon)
+  content_styles:
+    $status: required
+    $text: All blocks in the Content Style post should be styled properly
+  code_block:
+    $status: required
+    $text: Code blocks should have tab-size:4 and direction:ltr
+  search:
+    $status: required
+    $text: Search popup should be added to the theme
+
+privacy:
+  assets:
+    $status: required
+    $text: All assets (images, fonts, etc.) should be added from the assets folder. No external assets should be used.
+
+links:
+  header_navigation:
+    $status: required
+    $text: Header navigation should be added to the theme
+  footer_navigation:
+    $status: required
+    $text: Footer navigation should be added to the theme
+  pagination:
+    $status: required
+    $text: Pagination should be added to all pages that displays a list of posts.
+  blog_social_media:
+    $status: required
+    $text: Social media of the blog should be displayed (usually in the footer).
+  author_social_media:
+    $status: required
+    $text: Social media of the author should be displayed in the author page.
+  author_website_url:
+    $status: required
+    $text: The author's website URL should be displayed in the author page, if available.
+  blog_url:
+    $status: required
+    $text: If the blog has a logo (_blog.logo_url), it should be shown in the header linking the logo to the blog homepage.
+
+versioning:
+  version:
+    $status: required
+    $text: "The theme should have a version number in the config.yaml file. All version numbers should have the format: 0.x.x"
+  changelog:
+    $status: required
+    $text: The theme should have a CHANGELOG.md file. The file should be updated whenever a new version is released.

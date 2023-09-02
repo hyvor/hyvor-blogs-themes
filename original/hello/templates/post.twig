@@ -5,12 +5,12 @@
 	<main role="main">
 
 		<article class="post-box">
-			<h1>{{ _post.title }}</h1>
+			<h1 class="post-title">{{ _post.title }}</h1>
 
 			<div class="time-author-wrapper">
 				{% if (_config.settings.post.authors) %}
 					<div class="global-post-authors">
-						<div class="authors">
+						<span class="authors">
 							{% for author in _post.authors %}
 								<a class="author" href="{{ author.url }}">
 									{% if author.picture_url %}
@@ -21,11 +21,9 @@
 									<span class="author-name">{{ author.name }}</span>
 								</a>
 							{% endfor %}
-						</div>
+						</span>	
 					</div>
 				{% endif %}
-				|
-
 				<span class="time-wrap">
 					{{ 'published' | lang }}
 					<time itemprop="datePublished" datetime="{{ _post.published_at | date('d-m-Y') }}">
@@ -70,7 +68,7 @@
 
 		</article>
 
-		{% if _route != 'page' %}
+		{% if _route.name != 'page' %}
 
 			{% if _newsletter %}
 				<section class="newsletter-box">

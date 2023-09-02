@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "yaml": "^2.3.2"
+  }
+}

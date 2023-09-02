@@ -51,13 +51,11 @@
         font-weight: 500;
     }
 
-    h1 a,
-    h2 a,
-    h3 a,
-    h4 a,
-    h5 a,
-    h6 a {
-        font-weight: inherit;
+    h1, h2, h3, h4, h5, h6 {
+        a[href^="#"] {
+            text-decoration: none;
+            box-shadow: none;
+        }
     }
 
     p {
@@ -268,6 +266,10 @@
         background: var(--color-background-secondary);
         border-radius: 4px;
         box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 white inset;
+    }
+
+    .table-container {
+        overflow-x: auto;
     }
 
     table {

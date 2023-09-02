@@ -326,23 +326,23 @@
         margin-bottom: 0;
 
         &:hover {
-            .anchor-head {
+            a[href^="#"]:before {
                 color: var(--color-text-link-blue);
                 opacity: 1;
             }
         }
 
-        .anchor-head {
+        a[href^="#"] {
             position: relative;
-            opacity: 0;
             outline: none;
 
             &::before {
                 content: "#";
                 position: absolute;
-                right: -3px;
+                right: 100%;
                 width: 1em;
                 font-weight: $bold-weight;
+                opacity: 0;
             }
         }
     }
@@ -505,10 +505,6 @@
             border-top: 1px solid var(--color-light);
         }
     }
-}
-
-.post-updated-at {
-    font-family: "Ubuntu mono", "monospace";
 }
 
 // Post cover

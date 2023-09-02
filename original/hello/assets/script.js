@@ -77,6 +77,10 @@ function initSearch() {
 
     var lastXhr;
 
+    searchInputNew = searchInput.cloneNode(true)
+    searchInput.parentNode.replaceChild(searchInputNew, searchInput);
+    searchInput = searchInputNew;
+
     searchInput.addEventListener('keyup', function (e) {
 
         if (e.target.value.trim() === "") {
