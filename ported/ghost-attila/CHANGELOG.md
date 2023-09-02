@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+## [0.0.6] - 2023-09-01
+- Use THEME_FONTS
+- Added table styles
+- Added heading anchor styles
+
 ## [0.0.5] - 2023-06-25
 - Hide comments, newsletter when empty
 

@@ -385,6 +385,14 @@
         display: none;
     }
 
+    .logo-placeholder {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background: var(--color-background-contrast);
+    }
+
     a {
         display: block;
         height: 4rem;
