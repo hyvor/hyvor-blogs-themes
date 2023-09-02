@@ -5,6 +5,7 @@
 - Added table styles
 - Show "Home" when logo is not set
 - Fixed ol numbering styles
+- Added THEME_FONTS support
 
 ## [1.0.3] - 2023-06-25
 - Hide newsletter when empty
