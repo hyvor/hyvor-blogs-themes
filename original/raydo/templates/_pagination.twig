@@ -1,0 +1,19 @@
+<!-- begin pagination -->
+<nav class="pagination" aria-label="{{ 'pagination' | lang }}">
+  <div class="container">
+    <div class="pagination__list">
+
+      <a title="{{ 'previous_page' | lang }}" class="pagination__prev{% if not _pagination.page_prev %} disabled{% endif %}" href="{{ _pagination.page_prev | pagination_page_url }}">
+        {{ 'previous_page' | lang }}
+      </a>
+
+      <span class="pagination__count">{{ 'page' | lang }} {{ _pagination.page }} {{ 'of' | lang }} {{ _pagination.pages }}</span>
+
+      <a title="{{ 'next_page' | lang }}" class="pagination__next{% if not _pagination.page_next %} disabled{% endif %}" href="{{ _pagination.page_next | pagination_page_url }}">
+        {{ 'next_page' | lang }}
+      </a>
+
+    </div>
+  </div>
+</nav>
+<!-- end pagination -->

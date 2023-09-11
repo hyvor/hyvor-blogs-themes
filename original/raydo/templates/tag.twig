@@ -1,0 +1,38 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+<main role="main" class="tag-page">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <section class="tag-head">
+          <h1 class="tag-title">{{ _tag.name }}</h1>
+          {% if _tag.description %}
+            <div class="tag-description">{{ _tag.description }}</div>
+          {% endif %}
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section-title">
+      {{ 'check_out_posts' | lang }}
+      <span>
+        {{ _pagination.total | lang_by_number(
+          zero="posts_num_zero",
+          one="posts_num_one",
+          multi="posts_num_multi"
+        )}}
+      </span>
+    </div>
+    <div class="row">
+      {% include '_loop.twig' %}
+    </div>
+  </div>
+
+  {% include '_pagination.twig' %}
+</main>
+
+{% endblock %}

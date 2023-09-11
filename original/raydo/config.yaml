@@ -1,0 +1,57 @@
+THEME_NAME: raydo
+THEME_VERSION: 1.0.0
+THEME_FONTS: "lexend:400,700,800"
+POSTS_PER_PAGINATION: 7
+
+fonts:
+  base_font_family: "-apple-system, BlinkMacSystemFont, Segoe UI, Ubuntu, Cantarell, Helvetica, Arial, sans-serif"
+  heading_font_family: "'Lexend', sans-serif"
+
+size: 18
+style: normal
+weight: normal
+line_height: 1.6
+
+colors:
+  light:
+    accent: "#ff5151"
+    background_color: "#fff"
+    background_alt_color: "#f3f1f3"
+    background_gradient_start: "rgba(255,255,255, 0.65)"
+    background_gradient_end: "rgba(255,255,255, 1)"
+    text_color: "#05051c"
+    text_alt_color: "#fff"
+    heading_font_color: "#05051c"
+    link_color: "#05051c"
+    link_color_hover: "#ff2a2a"
+    border_color: "#e6e6e6"
+    code_color: "#eb5757"
+    code_background_color: "#e6e6e6"
+  dark:
+    accent: "#8536ff"
+    background_color: "#1a1a1c"
+    background_alt_color: "#222226"
+    background_gradient_start: "rgba(26,26,28, 0.65)"
+    background_gradient_end: "rgba(26,26,28, 1)"
+    text_color: "#f0f0f0"
+    text_alt_color: "#fff"
+    heading_font_color: "#f0f0f0"
+    link_color: "#f0f0f0"
+    link_color_hover: "#7028de"
+    border_color: "#303237"
+    code_color: "#ababab"
+    code_background_color: "#454545"
+
+
+settings:
+  loop:
+    authors: true
+    tags: true
+    featured_image: true
+  post:
+    authors: true
+    tags: true
+    featured_image: true
+    variants: true
+  footer:
+    feed_icon: true

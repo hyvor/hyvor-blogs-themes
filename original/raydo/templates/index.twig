@@ -1,0 +1,15 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+  <main class="content" role="main" aria-label="Content">
+    {% include '_hero.twig' %}
+    <div class="container">
+      <div class="row">
+        {% include '_loop.twig' %}
+      </div>
+    </div>
+    {% include '_pagination.twig' %}
+  </main>
+
+{% endblock %}
