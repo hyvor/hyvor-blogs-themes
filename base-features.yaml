@@ -23,6 +23,9 @@ multi_language:
     $status: required
     $text: All strings in template files are internationalized
     $link: https://blogs.hyvor.com/docs/themes-internationalization
+  en:
+    $status: required
+    $text: en.yaml file is added
   switcher:
     $status: required
     $text: To switch between languages.
