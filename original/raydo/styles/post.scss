@@ -204,22 +204,31 @@
   }
 
   pre {
+    position: relative;
     padding: 16px 0;
     border-radius: 22px;
     font-size: 14px;
+    tab-size: 4;
+    direction: ltr;
 
     .line {
       padding: 1px 14px;
     }
 
     .line-number {
-      margin-inline-end: 14px;
+      position: absolute;
+      margin-inline-end: 16px;
+      left: 16px;
     }
 
     code {
       display: block;
       width: max-content;
       min-width: 100%;
+    }
+
+    &.has-line-numbers .line {
+      padding-left: 36px;
     }
   }
 
