@@ -450,6 +450,44 @@
   }
 }
 
+/* 404 */
+.error {
+  max-width: 780px;
+  margin: 0 auto;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+
+  .error__title {
+    font-size: 140px;
+    line-height: 1;
+  }
+
+  .error__text {
+    font-weight: 700;
+  }
+
+  .error__button {
+    padding: 8px 16px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    color: var(--text-alt-color);
+    background: var(--color-accent);
+
+    &:hover {
+      background: var(--link-color-hover);
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .error__title {
+      font-size: 100px;
+    }
+  }
+}
+
 /* Shared declarations for certain elements. */
 h1, h2, h3, h4, h5, h6,
 ul, ol, dl,
