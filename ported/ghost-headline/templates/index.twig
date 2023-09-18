@@ -1,13 +1,13 @@
 {% extends "@base.twig" %}
 {% block body %}
-<main class="home-template gh-main gh-outer">
-    <div class="gh-inner">
+<main class="home-template hy-main hy-outer">
+    <div class="hy-inner">
 
-        <section class="gh-topic gh-topic-grid">
-            <h2 class="gh-topic-name">
+        <section class="hy-topic hy-topic-grid">
+            <h2 class="hy-topic-name">
                 {{ 'latest' | lang }}
             </h2>
-            <div class="gh-topic-content">
+            <div class="hy-topic-content">
                 {% if _pagination.page == 1 %}
                 {% set large_post = data(endpoint="posts", sort="is_featured DESC", limit="1") %}
                 {% for post in large_post.data %}
@@ -20,12 +20,13 @@
         </section>
 
         {% if _pagination.page == 1 %}
+
         {% if _config.settings.home.tag_1.show %}
-        <section class="gh-topic gh-topic-grid">
-            <h2 class="gh-topic-name">
+        <section class="hy-topic hy-topic-grid">
+            <h2 class="hy-topic-name">
                 <a href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_1.slug }}">{{ _config.settings.home.tag_1.slug }}</a>
             </h2>
-            <div class="gh-topic-content">
+            <div class="hy-topic-content">
                 {% set large_post_tag_1 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_1.slug}", limit="1") %}
                 {% for post in large_post_tag_1.data %}
                 {% include '_card-large.twig' %}
@@ -35,8 +36,8 @@
                 {% include '_card.twig' %}
                 {% endfor %}            
             </div>
-            <footer class="gh-topic-footer">
-                <a class="gh-topic-link" href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_1.slug }}">
+            <footer class="hy-topic-footer">
+                <a class="hy-topic-link" href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_1.slug }}">
                     {{ 'show more' | lang }} 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -48,11 +49,11 @@
         {% endif %}
 
         {% if _config.settings.home.tag_2.show %}
-        <section class="gh-topic gh-topic-grid">
-            <h2 class="gh-topic-name">
+        <section class="hy-topic hy-topic-grid">
+            <h2 class="hy-topic-name">
                 <a href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_2.slug }}">{{ _config.settings.home.tag_2.slug }}</a>
             </h2>
-            <div class="gh-topic-content">
+            <div class="hy-topic-content">
                 {% set large_post_tag_2 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_2.slug}", limit="1") %}
                 {% for post in large_post_tag_2.data %}
                 {% include '_card-full.twig' %}
@@ -62,8 +63,8 @@
                 {% include '_card.twig' %}
                 {% endfor %}            
             </div>
-            <footer class="gh-topic-footer">
-                <a class="gh-topic-link" href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_2.slug }}">
+            <footer class="hy-topic-footer">
+                <a class="hy-topic-link" href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_2.slug }}">
                     {{ 'show more' | lang }} 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -75,11 +76,11 @@
         {% endif %}  
 
         {% if _config.settings.home.tag_3.show %}
-        <section class="gh-topic gh-topic-grid">
-            <h2 class="gh-topic-name">
+        <section class="hy-topic hy-topic-grid">
+            <h2 class="hy-topic-name">
                 <a href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_3.slug }}">{{ _config.settings.home.tag_3.slug }}</a>
             </h2>
-            <div class="gh-topic-content">
+            <div class="hy-topic-content">
                 {% set large_post_tag_3 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_3.slug}", limit="1") %}
                 {% for post in large_post_tag_3.data %}
                 {% include '_card-large.twig' %}
@@ -89,8 +90,8 @@
                 {% include '_card.twig' %}
                 {% endfor %}            
             </div>
-            <footer class="gh-topic-footer">
-                <a class="gh-topic-link" href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_3.slug }}">
+            <footer class="hy-topic-footer">
+                <a class="hy-topic-link" href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_3.slug }}">
                     {{ 'show more' | lang }} 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -101,15 +102,17 @@
         </section>
         {% endif %}
 
-        <div class="gh-topic-list">
+        {% endif %}
+        
+        <div class="hy-topic-list">
 
             {% if _config.settings.home.tag_4.show %}
-            <section class="gh-topic gh-topic-minimal">
-                <header class="gh-topic-header">
-                    <h2 class="gh-topic-name">
+            <section class="hy-topic hy-topic-minimal">
+                <header class="hy-topic-header">
+                    <h2 class="hy-topic-name">
                         <a href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_4.slug }}">{{ _config.settings.home.tag_4.slug }}</a>
                     </h2>
-                    <a class="gh-topic-link" href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_4.slug }}">
+                    <a class="hy-topic-link" href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_4.slug }}">
                         {{ 'more' | lang }} 
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -117,7 +120,7 @@
                         </svg>
                     </a>
                 </header>
-                <div class="gh-topic-content">
+                <div class="hy-topic-content">
                 {% set regular_post_tag_4 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_4.slug}", limit="5") %}
                 {% for post in regular_post_tag_4.data %}
                 {% include '_card-small.twig' %}
@@ -127,12 +130,12 @@
             {% endif %}
 
             {% if _config.settings.home.tag_5.show %}
-            <section class="gh-topic gh-topic-minimal">
-                <header class="gh-topic-header">
-                    <h2 class="gh-topic-name">
+            <section class="hy-topic hy-topic-minimal">
+                <header class="hy-topic-header">
+                    <h2 class="hy-topic-name">
                         <a href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_5.slug }}">{{ _config.settings.home.tag_5.slug }}</a>
                     </h2>
-                    <a class="gh-topic-link" href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_5.slug }}">
+                    <a class="hy-topic-link" href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_5.slug }}">
                         {{ 'more' | lang }} 
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -140,7 +143,7 @@
                         </svg>
                     </a>
                 </header>
-                <div class="gh-topic-content">
+                <div class="hy-topic-content">
                 {% set regular_post_tag_5 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_5.slug}", limit="5") %}
                 {% for post in regular_post_tag_5.data %}
                 {% include '_card-small.twig' %}
@@ -150,12 +153,12 @@
             {% endif %}
 
             {% if _config.settings.home.tag_6.show %}
-            <section class="gh-topic gh-topic-minimal">
-                <header class="gh-topic-header">
-                    <h2 class="gh-topic-name">
+            <section class="hy-topic hy-topic-minimal">
+                <header class="hy-topic-header">
+                    <h2 class="hy-topic-name">
                         <a href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_6.slug }}">{{ _config.settings.home.tag_6.slug }}</a>
                     </h2>
-                    <a class="gh-topic-link" href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_6.slug }}">
+                    <a class="hy-topic-link" href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_6.slug }}">
                         {{ 'more' | lang }} 
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -163,14 +166,13 @@
                         </svg>
                     </a>
                 </header>
-                <div class="gh-topic-content">
+                <div class="hy-topic-content">
                 {% set regular_post_tag_6 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_6.slug}", limit="5") %}
                 {% for post in regular_post_tag_6.data %}
                 {% include '_card-small.twig' %}
                 {% endfor %} 
                 </div>
             </section>
-            {% endif %}    
             {% endif %}
               
         </div>

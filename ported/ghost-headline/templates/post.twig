@@ -2,48 +2,48 @@
 
 {% block body %}
 
-<main class="post-template gh-main">
-    <article class="gh-article post">
+<main class="post-template hy-main">
+    <article class="hy-article post">
 
-        <header class="gh-article-header gh-canvas">
+        <header class="hy-article-header hy-canvas">
 
-            <div class="gh-article-tags">
+            <div class="hy-article-tags">
             {% if (_config.settings.post.tags) %}
             {% for tag in _post.tags %}
-            <a class="gh-article-tag" href="{{ tag.url }}">{{ tag.name }}</a>
+            <a class="hy-article-tag" href="{{ tag.url }}">{{ tag.name }}</a>
             {% endfor %}
             {% endif %}
             </div>
             
-            <h1 class="gh-article-title">{{ _post.title }}</h1>
+            <h1 class="hy-article-title">{{ _post.title }}</h1>
 
-            <aside class="gh-article-sidebar">
-                <div class="gh-author-image-list">
+            <aside class="hy-article-sidebar">
+                <div class="hy-author-image-list">
                     {% if (_config.settings.loop.authors) %}
                     {% for author in _post.authors %}
                     {% if author.picture_url %}
-                    <a class="gh-author-image" href="{{ author.url }}">
+                    <a class="hy-author-image" href="{{ author.url }}">
                         <img src="{{ author.picture_url }}" alt="{{ author.name }}">
                     </a>
                     {% endif %}
                     {% endfor %}
                     {% endif %}
                 </div>
-                <div class="gh-author-name-list">
+                <div class="hy-author-name-list">
                     {% if (_config.settings.loop.authors) %}
                     {% for author in _post.authors %}
-                    <h4 class="gh-author-name">
+                    <h4 class="hy-author-name">
                         <a href="{{ author.url }}">{{ author.name }}</a>
                     </h4>
                     {% endfor %}
                     {% endif %}
                 </div>
-                <div class="gh-article-meta">
-                    <div class="gh-article-meta-inner">
-                        <time class="gh-article-date" datetime="{{ _post.published_at | date('d-m-Y') }}">{{ _post.published_at | date('M d, Y') }}</time>
+                <div class="hy-article-meta">
+                    <div class="hy-article-meta-inner">
+                        <time class="hy-article-date" datetime="{{ _post.published_at | date('d-m-Y') }}">{{ _post.published_at | date('M d, Y') }}</time>
                     </div>
                 </div>
-                <div class="gh-article-lang">
+                <div class="hy-article-lang">
                 {% if _post.variants | length > 1 %}
                 {{ 'translations' | lang }}:
                 <ul>
@@ -61,17 +61,19 @@
             </aside>
 
             {% if _post.featured_image_url and _config.settings.post.featured_image %}
-                <figure class="gh-article-image">
+                <figure class="hy-article-image">
                     <img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}">
                 </figure>
             {% endif %}
 
         </header>
 
-        <section class="gh-content gh-canvas">
+        <section class="hy-content hy-canvas">
             {{ _post.content | raw }}
         </section>
 
+        {% if _route.name != 'page' %}
+        
         {% if _newsletter %}
         <div class="post-newsletter">
             <h3>{{ 'newsletter' | lang }}</h3>
@@ -86,6 +88,8 @@
                 <h3>{{ 'comments' | lang }}</h3>
                 <div>{{ _comments | template }}</div>
             </div>
+        {% endif %}
+
         {% endif %}
 
     </article>

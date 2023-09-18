@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         :root {
-            --color-accent: #{{ _config.colors.light.accent_color }};
-            --color-accent-dark: #{{ _config.colors.dark.accent_color }};
-            --color-primary-text-light: #{{ _config.colors.light.primary_text_color }};
-            --color-secondary-text-light: #{{ _config.colors.light.secondary_text_color }};
-            --color-primary-text-dark: #{{ _config.colors.dark.primary_text_color }};
-            --color-secondary-text-dark: #{{ _config.colors.dark.secondary_text_color }};
+            --color-accent: {{ _config.colors.light.accent_color }};
+            --color-accent-dark: {{ _config.colors.dark.accent_color }};
+            --color-primary-text-light: {{ _config.colors.light.primary_text_color }};
+            --color-secondary-text-light: {{ _config.colors.light.secondary_text_color }};
+            --color-primary-text-dark: {{ _config.colors.dark.primary_text_color }};
+            --color-secondary-text-dark: {{ _config.colors.dark.secondary_text_color }};
 
             --font-body: {{ _config.fonts.body.family }};
             --font-heading: {{ _config.fonts.heading.family }};
@@ -22,7 +22,7 @@
 </head>
 <body class="is-head-stacked has-serif-body is-dropdown-loaded">
 
-    <div class="gh-site">
+    <div class="hy-site">
 
     {% include "_header.twig" %}
 
@@ -34,7 +34,8 @@
 
     </div>
 
-    <script src="{{ 'script.js' | asset_url }}"></script>
+    <script src="{{ 'main.js' | asset_url }}"></script>
+    <script src="{{ 'search.js' | asset_url }}"></script>
 
     {{ _foot | template }}
 </body>

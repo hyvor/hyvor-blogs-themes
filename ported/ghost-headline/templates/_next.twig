@@ -1,10 +1,10 @@
-<div class="gh-read-next gh-canvas">
-    <section class="gh-pagehead">
-        <h4 class="gh-pagehead-title">{{ 'latest' | lang }}</h4>
+<div class="hy-read-next hy-canvas">
+    <section class="hy-pagehead">
+        <h4 class="hy-pagehead-title">{{ 'latest' | lang }}</h4>
     </section>
 
-    <div class="gh-topic gh-topic-grid">
-        <div class="gh-topic-content">
+    <div class="hy-topic hy-topic-grid">
+        <div class="hy-topic-content">
 
             {% set large_post = data(endpoint="posts", sort="is_featured DESC", limit="3") %}
             {% for post in large_post.data %}

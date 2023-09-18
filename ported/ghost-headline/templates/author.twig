@@ -2,24 +2,24 @@
 
 {% block body %}
 
-	<main class="gh-main gh-outer">
-		<div class="gh-inner">
+	<main class="hy-main hy-outer">
+		<div class="hy-inner">
 
-            <section class="gh-pagehead">
+            <section class="hy-pagehead">
                 {% if _author.picture_url %}
-                <figure class="gh-author-image">
+                <figure class="hy-author-image">
                         <img src="{{ _author.picture_url }}" alt="{{ _author.name }}">
                 </figure>
                 {% endif %}
 
-                <div class="gh-pagehead-content">
-                    <h1 class="gh-pagehead-title">{{ _author.name }}</h1>
+                <div class="hy-pagehead-content">
+                    <h1 class="hy-pagehead-title">{{ _author.name }}</h1>
 
                 </div>
             </section>
 
-			<div class="gh-topic gh-topic-grid">
-				<div class="gh-topic-content gh-feed">
+			<div class="hy-topic hy-topic-grid">
+				<div class="hy-topic-content hy-feed">
                     {%  include '_loop.twig' %}
 				</div>
 			</div>

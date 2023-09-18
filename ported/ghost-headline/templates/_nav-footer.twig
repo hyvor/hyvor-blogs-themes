@@ -1,4 +1,4 @@
-<nav class="gh-foot-menu">
+<nav class="hy-foot-menu">
     <ul class="nav">
     {% for nav in _blog.nav_footer %}
         <li class="nav-{{ nav.name | lower | slug }} {% if is_current_url(nav.url) %}nav-current{% endif %}"><a href="{{ nav.url }}">{{ nav.name }}</a></li>

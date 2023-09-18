@@ -1,28 +1,28 @@
-<header id="gh-head" class="gh-head gh-outer">
-    <div class="gh-head-inner gh-inner">
-        <div class="gh-head-brand">
-            <div class="gh-head-brand-wrapper">
-                <h1 class="gh-head-logo">
+<header id="hy-head" class="hy-head hy-outer">
+    <div class="hy-head-inner hy-inner">
+        <div class="hy-head-brand">
+            <div class="hy-head-brand-wrapper">
+                <h1 class="hy-head-logo">
                 <a href="{{ _blog.url }}">{% if _blog.logo_url %}<img src="{{ _blog.logo_url }}" alt="{{ _blog.name }}" />{% else %}{{ _blog.name }}{% endif %}</a>
                 </h1>
             </div>
-            <button class="nav-search gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search="">
+            <button class="nav-search hy-search hy-icon-btn" aria-label="Search this site" data-ghost-search="">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </button>
-            <button class="gh-burger"></button>
+            <button class="hy-burger"></button>
         </div>
 
         {% include '_nav.twig' %}
 
-        <div class="gh-head-actions">
-            <button class="nav-search gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search="">
+        <div class="hy-head-actions">
+            <button class="nav-search hy-search hy-icon-btn" aria-label="Search this site" data-ghost-search="">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </button>
             {% if _route %}
             {% if _blog.languages | length > 1 %}
-            <div class="gh-head-language">
+            <div class="hy-head-language">
                 {% for lang in _blog.languages %}
-                <a class="gh-head-link gh-portal-close" href="{{ lang.code | language_variant_url }}">{{ lang.name }}{% if _lang.code == lang.code %}{% endif %}</a>
+                <a class="hy-head-link hy-portal-close" href="{{ lang.code | language_variant_url }}">{{ lang.name }}{% if _lang.code == lang.code %}{% endif %}</a>
                 {% endfor %}
 
                 {% if (_blog.color_modes == 'both') %}

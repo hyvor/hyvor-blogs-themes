@@ -1,27 +1,30 @@
-<article class="gh-card post tag-{{ post.title | lower | slug }}">
-    <a class="gh-card-link" href="{{ post.url }}">
+<article class="hy-card post tag-{{ post.title | lower | slug }}">
+    <a class="hy-card-link" href="{{ post.url }}">
         {% if post.featured_image_url and _config.settings.post.featured_image %}
-        <figure class="gh-card-image">
+        <figure class="hy-card-image">
+            {% if post.is_featured %}
+            <span class="featured-icon">{{ icon('fontawesome', 'star-solid', 12) }}</span>
+            {% endif %}
             <img srcset="{{ post.featured_image_url }}" src="{{ post.featured_image_url }}" alt="{{ post.title }}" class="featured-image">
         </figure>
         {% endif %}
 
-        <div class="gh-card-wrapper">
-            <header class="gh-card-header"><h3 class="gh-card-title">{{ post.title }}</h3></header>
+        <div class="hy-card-wrapper">
+            <header class="hy-card-header"><h3 class="hy-card-title">{{ post.title }}</h3></header>
 
-                <div class="gh-card-excerpt">
+                <div class="hy-card-excerpt">
                 {{ post.description }}
                 </div>
 
-            <footer class="gh-card-footer">
-                <span class="gh-card-author">
+            <footer class="hy-card-footer">
+                <span class="hy-card-author">
                 {% if (_config.settings.loop.authors) %}
                     {% for author in post.authors %}
                         {{ author.name }}
                     {% endfor %}
                 {% endif %}
                 </span>
-                <time class="gh-card-date" datetime="{{ post.published_at | format_date('long', locale=_lang.code)}}">
+                <time class="hy-card-date" datetime="{{ post.published_at | format_date('long', locale=_lang.code)}}">
                 {{ post.published_at | format_date('long', locale=_lang.code)}}
                 </time>
             </footer>
