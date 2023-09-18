@@ -1,0 +1,52 @@
+// ================================================== ==================================================
+// ==================================================  Code ==================================================
+// ================================================== ==================================================
+
+code {
+    font-family: var(--font-code);
+    font-size: 13px;
+    direction: ltr;
+    tab-size: 4;
+}
+
+pre {
+    padding: 1.6rem 0;
+    overflow-x: auto;
+    hyphens: none;
+    line-height: 1.5;
+    white-space: pre;
+    background-color: var(--color-lighter-gray);
+    direction: ltr;
+    tab-size: 4;
+    code {
+        display: block;
+        direction: ltr;
+        margin: auto 0;
+        min-width: 100%;
+        padding: 4px 0;
+        word-break: break-all;
+        width: max-content;
+        .line {
+            padding: 1px 2.6rem;
+            position: relative;
+            &.highlight:not(table) {
+                background-color: var(--color-darker-gray) !important;
+            }
+        }
+        .line-number {
+            margin-right: 1rem;
+            position: absolute;
+            left: 0.5rem;
+        }
+        .has-line-numbers .line {
+            padding-left: 2rem;
+        }
+    }
+}
+
+:not(pre) > code {
+    padding: 0.4rem;
+    color: var(--color-accent);
+    background-color: var(--color-lighter-gray);
+    tab-size: 4;
+}

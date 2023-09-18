@@ -1,0 +1,113 @@
+// ================================================== ==================================================
+// ==================================================  Content ==================================================
+// ================================================== ==================================================
+
+.hy-content {
+    margin-top: 4rem;
+    font-size: var(--content-font-size, 1.8rem);
+    letter-spacing: var(--content-letter-spacing, 0);
+}
+
+/* Default vertical spacing */
+.hy-content > * + * {
+    margin-top: calc(1.6em * var(--content-spacing-multiplier, 1));
+    margin-bottom: 0;
+}
+
+/* [id] represents all headings h1-h6, reset all margins */
+.hy-content > [id] {
+    margin: 0;
+}
+
+.has-serif-title .hy-content > [id] {
+    font-family: var(--font-content);
+    letter-spacing: -0.01em;
+}
+
+/* Add back a top margin to all headings, unless a heading
+is the very first element in the post content */
+.hy-content > [id]:not(:first-child) {
+    margin-top: calc(1.6em * var(--content-spacing-multiplier, 1));
+}
+
+/* Add a small margin between a heading and anything after it */
+.hy-content > [id] + * {
+    margin-top: calc(0.8em * var(--content-spacing-multiplier, 1));
+}
+
+/* A larger margin before/after HRs and blockquotes */
+.hy-content > hr,
+.hy-content > blockquote {
+    position: relative;
+    margin-top: calc(2.4em * var(--content-spacing-multiplier, 1));
+}
+
+.hy-content > hr + *,
+.hy-content > blockquote + * {
+    margin-top: calc(2.4em * var(--content-spacing-multiplier, 1));
+}
+
+/* Now the content typography styles */
+.hy-content h2 {
+    font-size: 1.6em;
+}
+
+.hy-content h3 {
+    font-size: 1.4em;
+}
+
+.hy-content a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    word-break: break-word;
+}
+
+.has-serif-body .hy-content > blockquote,
+.has-serif-body .hy-content > ol,
+.has-serif-body .hy-content > ul,
+.has-serif-body .hy-content > dl,
+.has-serif-body .hy-content > p {
+    font-family: var(--font-content);
+}
+
+.hy-content ul,
+.hy-content ol,
+.hy-content dl {
+    padding-inline-start: 2.8rem;
+}
+
+.hy-content li + li {
+    margin-top: 0.8rem;
+}
+
+.hy-content aside {
+    background: rgba(124,139,154,.13);
+    margin-top: calc(2em*var(--content-spacing-multiplier, 1));
+    display: flex;
+    padding: 1em;
+}
+
+.hy-content aside span {
+    padding-inline-end: 0.8em;
+    line-height: 1.25em;
+    font-size: 1.15em;
+}
+
+.hy-content aside div {
+    font-family: var(--font-content);
+    font-size: .95em;
+    letter-spacing: var(--content-letter-spacing,0);
+    word-break: break-word;
+}
+
+.hy-content figcaption a {
+    color: var(--color-darker-gray);
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .hy-content {
+        margin-top: 3.2rem;
+        font-size: 1.7rem;
+    }
+}

@@ -1,0 +1,26 @@
+// ================================================== ==================================================
+// ==================================================  Comments ==================================================
+// ================================================== ==================================================
+.hy-comments {
+    margin-top: 64px;
+    margin-bottom: -24px;
+}
+
+.hy-comments-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.hy-comments .hy-comments-title {
+    margin-bottom: 28px;
+}
+
+.hy-comments-header .hy-comments-title {
+    margin-bottom: 0;
+}
+
+.hy-comments-count {
+    color: var(--color-secondary-text-light);
+}

@@ -1,0 +1,95 @@
+// ================================================== ==================================================
+// ==================================================  Global ==================================================
+// ================================================== ==================================================
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--color-primary-text-light);
+    background-color: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    height: auto;
+}
+
+a {
+    color: var(--color-darker-gray);
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.15;
+    color: var(--color-darker-gray);
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: var(--h1-size);
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+h4 {
+    font-size: 2.2rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 1.8rem;
+}
+
+@media (max-width: 767px) {
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    h3 {
+        font-size: 2.1rem;
+    }
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-light-gray);
+    border: 0;
+}
+
+blockquote:not([class]) {
+    padding-inline-start: 2rem;
+    border-inline-start: 4px solid var(--color-accent);
+}
+
+figcaption {
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: var(--color-secondary-text-light);
+    text-align: center;
+}
