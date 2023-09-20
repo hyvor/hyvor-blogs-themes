@@ -6,93 +6,51 @@
     flex-grow: 1;
     justify-content: center;
     user-select: text;
-    padding: 8vw
-}
-
-.error-content,.error-details {
+    padding: 8vw;
     display: flex;
-    align-items: center
-}
+    align-items: center;
 
-.error-details {
-    margin-bottom: 4rem
-}
+    .error-details {
+        margin-bottom: 4rem;
 
-.error-ghost {
-    margin: 15px;
-    height: 115px
-}
+        .error-message {
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+            align-items: center;
 
-@media (max-width: 630px) {
-    .error-ghost {
-        display:none
+            a {
+                font-size: 1.4rem;
+                line-height: 1;
+                margin: 8px 0
+            }
+
+            .error-code {
+                margin: 0;
+                color: #c5d2d9;
+                font-size: 10vw;
+                font-weight: 600;
+                line-height: .9em;
+                letter-spacing: -.4vw
+            }
+
+            .error-description {
+                margin: 0;
+                padding: 0;
+                border: none;
+                color: #54666d;
+                font-size: 2.3rem;
+                font-weight: 300;
+                line-height: 1.3em
+            }
+
+            .error-link {
+                background-color: transparent;
+                color: #5ba4e5;
+                transition: background .3s, color .3s;
+                text-decoration: none
+            }
+        }
     }
-}
 
-.error-code {
-    margin: 0;
-    color: #c5d2d9;
-    font-size: 10vw;
-    font-weight: 600;
-    line-height: .9em;
-    letter-spacing: -.4vw
-}
-
-.error-description {
-    margin: 0;
-    padding: 0;
-    border: none;
-    color: #54666d;
-    font-size: 2.3rem;
-    font-weight: 300;
-    line-height: 1.3em
-}
-
-.error-message {
-    display: flex;
-    flex-direction: column;
-    margin: 15px;
-    align-items: center
-}
-
-.error-message a {
-    font-size: 1.4rem;
-    line-height: 1;
-    margin: 8px 0
-}
-
-.error-link {
-    background-color: transparent;
-    color: #5ba4e5;
-    transition: background .3s,color .3s;
-    text-decoration: none
-}
-
-.error-stack {
-    margin: 1rem auto;
-    padding: 2rem;
-    max-width: 800px;
-    background-color: hsla(0,0%,100%,.3)
-}
-
-.error-stack-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none
-}
-
-.error-stack-list li {
-    display: block
-}
-
-.error-stack-list li:before {
-    content: "\21AA";
-    display: inline-block;
-    margin-inline-end: .5rem;
-    color: #bbb;
-    font-size: 1.2rem
-}
-
-.error-stack-function {
-    font-weight: 700
 }

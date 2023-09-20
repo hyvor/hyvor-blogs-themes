@@ -191,30 +191,32 @@ $mobile: 576px;
   
   .popular-wrapper {
     padding: 24px;
-  }
-  
-  .popular-wrapper .popular-title {
-    margin-bottom: 16px;
-    font-size: 12px;
-    line-height: 1.6;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    .popular-title {
+      margin-bottom: 16px;
+      font-size: 12px;
+      line-height: 1.6;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .popular-tags {
+      display: flex;
+      flex-wrap: wrap;
+    
+      a {
+        padding: 6px 16px;
+        margin: 0 8px 8px 0;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.6;
+        border-radius: 30px;
+        transition: $global-transition;
+      }
+    }
   }
   
   .popular-wrapper .popular-tags {
-    display: flex;
-    flex-wrap: wrap;
-  
     a {
-      padding: 6px 16px;
-      margin: 0 8px 8px 0;
-      font-size: 12px;
-      font-weight: 500;
-      line-height: 1.6;
-      border-radius: 30px;
-      transition: $global-transition;
-  
       @media (max-width: $mobile) {
         margin: 0 4px 4px 0;
       }

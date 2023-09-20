@@ -18,6 +18,7 @@ pre {
     background-color: var(--color-lighter-gray);
     direction: ltr;
     tab-size: 4;
+
     code {
         display: block;
         direction: ltr;
@@ -26,25 +27,29 @@ pre {
         padding: 4px 0;
         word-break: break-all;
         width: max-content;
+
         .line {
             padding: 1px 2.6rem;
             position: relative;
+
             &.highlight:not(table) {
                 background-color: var(--color-darker-gray) !important;
             }
         }
+
         .line-number {
             margin-right: 1rem;
             position: absolute;
             left: 0.5rem;
         }
+
         .has-line-numbers .line {
             padding-left: 2rem;
         }
     }
 }
 
-:not(pre) > code {
+:not(pre)>code {
     padding: 0.4rem;
     color: var(--color-accent);
     background-color: var(--color-lighter-gray);

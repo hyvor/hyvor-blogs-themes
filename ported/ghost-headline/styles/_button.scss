@@ -2,47 +2,6 @@
 // ==================================================  Button ==================================================
 // ================================================== ==================================================
 
-.hy-btn {
-    display: inline-flex;
-    gap: 0.4em;
-    align-items: center;
-    justify-content: center;
-    padding: calc(0.75em * var(--multiplier, 1)) calc(1.15em * var(--multiplier, 1));
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1;
-    color: var(--color-white);
-    letter-spacing: inherit;
-    cursor: pointer;
-    background-color: var(--color-darker-gray);
-    border: 0;
-    border-radius: 100px;
-}
-
-.hy-btn:hover {
-    opacity: 0.95;
-}
-
-.hy-post-upgrade-cta .hy-btn {
-    line-height: inherit;
-}
-
-.hy-primary-btn {
-    background-color: var(--color-accent);
-}
-
-.hy-outline-btn {
-    color: var(--color-darker-gray);
-    text-decoration: none;
-    background-color: transparent;
-    border: 1px solid var(--color-light-gray);
-}
-
-.hy-outline-btn:hover {
-    border-color: var(--color-mid-gray);
-    opacity: 1;
-}
-
 .hy-icon-btn {
     display: inline-flex;
     align-items: center;
@@ -55,28 +14,9 @@
     background-color: transparent;
     border: 0;
     outline: none;
-}
 
-.hy-icon-btn svg {
-    width: 20px;
-    height: 20px;
-}
-
-.hy-text-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    color: var(--darker-gray-color);
-    letter-spacing: inherit;
-    cursor: pointer;
-    background-color: transparent;
-    border: 0;
-    outline: none;
-    will-change: opacity;
-}
-
-.hy-text-btn:hover {
-    opacity: 0.8;
+    svg {
+        width: 20px;
+        height: 20px;
+    }
 }
