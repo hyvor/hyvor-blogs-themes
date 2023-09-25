@@ -56,4 +56,4 @@ settings:
   feed: true
   copyright:
     show_hide: true
-    copy_text: Headline © 2023. Powered by Hyvor
+    copy_text: "© {{ _blog.name }}"

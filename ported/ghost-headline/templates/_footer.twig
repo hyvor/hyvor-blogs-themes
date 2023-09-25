@@ -14,7 +14,7 @@
         {% endif %}
 
         {% if _config.settings.copyright.show_hide %}
-        <div class="hy-copyright">{{ _config.settings.copyright.copy_text }}</div>
+        <div class="hy-copyright">{{ _config.settings.copyright.copy_text | template }}</div>
         {% endif %}
     </div>
 </footer>
