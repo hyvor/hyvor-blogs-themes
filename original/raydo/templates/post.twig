@@ -1,0 +1,116 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+  <main role="main">
+
+    <div class="container">
+      <div class="post-head">
+
+        {% if _post.featured_image_url and _config.settings.post.featured_image %}
+          <div class="image-box">
+            <img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}" class="post-image" loading="lazy">
+          </div>
+        {% endif %}
+
+        <div class="post-head__inner">
+          <div class="post__meta">
+            {% if (_config.settings.loop.tags) %}
+              <div class="post__tags">
+                {% for tag in _post.tags %}
+                  <a href="{{ tag.url }}" class="post__tag">{{ tag.name }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <time class="post__date" datetime="{{ _post.published_at | date('d-m-Y') }}">
+              {{ _post.published_at | format_date('medium', locale=_lang.code) }}
+            </time>
+          </div>
+
+          <h1 class="post-title">{{ _post.title }}</h1>
+
+          {% if _post.description %}
+            <p class="post-description">{{ _post.description }}</p>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- begin post -->
+      <article class="post">
+
+        <section class="post-content">
+          {{ _post.content | raw }}
+        </section>
+
+        {% if _post.authors | length > 0 or _post.variants | length > 0 %}
+        <div class="post__info">
+
+          {% if (_config.settings.post.authors) %}
+            <div class="post__authors">
+              <div class="post__authors__inner">
+                {% for author in _post.authors %}
+                  <a class="post__author" href="{{ author.url }}">
+                    {% if author.picture_url %}
+                      <img class="post__author__image" alt="Profile picture of {{ author.name }}" src="{{ author.picture_url }}" loading="lazy">
+                    {% endif %}
+                  </a>
+                {% endfor %}
+              </div>
+              <div class="post__author__name">
+                {% for author in _post.authors %}
+                  <a href="{{ author.url }}" class="post__author__link">{{ author.name }}{% if not loop.last %}, {% endif %}</a>
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+
+          {% if _config.settings.post.variants and _post.variants | length > 0 %}
+            <div class="translated-wrapper">
+              <p>
+                <span>
+                  <span>{{ 'translated' | lang }}:
+                  </span>
+                  {% for variant in _post.variants %}
+                    <a href="{{ variant.url }}">
+                      {{ variant.language.name }}
+                    </a>
+                    {% if not loop.last %}&nbsp;&bull;&nbsp;
+                    {% endif %}
+                  {% endfor %}
+                </span>
+              </p>
+            </div>
+          {% endif %}
+
+        </div>
+        {% endif %}
+
+        {% if _route.name != 'page' %}
+
+          {% if _newsletter %}
+            <section class="newsletter-box">
+              <h3>{{ 'newsletter' | lang }}</h3>
+              <div>
+                {{ _newsletter | template }}
+              </div>
+            </section>
+          {% endif %}
+
+          {% if _comments %}
+            <section class="comments-box">
+              <h3>{{ 'comments' | lang }}</h3>
+              <div>{{ _comments | template }}</div>
+            </section>
+          {% endif %}
+
+        {% endif %}
+      </article>
+      <!-- end post -->
+    </div>
+
+  </main>
+
+{% endblock %}

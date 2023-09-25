@@ -1,0 +1,124 @@
+{% import "_macro.twig" as macro %}
+
+<!-- begin footer-widgets -->
+<section class="footer-widgets">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="widget-box">
+          <div class="row">
+
+            {% if (_config.settings.loop.authors) %}
+              <div class="col col-4 col-d-6 col-t-12">
+                <div class="widget widget-authors">
+                  <div class="widget__head">
+                    <h3 class="widget__title">{{ 'authors' | lang }}</h3>
+                    <div class="authors">
+                      {% set all_authors = data(endpoint="authors", keys="picture_url,name,url", limit="5").data %}
+                      <div class="authors__inner">
+                        {% for author in all_authors %}
+                          <a href="{{ author.url }}" class="author__image">
+                            {% if author.picture_url %}
+                              <img src="{{ author.picture_url }}" alt="{{ author.name }}">
+                            {% endif %}
+                          </a>
+                        {% endfor %}
+                      </div>
+                      <div class="author__name">
+                        {% for author in all_authors %}
+                          <a href="{{ author.url }}" class="author__link">{{ author.name }}</a>{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+
+            <div class="col col-4 col-d-6 col-t-12">
+              <div class="widget widget-recent">
+                <div class="widget__head">
+                  <h3 class="widget__title">{{ 'recent_posts' | lang }}</h3>
+                </div>
+                {% set recent_posts = data(endpoint="posts", sort="published_at DESC", limit="3") %}
+                {% for post in recent_posts.data %}
+                  <div class="recent-post">
+                    {% if post.featured_image_url and _config.settings.loop.featured_image %}
+                      <a href="{{ post.url }}" class="recent-post__image" aria-hidden="true">
+                        <img src="{{ post.featured_image_url }}" alt="{{ post.title }}" loading="lazy">
+                      </a>
+                    {% endif %}
+                    <div class="recent-post__content">
+                      <time class="recent-post__date" datetime="{{ post.published_at | date('d-m-Y') }}">
+                        {{ post.published_at | format_date('medium', locale=_lang.code) }}
+                      </time>
+                      <h4 class="recent-post__title"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+
+            {% if (_config.settings.loop.tags) %}
+              <div class="col col-4 col-d-6 col-t-12">
+                <div class="widget widget-tags">
+                  <div class="widget__head">
+                    <h4 class="widget__title">{{ 'tags' | lang }}</h4>
+                  </div>
+                  <div class="tag-cloud">
+                    {% set tags = data(endpoint="tags", keys="name,url").data %}
+                    {% for tag in tags %}
+                      <a href="{{ tag.url }}" class="tag-cloud__tag">{{ tag.name }}</a>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end footer-widgets -->
+
+<!-- begin footer -->
+<footer class="footer">
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12">
+
+      <div class="footer__inner">
+
+        <div class="logo">
+          <a class="logo__link" href="{{ _blog.url }}">
+            {% if _blog.logo_url %}
+              <img class="logo__image" src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}" />
+            {% else %}
+              <span class="logo__name">{{ _blog.name }}</span>
+            {% endif %}
+          </a>
+        </div>
+
+        <div class="footer__info">
+          <nav class="footer__nav">
+            {% for nav in _blog.nav_footer %}
+              <a class="footer__nav__link {% if is_current_url(nav.url) %} active-link{% endif %}" href="{{ nav.url }}">{{ nav.name }}</a>
+            {% endfor %}
+          </nav>
+          <div class="footer__social">
+            {% include '_social.twig' with { social: _blog.social } %}
+            {% if _config.settings.footer.feed_icon %}{{ macro.social_icon("feed" | lang, _blog.url ~ "/feed", 'logo-rss') }}{% endif %}
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</footer>
+<!-- end footer -->

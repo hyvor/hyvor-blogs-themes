@@ -1,0 +1,57 @@
+{% extends '@base.twig' %}
+
+{% import "_macro.twig" as macro %}
+
+{% block body %}
+
+<main role="main" class="author-page">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <section class="author-head">
+          <div class="author-image">
+            {% if _author.picture_url %}
+              <img src="{{ _author.picture_url }}" alt="{{ _author.name }}'s Profile Picture" loading="lazy">
+            {% else %}
+              <span class="avatar-placeholder"></span>
+            {% endif %}
+          </div>
+          <h1 class="author-title">{{ _author.name }}</h1>
+          {% if _author.bio %}
+            <div class="author-description">{{ _author.bio }}</div>
+          {% endif %}
+          <div class="author-social">
+
+            {% if _author.website_url %}
+              {{ macro.social_icon('website' | lang, _author.website_url, 'link', 22) }}
+            {% endif %}
+            {% include '_social.twig' with {social: _author.social} %}
+            {% if _author.location %}
+              <span class="author-location">{{ icon('ionicons', 'navigate', 22) }} {{ _author.location }}</span>
+            {% endif %}
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section-title">
+      {{ 'check_out_posts' | lang }}
+      <span>
+        {{ _pagination.total | lang_by_number(
+          zero="posts_num_zero",
+          one="posts_num_one",
+          multi="posts_num_multi"
+        )}}
+      </span>
+    </div>
+    <div class="row">
+      {% include '_loop.twig' %}
+    </div>
+  </div>
+
+  {% include '_pagination.twig' %}
+</main>
+
+{% endblock %}

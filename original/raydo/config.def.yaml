@@ -1,0 +1,186 @@
+fonts:
+  base_font_family:
+    $name: Base Font
+    $type: text
+  heading_font_family:
+    $name: Heading Font
+    $type: text
+
+size:
+  $name: Font Size
+  $type: number
+
+style:
+  $name: Font Style
+  $type: text
+
+weight:
+  $name: Font Weight
+  $type: text
+
+line_height:
+  $name: Line Height
+  $type: number
+
+colors:
+  $name: Colors
+
+  light:
+    $name: Light Scheme
+
+    accent:
+      $name: Accent Color
+      $type: color
+
+    background_color:
+      $name: Background Color
+      $type: color
+
+    background_alt_color:
+      $name: Secondary Background Color
+      $type: color
+
+    background_gradient_start:
+      $name: Background Gradient Start
+      $type: color
+
+    background_gradient_end:
+      $name: Background Gradient End
+      $type: color
+
+    text_color:
+      $name: Text Color
+      $type: color
+
+    text_alt_color:
+      $name: Secondary Text Color
+      $type: color
+
+    heading_font_color:
+      $name: Heading Font Color
+      $type: color
+
+    link_color:
+      $name: Link Color
+      $type: color
+
+    link_color_hover:
+      $name: Link Hover Color
+      $type: color
+
+    border_color:
+      $name: Border Color
+      $type: color
+
+    border_alt_color:
+      $name: Secondary Border Color
+      $type: color
+
+    code_color:
+      $name: Code Color
+      $type: color
+
+    code_background_color:
+      $name: Background Code Color
+      $type: color
+
+  dark:
+    $name: Dark Scheme
+
+    accent:
+      $name: Accent Color
+      $type: color
+
+    background_color:
+      $name: Background Color
+      $type: color
+
+    background_alt_color:
+      $name: Secondary Background Color
+      $type: color
+
+    background_gradient_start:
+      $name: Background Gradient Start
+      $type: color
+
+    background_gradient_end:
+      $name: Background Gradient End
+      $type: color
+
+    text_color:
+      $name: Text Color
+      $type: color
+
+    text_alt_color:
+      $name: Secondary Text Color
+      $type: color
+
+    heading_font_color:
+      $name: Heading Font Color
+      $type: color
+
+    link_color:
+      $name: Link Color
+      $type: color
+
+    link_color_hover:
+      $name: Link Hover Color
+      $type: color
+
+    border_color:
+      $name: Border Color
+      $type: color
+
+    code_color:
+      $name: Code Color
+      $type: color
+
+    code_background_color:
+      $name: Background Code Color
+      $type: color
+
+settings:
+  $name: Settings
+
+  loop:
+    $name: Loop
+    $description: "In the posts loop. Ex: index page"
+
+    authors:
+      $name: Authors
+      $type: checkbox
+
+    tags:
+      $name: Tags
+      $type: checkbox
+
+    featured_image:
+      $name: Featured Image
+      $type: checkbox
+
+  post:
+    $name: Post Page
+
+    authors:
+      $name: Authors
+      $type: checkbox
+
+    tags:
+      $name: Tags
+      $type: checkbox
+
+    featured_image:
+      $name: Featured Image
+      $type: checkbox
+
+    variants:
+      $name: Variants
+      $description: Show language variants
+      $type: checkbox
+
+  footer:
+    $name: Footer
+
+    feed_icon:
+      $name: Feed Icon
+      $type: checkbox

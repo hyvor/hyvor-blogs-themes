@@ -1,0 +1,30 @@
+/* Tag */
+.tag-head {
+  max-width: 780px;
+  margin-bottom: 48px;
+
+  .tag-title {
+    margin-bottom: 0;
+    font-size: 48px;
+    text-transform: capitalize;
+  }
+
+  .tag-description {
+    margin-top: 12px;
+    font-size: 21px;
+  }
+
+  @media (max-width: $tablet) {
+    .tag-description {
+      font-size: inherit;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 32px;
+
+    .tag-title {
+      font-size: 36px;
+    }
+  }
+}

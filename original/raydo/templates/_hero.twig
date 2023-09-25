@@ -1,0 +1,28 @@
+{% if _blog.cover_url %}
+<!-- begin hero-image -->
+<div class="hero-image">
+  <div class="hero-image__inner">
+    <img src="{{ _blog.cover_url }}" alt="{{ _blog.name }}" loading="lazy">
+  </div>
+</div>
+<!-- end hero-image -->
+{% endif %}
+
+<!-- begin hero -->
+<section class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="hero__inner">
+          {% if _blog.name %}
+            <h1 class="hero__title">{{ _blog.name }}</h1>
+          {% endif %}
+          {% if _blog.description %}
+            <div class="hero__description">{{ _blog.description }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end hero -->
