@@ -1,0 +1,191 @@
+colors:
+  $name: Colors
+  $description: Colors to use in the theme
+  light:
+    $name: Light
+    $description: Light theme
+    accent_color:
+      $name: Accent Color
+      $description: Main color of the blog for light theme
+      $type: color
+    primary_text_color:
+      $name: Primary Text Color
+      $description: Primary/body text color
+      $type: color
+    secondary_text_color:
+      $name: Secondary Text Color
+      $description: Secondary text color (example- figcaption, card footer, copyright, etc)
+      $type: color
+  dark:
+    $name: Dark
+    $description: Dark theme
+    accent_color:
+      $name: Accent Color
+      $description: Main color of the blog for dark theme
+      $type: color
+    primary_text_color:
+      $name: Primary Text Color
+      $description: Primary/body text color for dark theme
+      $type: color
+    secondary_text_color:
+      $name: Secondary Text Color
+      $description: Secondary text color for dark theme
+      $type: color
+
+fonts:
+  $name: Fonts 
+  $description: Fonts to use in the theme
+  body:
+    $name: Body Font 
+    $description: Main font for the body
+    size: 
+      $name: Font Size 
+      $description: Body font size
+      $type: text
+    family:
+      $name: Font Family 
+      $description: Body font family
+      $type: text
+  heading:
+    $name: Heading Font 
+    $description: Font for all hadings (h1, h2, h3, h4, h5, h6) 
+    family:
+      $name: Font Family 
+      $description: Heading font family
+      $type: text
+  content:
+    $name: Post Content Font 
+    $description: Font for all post/page content and excerpt
+    family:
+      $name: Font Family 
+      $description: Content font family
+      $type: text
+  code:
+    $name: Code Font
+    $description: Font for the code 
+    size: 
+      $name: Font Size 
+      $description: Code font size
+      $type: text
+    family:
+      $name: Font Family 
+      $description: Code font family
+      $type: text
+
+settings:
+  $name: Settings
+  $description: Other theme settings
+  home:
+    $name: Home
+    $description: Tags sections of the homepage
+    tag_1:
+      $name: Tag Section 1
+      $description: First/top tag based posts section on the homepage
+      show:
+        $name: Show/hide
+        $description: Show/hide tag section 1
+        $type: checkbox
+      slug:
+        $name: Tag Slug
+        $description: Slug of the tag 1
+        $type: text
+    tag_2:
+      $name: Tag Section 2
+      $description: Second tag based posts section on the homepage
+      show:
+        $name: Show/hide
+        $description: Show/hide tag section 2
+        $type: checkbox
+      slug:
+        $name: Tag Slug
+        $description: Slug of the tag 2
+        $type: text
+    tag_3:
+      $name: Tag Section 3
+      $description: Third tag based posts section on the homepage
+      show:
+        $name: Show/hide
+        $description: Show/hide tag section 3
+        $type: checkbox
+      slug:
+        $name: Tag Slug
+        $description: Slug of the tag 3
+        $type: text
+    tag_4:
+      $name: Tag Section 4
+      $description: Fourth tag based posts section on the homepage
+      show:
+        $name: Show/hide
+        $description: Show/hide tag section 4
+        $type: checkbox
+      slug:
+        $name: Tag Slug
+        $description: Slug of the tag 4
+        $type: text
+    tag_5:
+      $name: Tag Section 5
+      $description: Fifth tag based posts section on the homepage
+      show:
+        $name: Show/hide
+        $description: Show/hide tag section 5
+        $type: checkbox
+      slug:
+        $name: Tag Slug
+        $description: Slug of the tag 5
+        $type: text
+    tag_6:
+      $name: Tag Section 6
+      $description: Sixth/last tag based posts section on the homepage
+      show:
+        $name: Show/hide
+        $description: Show/hide tag section 6
+        $type: checkbox
+      slug:
+        $name: Tag Slug
+        $description: Slug of the tag 6
+        $type: text
+  loop:
+    $name: Loop
+    $description: Features in the index page (list of posts)
+    authors:
+      $name: Authors
+      $description: Show/hide authors
+      $type: checkbox
+    featured_image:
+      $name: Featured Image 
+      $description: Show/hide featured image
+      $type: checkbox
+  post:
+    $name: Post
+    $description: Features in the post page
+    authors:
+      $name: Authors
+      $description: Show/hide authors
+      $type: checkbox
+    tags:
+      $name: Tags
+      $description: Show/hide tag name
+      $type: checkbox
+    featured_image:
+      $name: Featured Image
+      $description: Show/hide featured image
+      $type: checkbox
+  social:
+    $name: Social 
+    $description: Show/hide social links
+    $type: checkbox
+  feed:
+    $name: Feed
+    $description: Show/hide a link to RSS feed
+    $type: checkbox
+  copyright:
+    $name: Copyright
+    $description: Footer copyright
+    show_hide:
+      $name: Show/hide
+      $description: Show/hide copyright
+      $type: checkbox
+    copy_text:
+      $name: Copyright Text
+      $description: Copyright text in the footer
+      $type: text

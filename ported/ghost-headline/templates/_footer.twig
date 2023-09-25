@@ -1,0 +1,20 @@
+<footer class="hy-foot hy-outer">
+    <div class="hy-foot-inner hy-inner">
+
+        {% include '_nav-footer.twig' %}
+
+        {% if _config.settings.social %}
+        <div class="hy-social-icons">
+            {% include '_social.twig' with {social: _blog.social} %}
+            {% import "_macro.twig" as macro %}
+            {% if _config.settings.feed %}
+            {{ macro.social_icon("feed" | lang, _blog.url ~ "/feed", 'rss-solid') }}
+            {% endif %}
+        </div>
+        {% endif %}
+
+        {% if _config.settings.copyright.show_hide %}
+        <div class="hy-copyright">{{ _config.settings.copyright.copy_text | template }}</div>
+        {% endif %}
+    </div>
+</footer>

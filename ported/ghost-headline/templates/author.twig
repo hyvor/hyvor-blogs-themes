@@ -1,0 +1,30 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+	<main class="hy-main hy-outer">
+		<div class="hy-inner">
+
+            <section class="hy-pagehead">
+                {% if _author.picture_url %}
+                <figure class="hy-author-image">
+                        <img src="{{ _author.picture_url }}" alt="{{ _author.name }}">
+                </figure>
+                {% endif %}
+
+                <div class="hy-pagehead-content">
+                    <h1 class="hy-pagehead-title">{{ _author.name }}</h1>
+
+                </div>
+            </section>
+
+			<div class="hy-topic hy-topic-grid">
+				<div class="hy-topic-content hy-feed">
+                    {%  include '_loop.twig' %}
+				</div>
+			</div>
+            
+		</div>
+	</main>
+
+{% endblock %}

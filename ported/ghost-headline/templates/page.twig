@@ -1,0 +1,20 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+<main class="page-template hy-main">
+
+<article class="hy-article post no-image">
+
+        <header class="hy-article-header hy-canvas">
+            <h1 class="hy-article-title">{{ _post.title }}</h1>
+        </header>
+
+        <section class="hy-content hy-canvas">
+        {{ _post.content | raw }}
+        </section>
+
+    </article>
+</main>
+
+{% endblock %}

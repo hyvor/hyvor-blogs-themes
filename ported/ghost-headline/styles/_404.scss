@@ -1,0 +1,56 @@
+// ================================================== ==================================================
+// ==================================================  404 Error ==================================================
+// ================================================== ==================================================
+
+.error-content {
+    flex-grow: 1;
+    justify-content: center;
+    user-select: text;
+    padding: 8vw;
+    display: flex;
+    align-items: center;
+
+    .error-details {
+        margin-bottom: 4rem;
+
+        .error-message {
+            display: flex;
+            flex-direction: column;
+            margin: 15px;
+            align-items: center;
+
+            a {
+                font-size: 1.4rem;
+                line-height: 1;
+                margin: 8px 0
+            }
+
+            .error-code {
+                margin: 0;
+                color: #c5d2d9;
+                font-size: 10vw;
+                font-weight: 600;
+                line-height: .9em;
+                letter-spacing: -.4vw
+            }
+
+            .error-description {
+                margin: 0;
+                padding: 0;
+                border: none;
+                color: #54666d;
+                font-size: 2.3rem;
+                font-weight: 300;
+                line-height: 1.3em
+            }
+
+            .error-link {
+                background-color: transparent;
+                color: #5ba4e5;
+                transition: background .3s, color .3s;
+                text-decoration: none
+            }
+        }
+    }
+
+}

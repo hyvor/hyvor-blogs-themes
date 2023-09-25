@@ -1,0 +1,51 @@
+// ================================================== ==================================================
+// ==================================================  Layout ==================================================
+// ================================================== ==================================================
+
+.hy-site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    .hy-main {
+        flex-grow: 1;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+    .hy-outer {
+        padding-inline-end: var(--gap);
+        padding-inline-start: var(--gap);
+    }
+    
+    .hy-inner {
+        max-width: var(--container-width, 1200px);
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .hy-site {
+        .hy-main {
+            padding-top: 6.4rem;
+            padding-bottom: 6.4rem;
+        }
+    }
+}
+
+.hy-canvas {
+    display: grid;
+    grid-template-columns:
+        [full-start]
+        minmax(var(--gap), auto)
+        [wide-start]
+        minmax(auto, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2))
+        [main-start]
+        min(var(--content-width, 720px), calc(100% - calc(var(--gap) * 2)))
+        [main-end]
+        minmax(auto, calc((var(--container-width, 1200px) - var(--content-width, 720px)) / 2))
+        [wide-end]
+        minmax(var(--gap), auto)
+        [full-end];
+        > * {
+            grid-column: main-start/main-end;
+        }
+}

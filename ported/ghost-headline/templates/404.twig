@@ -1,0 +1,25 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+<main id="main">
+
+    <div class="hy-app">
+        <div class="hy-viewport">
+            <div class="hy-view">
+                <section class="error-content error-404 js-error-container">
+                    <section class="error-details">
+                        <section class="error-message">
+                        <h1 class="error-code">404</h1>
+                        <h2 class="error-description">{{ 'not_found' | lang }}</h2>
+                        <a class="error-link" href="{{ _blog.url }}">{{ 'go_home' | lang }}</a>
+                        </section>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}

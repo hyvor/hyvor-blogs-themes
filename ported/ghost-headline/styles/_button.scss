@@ -1,0 +1,22 @@
+// ================================================== ==================================================
+// ==================================================  Button ==================================================
+// ================================================== ==================================================
+
+.hy-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    color: var(--darker-gray-color);
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}

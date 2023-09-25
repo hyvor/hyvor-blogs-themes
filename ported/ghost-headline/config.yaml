@@ -1,0 +1,59 @@
+THEME_NAME: Headline
+THEME_VERSION: 1.0.0
+THEME_FONTS: inter:400,500,600,700|lora:400,400i,500,600,700,700i
+POSTS_PER_PAGINATION: 6
+
+colors: 
+  light: 
+    accent_color: "#f51919"
+    primary_text_color: "#15171a"
+    secondary_text_color: "#999999"
+  dark: 
+    accent_color: "#f51919"
+    primary_text_color: "#f6f6f6"
+    secondary_text_color: "#999999"
+
+fonts: 
+  body: 
+    size: 1.6rem
+    family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif
+  heading: 
+    family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif
+  content: 
+    family: Lora, Georgia, Times, serif
+  code: 
+    size: 15px 
+    family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; 
+
+settings:
+  home:
+    tag_1:
+      show: true
+      slug: welcome
+    tag_2:
+      show: true
+      slug: quidem
+    tag_3:
+      show: true
+      slug: omnis
+    tag_4:
+      show: true
+      slug: molestias
+    tag_5:
+      show: true
+      slug: dolorem
+    tag_6: 
+      show: true
+      slug: commodi
+  loop:
+    authors: true
+    featured_image: true
+  post:
+    authors: true
+    tags: true
+    featured_image: true
+  social: true
+  feed: true
+  copyright:
+    show_hide: true
+    copy_text: "© {{ _blog.name }}"

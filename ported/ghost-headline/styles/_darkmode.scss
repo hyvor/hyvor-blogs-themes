@@ -1,0 +1,106 @@
+// ================================================== ==================================================
+// ==================================================  Dark Mode ==================================================
+// ================================================== ==================================================
+
+.mode-dark {
+
+    body,
+    .hy-outer {
+        background-color: var(--color-darker-gray);
+        color: var(--color-primary-text-dark);
+    }
+
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    button.theme-toggle,
+    .search-form .search-field {
+        color: var(--color-white);
+    }
+
+    .hy-content {
+        figcaption a {
+            color: var(--color-white);
+        }
+
+        .bookmark {
+
+            .bookmark-title,
+            .bookmark-description,
+            .bookmark-domain {
+                color: var(--color-white);
+            }
+        }
+    }
+
+    .hy-topic-header,
+    .hy-topic-grid .hy-card:not(:only-child).large,
+    .search-form {
+        border-bottom: 1px solid var(--color-dark-gray);
+    }
+
+    .hy-topic-footer {
+        border-top: 1px solid var(--color-dark-gray);
+    }
+
+    .search,
+    hr,
+    .hy-foot,
+    .hy-read-next .hy-pagehead-title::after {
+        background-color: var(--color-dark-gray);
+    }
+
+    .hy-article-tag,
+    .hy-content a {
+        color: var(--color-accent-dark);
+    }
+
+    figcaption,
+    .hy-article-excerpt,
+    .hy-comments-count,
+    .hy-cta-link,
+    .hy-foot,
+    .hy-foot a,
+    .pswp__error-msg,
+    .pswp__error-msg a,
+    .hy-card-footer,
+    .hy-topic-header .hy-topic-link,
+    .hy-article-meta,
+    .hy-article-lang li,
+    .hy-article-lang a,
+    .hy-pagehead-description,
+    .hy-copyright {
+        color: var(--color-secondary-text-dark);
+    }
+    .hy-burger {
+        &::before {
+            background-color: var(--color-white);
+        }
+        &::after {
+            background-color: var(--color-white);
+        }
+    }
+}
+
+@media (min-width: 992px) {
+
+    .mode-dark .is-head-stacked .hy-head .hy-head-inner .hy-head-menu::before,
+    .mode-dark .is-head-stacked .hy-head .hy-head-inner .hy-head-menu::after {
+        background-color: var(--color-dark-gray);
+    }
+}
+
+@media (max-width: 767px) {
+    .mode-dark {
+        .is-head-open #hy-head .hy-head-actions {
+            background-color: var(--color-darker-gray);
+        }
+        .is-head-open:not(.is-head-brand):not(.is-head-dark):not(.is-head-transparent) #hy-head {
+            background-color: var(--color-darker-gray);
+        }
+    } 
+}

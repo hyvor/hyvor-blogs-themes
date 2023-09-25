@@ -1,0 +1,107 @@
+// ================================================== ==================================================
+// ==================================================  Content ==================================================
+// ================================================== ==================================================
+
+.hy-content {
+    margin-top: 4rem;
+    font-size: var(--content-font-size, 1.8rem);
+    letter-spacing: var(--content-letter-spacing, 0);
+
+    >*+* {
+        margin-top: calc(1.6em * var(--content-spacing-multiplier, 1));
+        margin-bottom: 0;
+    }
+
+    >[id] {
+        margin: 0;
+    }
+
+    >[id]:not(:first-child) {
+        margin-top: calc(1.6em * var(--content-spacing-multiplier, 1));
+    }
+
+    >[id]+* {
+        margin-top: calc(0.8em * var(--content-spacing-multiplier, 1));
+    }
+
+    >hr {
+        position: relative;
+        margin-top: calc(2.4em * var(--content-spacing-multiplier, 1));
+    }
+
+    >blockquote {
+        position: relative;
+        margin-top: calc(2.4em * var(--content-spacing-multiplier, 1));
+    }
+
+    hr+* {
+        margin-top: calc(2.4em * var(--content-spacing-multiplier, 1));
+    }
+
+    >blockquote+* {
+        margin-top: calc(2.4em * var(--content-spacing-multiplier, 1));
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    a {
+        color: var(--color-accent);
+        text-decoration: underline;
+        word-break: break-word;
+    }
+
+    ul {
+        padding-inline-start: 2.8rem;
+    }
+
+    .hy-content ol {
+        padding-inline-start: 2.8rem;
+    }
+
+    .hy-content dl {
+        padding-inline-start: 2.8rem;
+    }
+
+    li+li {
+        margin-top: 0.8rem;
+    }
+
+    aside {
+        background: rgba(124, 139, 154, .13);
+        border-radius: 0.25em;
+        margin-top: calc(2em*var(--content-spacing-multiplier, 1));
+        display: flex;
+        padding: 1em;
+
+        span {
+            padding-inline-end: 0.8em;
+            line-height: 1.25em;
+            font-size: 1.15em;
+        }
+
+        div {
+            font-family: var(--font-content);
+            font-size: .95em;
+            letter-spacing: var(--content-letter-spacing, 0);
+            word-break: break-word;
+        }
+    }
+
+    figcaption a {
+        color: var(--color-darker-gray);
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .hy-content {
+        margin-top: 3.2rem;
+        font-size: 1.7rem;
+    }
+}
