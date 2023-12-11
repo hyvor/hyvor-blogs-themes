@@ -41,8 +41,8 @@
                     </h4>
                 {% endif %}
                 {% if (_config.settings.post.date) %}
-                    <time datetime="{{ post.published_at | date('d-m-Y') }}">
-                        {{ post.published_at | date('d M Y') }}
+                    <time datetime="{{ _post.published_at | date('d-m-Y') }}">
+                        {{ _post.published_at | date('d M Y') }}
                     </time>{# &bull; 1 min read TODO #}
                 {% endif %}
             </div>
