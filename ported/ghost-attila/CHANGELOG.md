@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+## [0.0.7] - 2023-12-11
+- Fixed post published date
+
 ## [0.0.6] - 2023-09-01
 - Use THEME_FONTS
 - Added table styles
