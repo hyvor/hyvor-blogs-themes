@@ -1,0 +1,77 @@
+/* Styles for Pagination */
+.pagination {
+  width: 1100px;
+  max-width: 100%;
+  padding: 20px 20px;
+  margin:auto;
+  color: var(--color-accent);
+  background-color: var(--background-color);
+
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+    // font-family: var(--heading-font-family);
+
+  
+    .grid {
+      height: 100%;
+
+      .next,
+      .prev {
+        padding: 8px 16px;
+        // border: 1px solid var(--border-color);
+        text-decoration: none;
+        height: 100%;
+        border: var(--border-thickness) solid var(--border-color);
+        color: var(--color-accent); 
+        &:hover {
+          background-color: var(--background-hover-color);
+        }
+      }
+      
+      .next {
+        margin-inline-start: 16px;
+        border-inline-start: var(--border-thickness) solid var(--border-color);
+        height:100%;
+        }
+      
+      .prev {
+        margin-inline-end: 16px;
+        border-inline-end: var(--border-thickness) solid var(--border-color);
+        height: 100%;
+      }
+      
+      .count { 
+        margin: 0 16px;
+         
+      }
+
+      //disabled styles
+      .next.disabled,
+      .prev.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+        border: none;
+      }
+    }
+  }
+}
+  
+ //media queries for pagination
+ @media (max-width: 768px) {
+  .pagination {
+    padding: 0 !important;
+    .list {
+      .grid {
+        .next,
+        .prev {
+          padding: 8px 8px;
+        }
+      }
+    }
+  }
+}
+  

@@ -1,0 +1,47 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
+//   body {
+//     font-family: var(--base-font-family);
+//     font-size: var(--base-font-size);
+//     line-height: var(--base-line-height);
+//     color: var(--text-color);
+//     background: var(--background-color);
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+  
+//     @media (max-width: $tablet) {
+//       font-size: 16px;
+//     }
+//   }
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    background-color: var(--background-color);
+    color: var(--color-accent);
+}
+
+
+  
+  /* A very simple reset. */
+  body,
+  h1, h2, h3, h4, h5, h6,
+  p, blockquote, pre,
+  dl, dd, ol, ul,
+  fieldset, legend,
+  figure,
+  hr, div, section {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Remove trailing margins from nested lists. */
+  li > {
+    ul,
+    ol {
+      margin-bottom: 0;
+    }
+  
+  }

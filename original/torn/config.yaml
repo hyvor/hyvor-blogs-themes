@@ -1,0 +1,78 @@
+THEME_NAME: TORN
+THEME_VERSION: 0.0.1
+THEME_FONTS: "karla:300,600"
+POSTS_PER_PAGINATION: 10
+
+fonts:
+  size: 16
+  style: normal
+  weight: 200, 300, 400, 500, 600, 700
+  base_font_family: Karla
+  line-height: 1.6
+
+colors:
+  light:
+    accent: "#000000" 
+    background_color: "#ffffff"
+    border_color: "#bfbfbf"
+    background_hover_color: "#e3e3e3"
+    author_by_color: "#666"
+    toc_border_color: "#e3e3e3"
+    code_color: "#f8f8f8"
+    code_background_color: "#333"
+    # text_alt_color: "666"
+    blockqoute_color: "#666"
+    highlight_color: "#fff49f"
+    caption_color: "#585858"
+    search_background_color: "rgba(255, 255, 255, 0.9)"
+    featured_color: "#ffdd00"
+
+    
+
+
+
+  dark:
+    accent: "#ffffff" 
+    background_color: "#000"
+    border_color: "#5c5b5b"
+    background_hover_color: "#3a3a3a"
+    author_by_color: "#d3d3d3"
+    toc_border_color: "#585858"
+    code_color: "#333"
+    code_background_color: "#f8f8f8"
+    blockqoute_color: "#b0b0b0"
+    highlight_color: "#fff49f"
+    caption_color: "#666"
+    search_background_color: "rgba(0, 0, 0, 0.8)"
+    featured_color: "#ffdd00"
+
+border_thickness: 1
+grayscale: 100
+blockqoute_border_thickness: 4
+
+
+settings:
+  loop:
+    featured_image: true
+    aspect_ratio: 3/2
+    tags: true
+    authors: true
+
+  footer:
+    feed_icon: true
+
+  post:
+    authors: true
+    tags: true
+    featured_image: true
+    variants: true
+
+
+
+
+
+
+  
+
+
+

@@ -1,0 +1,296 @@
+/* Search */
+.search-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    background: var(--search-background-color);
+  
+    .search-wrapper-close {
+      position: absolute;
+      right: 32px;
+      top: 32px;
+      width: 40px;
+      height: 40px;
+      background: var(--border-color);
+      border: var(--border-thickness) solid var(--border-color);
+      opacity: 1;
+  
+      &:focus,
+      &:hover {
+        opacity: 1;
+        background-color: var(--color-accent);
+      }
+  
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        width: 60%;
+        height: 2px;
+        margin-top: -1px;
+        border-radius: 1px;
+        background: var(--background-color);
+      }
+  
+      &:before {
+        transform: rotate(-45deg);
+      }
+  
+      &:after {
+        transform: rotate(45deg);
+      }
+  
+      /* @media (max-width: $tablet) {
+        top: 32px;
+        right: 20px;
+      }
+  
+      @media (max-width: $mobile) {
+        right: 12px;
+      } */
+    }
+
+    [dir="rtl"] .search-wrapper-close {
+      left: 32px;
+      right: auto;
+    }
+  }
+
+[dir="rtl"] .search-wrapper {
+  left: 0;
+  right: 0;
+}
+  
+  .search-active {
+    overflow-y: hidden;
+  
+    .search-wrapper {
+      z-index: 500;
+      opacity: 1;
+    }
+  }
+  
+  .search {
+    position: relative;
+    z-index: 100;
+    max-width: 1110px;
+    margin: 100px auto 0;
+    border: var(--border-thickness) solid var(--border-color);
+    border-bottom: none;
+    background: var(--background-color);
+    overflow: hidden;
+    // will-change: transform;
+  }
+  
+  .mode-dark {
+    .search {
+      border-color: var(--border-color);
+    }
+  }
+  
+  .search-form {
+    position: relative;
+
+  
+    .search-input-icon {
+      position: absolute;
+      left: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 22px;
+      line-height: 1;
+      color: var(--border-color);
+  
+      svg {
+        vertical-align: baseline !important;
+      }
+    }
+  
+    .search-field {
+      width: 100%;
+      padding: 15px 50px 15px 48px;
+      font-size: 16px;
+      font-weight: 300;
+      border: none;
+      outline: 0;
+      background: var(--background-color);
+      color: var(--color-accent);
+      caret-color: var(--border-color);
+      border-bottom: var(--border-thickness) solid var(--border-color); 
+  
+      &::placeholder {
+        font-weight: 500;
+        color: var(--border-color);
+      }
+  
+      &::-ms-clear {
+        display: none;
+      }
+    }
+  
+    .search-button {
+      display: none;
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 0;
+      outline: none;
+      width: 24px;
+      height: 24px;
+      background: var(--background-color);
+  
+      &.search-button-clear {
+        display: block;
+        padding: 0;
+  
+        &:hover {
+          transform: translateY(-50%) rotate(90deg);
+        }
+  
+        i {
+          display: none;
+        }
+  
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          left: 20%;
+          top: 50%;
+          width: 60%;
+          height: 2px;
+          margin-top: -1px;
+          background: var(--border-color);
+        }
+
+        &:hover:before, &:hover:after {
+          background: var(--color-accent);
+        }
+  
+        &:before {
+          transform: rotate(-45deg);
+        }
+  
+        &:after {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  
+  .search-result {
+    overflow-y: scroll;
+    max-height: 58vh;
+    -webkit-overflow-scrolling: touch;
+
+    &:not(:empty) {
+      border-bottom: var(--border-thickness) solid var(--border-color);
+    }
+  
+    .search-result-row {
+      border-bottom: var(--border-thickness) solid var(--border-color);
+
+      &:last-child {
+        border-bottom: none;
+      }
+  
+      .search-result-row-link {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        outline: 0;
+  
+        &:hover {
+          .search-result-row-title {
+            color: var(--color-accent);
+          }
+        }
+  
+        .search-result-row-title {
+          font-size: 18px;
+          line-height: 1.3;
+          font-weight: 700;
+          color: var(--color-accent);
+        }
+  
+        .search-result-row-excerpt {
+          display: -webkit-box;
+          margin-top: 4px;
+          font-size: 16px;
+          line-height: 1.6;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: var(--color-accent);
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  
+  .popular-wrapper {
+    // padding: 24px 0 24px 0;
+  }
+  
+  .popular-wrapper .popular-title {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+  
+  .popular-tags {
+    display: flex;
+    //align all items to left
+    justify-content: flex-start;
+    background-color: var(--background-color);
+    border-bottom: var(--border-thickness) solid var(--border-color);
+    align-items: center;
+    overflow: auto;
+   
+  
+    a {
+      height: 100%;
+      padding: 4px 8px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--accent-color);
+      background: var(--background-color);
+      border-inline-start: var(--border-thickness) solid var(--border-color);
+      
+      &:first-child {
+        border-inline-start: none;
+      }
+
+      //last child
+      &:last-child {
+        border-inline-end: var(--border-thickness) solid var(--border-color);
+      }
+      
+  
+      &:hover {
+        background: var(--background-hover-color);
+      }
+    }
+  }
+  
+  [dir="rtl"] {
+    .search-input-icon {
+      left: auto;
+      right: 24px;
+    }
+  
+    .search-button {
+      left: 24px;
+      right: auto;
+    }
+  }

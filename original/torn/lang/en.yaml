@@ -1,0 +1,29 @@
+# loop
+pagination: Pagination
+previous_page: Prev
+next_page: Next
+page: Page
+of: of
+
+# search
+search: Search
+input_search: Type to search
+topics: Topics
+close: Close
+
+# footer
+authors: Meet our authors
+feed: RSS Feed
+recent_posts: Recent Posts
+tags: Tag Cloud
+
+# post
+newsletter: Newsletter
+comments: Comments
+translated: Translations
+
+# author/tag
+posts_num_zero: No Posts
+posts_num_one: 1 Post
+posts_num_multi: "* Posts"
+website: Website

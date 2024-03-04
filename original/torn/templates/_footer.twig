@@ -1,0 +1,22 @@
+{% import "_macro.twig" as macro %}
+<footer class="footer">
+    {# <div class="main">
+        <div class="row"> #}
+            <nav class="nav-main" aria-label="Main-Menu" id="menuList">
+                <div class="box">
+                    {% for nav in _blog.nav_footer %}
+                        <a class="link {% if is_current_url(nav.url) %} active-link{% endif %}" href="{{ nav.url }}">{{ nav.name }}</a>
+                    {% endfor %}
+                </div>
+
+                <div class="social">
+                    {% include '_social.twig' with { social: _blog.social } %}
+
+                    {% if _config.settings.footer.feed_icon %}
+                        {{ macro.social_icon("feed" | lang, _blog.url ~ "/feed", 'logo-rss') }}
+                    {% endif %}
+                </div>
+            </nav>
+        {# </div>
+    </div> #}
+</footer>

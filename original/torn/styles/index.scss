@@ -1,0 +1,31 @@
+@import 'header.scss';
+
+@import 'hero.scss';
+
+@import 'base.scss';
+
+@import 'variables.scss';
+
+@import 'tag_head.scss';
+
+@import 'loop.scss';
+
+@import 'footer.scss';
+
+@import 'pagination.scss';
+
+@import 'post.scss';
+
+@import 'tag.scss';
+
+@import 'author.scss';
+
+@import '404.scss';
+
+@import 'search.scss';
+
+.container {
+    padding:20px 20px;
+    color: var(--color-accent);
+    background-color: var(--background-color);
+  }

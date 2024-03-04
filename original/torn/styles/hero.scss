@@ -1,0 +1,25 @@
+.hero {
+  color: var(--color-accent);
+  background-color: var(--background-color);
+  .container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 45px 20px;
+
+    .inner {
+      margin: 0 auto;
+      max-width: 780px;
+
+      .title {
+        font-size: 60px;
+      }
+
+      .description {
+        font-size: 20px;
+      }
+
+    }
+
+  }
+  
+}

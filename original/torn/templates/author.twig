@@ -1,0 +1,47 @@
+{% extends '@base.twig' %}
+
+{% import "_macro.twig" as macro %}
+
+{% block body %}
+
+<main role="main" class="author-page">
+    <div class="container">
+        <div class="row">
+        
+            <section class="author-head">
+                <div class="author-image">
+                    {% if _author.picture_url %}
+                        <img src="{{ _author.picture_url }}" alt="{{ _author.name }}'s Profile Picture" loading="lazy">
+                    {% else %}
+                        <span class="avatar-placeholder"></span>
+                    {% endif %}
+                </div>
+                
+                <h1 class="author-title">{{ _author.name }}</h1>
+
+                {% if _author.bio %}
+                    <div class="author-description">{{ _author.bio }}</div>
+                {% endif %}
+
+                <div class="author-social">
+                    <div class="grid">
+                        {% if _author.website_url %}
+                            {{ macro.social_icon('website' | lang, _author.website_url, 'link', 22) }} 
+                        {% endif %}
+                        {% include '_social.twig' with {social: _author.social} %}
+                    </div>
+                </div>
+
+                {% if _author.location %}
+                <div class="author-location"><span class="author-location">{{ icon('ionicons', 'navigate', 22) }} {{ _author.location }}</span></div>
+                {% endif %}
+            </section>
+
+        </div>
+    </div>
+    {% include '_loop.twig' %}
+
+    {% include '_pagination.twig' %}
+</main>
+
+{% endblock %}

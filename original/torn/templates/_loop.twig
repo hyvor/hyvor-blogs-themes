@@ -1,0 +1,82 @@
+{# <div class="post-loop">
+    {% for post in _posts %}
+
+        <div class="article-card">
+        <a class="article" href="{{ post.url }}">
+        {% if post.featured_image_url and _config.settings.loop.featured_image %}
+            {% if post.is_featured %}
+                <span class="featured">{{ icon('ionicons', 'star', 14) }}</span>
+            {% endif %}
+                <div class="article-image">
+                    <img src="{{ post.featured_image_url }}" alt="{{ post.title }}" />
+                </div>
+        {% endif %}
+
+        <h2>{{ post.title }}</h2>
+        <p class="description">{{ post.description }}&hellip;</p>
+        </a>
+        </div>
+    {% endfor %}
+</div>
+ #}
+
+<div class="post-loop">
+    {% for post in _posts %}
+        {#  {% if loop.index is divisible by(2) %}
+            <div class="row">
+        {% endif %} #}
+
+        <div class="article-card">
+            
+            {% if post.featured_image_url and _config.settings.loop.featured_image %}
+                <a class="img-wrap" href="{{ post.url }}">
+                    <img src="{{ post.featured_image_url }}" alt="{{ post.title }}" />
+                </a>
+            {% endif %}
+
+            {# //start was here #}
+            
+            <div class="post-meta-data">
+                {# TODO #}
+                
+                <a class="article" href="{{ post.url }}">
+                    <h2>{{ post.title }}
+                    {% if post.is_featured %}
+                    <span class="featured">*</span>
+                {% endif %}
+                    </h2>
+                </a>
+
+                {% if post.description %}
+                <p class="description">{{ post.description }}</p>
+                {% endif %}
+
+                {% if (_config.settings.loop.authors) %}
+                    <div class="article-authors">
+                        <span class="by-author">By&nbsp;</span>
+                        {% for author in post.authors %}
+                        <a href="{{ author.url }}" class="article-author-link">{{ author.name }}</a>{% if not loop.last %},&nbsp;{% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <div class="article-date">
+                    <time class="date" datetime="{{ post.published_at | date('d-m-Y') }}">
+                        {{ post.published_at | format_date('medium', locale=_lang.code) }}
+                    </time>
+                </div>
+
+                {% if (_config.settings.loop.tags) %}
+                <div class="article-tags">
+                    {% for tag in post.tags %}
+                    <a class="article-tag" href="{{ tag.url }}">{{ tag.name }}</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    {% endfor %}
+
+</div> 
+

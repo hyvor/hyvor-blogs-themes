@@ -1,0 +1,220 @@
+fonts:
+  $name: Font
+  
+  size: 
+    $name: Font Size
+    $description: in px
+    $type: number
+    
+  style:
+    $name: Font-Style
+    $description: Font style
+    $type: text
+    
+  base_font_family:
+    $name: Font Family
+    $description: Font family name
+    $type: text
+    
+  weight:
+    $name: Font Weight
+    $description: Font weight
+    $type: number
+    
+  line-height:
+    $name: Line Height
+    $description: Height of lines
+    $type: number
+    
+colors:
+  $name: Colors
+  
+  light:
+    $name: Light Mode
+      
+    accent:
+      $name: Accent Color
+      $type: color
+      
+    background_color:
+      $name: Background Color
+      $type: color
+      
+    border_color:
+      $name: Border Color
+      $type: color 
+      
+    background_hover_color:
+      $name: Background Hover Color
+      $type: color
+      
+    author_by_color:
+      $name: Author by Color
+      $type: color
+      
+    toc_border_color:
+      $name: Table of Content Border Color
+      $type: color
+      
+    code_color:
+      $name: Code Color
+      $type: color
+      
+    code_background_color:
+      $name: Code Background Color
+      $type: color
+    
+    blockqoute_color:
+      $name: Blockqoute Color
+      $type: color
+      
+    highlight_color:
+      $name: Highlight Color
+      $type: color
+      
+    caption_color:
+      $name: Caption Color
+      $type: color
+      
+    search_background_color:
+      $name: Search Background Color
+      $type: color
+      
+    
+  dark:
+    $name: Dark Mode
+    
+    accent:
+      $name: Accent Color
+      $type: color
+      
+    background_color:
+      $name: Background Color
+      $type: color
+      
+    border_color:
+      $name: Border Color
+      $type: color 
+      
+    background_hover_color:
+      $name: Background Hover Color
+      $type: color
+      
+    author_by_color:
+      $name: Author by Color
+      $type: color
+      
+    toc_border_color:
+      $name: Table of Content Border Color
+      $type: color
+      
+    code_color:
+      $name: Code Color
+      $type: color
+      
+    code_background_color:
+      $name: Code Background Color
+      $type: color
+    
+    blockqoute_color:
+      $name: Blockqoute Color
+      $type: color
+      
+    highlight_color:
+      $name: Highlight Color
+      $type: color
+      
+    caption_color:
+      $name: Caption Color
+      $type: color
+      
+    search_background_color:
+      $name: Search Background Color
+      $type: color
+      
+      
+border_thickness:
+  $name: Border Thickness
+  $description: Thickness of borders in px
+  $type: number
+  
+grayscale:
+  $name: Grayscale
+  $description: Grayscale of the images
+  $type: number
+  
+blockqoute_border_thickness:
+  $name: Blockqoute Border Thickness
+  $type: number
+  
+settings:
+  $name: Settings
+
+  loop:
+    $name: "In the posts loop. Ex: index page"
+    
+    featured_image:
+      $name: Featured Image
+      $description: 
+      $type: checkbox
+      
+    aspect_ratio:
+      $name: Aspect Ratio
+      $description: Aspect Ratio of images
+      $type: number
+      
+    tags:
+      $name: Tags
+      $description: Tags
+      $type: checkbox
+      
+    authors:
+      $name: Authors
+      $description: 
+      $type: checkbox
+      
+  footer:
+    $name: Footer
+    
+    feed_icon:
+      $name: RSS Feed
+      $type: checkbox
+      
+  post:
+    $name: Post Page
+    
+    authors:
+      $name: authors
+      $type: checkbox
+      
+    tags:
+      $name: Tags
+      $type: checkbox
+      
+    featured_image:
+      $name: Featured Image
+      $type: checkbox
+      
+    variants:
+      $name: Language Variants
+      $description: Show language variants
+      $type: checkbox
+      
+    
+    
+      
+    
+      
+    
+   
+    
+      
+      
+    
+
+        
+    
+    
+    
+    
+  

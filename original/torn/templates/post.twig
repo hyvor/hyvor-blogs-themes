@@ -1,0 +1,147 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+<main role="main">
+
+    <div class="post-main-container">
+        <div class="post-main">
+
+            <div class="meta-data-container">
+
+                <div class="post-header">
+                    <h1 class="post-title">{{ _post.title }}</h1>
+                </div>
+
+                {% if _post.description %}
+                    <div class="post-description">
+                        {% if _post.description %}
+                            <p class="post-description">{{ _post.description }}</p>
+                        {% endif %}
+                    </div>
+                {% endif %}
+
+                {% if (_config.settings.post.authors) %}
+                    <div class="post-author-names">
+                    <span class="author-by">By&nbsp;</span>
+                        {% for author in _post.authors %}
+                            <a href="{{ author.url }}" class="post-author-link">{{ author.name }}{% if not loop.last %}, {% endif %}</a>
+                        {% endfor %}
+                       
+                    </div>
+                {% endif %}
+
+                <div class="post-date">
+                      <time datetime="{{ post.published_at | date('d-m-Y') }}">
+                        {{ post.published_at | format_date('medium', locale=_lang.code) }}
+                      </time>
+                </div>
+
+                {% if (_config.settings.post.tags) %}
+                    <div class="post-tags">
+                        {% for tag in _post.tags %}
+                        <div class="post-tag">
+                                <a href="{{ tag.url }}" class="post-tag-link">{{ tag.name }}</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                {% if _config.settings.post.variants and _post.variants | length > 0 %}
+                    <div class="translated-wrapper">
+                        <p>
+                            <span>
+                                <span>{{ 'translated' | lang }}
+                                </span>
+                                {% for variant in _post.variants %}
+                                    <a href="{{ variant.url }}">
+                                        {{ variant.language.name }}
+                                    </a>
+                                    {% if not loop.last %}&nbsp;&nbsp;
+                                    {% endif %}
+                                {% endfor %}
+                            </span>
+                        </p>
+                    </div>
+                {% endif %}
+
+
+            </div>
+        
+            {# <div class="post-head{% if not _post.featured_image_url and _config.settings.post.featured_image %} post-no-image{% endif %}"> #}
+                <div class="image-container {% if not _post.featured_image_url and _config.settings.post.featured_image %} post-no-image{% endif %}">
+                        {% if _post.featured_image_url and _config.settings.post.featured_image %}    
+                                <img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}" class="post-image" loading="lazy">
+                        {% endif %}
+                </div>
+            
+        </div>
+
+
+        <div class="content-toc-container">
+            <div class="post-content-container">
+                <!-- begin post -->
+                <article class="post">
+
+                    <section class="post-content">
+                    {{ _post.content | raw }}
+                    </section>
+
+                    {% if _route.name != 'page' %}
+
+                    {% if _newsletter %}
+                        <section class="newsletter-box">
+                        <h3>{{ 'newsletter' | lang }}</h3>
+                        <div>
+                            {{ _newsletter | template }}
+                        </div>
+                        </section>
+                    {% endif %}
+
+                    {% if _comments %}
+                        <section class="comments-box">
+                        <h3>{{ 'comments' | lang }}</h3>
+                        <div>{{ _comments | template }}</div>
+                        </section>
+                    {% endif %}
+
+                    {% endif %}
+                </article>
+            <!-- end post -->
+            </div>
+
+            <div class="toc-container">
+                <div class="toc-wrap">
+                    <h2 class="toc-heading">Table of Contents</h2>
+                    <button type="button" class="collapsible" aria-label="Toggle Table of Contents"><h2>Table of Contents 
+                        <i class="caret-up">{{ icon('ionicons', 'caret-down', 16) }}</i>
+                        <i class="caret-down">{{ icon('ionicons', 'caret-up', 16) }}</i>
+                    </h2></button>
+                    <div class="content">{{ _post.content | toc }}</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+        content.style.display = "none";
+        } else {
+        content.style.display = "block";
+        }
+    });
+    }
+</script>
+
+{% endblock %}
+
