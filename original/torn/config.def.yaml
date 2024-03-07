@@ -1,41 +1,46 @@
 fonts:
   $name: Font
-  
+    
   size: 
     $name: Font Size
     $description: in px
     $type: number
-    
-  style:
-    $name: Font-Style
-    $description: Font style
-    $type: text
+
+  weight:
+    $name: Base Font Weight
+    $description: Font weight of the base font
+    $type: number
     
   base_font_family:
     $name: Font Family
     $description: Font family name
     $type: text
     
-  weight:
-    $name: Font Weight
-    $description: Font weight
-    $type: number
-    
-  line-height:
+  line_height:
     $name: Line Height
     $description: Height of lines
     $type: number
+
+  link_font_weight:
+    $name: Links Font Weight
+    $description: Font weight of links
+    $type: number
     
+
 colors:
   $name: Colors
   
   light:
     $name: Light Mode
       
-    accent:
-      $name: Accent Color
+    main_color:
+      $name: Main Color
       $type: color
       
+    secondary_color:
+      $name: Secondary Color
+      $type: color
+       
     background_color:
       $name: Background Color
       $type: color
@@ -46,10 +51,6 @@ colors:
       
     background_hover_color:
       $name: Background Hover Color
-      $type: color
-      
-    author_by_color:
-      $name: Author by Color
       $type: color
       
     toc_border_color:
@@ -63,31 +64,23 @@ colors:
     code_background_color:
       $name: Code Background Color
       $type: color
-    
-    blockqoute_color:
-      $name: Blockqoute Color
-      $type: color
       
     highlight_color:
       $name: Highlight Color
-      $type: color
-      
-    caption_color:
-      $name: Caption Color
-      $type: color
-      
-    search_background_color:
-      $name: Search Background Color
       $type: color
       
     
   dark:
     $name: Dark Mode
     
-    accent:
-      $name: Accent Color
+    main_color:
+      $name: Main Color
       $type: color
       
+    secondary_color:
+      $name: Secondary Color
+      $type: color
+       
     background_color:
       $name: Background Color
       $type: color
@@ -98,10 +91,6 @@ colors:
       
     background_hover_color:
       $name: Background Hover Color
-      $type: color
-      
-    author_by_color:
-      $name: Author by Color
       $type: color
       
     toc_border_color:
@@ -115,21 +104,9 @@ colors:
     code_background_color:
       $name: Code Background Color
       $type: color
-    
-    blockqoute_color:
-      $name: Blockqoute Color
-      $type: color
       
     highlight_color:
       $name: Highlight Color
-      $type: color
-      
-    caption_color:
-      $name: Caption Color
-      $type: color
-      
-    search_background_color:
-      $name: Search Background Color
       $type: color
       
       
@@ -140,37 +117,34 @@ border_thickness:
   
 grayscale:
   $name: Grayscale
-  $description: Grayscale of the images
-  $type: number
-  
-blockqoute_border_thickness:
-  $name: Blockqoute Border Thickness
+  $description: Grayscale of the images %
   $type: number
   
 settings:
   $name: Settings
 
   loop:
-    $name: "In the posts loop. Ex: index page"
+    $name: "Posts Loop"
+    $description: "In the posts loop. Ex: index page"
     
     featured_image:
       $name: Featured Image
-      $description: 
+      $description: Show/hide featured image
       $type: checkbox
       
     aspect_ratio:
       $name: Aspect Ratio
-      $description: Aspect Ratio of images
+      $description: Aspect Ratio of images as a decimal
       $type: number
       
     tags:
       $name: Tags
-      $description: Tags
+      $description: Show/hide tags
       $type: checkbox
       
     authors:
       $name: Authors
-      $description: 
+      $description: Show/hide authors
       $type: checkbox
       
   footer:
@@ -184,37 +158,27 @@ settings:
     $name: Post Page
     
     authors:
-      $name: authors
+      $name: Authors
+      $description: Show/hide authors
       $type: checkbox
       
     tags:
       $name: Tags
+      $description: Show/hide tags
       $type: checkbox
       
     featured_image:
       $name: Featured Image
+      $description: Show/hide featured image
       $type: checkbox
       
     variants:
       $name: Language Variants
-      $description: Show language variants
+      $description: Show/hide language variants
+      $type: checkbox
+
+    toc:
+      $name: Table of Contents
+      $description: Show/hide table of content
       $type: checkbox
       
-    
-    
-      
-    
-      
-    
-   
-    
-      
-      
-    
-
-        
-    
-    
-    
-    
-  

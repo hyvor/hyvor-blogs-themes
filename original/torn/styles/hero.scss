@@ -1,21 +1,21 @@
 .hero {
-  color: var(--color-accent);
+  color: var(--main-color);
   background-color: var(--background-color);
   .container {
     text-align: center;
     margin: 0 auto;
-    padding: 45px 20px;
+    padding: 2.813rem 1.25rem;
 
     .inner {
       margin: 0 auto;
-      max-width: 780px;
+      max-width: 48.75rem;
 
       .title {
-        font-size: 60px;
+        font-size: 3.75rem;
       }
 
       .description {
-        font-size: 20px;
+        font-size: 1.25rem;
       }
 
     }

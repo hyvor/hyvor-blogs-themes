@@ -23,7 +23,7 @@
 
                 {% if (_config.settings.post.authors) %}
                     <div class="post-author-names">
-                    <span class="author-by">By&nbsp;</span>
+                    <span class="author-by">{{ 'by' | lang }}</span>
                         {% for author in _post.authors %}
                             <a href="{{ author.url }}" class="post-author-link">{{ author.name }}{% if not loop.last %}, {% endif %}</a>
                         {% endfor %}
@@ -40,9 +40,11 @@
                 {% if (_config.settings.post.tags) %}
                     <div class="post-tags">
                         {% for tag in _post.tags %}
-                        <div class="post-tag">
-                                <a href="{{ tag.url }}" class="post-tag-link">{{ tag.name }}</a>
-                        </div>
+                        <a href="{{ tag.url }}" class="post-tag-link">
+                            <div class="post-tag">
+                                {{ tag.name }}
+                            </div>
+                        </a>
                         {% endfor %}
                     </div>
                 {% endif %}
@@ -51,14 +53,12 @@
                     <div class="translated-wrapper">
                         <p>
                             <span>
-                                <span>{{ 'translated' | lang }}
+                                <span class="translated-text">{{ 'translated' | lang }}:
                                 </span>
                                 {% for variant in _post.variants %}
                                     <a href="{{ variant.url }}">
-                                        {{ variant.language.name }}
+                                        {{ variant.language.name }}{% if not loop.last %},{% endif %}
                                     </a>
-                                    {% if not loop.last %}&nbsp;&nbsp;
-                                    {% endif %}
                                 {% endfor %}
                             </span>
                         </p>
@@ -69,11 +69,11 @@
             </div>
         
             {# <div class="post-head{% if not _post.featured_image_url and _config.settings.post.featured_image %} post-no-image{% endif %}"> #}
+            {% if _post.featured_image_url and _config.settings.post.featured_image %}    
                 <div class="image-container {% if not _post.featured_image_url and _config.settings.post.featured_image %} post-no-image{% endif %}">
-                        {% if _post.featured_image_url and _config.settings.post.featured_image %}    
-                                <img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}" class="post-image" loading="lazy">
-                        {% endif %}
+                    <img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}" class="post-image" loading="lazy">
                 </div>
+            {% endif %}
             
         </div>
 
@@ -109,7 +109,8 @@
                 </article>
             <!-- end post -->
             </div>
-
+            
+            {% if _config.settings.post.toc %}
             <div class="toc-container">
                 <div class="toc-wrap">
                     <h2 class="toc-heading">Table of Contents</h2>
@@ -120,6 +121,8 @@
                     <div class="content">{{ _post.content | toc }}</div>
                 </div>
             </div>
+            {% endif %}
+            
 
         </div>
     </div>

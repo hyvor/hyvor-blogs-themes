@@ -1,5 +1,6 @@
 .header {
-    color: var(--color-accent);
+    font-weight: var(--link-font-weight);
+    color: var(--main-color);
     background-color: var(--background-color);
     border-top: var(--border-thickness) solid var(--border-color);
     border-bottom: var(--border-thickness) solid var(--border-color);
@@ -10,10 +11,10 @@
         align-items: center;
 
         .row {
-            width: 1100px;
+            width: 68.75rem;
             max-width: 100%;
             margin:auto;
-            height: 40px;
+            height: 2.5rem;
 
             .nav-main {
                 display: flex;
@@ -22,7 +23,7 @@
 
                 .logo {
                     display: flex;
-                    padding: 10px; /* Add padding for better visual appeal */
+                    padding: 0.625rem; /* Add padding for better visual appeal */
                     align-items: center; /* Center the logo vertically */
                     /*align logo to left*/
                     margin-inline-end: auto;
@@ -31,12 +32,14 @@
                     
                     a {
                         text-decoration: none;
-                        color: var(--color-accent);
+                        color: var(--main-color);
+                        max-height: 2.5rem;
                     }
 
-                    .logo__image {
-                        max-height: 50px;
-                        }
+                    .logo-image {
+                        max-height: 2.5rem;
+                        filter: var(--image-filter);
+                    }
                 }
             
                 .menu-list {
@@ -62,12 +65,12 @@
 
                             .link {
                                 display: block;
-                                padding: 0 18px; /* Add padding for better visual appeal */
+                                padding: 0 1.125rem; /* Add padding for better visual appeal */
                                 height: 100%;
                                 display: inline-flex;
                                 align-items: center;
                                 text-decoration: none;
-                                color: var(--color-accent);
+                                color: var(--main-color);
                             }
                     
                         }
@@ -106,8 +109,8 @@
                     .nav-search a {
                         display: block;
                         text-decoration: none;
-                        color: var(--color-accent);
-                        padding: 10px 18px; 
+                        color: var(--main-color);
+                        padding: 0.625rem 1.125rem; 
                         display: flex;
                         align-items: center;
                         height: 100%;
@@ -128,8 +131,8 @@
                         align-items: center;
                         height: 100%;
                         text-decoration: none;
-                        color: var(--color-accent);
-                        padding: 10px 18px; /* Add padding for better visual appeal */
+                        color: var(--main-color);
+                        padding: 0.625rem 1.125rem; /* Add padding for better visual appeal */
                         align-items: center;
                         display: none;
                         cursor: pointer;
@@ -153,7 +156,7 @@
                             position: absolute;
                             z-index: 1;
                             opacity: 0;
-                            transform: translateY(28px);
+                            transform: translateY(1.75rem);
                             pointer-events: none;
                             border-bottom: var(--border-thickness) solid var(--border-color);
                             background-color: var(--background-color);
@@ -172,17 +175,12 @@
                                     border-bottom: none;
                                 }
 
-                                //first child
                                 &:first-child {
                                     border-top: var(--border-thickness) solid var(--border-color);
                                 }
 
                                 &.active {
                                     background-color: var(--background-hover-color);
-
-                                    // &:first-child {
-                                    //     border-top: var(--border-thickness) solid var(--border-color);
-                                    // }
                                 }
 
                                 &:hover {
@@ -260,7 +258,7 @@
                 .nav-main {
                     .logo {
                         .logo__image {
-                            max-height: 40px;
+                            max-height: 2.5rem;
                         }
                     }
 
@@ -269,7 +267,7 @@
                         opacity: 0;
                         visibility: hidden;
                         right: 0;
-                        top:41px;
+                        top:2.563rem;
                         display: flex;
                         height: initial;
                         flex-direction: column;
@@ -286,7 +284,6 @@
                             //disable display flex
                             display: block;
 
-                            //first child
                             .item:first-child {
                                 border-top: var(--border-thickness) solid var(--border-color);
                             }
@@ -299,10 +296,10 @@
                                 margin-bottom: 0;
 
                                 .link {
-                                    padding: 10px 18px;
+                                    padding: 0.625rem 1.125rem;
                                     display: block;
                                     text-decoration: none;
-                                    color: var(--color-accent);
+                                    color: var(--main-color);
                                     height: 100%;
                                     background-color: var(--background-color);
 

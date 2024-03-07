@@ -23,18 +23,18 @@
                     <div class="author-description">{{ _author.bio }}</div>
                 {% endif %}
 
-                <div class="author-social">
-                    <div class="grid">
-                        {% if _author.website_url %}
-                            {{ macro.social_icon('website' | lang, _author.website_url, 'link', 22) }} 
-                        {% endif %}
-                        {% include '_social.twig' with {social: _author.social} %}
-                    </div>
-                </div>
+                <div class="grid">{% include '_social.twig' with {social: _author.social} %}</div>
+
+                {% if _author.website_url %}
+                    {{ macro.social_icon('website' | lang, _author.website_url, 'link', 22) }} 
+                {% endif %}
 
                 {% if _author.location %}
                 <div class="author-location"><span class="author-location">{{ icon('ionicons', 'navigate', 22) }} {{ _author.location }}</span></div>
                 {% endif %}
+
+
+                <div class="posts-count"><span class="posts-count-span">{{ icon('fontawesome', 'bookmark-solid', 16) }}</span>{{ _author.posts_count | lang_by_number( zero="posts_num_zero", one="posts_num_one", multi="posts_num_multi" ) }}</div>
             </section>
 
         </div>

@@ -3,9 +3,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1100px;
+    width: 68.75rem;
     max-width: 100%;
-    padding-top: 20px;
+    padding-top: 1.25rem;
     margin:auto;
 
     .article-card {
@@ -38,9 +38,9 @@
    .article-card .featured {
         position: absolute;
         z-index: 1;
-        color: var(--color-accent);
-        transform: translateY(-10px);
-        font-size: 40px;
+        color: var(--main-color);
+        transform: translateY(-0.625rem);
+        font-size: 2.5rem;
    }
     
     .article-card img {
@@ -51,27 +51,25 @@
     }
     
     .article-card h2 {
-        // margin:10px;
-        font-weight: 700; 
-        padding: 10px;
-        color: var(--color-accent);
+        // margin:0.625rem;
+        font-weight: var(--link-font-weight); 
+        padding: 0.625rem;
+        color: var(--main-color);
 
     }
     
     .article-card .description {
-        font-size: 16px;
-        // margin:10px;
-        font-weight: 300;
-        padding: 10px;
+        // margin:0.625rem;
+        font-weight: var(--base-font-weight);
+        padding: 0.625rem;
     }
     
     .article-card a.article {
         text-decoration: none;
-        color: var(--color-accent);
+        color: var(--main-color);
         display: flex;
     
         &:hover {
-            // color: var(--background-color);
             text-decoration: underline;
         }
     
@@ -79,46 +77,47 @@
     }
     
     .article-card .article-authors {
-        // display: flex;
-        // flex-direction: row;
         align-items: center;
-        padding: 10px;
+        padding: 0.625rem;
     
         //links 
         a {
             text-decoration: none;
-            color: var(--color-accent);
+            color: var(--main-color);
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
     
     .post-meta-data {
-        padding: 20px;
+        padding: 1.25rem;
     }
     
     .post-meta-data .by-author {
-        color: var(--author-by-color);
+        color: var(--secondary-color);
     }
     
     .post-meta-data .article-date {
-        padding:10px
+        padding:0.625rem
     }
     
     .article-tags {
-        padding: 10px;
-        font-weight: 600;
+        padding: 0.625rem;
+        font-weight: var(--link-font-weight);
         
         a {
             text-decoration: none;
-            color: var(--color-accent);
+            color: var(--main-color);
         }
     }
     
     .article-tag {
-        // background-color: #d0d0d0;
         border: var(--border-thickness) solid var(--border-color);
-        padding: 3px 10px;
-        margin-inline-end: 3px;
-        display: inline-block;;
+        padding: 0.188rem 0.625rem;
+        margin-inline-end: 0.188rem;
+        display: inline-block;
     
         &:hover {
             background-color: var(--background-hover-color);

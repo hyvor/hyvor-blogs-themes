@@ -1,11 +1,3 @@
-/* main menu dropdown */
-// function menuToggle() {
-//     document.getElementById('hamburger').classList.toggle("is-open");
-//     document.getElementById('menuList').classList.toggle("is-visible");
-// };
-
-
-
 function menuToggle() {
     const menuList = document.getElementById('menu-list');
     menuList.classList.toggle('open');

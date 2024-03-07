@@ -6,8 +6,8 @@
     <div class="container">
       <div class="error">
         <h1 class="title">404</h1>
-        <p class="text">The requested page could not be found.</p>
-        <a href="{{ _blog.url }}" class="button">Back to homepage</a>
+        <p class="text">{{ 'not_found' | lang }}</p>
+        <a href="{{ _blog.url }}" class="button">{{ 'back_home' | lang }}</a>
       </div>
     </div>
   </main>

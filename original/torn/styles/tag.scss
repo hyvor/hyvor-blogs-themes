@@ -1,5 +1,5 @@
 .tag-page {
-    color: var(--color-accent);
+    color: var(--main-color);
     background-color: var(--background-color);
     
     .container {
@@ -7,9 +7,9 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 1100px;
+        width: 68.75rem;
         max-width: 100%;
-        padding-top: 20px;
+        padding-top: 1.25rem;
         margin: auto;
 
         .row{
@@ -23,25 +23,25 @@
             padding: 0;
             
             .head {
-                padding-top: 45px;
-                padding-bottom: 30px;
+                padding-top: 2.813rem;
+                padding-bottom: 1.875rem;
 
 
                 .title {
                     border : var(--border-thickness) solid var(--border-color);
-                    padding: 3px 10px;
-                    font-size: 30px;
-                    font-weight: 700;
+                    padding: 0.188rem 0.625rem;
+                    font-size: 1.875rem;
+                    font-weight: var(--link-font-weight);
                     
                 }
                 
                 .title-wrapper {
                     text-align: center;
-                    padding: 15px 10px;
+                    padding: 0.938rem 0.625rem;
                 }
                 
                 .posts-count{
-                    padding: 15px 10px;
+                    padding: 0.938rem 0.625rem;
                     //align the child elements to center
                     display: flex;
                     flex-direction: row;
@@ -50,13 +50,13 @@
                 }
                 
                 .posts-count-span {
-                    margin-inline-end: 5px;
+                    margin-inline-end: 0.313rem;
                 }
                 
                 .description {
-                    padding: 15px 10px;
+                    padding: 0.938rem 0.625rem;
                     text-align: center;
-                    font-weight: 300;
+                    font-weight: var(--base-font-weight);
                 }
             
             }

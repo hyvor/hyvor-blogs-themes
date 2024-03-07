@@ -8,9 +8,9 @@
                 <div class="logo">
                     <a href="{{ _blog.url }}">
                         {% if _blog.logo_url %}
-                        <img class="logo__image" src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}"/>
+                        <img class="logo-image" src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}"/>
                         {% else %}
-                        <span class="logo__name">{{ _blog.name }}</span>
+                        <span class="logo-name">{{ _blog.name }}</span>
                         {% endif %}
                     </a> 
                 </div>
@@ -29,8 +29,8 @@
                 <div class="nav-buttons">
                     {% if (_blog.color_modes == 'both') %}
                     <div class="color-mode-toggler">
-                        <a onclick="_hb.changeColorMode('light')"><i>{{ icon('ionicons', 'sunny', 14) }}</i><span>&nbsp;Light</span></a>
-                        <a onclick="_hb.changeColorMode('dark')"><i>{{ icon('ionicons', 'moon', 14) }}</i><span>&nbsp;Dark</span></a>
+                        <a onclick="_hb.changeColorMode('light')" href="javascript:void(0)"><i>{{ icon('ionicons', 'sunny', 14) }}</i><span>&nbsp;{{ 'light_mode' | lang }}</span></a>
+                        <a onclick="_hb.changeColorMode('dark')" href="javascript:void(0)"><i>{{ icon('ionicons', 'moon', 14) }}</i><span>&nbsp;{{ 'dark_mode' | lang }}</span></a>
                     </div>
                     {% endif %}
                     
@@ -52,11 +52,11 @@
                     {% endif %}
 
                     <div class="nav-search">
-                        <a class="nav-search-button"><i aria-hidden="true">{{ icon('ionicons', 'search', 16) }}</i>
+                        <a class="nav-search-button" href="javascript:void(0)"><i aria-hidden="true">{{ icon('ionicons', 'search', 16) }}</i>
                         </a>
                     </div>
 
-                    <div class="hamburger-icon">
+                    <div class="hamburger-icon" id="hamburger" onclick="menuToggle()">
                         <i aria-hidden="true" class="active" onclick="menuToggle()">{{ icon('ionicons', 'menu', 16) }}</i>
                         <i aria-hidden="true" onclick="menuToggle()">{{ icon('ionicons', 'close', 16) }}</i>
                     </div>

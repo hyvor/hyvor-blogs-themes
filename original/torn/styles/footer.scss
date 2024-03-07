@@ -1,11 +1,11 @@
 .footer {
+    font-weight: var(--link-font-weight);
     background-color: var(--background-color);
     border-top: var(--border-thickness) solid var(--border-color);
     border-bottom: var(--border-thickness) solid var(--border-color);
-    margin-top: 20px;
-    color: var(--color-accent);
-
-        height: 40px;
+    margin-top: 1.25rem;
+    color: var(--main-color);
+    height: 2.5rem;
 
 
             .nav-main {
@@ -13,9 +13,9 @@
                 align-items: center;
                 height: 100%;
 
-                width: 1100px;
+                width: 68.75rem;
                 max-width: 100%;
-                margin:auto;
+                margin: auto;
                 // height: 40px;
 
 
@@ -28,12 +28,12 @@
                     .link {
                         border-inline-start: var(--border-thickness) solid var(--border-color);
                         display: block;
-                        padding: 0 18px; /* Add padding for better visual appeal */
+                        padding: 0 1.125rem; /* Add padding for better visual appeal */
                         height: 100%;
                         display: inline-flex;
                         align-items: center;
                         text-decoration: none;
-                        color: var(--color-accent);
+                        color: var(--main-color);
                          /*hover effect*/
                          &:hover {
                             background-color: var(--background-hover-color);
@@ -51,14 +51,14 @@
 
                 .social-link {
                     border-inline-start: var(--border-thickness) solid var(--border-color);
-                    padding: 0 18px; /* Add padding for better visual appeal */
+                    padding: 0 1.125rem; /* Add padding for better visual appeal */
                     height: 100%;
                     display: inline-flex;
                     align-items: center;
                     text-decoration: none;
-                    color: var(--color-accent);
+                    color: var(--main-color);
             
-                    //border right for last chils
+                    //border right for last child
                     &:last-child {
                         border-inline-end: var(--border-thickness) solid var(--border-color);
                     }
@@ -92,8 +92,8 @@
         
             .link {
                 border-bottom: var(--border-thickness) solid var(--border-color);
-                padding-top: 8px !important;
-                padding-bottom: 8px !important;
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
                 justify-content: center !important;
                 //last child
                 &:last-child {
@@ -116,7 +116,7 @@
             justify-content: center !important;
 
             .social-link {
-                padding : 8px !important;
+                padding : 0.5rem !important;
                 flex-grow: 1;
 
                 //align i icons to center

@@ -1,31 +1,5 @@
-{# <div class="post-loop">
-    {% for post in _posts %}
-
-        <div class="article-card">
-        <a class="article" href="{{ post.url }}">
-        {% if post.featured_image_url and _config.settings.loop.featured_image %}
-            {% if post.is_featured %}
-                <span class="featured">{{ icon('ionicons', 'star', 14) }}</span>
-            {% endif %}
-                <div class="article-image">
-                    <img src="{{ post.featured_image_url }}" alt="{{ post.title }}" />
-                </div>
-        {% endif %}
-
-        <h2>{{ post.title }}</h2>
-        <p class="description">{{ post.description }}&hellip;</p>
-        </a>
-        </div>
-    {% endfor %}
-</div>
- #}
-
 <div class="post-loop">
     {% for post in _posts %}
-        {#  {% if loop.index is divisible by(2) %}
-            <div class="row">
-        {% endif %} #}
-
         <div class="article-card">
             
             {% if post.featured_image_url and _config.settings.loop.featured_image %}
@@ -33,11 +7,8 @@
                     <img src="{{ post.featured_image_url }}" alt="{{ post.title }}" />
                 </a>
             {% endif %}
-
-            {# //start was here #}
             
             <div class="post-meta-data">
-                {# TODO #}
                 
                 <a class="article" href="{{ post.url }}">
                     <h2>{{ post.title }}
@@ -53,9 +24,9 @@
 
                 {% if (_config.settings.loop.authors) %}
                     <div class="article-authors">
-                        <span class="by-author">By&nbsp;</span>
+                        <span class="by-author">{{ 'by' | lang }}</span>
                         {% for author in post.authors %}
-                        <a href="{{ author.url }}" class="article-author-link">{{ author.name }}</a>{% if not loop.last %},&nbsp;{% endif %}
+                        <a href="{{ author.url }}" class="article-author-link">{{ author.name }}</a>{% if not loop.last %},{% endif %}
                         {% endfor %}
                     </div>
                 {% endif %}

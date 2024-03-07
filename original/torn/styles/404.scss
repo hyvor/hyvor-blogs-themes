@@ -5,9 +5,9 @@
     justify-content: space-between;
     width: 1100px;
     max-width: 100%;
-    padding-top: 20px;
+    padding-top: 1.25rem;
     margin:auto;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 6.25rem);
 
 
     .container {
@@ -30,31 +30,29 @@
             width: 100%;
 
             .title {
-                margin: 15px 10px;
+                margin: 0.938rem 0.625rem;
                 text-align: center;
-                font-weight: 700;
-                font-size: 80px;
-                line-height: 24px;
+                font-weight: var(--link-font-weight);
+                font-size: 5rem;
+                line-height: 1.5rem;
             }
 
             .text {
-                margin: 15px 10px;
+                margin: 0.938rem 0.625rem;
                 text-align: center;
-                font-weight: 300;
             }
 
             .button {
-                padding: 15px 10px;
-                margin: 15px 10px;
+                padding: 0.938rem 0.625rem;
+                margin: 0.938rem 0.625rem;
                 text-align: center;
-                font-weight: 700;
-                border: var(border-thickness) solid var(--border-color);
+                font-weight: var(--link-font-weight);
+                color: var(--main-color);
                 text-decoration: none;
-                color: var(--color-accent);
+                
 
                 &:hover {
-                    background-color: var(background-hover-color);
-                    color: var(--color-accent);
+                    text-decoration: underline;
                 }
                 
             }

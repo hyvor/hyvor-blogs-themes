@@ -4,21 +4,18 @@
     <div class="list">
       <div class="grid">
         <a title="{{ 'previous_page' | lang }}" class="prev{% if not _pagination.page_prev %} disabled {% endif %}" href="{{ _pagination.page_prev | pagination_page_url }}">
-        <i>{{ icon('fontawesome', 'chevron-left-solid', 10) }}</i>
-          {# {{ 'previous_page' | lang }} #} Prev
+        <i class="caret-prev">{{ icon('fontawesome', 'chevron-left-solid', 10) }}</i>
+          {{ 'previous_page' | lang }}
         </a>
 
-        <span class="count">{{ 'page' | lang }} {{ _pagination.page }} of {{ _pagination.pages }}</span>
-        {# copy the line very below and paste it here to change the word of TODO #}
-
+        <span class="count">{{ 'page' | lang }} {{ _pagination.page }} {{ 'of' | lang }} {{ _pagination.pages }}</span>
+  
         <a title="{{ 'next_page' | lang }}" class="next{% if not _pagination.page_next %} disabled {% endif %}" href="{{ _pagination.page_next | pagination_page_url }}">
-          {# {{ 'next_page' | lang }} #}Next
-          <i>{{ icon('fontawesome', 'chevron-right-solid', 10) }}</i>
+          {{ 'next_page' | lang }}
+          <i class="caret-next">{{ icon('fontawesome', 'chevron-right-solid', 10) }}</i>
         </a>
       </div>
     </div>
   </div>
 </nav>
 <!-- end pagination -->
-
-      {# <span class="pagination__count">{{ 'page' | lang }} {{ _pagination.page }} {{ 'of' | lang }} {{ _pagination.pages }}</span> #}

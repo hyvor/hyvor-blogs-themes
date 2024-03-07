@@ -1,29 +1,36 @@
-# loop
+# loop-- checked
 pagination: Pagination
 previous_page: Prev
 next_page: Next
 page: Page
 of: of
 
-# search
-search: Search
+# search -- checked
 input_search: Type to search
-topics: Topics
 close: Close
 
-# footer
-authors: Meet our authors
-feed: RSS Feed
-recent_posts: Recent Posts
-tags: Tag Cloud
+# header -- checked
+dark_mode: Dark
+light_mode: Light
 
-# post
+
+# footer -- checked
+feed: RSS Feed
+
+# post -- checked
 newsletter: Newsletter
 comments: Comments
 translated: Translations
 
-# author/tag
+# author/tag --- checked
+by: By
+
+#author and tag pages -- checked
 posts_num_zero: No Posts
 posts_num_one: 1 Post
 posts_num_multi: "* Posts"
 website: Website
+
+# 404 -- checked
+not_found: The requested page could not be found
+back_home: Back to homepage
