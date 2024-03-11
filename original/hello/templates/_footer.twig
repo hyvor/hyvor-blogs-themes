@@ -20,7 +20,7 @@
 
         {% if _blog.languages | length > 1 %}
             <div class="nav-lang">
-                <a class="lang-label global-opacity-link" role="label" onclick="toggleLanguageDropdown()">
+                <a class="lang-label global-opacity-link" role="button" onclick="toggleLanguageDropdown()" aria-label="language">
                     <span>{{ _lang.name }}&nbsp</span>{{ icon('fontawesome', 'earth-asia-solid', 16) }}
                 </a>
                 <div id="lang-selector">
@@ -28,6 +28,8 @@
                         <a
                             href="{{ lang.code | language_variant_url }}"
                             class="global-opacity-link {% if lang.code == _lang.code %}active{% endif %}"
+                            role="button"
+                            aria-label="language"
                         >{{ lang.name }}{% if _lang.code == lang.code %}<span class="bull">&bull;</span>{% endif %}</a>
                     {% endfor %}
                 </div>

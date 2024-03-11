@@ -20,7 +20,7 @@
                         <span class="author-pictures">
                             {% for author in post.authors %}
                                 {% if author.picture_url %}
-                                    <img src="{{ author.picture_url }}" />
+                                    <img src="{{ author.picture_url }}" alt="{{ author.name }}" />
                                 {% else %}
                                     <span class="avatar-placeholder"></span>
                                 {% endif %}
