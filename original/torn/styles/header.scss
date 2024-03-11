@@ -5,16 +5,6 @@
     border-top: var(--border-thickness) solid var(--border-color);
     border-bottom: var(--border-thickness) solid var(--border-color);
 
-    button {
-        background-color: var(--background-color);
-        border: none;
-        cursor: pointer;
-        font-family: var(--base-font-family);
-        font-weight: var(--strong-font-weight);
-        color: var(--main-color);
-        font-size: var(--base-font-size);
-
-    }
     .main {
         display: flex;
         justify-content: space-between;
@@ -120,9 +110,9 @@
                         }
                     }
                 
-                    .color-mode-toggler button,
-                    .nav-lang button,
-                    .nav-search button {
+                    .color-mode-toggler a,
+                    .nav-lang a,
+                    .nav-search a {
                         display: block;
                         text-decoration: none;
                         color: var(--main-color);
@@ -132,12 +122,12 @@
                         height: 100%;
                     }
 
-                    .nav-lang button {
+                    .nav-lang a {
                         border-inline-start: var(--border-thickness) solid var(--border-color);
                         border-inline-end: var(--border-thickness) solid var(--border-color);
                     }
 
-                    .nav-search button {
+                    .nav-search a {
                         border-inline-end: var(--border-thickness) solid var(--border-color);
                     }
 
@@ -183,7 +173,7 @@
                             }
 
 
-                            button {
+                            a {
                                 border-bottom: var(--border-thickness) solid var(--border-color);
                                 position: relative;
 
@@ -256,11 +246,11 @@
 
 }
 
-.mode-light .color-mode-toggler button:first-child {
+.mode-light .color-mode-toggler a:first-child {
     display: none!important;
   }
   
-  .mode-dark .color-mode-toggler button:last-child {
+  .mode-dark .color-mode-toggler a:last-child {
     display: none!important;
   } 
 
