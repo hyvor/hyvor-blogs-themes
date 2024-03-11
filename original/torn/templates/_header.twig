@@ -8,7 +8,7 @@
                 <div class="logo">
                     <a href="{{ _blog.url }}">
                         {% if _blog.logo_url %}
-                        <img class="logo-image" src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}"/>
+                        <img class="logo-image" src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}" aria-label="logo-image" />
                         {% else %}
                         <span class="logo-name">{{ _blog.name }}</span>
                         {% endif %}
@@ -19,7 +19,7 @@
                     <ul class="list">
                     {% for nav in _blog.nav_header %}
                         <li class="item">
-                        <a href="{{ nav.url }}" class="link {{ nav.name | lower | slug }}{% if is_current_url(nav.url) %} active-link{% endif %}">{{ nav.name }}</a>
+                        <button href="{{ nav.url }}" class="link {{ nav.name | lower | slug }}{% if is_current_url(nav.url) %} active-link{% endif %}" aria-label="{{ nav.name }}">{{ nav.name }}</button>
                         </li>
                     {% endfor %}
                     </ul>
@@ -29,21 +29,21 @@
                 <div class="nav-buttons">
                     {% if (_blog.color_modes == 'both') %}
                     <div class="color-mode-toggler">
-                        <a onclick="_hb.changeColorMode('light')" href="javascript:void(0)"><i>{{ icon('ionicons', 'sunny', 14) }}</i><span>&nbsp;{{ 'light_mode' | lang }}</span></a>
-                        <a onclick="_hb.changeColorMode('dark')" href="javascript:void(0)"><i>{{ icon('ionicons', 'moon', 14) }}</i><span>&nbsp;{{ 'dark_mode' | lang }}</span></a>
+                        <button onclick="_hb.chbuttonngeColorMode('light')" href="javascript:void(0)" role="button" aria-label="light-mode"><i>{{ icon('ionicons', 'sunny', 14) }}</i><span>&nbsp;{{ 'light_mode' | lang }}</span></button>
+                        <button onclick="_hb.changeColorMode('dark')" href="javascript:void(0)" role="button" aria-label="dark-mode"><i>{{ icon('ionicons', 'moon', 14) }}</i><span>&nbsp;{{ 'dark_mode' | lang }}</span></button>
                     </div>
                     {% endif %}
                     
                     {% if _blog.languages | length > 1 %}
                     <div class="nav-lang">
-                        <a class="lang-label" role="label" onclick="toggleLanguageDropdown()">
+                        <button class="lang-label" role="button" onclick="toggleLanguageDropdown()" aria-label="language">
                             <i>{{ icon('ionicons', 'earth', 14) }}</i><span>&nbsp;{{ _lang.name }}</span>
-                        </a>
+                        </button>
 
                         <div id="lang-selector">
                         {% for lang in _blog.languages %}
-                            <a href="{{ lang.code | language_variant_url }}" class="{% if lang.code == _lang.code %}active{% endif %}">{{ lang.name }}
-                            </a>
+                             <button href="{{ lang.code | language_variant_url }}" class="{% if lang.code == _lang.code %}active{% endif %}" role="button" aria-label="{{ lang.name }}">{{ lang.name }}
+                            </button>
                         {% endfor %}
                         </div>
 
@@ -52,8 +52,8 @@
                     {% endif %}
 
                     <div class="nav-search">
-                        <a class="nav-search-button" href="javascript:void(0)"><i aria-hidden="true">{{ icon('ionicons', 'search', 16) }}</i>
-                        </a>
+                        <button class="nav-search-button" href="javascript:void(0)"><i aria-hidden="true">{{ icon('ionicons', 'search', 16) }}</i>
+                        </button>
                     </div>
 
                     <div class="hamburger-icon" id="hamburger" onclick="menuToggle()">

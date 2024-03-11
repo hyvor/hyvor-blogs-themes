@@ -66,7 +66,6 @@
 
             </div>
         
-            {# <div class="post-head{% if not _post.featured_image_url and _config.settings.post.featured_image %} post-no-image{% endif %}"> #}
             {% if _post.featured_image_url and _config.settings.post.featured_image %}    
                 <div class="image-container {% if not _post.featured_image_url and _config.settings.post.featured_image %} post-no-image{% endif %}">
                     <img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}" class="post-image" loading="lazy">

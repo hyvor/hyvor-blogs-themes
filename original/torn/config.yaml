@@ -6,9 +6,9 @@ POSTS_PER_PAGINATION: 10
 fonts:
   size: 16
   weight: 300
-  base_font_family: Karla
-  line_height: 1.4
   strong_font_weight: 700
+  base_font_family: Karla, sans-serif
+  line_height: 1.4
 
 
 colors:

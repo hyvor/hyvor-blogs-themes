@@ -10,7 +10,12 @@ fonts:
     $name: Base Font Weight
     $description: Font weight of the base font
     $type: number
-    
+  
+  strong_font_weight:
+    $name: Strong Font Weight
+    $description: Font weight of headings and important texts
+    $type: number
+  
   base_font_family:
     $name: Font Family
     $description: Font family name
@@ -21,10 +26,7 @@ fonts:
     $description: Height of lines
     $type: number
 
-  strong_font_weight:
-    $name: Strong Font Weight
-    $description: Font weight of links
-    $type: number
+  
     
 
 colors:
@@ -35,34 +37,42 @@ colors:
       
     main_color:
       $name: Main Color
+      $description: "Main color of the theme: texts, links, etc."
       $type: color
       
     secondary_color:
       $name: Secondary Color
+      $description: "Secondary color of the theme: subtexts, etc."
       $type: color
        
     background_color:
       $name: Background Color
+      $description: Background color of the theme
       $type: color
       
     border_color:
       $name: Border Color
+      $description: Border color of the theme
       $type: color 
       
     background_hover_color:
       $name: Background Hover Color
+      $description: Background color of the buttons when hovered
       $type: color
       
     code_color:
       $name: Code Color
+      $description: Color of the code texts
       $type: color
       
     code_background_color:
       $name: Code Background Color
+      $description: Background color of the code blocks
       $type: color
       
     highlight_color:
       $name: Highlight Color
+      $description: Highlight color of the theme
       $type: color
       
     
@@ -71,38 +81,47 @@ colors:
     
     main_color:
       $name: Main Color
+      $description: "Main color of the theme: texts, links, etc."
       $type: color
       
     secondary_color:
       $name: Secondary Color
+      $description: "Secondary color of the theme: subtexts, etc."
       $type: color
        
     background_color:
       $name: Background Color
+      $description: Background color of the theme
       $type: color
       
     border_color:
       $name: Border Color
+      $description: Border color of the theme
       $type: color 
       
     background_hover_color:
       $name: Background Hover Color
+      $description: Background color of the buttons when hovered
       $type: color
       
     toc_border_color:
       $name: Table of Content Border Color
+      $description: Border color of the table of content
       $type: color
       
     code_color:
       $name: Code Color
+      $description: Color of the code texts
       $type: color
       
     code_background_color:
       $name: Code Background Color
+      $description: Background color of the code blocks
       $type: color
       
     highlight_color:
       $name: Highlight Color
+      $description: Highlight color of the theme
       $type: color
       
       
@@ -125,7 +144,7 @@ settings:
     
     featured_image:
       $name: Featured Image
-      $description: Show/hide featured image
+      $description: "Show/hide featured image"
       $type: checkbox
       
     aspect_ratio:
@@ -135,12 +154,12 @@ settings:
       
     tags:
       $name: Tags
-      $description: Show/hide tags
+      $description: "Show/hide tags"
       $type: checkbox
       
     authors:
       $name: Authors
-      $description: Show/hide authors
+      $description: "Show/hide authors"
       $type: checkbox
       
   footer:
@@ -155,26 +174,26 @@ settings:
     
     authors:
       $name: Authors
-      $description: Show/hide authors
+      $description: "Show/hide authors"
       $type: checkbox
       
     tags:
       $name: Tags
-      $description: Show/hide tags
+      $description: "Show/hide tags"
       $type: checkbox
       
     featured_image:
       $name: Featured Image
-      $description: Show/hide featured image
+      $description: "Show/hide featured image"
       $type: checkbox
       
     variants:
       $name: Language Variants
-      $description: Show/hide language variants
+      $description: "Show/hide language variants"
       $type: checkbox
 
     toc:
       $name: Table of Contents
-      $description: Show/hide table of content
+      $description: "Show/hide table of content"
       $type: checkbox
       

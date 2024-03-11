@@ -20,13 +20,13 @@ img {
 .meta-data-container {
         width: 50%;
         padding: 1.875rem 2.188rem;
-        // border-inline-end: var(--border-thickness) solid var(--border-color);
 
         .post-header {
             padding-bottom: 0.625rem;
 
             .post-title h1 {
-                 //remove this once config.yaml is updated
+                font-weight: var(--strong-font-weight);
+                color: var(--main-color);
 
             }
             
@@ -376,10 +376,8 @@ img {
 
 
 .toc-container {
-        width: 30%;
-        // padding: 2.188rem 1.25rem 2.188rem 1.25rem;   
+        width: 30%;  
         border-inline-start: var(--border-thickness) solid var(--border-color);
-        //center align
 
         .collapsible {
             display: none;
@@ -401,9 +399,19 @@ img {
     top: 0;
     padding: 2.188rem;
     ul {
+      position: relative;
       padding-inline-start: 0.938rem;
-      border-inline-start: var(--border-thickness) solid var(--border-color);
     }
+    ul:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: var(--border-thickness);
+      background-color: var(--border-color);
+      opacity: 0.5;
+      left: 0;
+    }
+
     li {
       list-style: none;
       
@@ -460,7 +468,6 @@ img {
     .meta-data-container {
         width: 100%;
         border-inline-end: none;
-        // border-bottom: var(--border-thickness) solid var(--border-color);
 
         //align the content inside the meta-data-container to center
         text-align: center;

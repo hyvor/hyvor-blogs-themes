@@ -15,7 +15,6 @@
     align-items: center;
     margin: auto;
     padding: 0;
-    // font-family: var(--heading-font-family);
 
   
     .grid {
@@ -27,7 +26,6 @@
       .next,
       .prev {
         padding: 0.5rem 1rem;
-        // border: 1px solid var(--border-color);
         text-decoration: none;
         height: 100%;
         border: var(--border-thickness) solid var(--border-color);
