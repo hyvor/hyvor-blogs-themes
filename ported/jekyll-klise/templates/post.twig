@@ -22,8 +22,9 @@
 
 					{% if not _post.is_page %}
 						<div class="post-meta">
-							<time itemprop="datePublished" datetime="{{ post.published_at | date('d-m-Y') }}">
-								{{ post.published_at | date('M d, Y') }}
+						
+							<time itemprop="datePublished" datetime="{{ _post.published_at | date('Y-m-d') }}">
+								{{ _post.published_at | date('M d, Y') }}
 							</time>
 
 
