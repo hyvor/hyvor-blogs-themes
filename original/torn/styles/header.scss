@@ -1,5 +1,5 @@
 .header {
-    font-weight: var(--link-font-weight);
+    font-weight: var(--strong-font-weight);
     color: var(--main-color);
     background-color: var(--background-color);
     border-top: var(--border-thickness) solid var(--border-color);
@@ -37,6 +37,7 @@
                     }
 
                     .logo-image {
+                        padding: 0.188rem 0 ; /* Add padding for better visual appeal */
                         max-height: 2.5rem;
                         filter: var(--image-filter);
                     }

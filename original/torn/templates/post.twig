@@ -25,7 +25,7 @@
                     <div class="post-author-names">
                     <span class="author-by">{{ 'by' | lang }}</span>
                         {% for author in _post.authors %}
-                            <a href="{{ author.url }}" class="post-author-link">{{ author.name }}{% if not loop.last %}, {% endif %}</a>
+                            <a href="{{ author.url }}" class="post-author-link">{{ author.name }}</a>{% if not loop.last %},{% endif %}
                         {% endfor %}
                        
                     </div>
@@ -56,9 +56,7 @@
                                 <span class="translated-text">{{ 'translated' | lang }}:
                                 </span>
                                 {% for variant in _post.variants %}
-                                    <a href="{{ variant.url }}">
-                                        {{ variant.language.name }}{% if not loop.last %},{% endif %}
-                                    </a>
+                                    <a href="{{ variant.url }}">{{ variant.language.name }}</a>{% if not loop.last %},{% endif %}
                                 {% endfor %}
                             </span>
                         </p>

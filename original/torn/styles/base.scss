@@ -18,7 +18,7 @@
 
 body {
     line-height: var(--base-line-height);
-    font-family: 'Karla', sans-serif;
+    font-family: var(--base-font-family);
     font-weight: var(--base-font-weight);
     background-color: var(--background-color);
     color: var(--main-color);
@@ -37,6 +37,11 @@ body {
   hr, div, section {
     margin: 0;
     padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--base-font-family);
+    font-weight: var(--strong-font-weight);
   }
   
   /* Remove trailing margins from nested lists. */

@@ -52,7 +52,7 @@
     
     .article-card h2 {
         // margin:0.625rem;
-        font-weight: var(--link-font-weight); 
+        font-weight: var(--strong-font-weight); 
         padding: 0.625rem;
         color: var(--main-color);
 
@@ -105,7 +105,7 @@
     
     .article-tags {
         padding: 0.625rem;
-        font-weight: var(--link-font-weight);
+        font-weight: var(--strong-font-weight);
         
         a {
             text-decoration: none;

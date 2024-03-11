@@ -8,7 +8,7 @@ fonts:
   weight: 300
   base_font_family: Karla
   line_height: 1.4
-  link_font_weight: 700
+  strong_font_weight: 700
 
 
 colors:
@@ -18,7 +18,6 @@ colors:
     background_color: "#ffffff"
     border_color: "#bfbfbf"
     background_hover_color: "#e3e3e3"
-    toc_border_color: "#e3e3e3" 
     code_color: "#f8f8f8"
     code_background_color: "#333"
     highlight_color: "#fff49f"
@@ -30,7 +29,6 @@ colors:
     background_color: "#000"
     border_color: "#5c5b5b"
     background_hover_color: "#3a3a3a"
-    toc_border_color: "#585858"
     code_color: "#333"
     code_background_color: "#f8f8f8"
     highlight_color: "#fff49f"

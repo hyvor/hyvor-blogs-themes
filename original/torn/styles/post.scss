@@ -64,7 +64,7 @@ img {
 
         .post-tags {
             padding: 0.625rem 0 0.625rem 0;
-            font-weight: var(--link-font-weight);
+            font-weight: var(--strong-font-weight);
             
         }
 
@@ -97,7 +97,7 @@ img {
             }
 
             .translated-text {
-                font-weight: var(--link-font-weight);
+                font-weight: var(--strong-font-weight);
             }
         }
   }
@@ -207,7 +207,7 @@ img {
     color: var(--secondary-color);
 
     a {
-      font-weight: var(--link-font-weight);
+      font-weight: var(--strong-font-weight);
       text-decoration: none;
       color: var(--secondary-color);
     }
@@ -285,7 +285,7 @@ img {
 
       .bookmark-title {
         font-size: 1rem;
-        font-weight: var(--link-font-weight);
+        font-weight: var(--strong-font-weight);
         line-height: 1.3;
       }
 
@@ -298,7 +298,7 @@ img {
       .bookmark-domain {
         margin-top: 1.5rem;
         font-size: 0.875rem;
-        font-weight: var(--link-font-weight);
+        font-weight: var(--strong-font-weight);
         line-height: 1;
       }
     }
@@ -333,7 +333,7 @@ img {
       }
 
       th {
-        font-weight: var(--link-font-weight);
+        font-weight: var(--strong-font-weight);
         text-align: left;
       }
       p {
@@ -402,7 +402,7 @@ img {
     padding: 2.188rem;
     ul {
       padding-inline-start: 0.938rem;
-      border-inline-start: var(--border-thickness) solid var(--toc-border-color);
+      border-inline-start: var(--border-thickness) solid var(--border-color);
     }
     li {
       list-style: none;
@@ -497,6 +497,7 @@ img {
             border: var(--border-thickness) solid var(--border-color);
             background-color: var(--background-color);
             font-family: inherit;
+            color: var(--main-color);
 
             .caret-up {
               display: inline-block;

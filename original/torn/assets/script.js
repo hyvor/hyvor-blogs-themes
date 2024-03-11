@@ -98,6 +98,7 @@ function initSearch() {
         if (e.target.value.trim() === "") {
         searchResult.innerHTML = '';
         popular.style.display = 'block'
+        searchButton.classList.remove('search-button-clear');
         return;
         }
 
@@ -136,8 +137,18 @@ function initSearch() {
             } else {
                 popular.style.display = 'block'
             }
-        })
 
+        })
+        
+    });
+
+     // clear the search input when user click the search-button-clearr
+     searchButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        searchInput.value = '';
+        searchResult.innerHTML = '';
+        popular.style.display = 'block'
+        searchButton.classList.remove('search-button-clear');
     });
 }
   

@@ -21,8 +21,8 @@ fonts:
     $description: Height of lines
     $type: number
 
-  link_font_weight:
-    $name: Links Font Weight
+  strong_font_weight:
+    $name: Strong Font Weight
     $description: Font weight of links
     $type: number
     
@@ -51,10 +51,6 @@ colors:
       
     background_hover_color:
       $name: Background Hover Color
-      $type: color
-      
-    toc_border_color:
-      $name: Table of Content Border Color
       $type: color
       
     code_color:

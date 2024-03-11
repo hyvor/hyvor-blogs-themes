@@ -5,14 +5,13 @@
   <style>
     :root {
       --base-font-family: {{ _config.fonts.base_font_family | raw }};
-      --base-font-size: {{ _config.size }}px;
-      --base-font-style: {{ _config.style }};
+      --base-font-size: {{ _config.fonts.size }}px;
       --base-font-weight: {{ _config.fonts.weight }};
       --base-line-height: {{ _config.fonts.line_height }};
       --border-thickness: {{ _config.border_thickness }}px;
       --aspect-ratio: {{ _config.settings.loop.aspect_ratio }};
       --image-filter: grayscale({{ _config.grayscale }}%);
-      --link-font-weight: {{ _config.fonts.link_font_weight }};
+      --strong-font-weight: {{ _config.fonts.strong_font_weight }};
     }
     .mode-light:root {
       --main-color: {{ _config.colors.light.main_color }};
