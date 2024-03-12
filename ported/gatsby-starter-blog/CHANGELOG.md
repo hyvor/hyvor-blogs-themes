@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+## [1.0.5] - 2024-03-12
+- Inline code added
+
 ## [1.0.4] - 2023-09-01
 - Added heading anchor styles
 - Added table styles

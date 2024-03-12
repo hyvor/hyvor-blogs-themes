@@ -1,3 +1,6 @@
+## [1.0.2] - 2024-03-12
+- Search icon issue fixed
+
 ## [1.0.1] - 2023-09-01
 - Added tables styles
 - Added heading anchor styles

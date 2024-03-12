@@ -164,7 +164,8 @@
 }
 
 .color-mode-toggler,
-.lang-label {
+.lang-label,
+.nav-search {
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -175,6 +176,33 @@
   svg {
     margin-inline-end: 2px;
     vertical-align: bottom !important;
+  }
+}
+
+.nav-search {
+
+  .nav-search-button {
+    display: inline-block;
+    padding: 12px;
+    border-radius: 50%;
+    color: white;
+    background: var(--color-accent);
+    box-shadow: 1px 12px 16px -4px rgba(0, 0, 0, 0.08);
+    transition: $global-transition;
+    margin-inline-start: 20px;
+
+    &:hover {
+      background: var(--link-color-hover);
+    }
+  }
+
+  svg {
+    margin-inline-end: 0;
+  }
+
+  @media (max-width: $desktop) {
+    order: 1;
+    margin-top: 8px;
   }
 }
 

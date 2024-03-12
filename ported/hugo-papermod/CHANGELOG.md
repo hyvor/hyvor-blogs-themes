@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+# [1.0.4] - 2024-03-12
+- Archive navigtion
+- Search navigation
+- Table display: table
+
 ## [1.0.3] - 2023-09-01
 
 ### Added

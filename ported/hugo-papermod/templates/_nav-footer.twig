@@ -6,4 +6,12 @@
         </a>
     </li>
     {% endfor %}
+
+    {% if (_config.settings.archive) %}
+    <li>
+        <a class="archive" href="/archive">
+            <span class="archive">Archive</span>
+        </a>
+    </li>
+    {% endif %}
 </ul>

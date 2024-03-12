@@ -128,6 +128,14 @@ function initSearch() {
 
     });
 
+    searchButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        searchInput.value = '';
+        searchResult.innerHTML = '';
+        popular.style.display = 'block'
+        searchButton.classList.remove('search-button-clear');
+    });
+
 }
 
 document.addEventListener('flashload:navigationEnded', initSearch)

@@ -1,3 +1,5 @@
+## [1.0.5] - 2024-03-12
+- Post published date fixed
 
 ## [1.0.4] - 2023-09-01
 - Increased POSTS_PER_PAGINATION to 100
