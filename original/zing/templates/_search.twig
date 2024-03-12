@@ -1,0 +1,30 @@
+<!-- begin search -->
+<div class="search-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="search">
+          <form class="search-form">
+            <i aria-hidden="true" class="search-input-icon">{{ icon('ionicons', 'search') }}</i>
+            <input class="search-field" type="text" placeholder="{{ 'input_search' | lang }}…">
+            <button class="search-button" type="submit">
+              <i aria-hidden="true">{{ icon('ionicons', 'close') }}</i>
+            </button>
+          </form>
+          <div class="popular-wrapper">
+            <h4 class="popular-title">{{ 'topics' | lang }}</h4>
+            <span class="popular-tags post-tags">
+              {% set tags = data(endpoint="tags", keys="name,url", limit="10").data %}
+              {% for tag in tags %}
+                <a href="{{ tag.url }}">{{ tag.name }}</a>
+              {% endfor %}
+            </span>
+          </div>
+          <div class="search-result"></div>
+        </div>
+        <button class="search-wrapper-close" aria-label="{{ 'close' | lang }}"></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end search -->
