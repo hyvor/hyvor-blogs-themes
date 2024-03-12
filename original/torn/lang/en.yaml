@@ -1,0 +1,35 @@
+# loop
+pagination: Pagination
+previous_page: Prev
+next_page: Next
+page: Page
+of: of
+
+# search
+input_search: Type to search
+close: Close
+
+# header
+dark_mode: Dark
+light_mode: Light
+
+# footer
+feed: RSS Feed
+
+# post
+newsletter: Newsletter
+comments: Comments
+translated: Translations
+
+# author/tag
+by: By
+
+#author and tag pages
+posts_num_zero: No Posts
+posts_num_one: 1 Post
+posts_num_multi: "* Posts"
+website: Website
+
+# 404
+not_found: The requested page could not be found
+back_home: Back to homepage

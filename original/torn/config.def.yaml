@@ -1,0 +1,186 @@
+fonts:
+  $name: Font
+    
+  size: 
+    $name: Font Size
+    $description: in px
+    $type: number
+
+  weight:
+    $name: Base Font Weight
+    $description: Font weight of the base font
+    $type: number
+  
+  strong_font_weight:
+    $name: Strong Font Weight
+    $description: Font weight of headings and important texts
+    $type: number
+  
+  base_font_family:
+    $name: Font Family
+    $description: Font family name
+    $type: text
+    
+  line_height:
+    $name: Line Height
+    $description: Height of lines
+    $type: number
+
+  
+    
+
+colors:
+  $name: Colors
+  
+  light:
+    $name: Light Mode
+      
+    main_color:
+      $name: Main Color
+      $description: "Used for texts, links, etc."
+      $type: color
+      
+    secondary_color:
+      $name: Secondary Color
+      $description: "Used for subtexts, etc."
+      $type: color
+       
+    background_color:
+      $name: Background Color
+      $type: color
+      
+    border_color:
+      $name: Border Color
+      $type: color 
+      
+    background_hover_color:
+      $name: Background Hover Color
+      $type: color
+      
+    code_color:
+      $name: Code Color
+      $description: Used for inline-code texts
+      $type: color
+      
+    code_background_color:
+      $name: Code Background Color
+      $description: Used for inline-code blocks
+      $type: color
+      
+    highlight_color:
+      $name: Highlight Color
+      $type: color
+      
+    
+  dark:
+    $name: Dark Mode
+    
+    main_color:
+      $name: Main Color
+      $description: "Used for texts, links, etc."
+      $type: color
+      
+    secondary_color:
+      $name: Secondary Color
+      $description: "Used for subtexts, etc."
+      $type: color
+       
+    background_color:
+      $name: Background Color
+      $type: color
+      
+    border_color:
+      $name: Border Color
+      $type: color 
+      
+    background_hover_color:
+      $name: Background Hover Color
+      $type: color
+      
+    code_color:
+      $name: Code Color
+      $description: Used for inline-code texts
+      $type: color
+      
+    code_background_color:
+      $name: Code Background Color
+      $description: Used for inline-code blocks
+      $type: color
+      
+    highlight_color:
+      $name: Highlight Color
+      $type: color
+      
+      
+border_thickness:
+  $name: Border Thickness
+  $description: Thickness of borders in px
+  $type: number
+  
+grayscale:
+  $name: Grayscale
+  $description: Grayscale of the images %
+  $type: number
+  
+settings:
+  $name: Settings
+
+  loop:
+    $name: "Posts Loop"
+    $description: "In the posts loop. Ex: index page"
+    
+    featured_image:
+      $name: Featured Image
+      $description: "Show/hide featured image"
+      $type: checkbox
+      
+    aspect_ratio:
+      $name: Aspect Ratio
+      $description: Aspect Ratio of images as a decimal
+      $type: number
+      
+    tags:
+      $name: Tags
+      $description: "Show/hide tags"
+      $type: checkbox
+      
+    authors:
+      $name: Authors
+      $description: "Show/hide authors"
+      $type: checkbox
+      
+  footer:
+    $name: Footer
+    
+    feed_icon:
+      $name: RSS Feed
+      $type: checkbox
+      
+  post:
+    $name: Post Page
+    
+    authors:
+      $name: Authors
+      $description: "Show/hide authors"
+      $type: checkbox
+      
+    tags:
+      $name: Tags
+      $description: "Show/hide tags"
+      $type: checkbox
+      
+    featured_image:
+      $name: Featured Image
+      $description: "Show/hide featured image"
+      $type: checkbox
+      
+    variants:
+      $name: Language Variants
+      $description: "Show/hide language variants"
+      $type: checkbox
+
+    toc:
+      $name: Table of Contents
+      $description: "Show/hide table of content"
+      $type: checkbox
+      
