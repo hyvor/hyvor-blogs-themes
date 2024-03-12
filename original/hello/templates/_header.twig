@@ -2,7 +2,7 @@
 	<nav>
 		<a class="brand" href="{{ _blog.url }}">
 			{% if _blog.logo_url %}
-				<img src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}"/>
+				<img src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}"  aria-label="logo-image" />
 			{% endif %}
 			<span class="name">{{ _blog.name }}</span>
 		</a>
@@ -10,12 +10,12 @@
 		<div class="nav-links">
 			<div class="nav-links-inner">
 				{% for nav in _blog.nav_header %}
-					<a class="global-opacity-link nav-{{ nav.name | lower | slug }}{% if is_current_url(nav.url) %} active{% endif %}" href="{{ nav.url }}">
+					<a class="global-opacity-link nav-{{ nav.name | lower | slug }}{% if is_current_url(nav.url) %} active{% endif %}" href="{{ nav.url }}" aria-label="{{ nav.name }}">
 						<span>{{ nav.name }}</span>
 					</a>
 				{% endfor %}
 
-				<a title="{{ 'search' | lang }}" href="#" id="search" class="nav-search global-opacity-link">
+				<a title="{{ 'search' | lang }}" href="#" id="search" class="nav-search global-opacity-link" aria-label="search" role="button">
 					<i aria-hidden="true">{{ icon('fontawesome', 'magnifying-glass-solid', 14) }}</i>
 					<span class="mobile-title">{{ 'search' | lang }}</span>
 				</a>
@@ -28,8 +28,8 @@
 
 		{% if (_blog.color_modes == 'both') %}
 			<div class="color-mode-toggler">
-				<a class="global-opacity-link" onclick="_hb.changeColorMode('light')">{{ icon('fontawesome', 'sun-solid', 18) }}</a>
-				<a class="global-opacity-link" onclick="_hb.changeColorMode('dark')">{{ icon('fontawesome', 'moon-solid', 18) }}</a>
+				<a class="global-opacity-link" onclick="_hb.changeColorMode('light')" role="button" aria-label="light-mode" href="javascript:void(0)">{{ icon('fontawesome', 'sun-solid', 18) }}</a>
+				<a class="global-opacity-link" onclick="_hb.changeColorMode('dark')" role="button" aria-label="dark-mode" href="javascript:void(0)">{{ icon('fontawesome', 'moon-solid', 18) }}</a>
 			</div>
 		{% endif %}
 
