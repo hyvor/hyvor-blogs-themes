@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+## [1.0.6] - 2024-03-12
+- Search icon issue fixhed
+- Font changed to "Readex Pro"
+- Author image alt added
+
 ## [1.0.5] - 2023-09-01
 
 - Added heading anchor styles

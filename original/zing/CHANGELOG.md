@@ -1,3 +1,7 @@
+## [1.0.3] - 2024-03-12
+- Search feature added
+- Accessiblity issues fixed (identified so far)
+
 ## [1.0.2] - 2023-09-01
 - Added table styles
 - Added heading anchor styles
