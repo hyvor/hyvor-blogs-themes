@@ -37,42 +37,38 @@ colors:
       
     main_color:
       $name: Main Color
-      $description: "Main color of the theme: texts, links, etc."
+      $description: "Used for texts, links, etc."
       $type: color
       
     secondary_color:
       $name: Secondary Color
-      $description: "Secondary color of the theme: subtexts, etc."
+      $description: "Used for subtexts, etc."
       $type: color
        
     background_color:
       $name: Background Color
-      $description: Background color of the theme
       $type: color
       
     border_color:
       $name: Border Color
-      $description: Border color of the theme
       $type: color 
       
     background_hover_color:
       $name: Background Hover Color
-      $description: Background color of the buttons when hovered
       $type: color
       
     code_color:
       $name: Code Color
-      $description: Color of the code texts
+      $description: Used for inline-code texts
       $type: color
       
     code_background_color:
       $name: Code Background Color
-      $description: Background color of the code blocks
+      $description: Used for inline-code blocks
       $type: color
       
     highlight_color:
       $name: Highlight Color
-      $description: Highlight color of the theme
       $type: color
       
     
@@ -81,47 +77,38 @@ colors:
     
     main_color:
       $name: Main Color
-      $description: "Main color of the theme: texts, links, etc."
+      $description: "Used for texts, links, etc."
       $type: color
       
     secondary_color:
       $name: Secondary Color
-      $description: "Secondary color of the theme: subtexts, etc."
+      $description: "Used for subtexts, etc."
       $type: color
        
     background_color:
       $name: Background Color
-      $description: Background color of the theme
       $type: color
       
     border_color:
       $name: Border Color
-      $description: Border color of the theme
       $type: color 
       
     background_hover_color:
       $name: Background Hover Color
-      $description: Background color of the buttons when hovered
-      $type: color
-      
-    toc_border_color:
-      $name: Table of Content Border Color
-      $description: Border color of the table of content
       $type: color
       
     code_color:
       $name: Code Color
-      $description: Color of the code texts
+      $description: Used for inline-code texts
       $type: color
       
     code_background_color:
       $name: Code Background Color
-      $description: Background color of the code blocks
+      $description: Used for inline-code blocks
       $type: color
       
     highlight_color:
       $name: Highlight Color
-      $description: Highlight color of the theme
       $type: color
       
       
