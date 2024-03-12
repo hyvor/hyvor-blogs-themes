@@ -78,8 +78,18 @@ main #post-content {
         code {
             display: block;
             width: max-content;
-            min-width: 100%;
+
         }
+    }
+
+    code {
+        display: block;
+        width: max-content;
+        padding: 0 0.5rem;
+        background: var(--color-accent);
+        font-size: 0.75rem;
+        border-radius: 2px;
+        color: var(--color-background);
     }
 
     a.bookmark {
