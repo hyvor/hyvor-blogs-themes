@@ -29,6 +29,8 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+
+                
                 {% endif %}
                 
                 {% if _route %}
@@ -42,6 +44,10 @@
                 </ul>
                 {% endif %}
                 {% endif %}
+
+                <a href="/search" class="search" aria-label="search-button" role="button">
+                {{ icon('fontawesome', 'magnifying-glass-solid', 16) }}
+                </a>
             </div>
         </div>
         {% include '_nav.twig' %}

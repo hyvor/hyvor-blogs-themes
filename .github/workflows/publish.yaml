@@ -14,4 +14,4 @@ jobs:
         run: |
           curl -X POST \
             -H "X-Key: ${{ secrets.PUBLISH_KEY }}" \
-            https://blogs.hyvor.com/special/themes/publish
+            https://blogs.hyvor.com/api/special/themes/publish

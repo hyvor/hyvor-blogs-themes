@@ -1,0 +1,21 @@
+<!-- begin pagination -->
+<nav class="pagination" aria-label="{{ 'pagination' | lang }}">
+  <div class="container">
+    <div class="list">
+      <div class="grid">
+        <a title="{{ 'previous_page' | lang }}" class="prev{% if not _pagination.page_prev %} disabled {% endif %}" href="{{ _pagination.page_prev | pagination_page_url }}" aria-disabled="true">
+        <i class="caret-prev">{{ icon('fontawesome', 'chevron-left-solid', 10) }}</i>
+          {{ 'previous_page' | lang }}
+        </a>
+
+        <span class="count">{{ 'page' | lang }} {{ _pagination.page }} {{ 'of' | lang }} {{ _pagination.pages }}</span>
+  
+        <a title="{{ 'next_page' | lang }}" class="next{% if not _pagination.page_next %} disabled {% endif %}" href="{{ _pagination.page_next | pagination_page_url }}" aria-disabled="true">
+          {{ 'next_page' | lang }}
+          <i class="caret-next">{{ icon('fontawesome', 'chevron-right-solid', 10) }}</i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- end pagination -->

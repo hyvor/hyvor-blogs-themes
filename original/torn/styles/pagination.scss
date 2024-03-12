@@ -1,0 +1,98 @@
+/* Styles for Pagination */
+.pagination {
+  font-weight: var(--strong-font-weight);
+  width: 68.75rem;
+  max-width: 100%;
+  padding: 1.25rem 1.25rem;
+  margin:auto;
+  color: var(--main-color);
+  background-color: var(--background-color);
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+
+  
+    .grid {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .next,
+      .prev {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        height: 100%;
+        border: var(--border-thickness) solid var(--border-color);
+        color: var(--main-color); 
+        &:hover {
+          background-color: var(--background-hover-color);
+        }
+
+        .caret-prev, .caret-next {
+          display: inline-flex;
+          align-items: center;
+        }
+      }
+      
+      .next {
+        margin-inline-start: 1rem;
+        border-inline-start: var(--border-thickness) solid var(--border-color);
+        height:100%;
+        }
+      
+      .prev {
+        margin-inline-end: 1rem;
+        border-inline-end: var(--border-thickness) solid var(--border-color);
+        height: 100%;
+      }
+      
+      .count { 
+        margin: 0 1rem;
+         
+      }
+
+      //disabled styles
+      .next.disabled,
+      .prev.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+        border: none;
+      }
+    }
+  }
+}
+
+[dir="rtl"] .grid {
+  flex-direction: row-reverse;
+
+  .caret-prev svg {
+    transform: rotateY(180deg);
+  }
+
+  .caret-next svg {
+    transform: rotateY(-180deg);
+  }
+}
+
+  
+ //media queries for pagination
+ @media (max-width: 768px) {
+  .pagination {
+    padding: 0 !important;
+    .list {
+      .grid {
+        .next,
+        .prev {
+          padding: 0.5rem 0.5rem;
+        }
+      }
+    }
+  }
+}
+  

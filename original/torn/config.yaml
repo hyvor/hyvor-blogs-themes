@@ -1,0 +1,65 @@
+THEME_NAME: TORN
+THEME_VERSION: 1.0.0
+THEME_FONTS: "karla:300,700"
+POSTS_PER_PAGINATION: 10
+
+fonts:
+  size: 16
+  weight: 300
+  strong_font_weight: 700
+  base_font_family: Karla, sans-serif
+  line_height: 1.4
+
+
+colors:
+  light:
+    main_color: "#000000"
+    secondary_color: "#585858"
+    background_color: "#ffffff"
+    border_color: "#bfbfbf"
+    background_hover_color: "#e3e3e3"
+    code_color: "#f8f8f8"
+    code_background_color: "#333"
+    highlight_color: "#fff49f"
+
+
+  dark:
+    main_color: "#ffffff"
+    secondary_color: "#c3c3c3"
+    background_color: "#000"
+    border_color: "#5c5b5b"
+    background_hover_color: "#3a3a3a"
+    code_color: "#333"
+    code_background_color: "#f8f8f8"
+    highlight_color: "#fff49f"
+
+border_thickness: 1
+grayscale: 100
+
+
+settings:
+  loop:
+    featured_image: true
+    aspect_ratio: 3/2
+    tags: true
+    authors: true
+
+  footer:
+    feed_icon: true
+
+  post:
+    authors: true
+    tags: true
+    featured_image: true
+    variants: true
+    toc: true
+
+
+
+
+
+
+  
+
+
+

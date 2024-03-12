@@ -1,0 +1,14 @@
+<div class="tag-head-container">
+    {% set tags = data(endpoint="tags", keys="name,url", limit="10").data %}
+    <div class="tag-head">
+        <div class="tag-head-title">
+            <ul class="tag-list">
+                {% for tag in tags %}
+                    <li class="tag-list-item">
+                        <a href="{{ tag.url }}" class="tag-link">{{ tag.name }}</a>  
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

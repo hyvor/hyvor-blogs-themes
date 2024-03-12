@@ -113,3 +113,7 @@ settings:
     feed_icon:
       $name: Feed Icon
       $type: checkbox
+
+  archive:
+    $name: Archive
+    $type: checkbox

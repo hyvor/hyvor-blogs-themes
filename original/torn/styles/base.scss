@@ -1,0 +1,40 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+body {
+    line-height: var(--base-line-height);
+    font-family: var(--base-font-family);
+    font-weight: var(--base-font-weight);
+    background-color: var(--background-color);
+    color: var(--main-color);
+    font-size: 1rem;
+}
+
+
+  
+  /* A very simple reset. */
+  body,
+  h1, h2, h3, h4, h5, h6,
+  p, blockquote, pre,
+  dl, dd, ol, ul,
+  fieldset, legend,
+  figure,
+  hr, div, section {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--base-font-family);
+    font-weight: var(--strong-font-weight);
+  }
+  
+  /* Remove trailing margins from nested lists. */
+  li > {
+    ul,
+    ol {
+      margin-bottom: 0;
+    }
+  
+  }
