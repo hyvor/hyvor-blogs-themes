@@ -20,3 +20,8 @@
 
 - Fixed the date bug in post.twig (#8)
 - Fixed the dot bug when authors is set to false (#9)
+
+# Fixed
+- Archive navigtion
+- Search navigation
+- Table display: table
