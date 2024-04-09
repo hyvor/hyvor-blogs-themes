@@ -21,6 +21,7 @@
         padding: 0;
 
         .error {
+            //
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
@@ -29,6 +30,7 @@
             width: 100%;
 
             .title {
+                margin: 0.938rem 0.625rem;
                 text-align: center;
                 font-size: 5rem;
             }
@@ -36,14 +38,21 @@
             .text {
                 margin: 0.938rem 0.625rem;
                 text-align: center;
-                font-size: 1rem;
+                font-size: 1.75rem;
             }
 
-            .link {
+            .button {
                 padding: 0.938rem 0.625rem;
+                margin: 0.938rem 0.625rem;
                 text-align: center;
+                color: var(--color-content-secondary);
                 text-decoration: none;
-                font-size: 1rem;
+                font-size: 1.75rem;
+                
+
+                &:hover {
+                    color: var(--color-content);
+                }
                 
             }
         }
