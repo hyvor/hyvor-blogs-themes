@@ -34,3 +34,7 @@ posts_num_one: 1 Post
 posts_num_multi: "* Posts"
 website: Website
 authors: Our authors
+
+# 404
+not_found: Not Found
+back_home: Back to Home

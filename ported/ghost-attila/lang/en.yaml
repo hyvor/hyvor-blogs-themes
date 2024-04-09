@@ -33,3 +33,7 @@ posts_num_multi: "* Posts"
 # author
 author: Author
 website: Website
+
+#404
+not_found: Page not found
+back_home: Back to home

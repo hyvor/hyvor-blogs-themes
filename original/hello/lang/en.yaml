@@ -1,4 +1,3 @@
-
 # loop
 pagination: Pagination
 previous_page: Previous Page
@@ -20,6 +19,10 @@ posts_num_one: 1 Post
 posts_num_multi: "* Posts"
 website: Website
 
-# search 
+# search
 search: Search
 tags: Tags
+
+#404 page
+not_found: Page not found
+back_home: Back to Home

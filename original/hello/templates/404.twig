@@ -1,0 +1,15 @@
+{% extends '@base.twig' %}
+
+{% block body %}
+
+	<main role="main" class="page-404">
+		<div class="container">
+			<div class="error">
+				<h1 class="title">404</h1>
+				<p class="text">{{ 'not_found' | lang }}</p>
+				<a href="{{ _blog.url }}" class="button">{{ 'back_home' | lang }}</a>
+			</div>
+		</div>
+	</main>
+
+{% endblock %}
