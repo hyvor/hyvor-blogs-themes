@@ -9,20 +9,22 @@
 
 			<div class="time-author-wrapper">
 				{% if (_config.settings.post.authors) %}
-					<div class="global-post-authors">
-						<span class="authors">
-							{% for author in _post.authors %}
-								<a class="author" href="{{ author.url }}">
-									{% if author.picture_url %}
-										<img alt="Profile picture of {{ author.name }}" src="{{ author.picture_url }}"/>
-									{% else %}
-										<span class="avatar-placeholder"></span>
-									{% endif %}
-									<span class="author-name">{{ author.name }}</span>
-								</a>
-							{% endfor %}
-						</span>	
-					</div>
+					{% if _post.authors %}
+						<div class="global-post-authors">
+							<span class="authors">
+								{% for author in _post.authors %}
+									<a class="author" href="{{ author.url }}">
+										{% if author.picture_url %}
+											<img alt="Profile picture of {{ author.name }}" src="{{ author.picture_url }}"/>
+										{% else %}
+											<span class="avatar-placeholder"></span>
+										{% endif %}
+										<span class="author-name">{{ author.name }}</span>
+									</a>
+								{% endfor %}
+							</span>
+						</div>
+					{% endif %}
 				{% endif %}
 				<span class="time-wrap">
 					{{ 'published' | lang }}

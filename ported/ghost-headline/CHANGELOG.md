@@ -4,6 +4,10 @@ Headline is a [Hyvor](https://blogs.hyvor.com) theme ported from Headline Ghost 
 
 ## Changelog
 
+## [1.0.1] - 2024-10-08
+
+- 404 page added
+
 ## [1.0.0]
 
 Initial ported theme

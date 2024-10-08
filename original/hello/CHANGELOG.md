@@ -1,6 +1,11 @@
 ## [Unreleased]
 
+## [1.0.7] - 2024-10-08
+
+- 404 page added
+
 ## [1.0.6] - 2024-03-12
+
 - Search icon issue fixhed
 - Font changed to "Readex Pro"
 - Author image alt added
