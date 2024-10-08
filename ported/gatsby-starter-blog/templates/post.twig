@@ -1,67 +1,69 @@
 {% extends '@base.twig' %}
 
 {% block body %}
-    <div class="header-wrapper">
-        {% include '_header.twig' %}
+	<div class="header-wrapper">
+		{% include '_header.twig' %}
 
-        </div>   
-             <main>
-                <article class="blog-post" itemscope="" itemtype="http://schema.org/Article">
-                    <header>
-                        <h1 itemprop="headline">{{ _post.title }}</h1>
-                        <p>{{ post.published_at | date('F j, Y') }}</p>
-                    </header>
-
-
-                     {% if _post.variants | length > 1 %}
-                        <div class="translations">
-                            <p>
-                                <span>
-                                    <span>{{ 'translated' | lang }}: </span>
-                                        {% for variant in _post.variants %}
-                                            <a href="{{ variant.url }}">
-                                                {{ variant.language.name }}
-                                            </a>
-                                            {% if not loop.last %}&nbsp;&bull;&nbsp;{% endif %}
-                                        {% endfor %}
-                                </span>
-                            </p>
-                        </div>
-                    {% endif %}
+	</div>
+	<main>
+		<article class="blog-post" itemscope="" itemtype="http://schema.org/Article">
+			<header>
+				<h1 itemprop="headline">{{ _post.title }}</h1>
+				<p>{{ _post.published_at | date('F j, Y') }}</p>
+			</header>
 
 
-                    <section id="post-content" itemprop="articleBody">
-                        {{ _post.content | raw }}
-                    </section>
+			{% if _post.variants | length > 1 %}
+				<div class="translations">
+					<p>
+						<span>
+							<span>{{ 'translated' | lang }}:
+							</span>
+							{% for variant in _post.variants %}
+								<a href="{{ variant.url }}">
+									{{ variant.language.name }}
+								</a>
+								{% if not loop.last %}&nbsp;&bull;&nbsp;
+								{% endif %}
+							{% endfor %}
+						</span>
+					</p>
+				</div>
+			{% endif %}
 
-                    {% if _newsletter %}
-                        <section class="newsletter">
-                            {{ _newsletter | template }}
-                        </section>
-                    {% endif %}
 
-                    {% if _comments %}
-                        <section class="comments">
-                            {{ _comments | template }}
-                        </section>
-                    {% endif %}
+			<section id="post-content" itemprop="articleBody">
+				{{ _post.content | raw }}
+			</section>
 
-                    <hr>
+			{% if _newsletter %}
+				<section class="newsletter">
+					{{ _newsletter | template }}
+				</section>
+			{% endif %}
 
-                    <div class="author-bio">
-                        {% if (_post.authors[0].picture_url) %}
-                            <div class="picture">
-                                <img src="{{ _post.authors[0].picture_url }}" alt="Profile Picture" />
-                            </div>
-                        {% endif %}
-                        <div class="author-details">
-                            {{ 'byAuthor' | lang(name=_post.authors[0].name) }}
-                            <div class="desc">{{ _post.authors[0].bio }}</div>
-                        </div>
-                    </div>
+			{% if _comments %}
+				<section class="comments">
+					{{ _comments | template }}
+				</section>
+			{% endif %}
 
-                </article>
+			<hr>
 
-             </main>
+			<div class="author-bio">
+				{% if (_post.authors[0].picture_url) %}
+					<div class="picture">
+						<img src="{{ _post.authors[0].picture_url }}" alt="Profile Picture"/>
+					</div>
+				{% endif %}
+				<div class="author-details">
+					{{ 'byAuthor' | lang(name=_post.authors[0].name) }}
+					<div class="desc">{{ _post.authors[0].bio }}</div>
+				</div>
+			</div>
+
+		</article>
+
+	</main>
 
 {% endblock %}
