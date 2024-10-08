@@ -86,7 +86,6 @@
                     display: flex;
                     align-items: center;
                     margin-inline-start: auto;
-                    border-inline-start: var(--border-thickness) solid var(--border-color);
                     height: 100%;
 
                     i {
@@ -124,11 +123,18 @@
 
                     .nav-lang a {
                         border-inline-start: var(--border-thickness) solid var(--border-color);
-                        border-inline-end: var(--border-thickness) solid var(--border-color);
+                       
                     }
 
                     .nav-search a {
                         border-inline-end: var(--border-thickness) solid var(--border-color);
+                        border-inline-start: var(--border-thickness) solid var(--border-color);
+                        
+                        // check if the nav-lang is not available and add border to the search using sibling selectors
+                    }
+
+                    .color-mode-toggler a {
+                        border-inline-start: var(--border-thickness) solid var(--border-color);
                     }
 
                     .hamburger-icon {
