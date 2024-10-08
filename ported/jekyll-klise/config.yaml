@@ -1,38 +1,38 @@
 THEME_NAME: jekyll-klise
 THEME_VERSION: 1.0.5
 THEME_FONTS: roboto:400,400i,700,700i
-POSTS_PER_PAGINATION: 100
+POSTS_PER_PAGINATION: 10
 
 colors:
-    light:
-        text_base_color: "#434648"
-        text_link_blue: "#003fff"
-        text_link_blue_active: "#0036c7"
-        black: "#0d122b"
-        light: "#ececec"
-        smoke: "#d2c7c7"
-        gray: "#6b7886"
-        white: "#fff"
+  light:
+    text_base_color: "#434648"
+    text_link_blue: "#003fff"
+    text_link_blue_active: "#0036c7"
+    black: "#0d122b"
+    light: "#ececec"
+    smoke: "#d2c7c7"
+    gray: "#6b7886"
+    white: "#fff"
 
-    dark:
-        text_base_color: "#c7bebe"
-        text_link_blue: "#ff5277"
-        text_link_blue_active: "#ff2957"
-        black: "#131418"
-        white: "#eaeaea"
-        light: "#1b1d25"
-        smoke: "#4a4d56"
-        gray: "#767f87"
+  dark:
+    text_base_color: "#c7bebe"
+    text_link_blue: "#ff5277"
+    text_link_blue_active: "#ff2957"
+    black: "#131418"
+    white: "#eaeaea"
+    light: "#1b1d25"
+    smoke: "#4a4d56"
+    gray: "#767f87"
 
 fonts:
-    family_sans: "Roboto, sans-serif"
-    family_mono: "Consolas, monospace"
-    base_font_size: 16
+  family_sans: "Roboto, sans-serif"
+  family_mono: "Consolas, monospace"
+  base_font_size: 16
 
 settings:
-    post:
-        authors: true
-        tags: true
-        featured_image: true
-    footer:
-        feed_icon: true
+  post:
+    authors: true
+    tags: true
+    featured_image: true
+  footer:
+    feed_icon: true
