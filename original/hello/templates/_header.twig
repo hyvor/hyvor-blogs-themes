@@ -2,9 +2,10 @@
 	<nav>
 		<a class="brand" href="{{ _blog.url }}">
 			{% if _blog.logo_url %}
-				<img src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}"  aria-label="logo-image" />
+				<img src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}" aria-label="logo-image"/>
+			{% else %}
+				<span class="name">{{ _blog.name }}</span>
 			{% endif %}
-			<span class="name">{{ _blog.name }}</span>
 		</a>
 
 		<div class="nav-links">
