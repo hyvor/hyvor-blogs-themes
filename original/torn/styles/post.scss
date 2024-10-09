@@ -65,7 +65,6 @@ img {
         .post-tags {
             padding: 0.625rem 0 0.625rem 0;
             font-weight: var(--strong-font-weight);
-            
         }
 
         .post-tag-link {
@@ -74,6 +73,7 @@ img {
           margin-inline-end: 0.188rem;
           display: inline-block;
           text-decoration: none;
+          margin-bottom: 0.25rem;
 
           .post-tag {
             color: var(--main-color);
