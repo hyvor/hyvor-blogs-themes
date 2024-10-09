@@ -1,9 +1,9 @@
 colors:
   $name: Colors
-  
+
   light:
     $name: Light Scheme
-    
+
     theme:
       $name: Theme
       $type: color
@@ -28,10 +28,10 @@ colors:
       $name: Code Background
     border:
       $name: Border
-    
+
   dark:
     $name: Dark Scheme
-    
+
     theme:
       $name: Theme
       $type: color
@@ -56,17 +56,17 @@ colors:
       $name: Code Background
     border:
       $name: Border
-      
+
 gap:
   $name: Gap
   gap:
     $name: Gap
   content_gap:
     $name: Content Gap
-    
+
 height_width:
   $name: Height & Width
-  nav_width: 
+  nav_width:
     $name: Navigation Width
   main_width:
     $name: Main Width
@@ -74,19 +74,19 @@ height_width:
     $name: Header Height
   footer_height:
     $name: Footer Height
-    
+
 box:
   $name: Box
   radius:
     $name: Box Radius
-  
+
 font:
   $name: Font
   family:
     $name: Font Family
   size:
     $name: Font Size
-    
+
 settings:
   $name: Settings
   loop:
@@ -95,11 +95,16 @@ settings:
     authors:
       $name: Authors
       $type: checkbox
-    
+    published_date:
+      $name: Published Date
+      $type: checkbox
   post:
     $name: Post Page
     authors:
       $name: Authors
+      $type: checkbox
+    published_date:
+      $name: Published Date
       $type: checkbox
     tags:
       $name: Tags
@@ -107,7 +112,7 @@ settings:
     featured_image:
       $name: Featured Image
       $type: checkbox
-      
+
   footer:
     $name: Footer
     feed_icon:

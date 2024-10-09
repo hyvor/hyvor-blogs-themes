@@ -1,6 +1,6 @@
 THEME_NAME: zing
 THEME_VERSION: 1.0.3
-THEME_FONTS: 
+THEME_FONTS:
 POSTS_PER_PAGINATION: 6
 
 font:
@@ -41,16 +41,17 @@ colors:
     code_color: "#ababab"
     code_background_color: "#454545"
 
-
 settings:
   loop:
     authors: true
     tags: true
     featured_image: true
+
   post:
     authors: true
     tags: true
     featured_image: true
     variants: true
+    published_date: true
   footer:
     feed_icon: true

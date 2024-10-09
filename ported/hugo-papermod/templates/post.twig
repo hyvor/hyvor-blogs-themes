@@ -2,73 +2,77 @@
 
 {% block body %}
 
-<main class="main">
+	<main class="main">
 
-    <article class="post-single">
+		<article class="post-single">
 
-        <header class="post-header">
-            <div class="breadcrumbs">
-                <a href="{{ _blog.url }}">{{ 'home' | lang }}</a>&nbsp;»&nbsp;
-                {% if (_config.settings.post.tags) %}
-                {% for tag in _post.tags %}
-                <a href="{{ tag.url }}">{{ tag.name }}</a>&nbsp;»&nbsp;
-                {% endfor %}
-                {% endif %}
-                {{ _post.title }}
-            </div>
-            <h1 class="post-title">{{ _post.title }}</h1>
-            <div class="post-description">
-                {{ _post.description }}
-            </div>
-            <div class="post-meta"><span title="{{ _post.published_at | format_date('long', locale=_lang.code)}}">{{ _post.published_at | format_date('long', locale=_lang.code)}}</span>
-            {% if (_config.settings.post.authors) %}
-                &nbsp;·&nbsp;
-                {% for author in _post.authors %}
-                    <a href="{{ author.url }}">{{ author.name }}</a>
-                {% endfor %}
-            {% endif %}
-            {% if _post.variants | length > 1 %}
-            &nbsp;|&nbsp;{{ 'translations' | lang }}:
-            <ul class="i18n_list">
-                <li>
-                    {% for variant in _post.variants %}
-                        <a href="{{ variant.url }}">
-                            {{ variant.language.name }}
-                        </a>
-                        {% if not loop.last %}&nbsp;&bull;&nbsp;{% endif %}
-                    {% endfor %}
-                </li>
-            </ul>
-            {% endif %}
-            </div>
-        </header>
+			<header class="post-header">
+				<div class="breadcrumbs">
+					<a href="{{ _blog.url }}">{{ 'home' | lang }}</a>&nbsp;»&nbsp;
+					{% if (_config.settings.post.tags) %}
+						{% for tag in _post.tags %}
+							<a href="{{ tag.url }}">{{ tag.name }}</a>&nbsp;»&nbsp;
+						{% endfor %}
+					{% endif %}
+					{{ _post.title }}
+				</div>
+				<h1 class="post-title">{{ _post.title }}</h1>
+				<div class="post-description">
+					{{ _post.description }}
+				</div>
+				{% if (_config.settings.post.published_date) %}
+					<div class="post-meta">
+						<span title="{{ _post.published_at | format_date('long', locale=_lang.code)}}">{{ _post.published_at | format_date('long', locale=_lang.code)}}</span>
+					{% endif %}
+					{% if (_config.settings.post.authors) %}
+						&nbsp;·&nbsp;
+						{% for author in _post.authors %}
+							<a href="{{ author.url }}">{{ author.name }}</a>
+						{% endfor %}
+					{% endif %}
+					{% if _post.variants | length > 1 %}
+						&nbsp;|&nbsp;{{ 'translations' | lang }}:
+						<ul class="i18n_list">
+							<li>
+								{% for variant in _post.variants %}
+									<a href="{{ variant.url }}">
+										{{ variant.language.name }}
+									</a>
+									{% if not loop.last %}&nbsp;&bull;&nbsp;
+									{% endif %}
+								{% endfor %}
+							</li>
+						</ul>
+					{% endif %}
+				</div>
+			</header>
 
-        {% if _post.featured_image_url and _config.settings.post.featured_image %}
-            <img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}" class="featured-image">
-        {% endif %}
+			{% if _post.featured_image_url and _config.settings.post.featured_image %}
+				<img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}" class="featured-image">
+			{% endif %}
 
-        <div class="post-content">
-            {{ _post.content | raw }}
-        </div>
+			<div class="post-content">
+				{{ _post.content | raw }}
+			</div>
 
-        {% if _newsletter %}
-            <div class="post-newsletter">
-                <h3>{{ 'newsletter' | lang }}</h3>
-                <div>
-                    {{ _newsletter | template }}
-                </div>
-            </div>
-        {% endif %}
+			{% if _newsletter %}
+				<div class="post-newsletter">
+					<h3>{{ 'newsletter' | lang }}</h3>
+					<div>
+						{{ _newsletter | template }}
+					</div>
+				</div>
+			{% endif %}
 
-        {% if _comments %}
-            <div class="post-comments">
-                <h3>{{ 'comments' | lang }}</h3>
-                <div>{{ _comments | template }}</div>
-            </div>
-        {% endif %}
+			{% if _comments %}
+				<div class="post-comments">
+					<h3>{{ 'comments' | lang }}</h3>
+					<div>{{ _comments | template }}</div>
+				</div>
+			{% endif %}
 
-    </article>
+		</article>
 
-</main> 
+	</main>
 
 {% endblock %}

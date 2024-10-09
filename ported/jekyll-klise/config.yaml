@@ -34,5 +34,8 @@ settings:
     authors: true
     tags: true
     featured_image: true
+    published_date: false
+  loop:
+    published_date: false
   footer:
     feed_icon: true

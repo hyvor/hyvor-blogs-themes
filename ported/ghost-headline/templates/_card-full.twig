@@ -1,33 +1,39 @@
 <article class="hy-card post tag-{{ post.title | lower | slug }} featured large">
-    <a class="hy-card-link" href="{{ post.url }}">
-        {% if post.featured_image_url and _config.settings.post.featured_image %}
-        <figure class="hy-card-image">
-            {% if post.is_featured %}
-            <span class="featured-text">{{ icon('fontawesome', 'star-solid', 12) }} {{ 'featured' | lang }}</span>
-            {% endif %}
-            <img srcset="{{ post.featured_image_url }}" src="{{ post.featured_image_url }}" alt="{{ post.title }}" class="featured-image">
-        </figure>
-        {% endif %}
+	<a class="hy-card-link" href="{{ post.url }}">
+		{% if post.featured_image_url and _config.settings.post.featured_image %}
+			<figure class="hy-card-image">
+				{% if post.is_featured %}
+					<span class="featured-text">{{ icon('fontawesome', 'star-solid', 12) }}
+						{{ 'featured' | lang }}</span>
+				{% endif %}
+				<img srcset="{{ post.featured_image_url }}" src="{{ post.featured_image_url }}" alt="{{ post.title }}" class="featured-image">
+			</figure>
+		{% endif %}
 
-        <div class="hy-card-wrapper">
-            <header class="hy-card-header"><h3 class="hy-card-title">{{ post.title }}</h3></header>
+		<div class="hy-card-wrapper">
+			<header class="hy-card-header">
+				<h3 class="hy-card-title">{{ post.title }}</h3>
+			</header>
 
-                <div class="hy-card-excerpt">
-                {{ post.description }}
-                </div>
+			<div class="hy-card-excerpt">
+				{{ post.description }}
+			</div>
 
-            <footer class="hy-card-footer">
-                <span class="hy-card-author">
-                {% if (_config.settings.loop.authors) %}
-                    {% for author in post.authors %}
-                        {{ author.name }}
-                    {% endfor %}
-                {% endif %}
-                </span>
-                <time class="hy-card-date" datetime="{{ post.published_at | format_date('long', locale=_lang.code)}}">
-                {{ post.published_at | format_date('long', locale=_lang.code)}}
-                </time>
-            </footer>
-        </div>
-    </a>
-</article> 
+			<footer class="hy-card-footer">
+				<span class="hy-card-author">
+					{% if (_config.settings.loop.authors) %}
+						{% for author in post.authors %}
+							{{ author.name }}
+						{% endfor %}
+					{% endif %}
+				</span>
+
+				{% if (_config.settings.loop.published_date) %}
+					<time class="hy-card-date" datetime="{{ post.published_at | format_date('long', locale=_lang.code)}}">
+						{{ post.published_at | format_date('long', locale=_lang.code)}}
+					</time>
+				{% endif %}
+			</footer>
+		</div>
+	</a>
+</article>

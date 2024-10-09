@@ -22,11 +22,11 @@
 
 					{% if not _post.is_page %}
 						<div class="post-meta">
-						
-							<time itemprop="datePublished" datetime="{{ _post.published_at | date('Y-m-d') }}">
-								{{ _post.published_at | date('M d, Y') }}
-							</time>
-
+							{% if (_config.settings.post.published_date) %}
+								<time itemprop="datePublished" datetime="{{ _post.published_at | date('Y-m-d') }}">
+									{{ _post.published_at | date('M d, Y') }}
+								</time>
+							{% endif %}
 
 							{% if (_config.settings.post.authors) %}
 								{% for author in _post.authors %}

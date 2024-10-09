@@ -80,3 +80,8 @@ settings:
     featured_image:
       $name: Featured Image
       $type: checkbox
+
+  loop:
+    published_date:
+      $name: Published Date
+      $type: checkbox
