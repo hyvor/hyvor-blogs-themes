@@ -32,3 +32,6 @@ settings:
     date: true
     tags: true
     featured_image: true
+
+  loop:
+    published_date: true

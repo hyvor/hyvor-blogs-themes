@@ -1,0 +1,24 @@
+.pagination-box{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+
+.pagination-next{
+    margin-inline-end: 10px;
+}
+
+.pagination-prev{
+    margin-inline-start: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pagination-info{
+    color: #828282;
+}
+
+
+  
+}

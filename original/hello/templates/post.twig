@@ -26,12 +26,15 @@
 						</div>
 					{% endif %}
 				{% endif %}
-				<span class="time-wrap">
-					{{ 'published' | lang }}
-					<time itemprop="datePublished" datetime="{{ _post.published_at | date('d-m-Y') }}">
-						{{ _post.published_at | date('M d, Y') }}
-					</time>
-				</span>
+
+				{% if (_config.settings.post.published_date) %}
+					<span class="time-wrap">
+						{{ 'published' | lang }}
+						<time itemprop="datePublished" datetime="{{ _post.published_at | date('d-m-Y') }}">
+							{{ _post.published_at | date('M d, Y') }}
+						</time>
+					</span>
+				{% endif %}
 			</div>
 
 			{% if _config.settings.post.variants and _post.variants | length > 0 %}

@@ -158,6 +158,10 @@ settings:
       $name: Featured Image
       $type: checkbox
 
+    published_date:
+      $name: Published Date
+      $type: checkbox
+
   post:
     $name: Post Page
 
@@ -176,6 +180,10 @@ settings:
     variants:
       $name: Variants
       $description: Show language variants
+      $type: checkbox
+
+    published_date:
+      $name: Published Date
       $type: checkbox
 
   footer:

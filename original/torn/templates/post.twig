@@ -35,8 +35,8 @@
 
 					{% if (_config.settings.post.published_date) %}
 						<div class="post-date">
-							<time datetime="{{ post.published_at | date('d-m-Y') }}">
-								{{ post.published_at | format_date('medium', locale=_lang.code) }}
+							<time datetime="{{ _post.published_at | date('d-m-Y') }}">
+								{{ _post.published_at | format_date('medium', locale=_lang.code) }}
 							</time>
 						</div>
 					{% endif %}

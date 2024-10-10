@@ -33,42 +33,42 @@ colors:
       $type: color
 
 fonts:
-  $name: Fonts 
+  $name: Fonts
   $description: Fonts to use in the theme
   body:
-    $name: Body Font 
+    $name: Body Font
     $description: Main font for the body
-    size: 
-      $name: Font Size 
+    size:
+      $name: Font Size
       $description: Body font size
       $type: text
     family:
-      $name: Font Family 
+      $name: Font Family
       $description: Body font family
       $type: text
   heading:
-    $name: Heading Font 
-    $description: Font for all hadings (h1, h2, h3, h4, h5, h6) 
+    $name: Heading Font
+    $description: Font for all hadings (h1, h2, h3, h4, h5, h6)
     family:
-      $name: Font Family 
+      $name: Font Family
       $description: Heading font family
       $type: text
   content:
-    $name: Post Content Font 
+    $name: Post Content Font
     $description: Font for all post/page content and excerpt
     family:
-      $name: Font Family 
+      $name: Font Family
       $description: Content font family
       $type: text
   code:
     $name: Code Font
-    $description: Font for the code 
-    size: 
-      $name: Font Size 
+    $description: Font for the code
+    size:
+      $name: Font Size
       $description: Code font size
       $type: text
     family:
-      $name: Font Family 
+      $name: Font Family
       $description: Code font family
       $type: text
 
@@ -152,8 +152,12 @@ settings:
       $description: Show/hide authors
       $type: checkbox
     featured_image:
-      $name: Featured Image 
+      $name: Featured Image
       $description: Show/hide featured image
+      $type: checkbox
+    published_date:
+      $name: Published Date
+      $description: Show/hide published date
       $type: checkbox
   post:
     $name: Post
@@ -170,8 +174,12 @@ settings:
       $name: Featured Image
       $description: Show/hide featured image
       $type: checkbox
+    published_date:
+      $name: Published Date
+      $description: Show/hide published date
+      $type: checkbox
   social:
-    $name: Social 
+    $name: Social
     $description: Show/hide social links
     $type: checkbox
   feed:

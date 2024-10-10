@@ -3,8 +3,8 @@ THEME_VERSION: 1.0.4
 THEME_FONTS:
 POSTS_PER_PAGINATION: 10
 
-colors: 
-  light: 
+colors:
+  light:
     theme: rgb(255, 255, 255)
     entry: rgb(255, 255, 255)
     primary: rgb(30, 30, 30)
@@ -14,7 +14,7 @@ colors:
     hljs_bg: rgb(28, 29, 33)
     code_bg: rgb(245, 245, 245)
     border: rgb(238, 238, 238)
-  dark: 
+  dark:
     theme: rgb(29, 30, 32)
     entry: rgb(46, 46, 51)
     primary: rgb(218, 218, 219)
@@ -25,30 +25,32 @@ colors:
     code_bg: rgb(55, 56, 62)
     border: rgb(51, 51, 51)
 
-gap: 
+gap:
   gap: 24px
   content_gap: 20px
 
-height_width: 
+height_width:
   nav_width: 1024px
   main_width: 720px
   header_height: 60px
   footer_height: 60px
 
-box: 
+box:
   radius: 8px
 
-font: 
+font:
   family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif
   size: 18px
 
 settings:
   loop:
     authors: true
+    published_date: true
   post:
     authors: true
     tags: true
     featured_image: true
+    published_date: true
   footer:
     feed_icon: true
 

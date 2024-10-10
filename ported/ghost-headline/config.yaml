@@ -3,27 +3,27 @@ THEME_VERSION: 0.0.1
 THEME_FONTS: inter:400,500,600,700|lora:400,400i,500,600,700,700i
 POSTS_PER_PAGINATION: 6
 
-colors: 
-  light: 
+colors:
+  light:
     accent_color: "#f51919"
     primary_text_color: "#15171a"
     secondary_text_color: "#999999"
-  dark: 
+  dark:
     accent_color: "#f51919"
     primary_text_color: "#f6f6f6"
     secondary_text_color: "#999999"
 
-fonts: 
-  body: 
+fonts:
+  body:
     size: 1.6rem
     family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif
-  heading: 
+  heading:
     family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif
-  content: 
+  content:
     family: Lora, Georgia, Times, serif
-  code: 
-    size: 15px 
-    family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; 
+  code:
+    size: 15px
+    family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 
 settings:
   home:
@@ -42,16 +42,18 @@ settings:
     tag_5:
       show: true
       slug: dolorem
-    tag_6: 
+    tag_6:
       show: true
       slug: commodi
   loop:
     authors: true
     featured_image: true
+    published_date: false
   post:
     authors: true
     tags: true
     featured_image: true
+    published_date: false
   social: true
   feed: true
   copyright:

@@ -172,6 +172,10 @@ settings:
       $description: Show language variants
       $type: checkbox
 
+    published_date:
+      $name: Published Date
+      $type: checkbox
+
   footer:
     $name: Footer
 
