@@ -1,8 +1,11 @@
 ## [Unreleased]
 
-## [1.0.6] - 2024-10-08
+## [1.0.6] - 2024-10-10
 
+- Audio added
 - 404 page added
+- Published date configuration added
+- Minor issues fixes - post date
 
 ## [1.0.5] - 2024-03-12
 
