@@ -1,4 +1,4 @@
-{% macro social_icon(name, url, icon_name type='ionicons') %}
+{% macro social_icon(name, url, icon_name, type='ionicons') %}
 	<a class="social-link" target="_blank" href="{{ url }}" title="{{ name }}">
 		<i class="icon" aria-hidden="true">{{ icon('ionicons', icon_name, 21) }}</i>
 	</a>
