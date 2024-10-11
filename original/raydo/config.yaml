@@ -42,16 +42,17 @@ colors:
     code_color: "#ababab"
     code_background_color: "#454545"
 
-
 settings:
   loop:
     authors: true
     tags: true
     featured_image: true
+    published_date: true
   post:
     authors: true
     tags: true
     featured_image: true
     variants: true
+    published_date: true
   footer:
     feed_icon: true

@@ -2,9 +2,11 @@
 	{% set primary_tag = post.tags[0] %}
 	{% set currDate = post.published_at | date('Y') %}
 	<article class="post-item">
-		<time class="post-item-date" datetime="{{ post.published_at | date('d-m-Y') }}">
-			{{ post.published_at | date('M d, Y') }}
-		</time>
+		{% if (_config.settings.post.published_date) %}
+			<time class="post-item-date" datetime="{{ post.published_at | date('d-m-Y') }}">
+				{{ post.published_at | date('M d, Y') }}
+			</time>
+		{% endif %}
 		<h4 class="post-item-title">
 			<a href="{{ post.url }}">{{ post.title | escape }}</a>
 		</h4>

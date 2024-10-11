@@ -3,30 +3,30 @@ colors:
   accent:
     $name: Accent Color
     $type: color
-    
+
   light:
     $name: Light Scheme
-    
+
     background_body:
       $name: Body Background Color
       $type: color
-      
+
     background_box:
       $name: Box Background Color
       $type: color
-      
+
     background_contrast:
       $name: Contrast Background Color
       $type: color
-      
+
     text_content:
       $name: Content Text Color
       $type: color
-      
+
     text_content_secondary:
       $name: Content Text Secondary Color
       $type: color
-      
+
     tag:
       $name: Tag
       bg:
@@ -35,30 +35,30 @@ colors:
       fg:
         $name: Tag Text Color
         $type: color
-        
+
   dark:
     $name: Dark Scheme
-    
+
     background_body:
       $name: Body Background Color
       $type: color
-      
+
     background_box:
       $name: Box Background Color
       $type: color
-      
+
     background_contrast:
       $name: Contrast Background Color
       $type: color
-      
+
     text_content:
       $name: Content Text Color
       $type: color
-      
+
     text_content_secondary:
       $name: Content Text Secondary Color
       $type: color
-      
+
     tag:
       $name: Tag
       bg:
@@ -67,81 +67,89 @@ colors:
       fg:
         $name: Tag Text Color
         $type: color
-        
+
 font:
   $name: Font
-  
+
   size:
     $name: Font Size
     $description: in px
     $type: number
-    
+
   family:
     $name: Font Family
-    
+
 line_height:
   $name: Line Height
   $description: Space between two lines in pixels
   $type: number
-  
+
 box:
   $name: Box
   $description: Box/card UIs used in the theme
-  
+
   radius:
     $name: Box Radius
     $description: Roundness in px
-    
+
   shadow:
     $name: Box Shadow
     $description: box-shadow CSS property
-    
+
 settings:
   $name: Settings
-  
+
   search:
     $name: Search
     $type: checkbox
-    
+
   loop:
     $name: Loop
     $description: "In the posts loop. Ex: index page"
-    
+
     authors:
       $name: Authors
       $type: checkbox
-      
+
     tags:
       $name: Tags
       $type: checkbox
-      
+
     featured_image:
       $name: Featured Image
       $type: checkbox
-      
+
+    published_date:
+      $name: Published Date
+      $type: checkbox
+
   post:
     $name: Post Page
-    
+
     authors:
       $name: Authors
       $type: checkbox
-      
+
     tags:
       $name: Tags
       $type: checkbox
-      
+
     featured_image:
       $name: Featured Image
       $type: checkbox
-      
+
     variants:
       $name: Variants
       $description: Show language variants
       $type: checkbox
-      
+
+    published_date:
+      $name: Published Date
+      $type: checkbox
+
   footer:
     $name: Footer
-    
+
     feed_icon:
       $name: Feed Icon
       $type: checkbox

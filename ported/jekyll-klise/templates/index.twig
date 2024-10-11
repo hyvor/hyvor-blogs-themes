@@ -19,6 +19,9 @@
 			<h3 class="posts-item-note" aria-label="Recent Posts">{{ 'recent_posts' | lang }}</h3>
 
 			{% include '_loop.twig' with {'_posts': _posts} %}
+
+			{% include '_pagination.twig' with {'_pagination': _pagination} %}
+
 		</main>
 	</div>
 

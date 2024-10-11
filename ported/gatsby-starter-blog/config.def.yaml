@@ -1,80 +1,97 @@
 colors:
   $name: Colors
-  
+
   light:
     $name: Light Scheme
-    
+
     primary:
       $name: Primary Color
       $type: color
-      
+
     text:
       $name: Text Color
       $type: color
-      
+
     text_light:
       $name: Text Light Color
       $type: color
-      
+
     heading:
       $name: Heading Color
-      $type: color  
-    
+      $type: color
+
     heading_black:
       $name: Heaidng Black Color
       $type: color
-      
+
     accent:
       $name: Accent Color
       $type: color
-      
+
     background:
       $name: Background Color
       $type: color
-    
+
   dark:
     $name: Dark Scheme
-    
+
     primary:
       $name: Primary Color
       $type: color
-      
+
     text:
       $name: Text Color
       $type: color
-      
+
     text_light:
       $name: Text Light Color
       $type: color
-      
+
     heading:
       $name: Heading Color
-      $type: color  
-    
+      $type: color
+
     heading_black:
       $name: Heaidng Black Color
       $type: color
-      
+
     accent:
       $name: Accent Color
       $type: color
-      
+
     background:
       $name: Background Color
       $type: color
-      
+
 font:
   $name: Font
-  
+
   family_sans:
     $name: Font Family (Sans)
     $description: Used in headings
-    
+
   family_serif:
     $name: Font Family (Serif)
     $description: Used in content
-    
+
   size:
     $name: Font Size
     $description: in px
     $type: number
+
+settings:
+  $name: Settings
+
+  loop:
+    $name: Loop Settings
+
+    published_date:
+      $name: Published Date
+      $type: checkbox
+
+  post:
+    $name: Post Settings
+
+    published_date:
+      $name: Published Date
+      $type: checkbox
