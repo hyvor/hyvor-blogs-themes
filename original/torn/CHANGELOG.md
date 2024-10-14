@@ -1,3 +1,6 @@
+## [1.0.4] - 2024-10-14
+- Minor bug fixes
+
 ## [1.0.3] - 2024-10-11
 
 - Minor bug fixes
