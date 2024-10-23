@@ -1,0 +1,22 @@
+fonts:
+  $name: Font
+
+  size:
+    $name: Font Size
+    $description: in px
+    $type: number
+
+  weight:
+    $name: Base Font Weight
+    $description: Font weight of the base font
+    $type: number
+  
+  base_font_family:
+    $name: Font Family
+    $description: Font family name
+    $type: text
+
+  line_height:
+    $name: Line Height
+    $description: Height of lines
+    $type: number

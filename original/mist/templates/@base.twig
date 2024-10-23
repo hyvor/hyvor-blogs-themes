@@ -1,0 +1,34 @@
+{# <!DOCTYPE html> #}
+<html lang="{{ _lang.code }}" dir="{{ _lang.direction }}">
+	<head>
+
+		<style>
+		:root {
+			--base-font-family: {{ _config.fonts.base_font_family | raw }};
+			--base-font-size: {{ _config.fonts.size }}px;
+			--base-font-weight: {{ _config.fonts.weight }};
+			--base-line-height: {{ _config.fonts.line_height }};
+			}
+			
+
+		.mode-light:root {
+			--background-color: {{ _config.colors.light.background_color }};
+			--main-color: {{ _config.colors.light.main_color }};
+		}
+
+		.mode-dark:root {
+			--background-color: {{ _config.colors.dark.background_color }};
+			--main-color: {{ _config.colors.dark.main_color }};
+		}
+		
+		
+		}
+	</style>
+	{{ _head | template }}
+</head>
+
+<body>
+	{% include '_header.twig' %}
+
+	{% block body %}{% endblock %}
+</body></html>

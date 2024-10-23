@@ -1,0 +1,22 @@
+.tag-head-container {
+    .tag-head{
+       
+        .tag-head-title {
+           
+            list-style: none;
+            
+
+            .tag-list-item{
+                display: inline-block;
+                list-style: none;
+                margin-right: 0.5rem;
+                margin-left: 0.5rem;
+                font-weight: 500;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
