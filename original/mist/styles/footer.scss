@@ -1,0 +1,123 @@
+.footer {
+    
+    color: var(--main-color);
+    height: 2.5rem;
+
+
+            .nav-main {
+                display: flex;
+                align-items: center;
+                height: 100%;
+
+                width: 68.75rem;
+                max-width: 100%;
+                margin: auto;
+                // height: 40px;
+
+
+
+                .box {
+                    height: 100%;
+                    display: flex;
+
+                    .link {
+                        display: block;
+                        padding: 0 1.125rem; /* Add padding for better visual appeal */
+                        height: 100%;
+                        display: inline-flex;
+                        align-items: center;
+                        text-decoration: none;
+                         /*hover effect*/
+                         &:hover {
+                            // background-color: var(--background-hover-color);
+                        }
+                    }
+                }
+
+                .social {
+                    margin-inline-start: auto;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                }
+
+
+                .social-link {
+                   
+                    padding: 0 1.125rem; /* Add padding for better visual appeal */
+                    height: 100%;
+                    display: inline-flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: var(--main-color);
+            
+                   
+                     /*hover effect*/
+                     &:hover {
+                        // background-color: var(--background-hover-color);
+                    }
+                }
+
+            }
+        
+        }
+    
+//mobile styles for footer
+@media (max-width: 884px) {
+
+    .footer {
+        border-bottom:none;
+        .nav-main {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+    
+        .box {
+            flex-direction: column;
+            height: initial;
+            width: 100%;
+
+        
+            .link {
+                
+                padding-top: 0.5rem !important;
+                padding-bottom: 0.5rem !important;
+                justify-content: center !important;
+                //last child
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                //align link text to center horizontally
+                text-align: center;
+
+            }
+        }
+
+        .social {
+            
+            //takes full width
+            width: 100%;
+            overflow: auto;
+            //align the parent to center
+            justify-content: center !important;
+
+            .social-link {
+                padding : 0.5rem !important;
+                flex-grow: 1;
+
+                //align i icons to center
+                i {
+                    display: block !important;
+                    margin: auto !important;
+                }
+                
+              
+                  
+            }
+
+        }
+    }
+}
+    

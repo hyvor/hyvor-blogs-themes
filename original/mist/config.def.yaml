@@ -20,3 +20,74 @@ fonts:
     $name: Line Height
     $description: Height of lines
     $type: number
+
+colors:
+
+
+
+settings:
+  $name: Settings
+
+  loop:
+    $name: "Posts Loop"
+    $description: "In the posts loop. Ex: index page"
+
+    featured_image:
+      $name: Featured Image
+      $description: "Show/hide featured image"
+      $type: checkbox
+
+    tags:
+      $name: Tags
+      $description: "Show/hide tags"
+      $type: checkbox
+
+    authors:
+      $name: Authors
+      $description: "Show/hide authors"
+      $type: checkbox
+
+    published_date:
+      $name: Published Date
+      $description: "Show/hide published date"
+      $type: checkbox
+
+  footer:
+    $name: Footer
+
+    feed_icon:
+      $name: RSS Feed
+      $type: checkbox
+
+  post:
+    $name: Post Page
+
+    authors:
+      $name: Authors
+      $description: "Show/hide authors"
+      $type: checkbox
+
+    tags:
+      $name: Tags
+      $description: "Show/hide tags"
+      $type: checkbox
+
+    featured_image:
+      $name: Featured Image
+      $description: "Show/hide featured image"
+      $type: checkbox
+
+    variants:
+      $name: Language Variants
+      $description: "Show/hide language variants"
+      $type: checkbox
+
+    toc:
+      $name: Table of Contents
+      $description: "Show/hide table of content"
+      $type: checkbox
+
+    published_date:
+      $name: Published Date
+      $description: "Show/hide published date"
+      $type: checkbox

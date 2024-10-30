@@ -1,22 +1,37 @@
 .tag-head-container {
+   
     .tag-head{
+        width: 80rem;
+         max-width: 100%;
+         margin: auto;
        
         .tag-head-title {
            
             list-style: none;
-            
 
-            .tag-list-item{
-                display: inline-block;
-                list-style: none;
-                margin-right: 0.5rem;
-                margin-left: 0.5rem;
-                font-weight: 500;
+            .tag-list{
+                padding-inline-start: 0;
+                .tag-list-item{
+                    display: inline-block;
+                    list-style: none;
+                    margin-right: 0.5rem;
+                    margin-left: 0.5rem;
+                    font-weight: 500;
+    
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                }
 
-                a {
-                    text-decoration: none;
+                // 1st tag will not have margin-left
+                .tag-list-item:first-child {
+                    margin-left: 0;
                 }
             }
+            
+
+            
         }
     }
 }

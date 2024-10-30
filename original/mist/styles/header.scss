@@ -10,7 +10,8 @@
         align-items: center;
 
         .row {
-            width: 68.75rem;
+            // width: 68.75rem;
+            width: 80rem;
             max-width: 100%;
             margin: auto;
             height: 2.5rem;
@@ -22,7 +23,7 @@
 
                 .logo {
                     display: flex;
-                    padding: 0.625rem;
+                    padding: 0.625rem 0 0.625rem 0;
                     /* Add padding for better visual appeal */
                     align-items: center;
                     /* Center the logo vertically */

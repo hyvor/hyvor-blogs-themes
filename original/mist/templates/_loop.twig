@@ -1,0 +1,89 @@
+{# <div class="post-container">
+    {% set posts = data(endpoint="posts", keys="title,url,excerpt,cover_image", limit="10").data %}
+    <div class="post-grid">
+        {% for post in _posts %}
+            {% if loop.index <= 2 %}
+                <!-- First two posts: large cards with background image -->
+                <div class="post-card post-card-large" style="background-image: url('{{ post.featured_image_url }}');">
+                    <a href="{{ post.url }}" class="post-link">
+                    
+                        <div class="post-content">
+                                {% for tag in post.tags %}
+								<a class="article__tag" href="{{ tag.url }}">{{ tag.name }}</a>
+							    {% endfor %}
+                            <h2 class="post-title">{{ post.title }}</h2>
+                            <p class="post-excerpt">{{ post.description }}</p>
+                        </div>
+                    </a>
+                </div>
+            {% else %}
+                <!-- Remaining posts: smaller cards with background image -->
+                <div class="post-card post-card-small" style="background-image: url('{{ post.featured_image_url }}');">
+                    <a href="{{ post.url }}" class="post-link">
+                        <div class="post-content">
+                        {% for tag in post.tags %}
+								<a class="article__tag" href="{{ tag.url }}">{{ tag.name }}</a>
+							{% endfor %}
+                            <h3 class="post-title">{{ post.title }}</h3>
+                            <p class="post-excerpt">{{ post.description }}</p>
+                        </div>
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div> #}
+
+<div class="post-container">
+    {% set posts = data(endpoint="posts", keys="title,url,description,featured_image_url,published_at,tags,reading_time,authors", limit="10").data %}
+    <div class="post-grid">
+        {% for post in posts %}
+            <div class="post-card {% if loop.index <= 2 %}post-card-large{% else %}post-card-small{% endif %}" style="background-image: url('{{ post.featured_image_url }}');">
+                <a href="{{ post.url }}" class="post-link">
+                    <div class="post-content">
+                        
+                        <!-- Post Info: Published Date and Reading Time -->
+                        <div class="post-info">
+                            {% if post.published_at %}
+                                <time class="post-date" datetime="{{ post.published_at | date('d-m-Y') }}">
+                                    {{ post.published_at | format_date('medium', locale=_lang.code) }}
+                                </time>
+                            {% endif %}
+                            
+                            {% if post.reading_time %}
+                                <p class="post-reading-time">{{ post.reading_time }} min read</p>
+                            {% endif %}
+                        </div>
+
+                        <!-- Post Title -->
+                        <h2 class="post-title">{{ post.title }}</h2>
+                        
+                        <!-- Post Description -->
+                        {% if post.description %}
+                            <p class="post-excerpt">{{ post.description }}</p>
+                        {% endif %}
+                        
+                        <!-- Tags -->
+                        <div class="post-tags">
+                            {% for tag in post.tags %}
+                                <a class="post-tag" href="{{ tag.url }}">{{ tag.name }}</a>
+                            {% endfor %}
+                        </div>
+
+                        <!-- Author Info -->
+                        <div class="post-author">
+                            {% for author in post.authors %}
+                                <div class="author-info">
+                                    <img src="{{ author.picture_url }}" alt="{{ author.name }}" class="author-avatar">
+                                    <span class="author-name">
+                                        <a href="{{ author.url }}">{{ author.name }}</a>
+                                    </span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

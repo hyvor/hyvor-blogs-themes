@@ -1,0 +1,191 @@
+.post-container {
+    width: 80rem;
+    margin: 50px auto;
+
+}
+
+// .post-grid {
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 20px;
+// }
+
+// /* General styles for all post cards */
+// .post-card {
+//     background-size: cover;      /* Make the background image cover the entire card */
+//     background-position: center; /* Center the image */
+//     color: var(--main-color);                /* Ensure text is visible on the background */
+//     border-radius: 8px;
+//     overflow: hidden;
+//     position: relative;
+//     padding: 20px;
+//     display: flex;
+//     align-items: flex-end;       /* Push content to the bottom of the card */
+//     height: 300px;               /* Set a fixed height for visual consistency */
+// }
+
+// .post-card::before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background: rgba(202, 202, 202, 0.4); /* Add a dark overlay for readability */
+//     z-index: 1;
+// }
+
+// .post-content {
+//     position: relative;
+//     z-index: 2;  /* Ensure text is on top of the overlay */
+// }
+
+// /* First two big cards */
+// .post-card-large {
+//     flex: 1 1 calc(50% - 20px); /* Each takes 50% of the width minus the gap */
+//     height: 400px;              /* Larger height for big cards */
+// }
+
+// /* Small cards for the rest */
+// .post-card-small {
+//     flex: 1 1 calc(33.33% - 20px); /* Each takes 1/3rd of the width minus the gap */
+//     height: 300px;                 /* Smaller height for small cards */
+// }
+
+// /* Post link styles */
+// .post-link {
+//     text-decoration: none;
+//     color: inherit;
+// }
+
+// .post-title {
+//     font-size: 1.5rem;
+//     margin-bottom: 10px;
+// }
+
+// .post-excerpt {
+//     font-size: 1rem;
+//     color: #fff;
+// }
+
+
+.post-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* General styles for all post cards */
+.post-card {
+    background-size: cover;
+    background-position: center;
+    color: var(--main-color); 
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+}
+
+.post-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(88, 88, 88, 0.4); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.post-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    height: 100%;
+}
+
+.post-info {
+    // position: absolute;
+    // top: 10px;
+    // left: 10px;
+}
+
+.post-date,
+.post-reading-time {
+    font-size: 0.875rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Title styling */
+.post-title {
+    // font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* Excerpt styling */
+.post-excerpt {
+    // font-size: 1rem;
+    color: #fff;
+    margin: 10px 0;
+}
+
+/* Tag styles */
+.post-tags {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.post-tag {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 2px 5px;
+    font-size: 0.75rem;
+}
+
+/* Author styling */
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.author-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-name {
+    font-size: 0.875rem;
+}
+
+/* First two big cards */
+.post-card-large {
+    flex: 1 1 calc(50% - 20px);
+    height: 400px;
+}
+
+/* Small cards for the rest */
+.post-card-small {
+    flex: 1 1 calc(33.33% - 20px);
+    height: 300px;
+}
+
+/* Post link styles */
+.post-link {
+    text-decoration: none;
+    color: inherit;
+}
+

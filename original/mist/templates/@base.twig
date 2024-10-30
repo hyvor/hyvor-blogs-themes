@@ -22,13 +22,19 @@
 		}
 		
 		
-		}
+		
 	</style>
 	{{ _head | template }}
+	  <script src="{{ 'script.js' | asset_url }}"></script> 
+	
 </head>
 
 <body>
 	{% include '_header.twig' %}
 
 	{% block body %}{% endblock %}
+
+	{% include '_footer.twig' %}
+
+{{ _foot | template }}
 </body></html>

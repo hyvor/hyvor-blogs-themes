@@ -18,3 +18,22 @@ colors:
   dark:
     background_color: "#ffffff"
     main_color: "#000000"
+
+
+settings:
+  loop:
+    featured_image: true
+    tags: true
+    authors: true
+    published_date: true
+
+  footer:
+    feed_icon: true
+
+  post:
+    authors: true
+    tags: true
+    featured_image: true
+    variants: true
+    toc: true
+    published_date: true
