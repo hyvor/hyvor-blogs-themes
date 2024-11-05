@@ -9,7 +9,7 @@
             </h2>
             <div class="hy-topic-content">
                 {% if _pagination.page == 1 %}
-                {% set large_post = data(endpoint="posts", sort="is_featured DESC", limit="1") %}
+                {% set large_post = data(endpoint="posts", sort="is_featured DESC", language=_lang.code, limit="1") %}
                 {% for post in large_post.data %}
                 {% include '_card-large.twig' %}
                 {% endfor %}
@@ -27,11 +27,11 @@
                 <a href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_1.slug }}">{{ _config.settings.home.tag_1.slug }}</a>
             </h2>
             <div class="hy-topic-content">
-                {% set large_post_tag_1 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_1.slug}", limit="1") %}
+                {% set large_post_tag_1 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_1.slug}", language=_lang.code, limit="1") %}
                 {% for post in large_post_tag_1.data %}
                 {% include '_card-large.twig' %}
                 {% endfor %}    
-                {% set regular_post_tag_1 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_1.slug}", limit="6") %}
+                {% set regular_post_tag_1 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_1.slug}", language=_lang.code, limit="6") %}
                 {% for post in regular_post_tag_1.data %}
                 {% include '_card.twig' %}
                 {% endfor %}            
@@ -54,11 +54,11 @@
                 <a href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_2.slug }}">{{ _config.settings.home.tag_2.slug }}</a>
             </h2>
             <div class="hy-topic-content">
-                {% set large_post_tag_2 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_2.slug}", limit="1") %}
+                {% set large_post_tag_2 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_2.slug}", language=_lang.code, limit="1") %}
                 {% for post in large_post_tag_2.data %}
                 {% include '_card-full.twig' %}
                 {% endfor %}    
-                {% set regular_post_tag_2 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_2.slug}", limit="6") %}
+                {% set regular_post_tag_2 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_2.slug}", language=_lang.code, limit="6") %}
                 {% for post in regular_post_tag_2.data %}
                 {% include '_card.twig' %}
                 {% endfor %}            
@@ -81,11 +81,11 @@
                 <a href="{{ _blog.url }}/tag/{{ _config.settings.home.tag_3.slug }}">{{ _config.settings.home.tag_3.slug }}</a>
             </h2>
             <div class="hy-topic-content">
-                {% set large_post_tag_3 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_3.slug}", limit="1") %}
+                {% set large_post_tag_3 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_3.slug}", language=_lang.code, limit="1") %}
                 {% for post in large_post_tag_3.data %}
                 {% include '_card-large.twig' %}
                 {% endfor %}    
-                {% set regular_post_tag_3 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_3.slug}", limit="6") %}
+                {% set regular_post_tag_3 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_3.slug}", language=_lang.code, limit="6") %}
                 {% for post in regular_post_tag_3.data %}
                 {% include '_card.twig' %}
                 {% endfor %}            
@@ -144,7 +144,7 @@
                     </a>
                 </header>
                 <div class="hy-topic-content">
-                {% set regular_post_tag_5 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_5.slug}", limit="5") %}
+                {% set regular_post_tag_5 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_5.slug}", limit="5", language=_lang.code) %}
                 {% for post in regular_post_tag_5.data %}
                 {% include '_card-small.twig' %}
                 {% endfor %} 
@@ -167,7 +167,7 @@
                     </a>
                 </header>
                 <div class="hy-topic-content">
-                {% set regular_post_tag_6 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_6.slug}", limit="5") %}
+                {% set regular_post_tag_6 = data(endpoint="posts?filter=tag.slug=#{_config.settings.home.tag_6.slug}", language=_lang.code, limit="5") %}
                 {% for post in regular_post_tag_6.data %}
                 {% include '_card-small.twig' %}
                 {% endfor %} 
