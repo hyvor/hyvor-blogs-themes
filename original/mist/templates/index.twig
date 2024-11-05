@@ -6,14 +6,14 @@
 	 {% include '_hero.twig' %}
 	 {% include '_tag_head.twig' %}
 		<div class="container">
-			{# <div class="row"></div> #}
+			<div class="row">{% include '_loop.twig' %}</div>
 
-			{% include '_loop.twig' %}
+			
 
-			{% include '_pagination.twig' %}
+			
 			
 		</div>
-
+{% include '_pagination.twig' %}
 
 	</main>
 {% endblock %}

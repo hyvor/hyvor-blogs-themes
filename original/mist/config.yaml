@@ -1,7 +1,7 @@
 THEME_NAME: MIST
 THEME_VERSION: 1.0.0
 THEME_FONTS: "Arima:400,700"
-POSTS_PER_PAGINATION: 10
+POSTS_PER_PAGINATION: 11
 
 fonts:
   size: 16
@@ -14,10 +14,14 @@ colors:
   light:
     background_color: "#000000"
     main_color: "#ffffff"
+    overlay_color: "#58585866"
+    tag_color: "#269486"
 
   dark:
     background_color: "#ffffff"
     main_color: "#000000"
+    overlay_color: "#cfcfcf6e"
+    tag_color: "#ffffff"
 
 
 settings:
