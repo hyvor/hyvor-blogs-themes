@@ -4,6 +4,9 @@ Headline is a [Hyvor](https://blogs.hyvor.com) theme ported from Headline Ghost 
 
 ## Changelog
 
+## [1.0.2] - 2024-11-05
+- Language variants updated for tags
+
 ## [1.0.1] - 2024-10-10
 
 - Audio added
