@@ -3,6 +3,7 @@
     color: var(--main-color);
     background-color: var(--background-color);
     padding-top: 8px;
+    
 
     .main {
         display: flex;
@@ -23,7 +24,7 @@
 
                 .logo {
                     display: flex;
-                    padding: 0.625rem 0 0.625rem 0;
+                    padding: 0.625rem 0 0.625rem 1.125rem;
                     /* Add padding for better visual appeal */
                     align-items: center;
                     /* Center the logo vertically */
@@ -249,4 +250,32 @@
 
 .mode-dark .color-mode-toggler a:last-child {
     display: none !important;
+}
+
+
+//media query
+@media (max-width: 768px) {
+    .header {
+        .main {
+            .row {
+                .nav-main {
+                    .logo {
+                        .logo-image {
+                            max-height: 2.5rem;
+                        }
+                    }
+
+                    .menu-list {
+                        display: none;
+                    }
+
+                    .nav-buttons {
+                        .hamburger-icon {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

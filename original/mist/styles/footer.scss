@@ -62,62 +62,56 @@
         
         }
     
-//mobile styles for footer
-@media (max-width: 884px) {
+// //mobile styles for footer
+// @media (max-width: 884px) {
 
-    .footer {
-        border-bottom:none;
-        .nav-main {
-            display: flex;
-            flex-direction: column;
-            height: auto;
-        }
+//     .footer {
+//         border-bottom:none;
+//         .nav-main {
+//             display: flex;
+//             flex-direction: column;
+//             height: auto;
+//         }
     
-        .box {
-            flex-direction: column;
-            height: initial;
-            width: 100%;
+//         .box {
+//             flex-direction: column;
+//             height: initial;
+//             width: 100%;
 
         
-            .link {
+//             .link {
                 
-                padding-top: 0.5rem !important;
-                padding-bottom: 0.5rem !important;
-                justify-content: center !important;
-                //last child
-                &:last-child {
-                    border-bottom: none;
-                }
+//                 padding-top: 0.5rem !important;
+//                 padding-bottom: 0.5rem !important;
+//                 justify-content: center !important;
+//                 //last child
+//                 &:last-child {
+//                     border-bottom: none;
+//                 }
 
-                //align link text to center horizontally
-                text-align: center;
+//                 //align link text to center horizontally
+//                 text-align: center;
 
-            }
-        }
+//             }
+//         }
 
-        .social {
+//         .social {
             
-            //takes full width
-            width: 100%;
-            overflow: auto;
-            //align the parent to center
-            justify-content: center !important;
+//             //takes full width
+//             width: 100%;
+//             overflow: auto;
+//             //align the parent to center
+//             justify-content: center !important;
 
-            .social-link {
-                padding : 0.5rem !important;
-                flex-grow: 1;
+//             .social-link {
+//                 padding : 0.5rem !important;
+//                 flex-grow: 1;
 
-                //align i icons to center
-                i {
-                    display: block !important;
-                    margin: auto !important;
-                }
+//                 //align i icons to center
+//                 i {
+//                     display: block !important;
+//                     margin: auto !important;
+//                 }
                 
               
                   
-            }
-
-        }
-    }
-}
-    

@@ -11,6 +11,7 @@ fonts:
   line_height: 1.4
 
 colors:
+  card_color: "#ffffff"
   light:
     background_color: "#000000"
     main_color: "#ffffff"
@@ -20,7 +21,7 @@ colors:
   dark:
     background_color: "#ffffff"
     main_color: "#000000"
-    overlay_color: "#cfcfcf6e"
+    overlay_color: "#2b2b2b6e"
     tag_color: "#ffffff"
 
 

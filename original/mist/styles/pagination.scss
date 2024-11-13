@@ -13,7 +13,7 @@
 
 .pagination__prev,
 .pagination__next {
-    background-color: var(--tag-color);
+   border: 1px solid var(--main-color);
     color: var(--main-color);
     padding: 10px 20px;
     width: 130px; 
@@ -25,7 +25,7 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
 
     &:hover {
-        background-color: #30b87f;
+        
         transform: translateY(-2px);
     }
 
@@ -34,11 +34,12 @@
     }
 
     &.disabled {
-        background-color: #00000000;
+        // background-color: #00000000;
         cursor: not-allowed;
         // pointer-events: none;
         transform: none;
-        color: rgb(167, 167, 167);
+        // color: rgb(167, 167, 167);
+        opacity: 0.4;
     
 
     }
@@ -50,7 +51,7 @@
     font-size: 14px;
     font-weight: 400;
     color: var(--main-color);
-    font-style: italic;
+    // font-style: italic;
 }
 
 /* Responsive styling for smaller screens */
