@@ -13,7 +13,7 @@
           <div class="popular-wrapper">
             <h4 class="popular-title">{{ 'topics' | lang }}</h4>
             <span class="popular-tags post-tags">
-              {% set tags = data(endpoint="tags", keys="name,url", limit="10").data %}
+              {% set tags = data(endpoint="tags", keys="name,url", language=_lang.code, limit="10").data %}
               {% for tag in tags %}
                 <a href="{{ tag.url }}">{{ tag.name }}</a>
               {% endfor %}
