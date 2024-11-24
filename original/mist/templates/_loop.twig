@@ -1,7 +1,9 @@
 <div class="post-container">
     <div class="post-grid">
         {% for post in _posts %}
-            <div class="post-card {% if loop.index <= 2 %}post-card-large{% else %}post-card-small{% endif %}" style="background-image: url('{{ post.featured_image_url }}');">
+            {# <div class="post-card {% if loop.index <= 2 %}post-card-large{% else %}post-card-small{% endif %}" style="background-image: url('{{ post.featured_image_url }}');"> #}
+            <div class="post-card {% if post.featured_image_url %}has-featured-image{% endif %} {% if loop.index <= 2 %}post-card-large{% else %}post-card-small{% endif %}" 
+                 {% if post.featured_image_url %}style="background-image: url('{{ post.featured_image_url }}');"{% endif %}>
                 <a href="{{ post.url }}" class="post-link">
                     <div class="post-content">
                         

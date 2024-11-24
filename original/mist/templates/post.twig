@@ -1,13 +1,14 @@
 {% extends '@base.twig' %}
 
 {% block body %}
+{# <div class="meta-data-container" style="background-image: url('{{ _post.featured_image_url }}');"> #}
+<div class="meta-data-container{% if _post.featured_image_url %} has-featured-image{% endif %}" style="background-image: url('{{ _post.featured_image_url }}');">
 
-	<main role="main">
-
-		<div class="post-main-container">
-			<div class="post-main">
-
-				<div class="meta-data-container">
+				{# {% if _post.featured_image_url and _config.settings.post.featured_image %}
+					<div class="image-container {% if not _post.featured_image_url and _config.settings.post.featured_image %} post-no-image{% endif %}">
+						<img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}" class="post-image" loading="lazy">
+					</div>
+				{% endif %} #}
 
 					<div class="post-header">
 						<h1 class="post-title">{{ _post.title }}</h1>
@@ -21,17 +22,28 @@
 						</div>
 					{% endif %}
 
-					{% if (_config.settings.post.authors) %}
-						<div class="post-author-names">
-							<span class="author-by">{{ 'by' | lang }}</span>
-							{% for author in _post.authors %}
-								<a href="{{ author.url }}" class="post-author-link">{{ author.name }}</a>
-								{% if not loop.last %},
-								{% endif %}
-							{% endfor %}
 
-						</div>
-					{% endif %}
+					{% if (_config.settings.post.authors) %}
+							<div class="post__authors">
+								<div class="post__authors__inner">
+									{% for author in _post.authors %}
+										<a class="post__author" href="{{ author.url }}">
+											{% if author.picture_url %}
+												<img class="post__author__image" alt="Profile picture of {{ author.name }}" src="{{ author.picture_url }}" loading="lazy">
+											{% endif %}
+										</a>
+									{% endfor %}
+								</div>
+								<div class="post__author__name">
+									{% for author in _post.authors %}
+										<a href="{{ author.url }}" class="post__author__link">{{ author.name }}
+											{% if not loop.last %},
+											{% endif %}
+										</a>
+									{% endfor %}
+								</div>
+							</div>
+						{% endif %}
 
 					{% if (_config.settings.post.published_date) %}
 						<div class="post-date">
@@ -57,7 +69,8 @@
 						<div class="translated-wrapper">
 							<p>
 								<span>
-									<span class="translated-text">{{ 'translated' | lang }}:
+									{# <span class="translated-text">{{ 'translated' | lang }}: #}
+									<span class="translated-text">Translations:
 									</span>
 									{% for variant in _post.variants %}
 										<a href="{{ variant.url }}">{{ variant.language.name }}</a>
@@ -72,11 +85,16 @@
 
 				</div>
 
-				{% if _post.featured_image_url and _config.settings.post.featured_image %}
-					<div class="image-container {% if not _post.featured_image_url and _config.settings.post.featured_image %} post-no-image{% endif %}">
-						<img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}" class="post-image" loading="lazy">
-					</div>
-				{% endif %}
+
+	<main role="main">
+
+	
+
+		<div class="post-main-container">
+			<div class="post-main">
+
+				
+				
 
 			</div>
 
