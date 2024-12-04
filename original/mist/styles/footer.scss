@@ -9,7 +9,6 @@
                 align-items: center;
                 height: 100%;
                 width:80rem;
-                
                 max-width: 100%;
                 margin: auto;
                 // height: 40px;
@@ -17,20 +16,17 @@
 
 
                 .box {
-                    height: 100%;
-                    display: flex;
+                    // height: 100%;
+                    // display: flex;
 
                     .link {
                         display: block;
-                        padding: 0 1.125rem; /* Add padding for better visual appeal */
+                        padding: 0 1.125rem; 
                         height: 100%;
                         display: inline-flex;
                         align-items: center;
                         text-decoration: none;
-                         /*hover effect*/
-                         &:hover {
-                            // background-color: var(--background-hover-color);
-                        }
+                        
                     }
                 }
 
@@ -52,66 +48,88 @@
                     color: var(--main-color);
             
                    
-                     /*hover effect*/
-                     &:hover {
-                        // background-color: var(--background-hover-color);
-                    }
+                   
                 }
 
             }
         
         }
-    
-// //mobile styles for footer
-// @media (max-width: 884px) {
 
-//     .footer {
-//         border-bottom:none;
-//         .nav-main {
-//             display: flex;
-//             flex-direction: column;
-//             height: auto;
-//         }
-    
-//         .box {
-//             flex-direction: column;
-//             height: initial;
-//             width: 100%;
+// .footer {
+//     color: var(--main-color);
+//     height: auto; /* Adjust height for better mobile support */
+// }
 
+// .nav-main {
+//     display: flex;
+//     align-items: center;
+//     height: auto;
+//     width: 80rem;
+//     max-width: 100%;
+//     margin: auto;
+//     flex-wrap: wrap; /* Allow wrapping on smaller screens */
+// }
+
+// .box {
+//     display: flex;
+//     flex-direction: column; /* Stack links vertically */
+//     width: 100%; /* Take full width on smaller screens */
+// }
+
+// .link {
+//     display: block;
+//     padding: 0.5rem 0; /* Add padding for better spacing */
+//     text-decoration: none;
+// }
+
+// .social {
+//     display: flex;
+//     justify-content: center; /* Center the social links */
+//     align-items: center;
+//     margin-inline-start: auto;
+//     flex-wrap: nowrap; /* Prevent wrapping of social links */
+//     width: 100%; /* Take full width on smaller screens */
+// }
+
+// .social-link {
+//     padding: 0 1.125rem;
+//     text-decoration: none;
+//     color: var(--main-color);
+// }
+
+@media (max-width: 950px) {
+    .nav-main {
+        flex-direction: column; 
+        align-items: stretch;
+        width: 100%;
         
-//             .link {
-                
-//                 padding-top: 0.5rem !important;
-//                 padding-bottom: 0.5rem !important;
-//                 justify-content: center !important;
-//                 //last child
-//                 &:last-child {
-//                     border-bottom: none;
-//                 }
+    }
 
-//                 //align link text to center horizontally
-//                 text-align: center;
+    .box {
+        display: flex;
+        flex-direction: column; 
+        margin-bottom: 1rem; 
+        align-items: center;
+        width: 100%;
 
-//             }
-//         }
+        .link {
+            padding: 0.625rem 0 !important; 
 
-//         .social {
-            
-//             //takes full width
-//             width: 100%;
-//             overflow: auto;
-//             //align the parent to center
-//             justify-content: center !important;
+        }
+    }
 
-//             .social-link {
-//                 padding : 0.5rem !important;
-//                 flex-grow: 1;
+    
 
-//                 //align i icons to center
-//                 i {
-//                     display: block !important;
-//                     margin: auto !important;
-//                 }
-                
-              
-                  
+    .social {
+        flex-direction: row; 
+        justify-content: center;
+        margin-inline-start: 0 !important;
+       
+        .social-link{
+            margin-bottom: 1rem !important;
+        }
+    }
+}
+       
+
+     

@@ -1,9 +1,12 @@
 .tag-head-container {
-   padding: 0 1.125rem;
+//    padding: 0 1.125rem;
+        width: 80rem;
+        max-width: 100%;
+        margin: 30px  auto;
     .tag-head{
         width: 80rem;
          max-width: 100%;
-         margin: auto;
+         margin:  auto;
        
         .tag-head-title {
            
@@ -34,4 +37,18 @@
             
         }
     }
+}
+
+
+// mobile styles
+@media (max-width: 1330px) {
+    .tag-head-container {
+        width: 95%;
+        margin: 30px auto;
+    }
+    .tag-head {
+        width: 95%;
+        margin: 30px auto;
+    }
+   
 }

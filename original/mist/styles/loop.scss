@@ -1,6 +1,6 @@
 .post-container {
     width: 80rem;
-    margin: 50px auto;
+    margin: 30px auto;
     // color: var(--main-color);
     max-width: 100%;
 
@@ -221,22 +221,53 @@
 
 
   // mobile styles
-  @media (max-width: 950px) {
+  @media (max-width: 768px) {
     .post-container {
       width: 95%;
-      margin: 50px auto;
+      margin: 30px auto;
     }
   
     .post-card {
       height: 400px;
     }
-  
-    .post-card-large {
-      flex: 1 1 100%;
+  // one card per row
+    .post-grid {
+      grid-template-columns: 1fr;
     }
-  
-    .post-card-small {
-      flex: 1 1 100%;
+
+    // .post-card-large {
+    //   grid-column: span 1;
+    // }
+
+    // .post-card-small {
+    //   grid-column: span 1;
+    // }
+   
+  }
+
+  // max width 1330px
+  @media (max-width: 1330px) {
+
+    .post-container {
+      width: 95%;
+      margin: 30px auto;
     }
+    .post-card {
+      height: 400px;
+    }
+
+    // .post-grid {
+    //   grid-template-columns: repeat(4, 1fr);
+    // }
+
+    // .post-card-large {
+    //   grid-column: span 2;
+    // }
+
+    // .post-card-small {
+    //   grid-column: span 1;
+    // }
+  
+   
   }
 
