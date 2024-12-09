@@ -26,6 +26,11 @@
                         display: inline-flex;
                         align-items: center;
                         text-decoration: none;
+                        transition: all 0.4s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.09);
+                        }
                         
                     }
                 }
@@ -46,7 +51,11 @@
                     align-items: center;
                     text-decoration: none;
                     color: var(--main-color);
+                    transition: all 0.4s ease-in-out;
             
+                    &:hover {
+                        transform: scale(1.09);
+                    }
                    
                    
                 }

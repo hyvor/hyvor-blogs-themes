@@ -5,7 +5,7 @@ POSTS_PER_PAGINATION: 11
 
 fonts:
   size: 16
-  weight: 400
+  base_font_weight: 400
   strong_font_weight: 700
   base_font_family: Arima
   line_height: 1.4

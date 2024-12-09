@@ -4,12 +4,6 @@
 {# <div class="meta-data-container" style="background-image: url('{{ _post.featured_image_url }}');"> #}
 <div class="meta-data-container{% if _post.featured_image_url %} has-featured-image{% endif %}" style="background-image: url('{{ _post.featured_image_url }}');">
 
-				{# {% if _post.featured_image_url and _config.settings.post.featured_image %}
-					<div class="image-container {% if not _post.featured_image_url and _config.settings.post.featured_image %} post-no-image{% endif %}">
-						<img src="{{ _post.featured_image_url }}" alt="{{ _post.title }}" class="post-image" loading="lazy">
-					</div>
-				{% endif %} #}
-
 					<div class="post-header">
 						<h1 class="post-title">{{ _post.title }}</h1>
 					</div>
@@ -87,21 +81,17 @@
 
 
 	<main role="main">
-
-	
-
 		<div class="post-main-container">
-			<div class="post-main">
+			{# <div class="post-main">
 
 				
 				
 
-			</div>
+			</div> #}
 
 
-			<div class="content-toc-container">
-				<div
-					class="post-content-container">
+		<div class="content-toc-container">
+				<div class="post-content-container">
 					<!-- begin post -->
 					<article class="post">
 
@@ -153,21 +143,21 @@
 	</main>
 
 
-	<script>
+<script>
 		var coll = document.getElementsByClassName("collapsible");
-var i;
+		var i;
 
-for (i = 0; i < coll.length; i++) {
-coll[i].addEventListener("click", function () {
-this.classList.toggle("active");
-var content = this.nextElementSibling;
-if (content.style.display === "block") {
-content.style.display = "none";
-} else {
-content.style.display = "block";
-}
-});
-}
-	</script>
+		for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function () {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		content.style.display = "none";
+		} else {
+		content.style.display = "block";
+		}
+		});
+		}
+</script>
 
 {% endblock %}

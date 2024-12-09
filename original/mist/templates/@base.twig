@@ -8,6 +8,7 @@
 			--base-font-size: {{ _config.fonts.size }}px;
 			--base-font-weight: {{ _config.fonts.weight }};
 			--base-line-height: {{ _config.fonts.line_height }};
+			--strong-font-weight: {{ _config.fonts.strong_font_weight }};
 			--card-color: {{ _config.colors.card_color }}
 			}
 			
@@ -39,7 +40,11 @@
 
 	{% block body %}{% endblock %}
 
+	{% include '_search.twig' %}
+
 	{% include '_footer.twig' %}
 
 {{ _foot | template }}
-</body></html>
+
+</body>
+{# </html> #}

@@ -22,11 +22,10 @@
     border-radius: 20px;
     font-size: 14px;
     font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.4s ease-in-out;
 
     &:hover {
-        
-        transform: translateY(-2px);
+       transform: scale(1.09);
     }
 
     &:active {

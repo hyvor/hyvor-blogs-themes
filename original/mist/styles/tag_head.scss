@@ -17,19 +17,40 @@
                 .tag-list-item{
                     display: inline-block;
                     list-style: none;
-                    margin-right: 0.5rem;
-                    margin-left: 0.5rem;
+                    // margin-right: 0.5rem;
+                    // margin-left: 0.5rem;
                     font-weight: 500;
+                    
+                    
     
                     a {
                         text-decoration: none;
                         color: inherit;
+                        display: inline-block;
+                        transition: all 0.4s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.09);
+                        }
                     }
+
+                    .middle-dot {
+                        margin: 0 0.5rem;
+                    }
+
+                   
+
                 }
 
                 // 1st tag will not have margin-left
                 .tag-list-item:first-child {
                     margin-left: 0;
+                }
+
+                .tag-list-item:last-child {
+                    .middle-dot {
+                        display: none;
+                    }
                 }
             }
             

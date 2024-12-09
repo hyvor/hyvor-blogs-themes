@@ -46,14 +46,14 @@
 								<span class="lang-code">&nbsp;{{ _lang.code }}</span>
 							</a>
 
-							{# <div id="lang-selector">
-																																																																{% for lang in _blog.languages %}
-																																																																	<a href="{{ lang.code | language_variant_url }}" class="{% if lang.code == _lang.code %}active{% endif %}" role="button" aria-label="{{ lang.name }}">{{ lang.name }}
-																																																																	</a>
-																																																																{% endfor %}
-																																																															</div> #}
+							<div id="lang-selector">
+								{% for lang in _blog.languages %}
+									<a href="{{ lang.code | language_variant_url }}" class="{% if lang.code == _lang.code %}active{% endif %}" role="button" aria-label="{{ lang.name }}">{{ lang.name }}
+									</a>
+								{% endfor %}
+							</div>
 
-							{# <div id="lang-selector-closer" onclick="toggleLanguageDropdown()"></div> #}
+							<div id="lang-selector-closer" onclick="toggleLanguageDropdown()"></div>
 						</div>
 					{% endif %}
 
@@ -63,10 +63,10 @@
 						</a>
 					</div>
 
-					{# <div class="hamburger-icon" id="hamburger-icon" onclick="menuToggle()">
-																																									<i aria-hidden="true" class="active">{{ icon('ionicons', 'menu', 16) }}</i>
-																																									<i aria-hidden="true">{{ icon('ionicons', 'close', 16) }}</i>
-																																								</div> #}
+					<div class="hamburger-icon" id="hamburger-icon" onclick="menuToggle()">
+						<i aria-hidden="true" class="active">{{ icon('ionicons', 'menu', 18) }}</i>
+						<i aria-hidden="true">{{ icon('ionicons', 'close', 18) }}</i>
+					</div>
 
 				</div>
 
@@ -76,4 +76,4 @@
 		</div>
 
 	</div>
-</header></header>
+</header>

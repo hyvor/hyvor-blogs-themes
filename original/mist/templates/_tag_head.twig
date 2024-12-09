@@ -5,8 +5,8 @@
             <ul class="tag-list">
                 {% for tag in tags %}
                     <li class="tag-list-item">
-                        <a href="{{ tag.url }}" class="tag-link">{{ tag.name }}</a>
-                    </li> · 
+                        <a href="{{ tag.url }}" class="tag-link">{{ tag.name }}</a><span class="middle-dot">·</span>
+                    </li>
                 {% endfor %}
             </ul>
         </div>
