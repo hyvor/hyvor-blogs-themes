@@ -16,11 +16,8 @@
 
                 .logo {
                     display: flex;
-                    padding: 0.625rem 0 0.625rem 1.125rem;
-                    /* Add padding for better visual appeal */
+                    padding: 0.625rem 0 0.625rem 0;
                     align-items: center;
-                    /* Center the logo vertically */
-                    /*align logo to left*/
                     margin-inline-end: auto;
                     height: 100%;
                     text-decoration: none;
@@ -45,13 +42,12 @@
                 .menu-list {
                     height: 100%;
                     display: flex;
+                    align-items: center;
 
                     .list {
                         list-style: none;
                         display: flex;
-                        // margin: 0;
                         padding: 0;
-                        // margin-bottom: 0;
 
 
                         .item {
@@ -66,12 +62,13 @@
                             .link {
                                 display: block;
                                 padding: 0 1.125rem;
-                                /* Add padding for better visual appeal */
                                 height: 100%;
                                 display: inline-flex;
                                 align-items: center;
                                 text-decoration: none;
                                 color: var(--main-color);
+
+
                             }
 
                         }
@@ -102,7 +99,6 @@
                         align-items: center;
                         flex-direction: column;
                         height: 100%;
-                        // pointer-events: auto;
                         transition: all 0.4s ease-in-out;
 
                        
@@ -139,7 +135,7 @@
                         cursor: pointer;
 
                         &:hover {
-                            // background-color: var(--background-hover-color);
+                            //  TODO:add styles
                         }
 
                     }
@@ -156,7 +152,6 @@
                                 position: absolute;
                                 top: -3px;
                                 right: 4px;
-                                // padding: 5px 10px;
                                 border-radius: 100%;
                                 color: var(--main-color);
                                 font-size: 13px;
@@ -165,7 +160,6 @@
                         }
 
                         #lang-selector {
-                            // width: 100%;
                             position: absolute;
                             z-index: 100000000;
                             opacity: 0;
@@ -186,37 +180,14 @@
                             a {
                                 position: relative;
 
-                                &.active {
-                                    background-color: var(--background-hover-color);
-                                }
-
-                                &:hover {
-                                    background-color: var(--background-hover-color);
-                                }
                             }
 
                             &.open {
                                 pointer-events: initial;
                                 opacity: 1;
                                 transform: translateY(0);
-                                
-                                // transform: translate3d(10px, 1px, 10px);
                             }
                         }
-
-
-                        // #lang-selector-closer {
-                        //     display: none;
-                        //     position: fixed;
-                        //     // width: 100%;
-                        //     height: 100%;
-                        //     z-index: 99;
-
-                        //     .open {
-                        //         display: block;
-                        //     }
-                        // }
-
 
                         #lang-selector-closer {
                             display: none;
@@ -234,7 +205,7 @@
 
                         [dir="rtl"] #lang-selector-closer {
                             right: 0;
-                            // left: auto;
+                            left: auto;
                         }
                     }
 

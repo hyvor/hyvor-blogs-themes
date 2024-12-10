@@ -1,20 +1,8 @@
 .author-page {
 
     .container {
-        // display: flex;
-        // flex-direction: row;
-        // flex-wrap: wrap;
-        // justify-content: space-between;
         
-
         .row {
-            // display: flex;
-            // flex-direction: row;
-            // // flex-wrap: wrap;
-            // justify-content: center;
-            // width: 100%;
-            // margin: 0;
-            // padding: 0;
 
             .author-head {
                 padding-top: 2.813rem;
@@ -25,15 +13,7 @@
                     overflow: hidden;
                     width: 9.375rem;
                     height: 9.375rem;
-                    // filter: var(--image-filter);
-
-                    //center align
                     margin: auto;
-                    // display: flex;
-                    // flex-direction: row;
-                    // justify-content: center;
-                    // align-items: center;
-
                    
                     img {
                         width: 100%;
@@ -42,15 +22,12 @@
                 }
 
                 .author-title {
-                    // padding: 0.938rem 0.625rem;
                     text-align: center;
                     font-size: 1.875rem;
                     margin-top: 1rem;
-                    // font-weight: var(--strong-font-weight);
                 }
 
                 .author-description {
-                    // padding: 0.938rem 0.625rem;
                     text-align: center;
                     margin-top: 1rem;
                 }   
@@ -58,7 +35,6 @@
                     .grid {
                         display: flex;
                         justify-content: center;
-                        // height: 100%;
                         height: 2.5rem;
                         width: 100%;
                         margin-top: 1rem;
@@ -75,8 +51,6 @@
                         align-items: center;
                         text-decoration: none;
                         transition: all 0.4s ease-in-out;
-                
-                     
                 
                          /*hover effect*/
                          &:hover {
@@ -99,14 +73,6 @@
     }
 
     .posts-count{
-        // padding: 0.938rem 0.625rem;
-        //align the child elements to center
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: center;
-        // align-items: center;  
-        // margin: 1rem 0;
-        
         width: 80rem;
         max-width: 100%;
         margin: 20px auto 0 auto;

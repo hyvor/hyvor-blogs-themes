@@ -1,8 +1,6 @@
 <!-- begin search -->
 <div class="search-wrapper">
   <div class="container">
-    {# <div class="row"> #}
-      {# <div class="col col-12"> #}
         <div class="search">
           <span class="popular-tags post-tags">
               {% set tags = data(endpoint="tags", keys="name,url", limit="11").data %}
@@ -22,8 +20,6 @@
           <div class="search-result"></div>
         </div>
         <button class="search-wrapper-close" aria-label="{{ 'close' | lang }}"></button>
-      {# </div> #}
-    {# </div> #}
   </div>
 </div>
 <!-- end search -->

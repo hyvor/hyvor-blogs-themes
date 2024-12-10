@@ -1,7 +1,6 @@
 {% extends '@base.twig' %}
 
 {% block body %}
-{# <div class="meta-data-container" style="background-image: url('{{ _post.featured_image_url }}');"> #}
 <div class="meta-data-container{% if _post.featured_image_url %} has-featured-image{% endif %}" style="background-image: url('{{ _post.featured_image_url }}');">
 
 					<div class="post-header">
@@ -82,60 +81,52 @@
 
 	<main role="main">
 		<div class="post-main-container">
-			{# <div class="post-main">
+			<div class="content-toc-container">
+					<div class="post-content-container">
+						<!-- begin post -->
+						<article class="post">
 
-				
-				
+							<section class="post-content">
+								{{ _post.content | raw }}
+							</section>
 
-			</div> #}
+							{% if _route.name != 'page' %}
 
+								{% if _newsletter %}
+									<section class="newsletter-box">
+										<h3>{{ 'newsletter' | lang }}</h3>
+										<div>
+											{{ _newsletter | template }}
+										</div>
+									</section>
+								{% endif %}
 
-		<div class="content-toc-container">
-				<div class="post-content-container">
-					<!-- begin post -->
-					<article class="post">
+								{% if _comments %}
+									<section class="comments-box">
+										<h3>{{ 'comments' | lang }}</h3>
+										<div>{{ _comments | template }}</div>
+									</section>
+								{% endif %}
 
-						<section class="post-content">
-							{{ _post.content | raw }}
-						</section>
-
-						{% if _route.name != 'page' %}
-
-							{% if _newsletter %}
-								<section class="newsletter-box">
-									<h3>{{ 'newsletter' | lang }}</h3>
-									<div>
-										{{ _newsletter | template }}
-									</div>
-								</section>
 							{% endif %}
-
-							{% if _comments %}
-								<section class="comments-box">
-									<h3>{{ 'comments' | lang }}</h3>
-									<div>{{ _comments | template }}</div>
-								</section>
-							{% endif %}
-
-						{% endif %}
-					</article>
-					<!-- end post -->
-				</div>
-
-				{% if _config.settings.post.toc %}
-					<div class="toc-container">
-						<div class="toc-wrap">
-							<h2 class="toc-heading">Table of Contents</h2>
-							<button type="button" class="collapsible" aria-label="Toggle Table of Contents">
-								<h2>Table of Contents
-									<i class="caret-up">{{ icon('ionicons', 'caret-down', 16) }}</i>
-									<i class="caret-down">{{ icon('ionicons', 'caret-up', 16) }}</i>
-								</h2>
-							</button>
-							<div class="content">{{ _post.content | toc }}</div>
-						</div>
+						</article>
+						<!-- end post -->
 					</div>
-				{% endif %}
+
+					{% if _config.settings.post.toc %}
+						<div class="toc-container">
+							<div class="toc-wrap">
+								<h2 class="toc-heading">Table of Contents</h2>
+								<button type="button" class="collapsible" aria-label="Toggle Table of Contents">
+									<h2>Table of Contents
+										<i class="caret-up">{{ icon('ionicons', 'caret-down', 16) }}</i>
+										<i class="caret-down">{{ icon('ionicons', 'caret-up', 16) }}</i>
+									</h2>
+								</button>
+								<div class="content">{{ _post.content | toc }}</div>
+							</div>
+						</div>
+					{% endif %}
 
 
 			</div>
@@ -144,20 +135,20 @@
 
 
 <script>
-		var coll = document.getElementsByClassName("collapsible");
-		var i;
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
 
-		for (i = 0; i < coll.length; i++) {
-		coll[i].addEventListener("click", function () {
-		this.classList.toggle("active");
-		var content = this.nextElementSibling;
-		if (content.style.display === "block") {
-		content.style.display = "none";
-		} else {
-		content.style.display = "block";
-		}
-		});
-		}
+	for (i = 0; i < coll.length; i++) {
+	coll[i].addEventListener("click", function () {
+	this.classList.toggle("active");
+	var content = this.nextElementSibling;
+	if (content.style.display === "block") {
+	content.style.display = "none";
+	} else {
+	content.style.display = "block";
+	}
+	});
+	}
 </script>
 
 {% endblock %}

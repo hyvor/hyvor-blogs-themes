@@ -16,8 +16,6 @@
 
 
                 .box {
-                    // height: 100%;
-                    // display: flex;
 
                     .link {
                         display: block;
@@ -64,47 +62,6 @@
         
         }
 
-// .footer {
-//     color: var(--main-color);
-//     height: auto; /* Adjust height for better mobile support */
-// }
-
-// .nav-main {
-//     display: flex;
-//     align-items: center;
-//     height: auto;
-//     width: 80rem;
-//     max-width: 100%;
-//     margin: auto;
-//     flex-wrap: wrap; /* Allow wrapping on smaller screens */
-// }
-
-// .box {
-//     display: flex;
-//     flex-direction: column; /* Stack links vertically */
-//     width: 100%; /* Take full width on smaller screens */
-// }
-
-// .link {
-//     display: block;
-//     padding: 0.5rem 0; /* Add padding for better spacing */
-//     text-decoration: none;
-// }
-
-// .social {
-//     display: flex;
-//     justify-content: center; /* Center the social links */
-//     align-items: center;
-//     margin-inline-start: auto;
-//     flex-wrap: nowrap; /* Prevent wrapping of social links */
-//     width: 100%; /* Take full width on smaller screens */
-// }
-
-// .social-link {
-//     padding: 0 1.125rem;
-//     text-decoration: none;
-//     color: var(--main-color);
-// }
 
 @media (max-width: 950px) {
     .nav-main {
