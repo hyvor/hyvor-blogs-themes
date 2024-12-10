@@ -1,0 +1,101 @@
+.footer {
+    
+    color: var(--main-color);
+    height: 2.5rem;
+
+
+            .nav-main {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                width:80rem;
+                max-width: 100%;
+                margin: auto;
+                // height: 40px;
+
+
+
+                .box {
+
+                    .link {
+                        display: block;
+                        padding: 0 1.125rem; 
+                        height: 100%;
+                        display: inline-flex;
+                        align-items: center;
+                        text-decoration: none;
+                        transition: all 0.4s ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.09);
+                        }
+                        
+                    }
+                }
+
+                .social {
+                    margin-inline-start: auto;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                }
+
+
+                .social-link {
+                   
+                    padding: 0 1.125rem; /* Add padding for better visual appeal */
+                    height: 100%;
+                    display: inline-flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: var(--main-color);
+                    transition: all 0.4s ease-in-out;
+            
+                    &:hover {
+                        transform: scale(1.09);
+                    }
+                   
+                   
+                }
+
+            }
+        
+        }
+
+
+@media (max-width: 950px) {
+    .nav-main {
+        flex-direction: column; 
+        align-items: stretch;
+        width: 100%;
+        
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column; 
+        margin-bottom: 1rem; 
+        align-items: center;
+        width: 100%;
+
+        .link {
+            padding: 0.625rem 0 !important; 
+
+        }
+    }
+
+    
+
+    .social {
+        flex-direction: row; 
+        justify-content: center;
+        margin-inline-start: 0 !important;
+       
+        .social-link{
+            margin-bottom: 1rem !important;
+        }
+    }
+}
+       
+
+     

@@ -1,0 +1,22 @@
+{% import "_macro.twig" as macro %}
+{% if social.twitter %}
+	{{ macro.social_icon("Twitter", social.twitter, 'x-twitter', 'fontawesome') }}
+{% endif %}
+{% if social.facebook %}
+	{{ macro.social_icon("Facebook", social.facebook, 'logo-facebook') }}
+{% endif %}
+{% if social.linkedin %}
+	{{ macro.social_icon("Linkedin", social.linkedin, 'logo-linkedin') }}
+{% endif %}
+{% if social.youtube %}
+	{{ macro.social_icon("Youtube", social.youtube, 'logo-youtube') }}
+{% endif %}
+{% if social.tiktok %}
+	{{ macro.social_icon("Tiktok", social.tiktok, 'logo-tiktok') }}
+{% endif %}
+{% if social.instagram %}
+	{{ macro.social_icon("Instagram", social.instagram, 'logo-instagram') }}
+{% endif %}
+{% if social.github %}
+	{{ macro.social_icon("Github", social.github, 'logo-github') }}
+{% endif %}

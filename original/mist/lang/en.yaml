@@ -1,0 +1,31 @@
+# loop
+pagination: Pagination
+previous_page: Prev
+next_page: Next
+page: Page
+of: of
+
+# search
+input_search: Type to search
+close: Close
+
+# header
+dark_mode: Dark
+light_mode: Light
+
+# footer
+feed: RSS Feed
+
+# post
+newsletter: Newsletter
+comments: Comments
+translated: Translations
+
+# author/tag
+by: By
+
+#author and tag pages
+posts_num_zero: No posts
+posts_num_one: 1 post
+posts_num_multi: "* posts"
+website: Website
