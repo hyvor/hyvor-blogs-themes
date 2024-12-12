@@ -1,7 +1,6 @@
 .post-container {
     width: 80rem;
-    margin: 30px auto;
-    // color: var(--main-color);
+    margin: 1.875rem auto;
     max-width: 100%;
 
 }
@@ -9,7 +8,7 @@
 .post-grid {
    
     display: grid;
-    gap: 20px;
+    gap: 1.25rem;
     grid-template-columns: repeat(6, 1fr);
     
 }
@@ -22,22 +21,22 @@
     background-position: center;
     // color: var(--main-color);
     // color: var(--card-color); 
-    border-radius: 10px;
+    border-radius: 0.625rem;
     overflow: hidden;
     position: relative;
-    padding: 20px;
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     // height: 400px;
-    min-height: 200px;
+    min-height: 12.5rem;
     transition: all 0.4s ease-in-out; 
 }
 
 
 .post-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
 }
 
 .post-card.has-featured-image {
@@ -77,13 +76,13 @@
 /* Title styling */
 .post-title {
     // font-size: 1.5rem;
-    margin: 10px 0;
+    margin: 0.625rem 0;
     color: var(--card-color);
 }
 
 /* Excerpt styling */
 .post-excerpt {
-    margin: 10px 0;
+    margin: 0.625rem 0;
     color: var(--card-color);
 }
 
@@ -102,11 +101,11 @@
 
 .post-tag {
     
-  border: 1px solid rgb(255, 255, 255);
-    border-radius: 15px;
-    padding: 5px 9px;
+  border: 0.063rem solid rgb(255, 255, 255);
+    border-radius: 0.938rem;
+    padding: 0.313rem 0.563rem;
     font-size: 0.75rem;
-    margin-inline-end: 5px;
+    margin-inline-end: 0.313rem;
     transition: all 0.4s ease-in-out;
 }
 
@@ -118,7 +117,7 @@
 .post-card-large {
 
   grid-column: span 3; 
-  min-height: 400px; 
+  min-height: 25rem; 
 }
 
 .post-card-small {
@@ -134,7 +133,7 @@
 
 .author-block{
     margin-top: auto; /* Pushes the author section to the bottom */
-    padding-top: 10px;
+    padding-top: 0.625rem;
     color: var(--card-color);
    
 }
@@ -142,27 +141,27 @@
 .article-authors {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
   
     .article-author-avatar {
       display: flex;
       align-items: center;
-      margin-inline-end: 12px;
+      margin-inline-end: 0.75rem;
   
       a {
         position: relative;
         display: inline-block;
         transform: translate(0);
-        width: 29px;
-        height: 29px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        width: 1.813rem;
+        height: 1.813rem;
+        border: 0.063rem solid rgba(255, 255, 255, 0.3);
         border-radius: 50%;
         overflow: hidden;
         transition: all 0.4s ease-in-out;
        
   
         &:not(:first-child) {
-          margin-inline-start: -12px;
+          margin-inline-start: -0.75rem;
         }
     
         &:nth-child(1) {
@@ -201,7 +200,7 @@
     }
   
     .article-author {
-      font-size: 13px;
+      font-size: 0.813rem;
       font-weight: 500;
       line-height: 1.4;
       text-align: inherit;
@@ -226,7 +225,7 @@
   @media (max-width: 768px) {
     .post-container {
       width: 95%;
-      margin: 30px auto;
+      margin: 1.875rem auto;
     }
   
   // one card per row
@@ -249,7 +248,7 @@
 
     .post-container {
       width: 95%;
-      margin: 30px auto;
+      margin: 1.875rem 1.125rem;
     }
   }
 

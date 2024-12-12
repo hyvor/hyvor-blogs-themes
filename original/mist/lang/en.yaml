@@ -20,12 +20,14 @@ feed: RSS Feed
 newsletter: Newsletter
 comments: Comments
 translated: Translations
-
-# author/tag
-by: By
+toc: Table of Contents
 
 #author and tag pages
 posts_num_zero: No posts
 posts_num_one: 1 post
 posts_num_multi: "* posts"
 website: Website
+
+# 404
+not_found: The requested page could not be found
+back_home: Back to homepage

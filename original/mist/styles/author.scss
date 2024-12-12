@@ -46,7 +46,7 @@
     
     
                     .social-link {
-                        padding: 0 18px; /* Add padding for better visual appeal */
+                        padding: 0 1.125rem; /* Add padding for better visual appeal */
                         display: inline-flex;
                         align-items: center;
                         text-decoration: none;
@@ -62,7 +62,6 @@
                 .author-location {
                     margin-top:1rem;
                     text-align: center;
-                    // font-weight: var(--strong-font-weight);
                 }
                 
             }
@@ -75,11 +74,10 @@
     .posts-count{
         width: 80rem;
         max-width: 100%;
-        margin: 20px auto 0 auto;
+        margin: 1.25rem auto 0 auto;
 
 
         .posts-count-span {
-            // margin-inline-start: 0.313rem;
             font-weight: 600;
         }
     }

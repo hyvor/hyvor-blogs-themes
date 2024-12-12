@@ -10,7 +10,7 @@
 					{% if _post.description %}
 						<div class="post-description">
 							{% if _post.description %}
-								<p class="post-description">{{ _post.description }}</p>
+								<p class="post-description-p">{{ _post.description }}</p>
 							{% endif %}
 						</div>
 					{% endif %}
@@ -62,9 +62,7 @@
 						<div class="translated-wrapper">
 							<p>
 								<span>
-									{# <span class="translated-text">{{ 'translated' | lang }}: #}
-									<span class="translated-text">Translations:
-									</span>
+									<span class="translated-text">{{ 'translated' | lang }}:</span>
 									{% for variant in _post.variants %}
 										<a href="{{ variant.url }}">{{ variant.language.name }}</a>
 										{% if not loop.last %},
@@ -116,9 +114,9 @@
 					{% if _config.settings.post.toc %}
 						<div class="toc-container">
 							<div class="toc-wrap">
-								<h2 class="toc-heading">Table of Contents</h2>
+								<h2 class="toc-heading">{{ 'toc' | lang }}</h2>
 								<button type="button" class="collapsible" aria-label="Toggle Table of Contents">
-									<h2>Table of Contents
+									<h2>{{ 'toc' | lang }}
 										<i class="caret-up">{{ icon('ionicons', 'caret-down', 16) }}</i>
 										<i class="caret-down">{{ icon('ionicons', 'caret-up', 16) }}</i>
 									</h2>

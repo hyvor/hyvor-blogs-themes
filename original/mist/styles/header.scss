@@ -1,5 +1,5 @@
 .header {
-    padding: 8px 0 8px 0;
+    padding: 0.5rem 0 0.5rem 0;
 
     .main {
 
@@ -52,12 +52,7 @@
 
                         .item {
                             margin-bottom: 0;
-                            transition: all 0.4s ease-in-out;
 
-                            /*hover effect*/
-                            &:hover {
-                                transform: scale(1.09);
-                            }
 
                             .link {
                                 display: block;
@@ -67,8 +62,12 @@
                                 align-items: center;
                                 text-decoration: none;
                                 color: var(--main-color);
+                                transition: all 0.4s ease-in-out;
 
-
+                                &:hover {
+                                    transform: scale(1.09) !;
+                                }
+                                
                             }
 
                             .active-link {
@@ -155,11 +154,11 @@
 
                             .lang-code {
                                 position: absolute;
-                                top: -3px;
-                                right: 4px;
+                                top: -0.188rem;
+                                right: 0.25rem;
                                 border-radius: 100%;
                                 color: var(--main-color);
-                                font-size: 13px;
+                                font-size: 0.813rem;
 
                             }
                         }
@@ -171,9 +170,9 @@
                             transform: translateY(1.75rem);
                             pointer-events: none;
                             background-color: var(--dropdown-background-color);
-                            box-shadow: 0 8px 40px -8px rgba(0, 0, 0, 0.22);
-                            border-radius: 12px;
-                            padding: 10px;
+                            box-shadow: 0 0.5rem 2.5rem -0.5rem rgba(0, 0, 0, 0.22);
+                            border-radius: 0.75rem;
+                            padding: 0.625rem;
 
 
                             //media query
@@ -196,6 +195,11 @@
                                 opacity: 1;
                                 transform: translateY(0);
                             }
+                        }
+
+                        [dir="rtl"] #lang-selector {
+                            right: 0;
+                            left: auto;
                         }
 
                         #lang-selector-closer {
@@ -254,7 +258,7 @@
                         position: absolute;
                         opacity: 0;
                         visibility: hidden;
-                        right: 10px;
+                        right: 0.625rem;
                         top:2.563rem;
                         display: flex;
                         height: initial;
@@ -267,13 +271,14 @@
                             visibility: visible;
                             transform: translateY(10px);
                             background-color: #ffffff;
-                            box-shadow: 0 8px 40px -8px rgba(0, 0, 0, 0.22);
-                            border-radius: 12px;
+                            box-shadow: 0 0.5rem 2.5rem -0.5rem rgba(0, 0, 0, 0.22);
+                            border-radius: 0.75rem;
                         }
 
                         .list {
-                            //disable display flex
                             display: block;
+                            padding: 0.625rem;
+                            margin: 0;
 
                            
 
@@ -281,7 +286,7 @@
                               
                                 width: 100%;
                                 display: block;
-                                // margin-bottom: 0;
+                                transition:all 0.4s ease-in-out;
 
                                 .link {
                                     padding: 0.625rem 1.125rem;
@@ -292,17 +297,17 @@
                                      background-color: var(--tag-color);
 
                                     &:hover {
-                                        //  background-color: var(--background-hover-color);
+                                        transform: scale(1.09);
                                     }
                                 }
                             }
                         }
                     }
 
-                    [dir="rtl"] .menu-list {
-                        left: 0;
-                        right: auto;
-                    }
+                    [dir="rtl"] & {.menu-list {
+                        left: 0.625rem !important;
+                        right: auto !important;
+                    }}
 
                     .nav-buttons {
 
@@ -325,6 +330,21 @@
                         
                         }
                     
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1330px) {
+    .header {
+        .main {
+            .row {
+                .nav-main {
+                    .logo {
+                        margin-inline-start: 1.125rem;
+                    }
                 }
             }
         }
