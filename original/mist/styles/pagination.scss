@@ -1,18 +1,18 @@
 .pagination {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 50px 0;
     
 }
 
-.pagination__list {
+.pagination-list {
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
 
-.pagination__prev,
-.pagination__next {
+.pagination-prev,
+.pagination-next {
    border: 1px solid var(--main-color);
     color: var(--main-color);
     padding: 10px 20px;
@@ -46,7 +46,7 @@
 
 }
 
-.pagination__count {
+.pagination-count {
     font-size: 14px;
     font-weight: 400;
     color: var(--main-color);
@@ -60,14 +60,14 @@
         gap: 0.5rem;
     }
 
-    .pagination__prev,
-    .pagination__next {
+    .pagination-prev,
+    .pagination-next {
         width: 100%; /* Full width on smaller screens */
         padding: 8px 15px;
         font-size: 13px;
     }
 
-    .pagination__count {
+    .pagination-count {
         font-size: 13px;
     }
 }

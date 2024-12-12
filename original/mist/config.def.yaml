@@ -6,9 +6,14 @@ fonts:
     $description: in px
     $type: number
 
-  weight:
+  base_font_weight:
     $name: Base Font Weight
     $description: Font weight of the base font
+    $type: number
+
+  strong_font_weight:
+    $name: Strong Font Weight
+    $description: Font weight of the strong font
     $type: number
   
   base_font_family:
@@ -22,6 +27,83 @@ fonts:
     $type: number
 
 colors:
+  $name: Colors
+  
+  card_color:
+    $name: Card Color
+    $description: Color of the card
+    $type: color
+  
+  highlight_color:
+    $name: Highlight Color
+    $description: Color of the highlight
+    $type: color
+
+  code_color:
+    $name: Code Color
+    $description: Color of the code
+    $type: color
+
+  code_background_color:
+    $name: Code Background Color
+    $description: Background color of the code
+    $type: color
+
+  light:
+    $name: Light Mode
+
+    background_color:
+      $name: Background Color
+      $description: Color of the background
+      $type: color
+
+    main_color:
+      $name: Main Color
+      $description: Color of the main text
+      $type: color
+
+    overlay_color:
+      $name: Overlay Color
+      $description: Color of the overlay
+      $type: color
+
+    tag_color:
+      $name: Tag Color
+      $description: Color of the tag
+      $type: color
+
+    dropdown_background_color:
+      $name: Dropdown Background Color
+      $description: Background color of the dropdown
+      $type: color
+
+  dark:
+    $name: Dark Mode
+
+    background_color:
+      $name: Background Color
+      $description: Color of the background
+      $type: color
+
+    main_color:
+      $name: Main Color
+      $description: Color of the main text
+      $type: color
+
+    overlay_color:
+      $name: Overlay Color
+      $description: Color of the overlay
+      $type: color
+
+    tag_color:
+      $name: Tag Color
+      $description: Color of the tag
+      $type: color
+
+    dropdown_background_color:
+      $name: Dropdown Background Color
+      $description: Background color of the dropdown
+      $type: color
 
 
 

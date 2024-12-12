@@ -71,6 +71,11 @@
 
                             }
 
+                            .active-link {
+                                font-weight: var(--strong-font-weight);
+                                opacity: 0.7;
+                            }
+
                         }
                     }
 
@@ -161,11 +166,11 @@
 
                         #lang-selector {
                             position: absolute;
-                            z-index: 100000000;
+                            z-index: 1000000000;
                             opacity: 0;
                             transform: translateY(1.75rem);
                             pointer-events: none;
-                            background-color: #ffffff;
+                            background-color: var(--dropdown-background-color);
                             box-shadow: 0 8px 40px -8px rgba(0, 0, 0, 0.22);
                             border-radius: 12px;
                             padding: 10px;
@@ -179,7 +184,11 @@
 
                             a {
                                 position: relative;
+                            }
 
+                            a.active {
+                                    font-weight: var(--strong-font-weight);
+                                    opacity: 0.7;
                             }
 
                             &.open {

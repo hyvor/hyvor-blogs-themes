@@ -249,33 +249,22 @@
     background-color: var(--tag-color);
     align-items: center;
     overflow: auto;
+    transition: all 0.4s ease-in-out;
 
 
     a {
       height: 100%;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       text-decoration: none;
       color: var(--main-color);
-    //   background: var(--tag-color);
-    color: var(--main-color);
-    border: 1px solid var(--main-color);
-    border-radius: 20px;
-    padding: 5px 9px;
-    margin-inline-end: 5px;
-    
-
-      &:first-child {
-        border-inline-start: none;
-      }
-
-      //last child
-      &:last-child {
-       
-      }
-
+      border: 1px solid var(--main-color);
+      border-radius: 20px;
+      padding: 3px 7px;
+      margin-inline-end: 5px;
+      
 
       &:hover {
-        // background: var(--background-hover-color);
+        transform: scale(1.04);
       }
     }
   }

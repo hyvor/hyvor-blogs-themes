@@ -14,10 +14,8 @@
   position: relative;
   // padding: 10px;
    // Seting background image styles
-  
-
-   padding: 2rem 0;
-   color: var(--main-color);
+  padding: 2rem 0;
+  color: var(--main-color);
 
    
 
@@ -235,7 +233,6 @@
     max-width: 100%;
 
     .post-content-container {
-        //  flex: 2;
         width: 70%;
         background-color: var(--content-bg);
 
@@ -260,12 +257,9 @@
     }
 
     .toc-container {
-        // flex: 1;
         width: 30%;
-        // background-color: var(--t);
         padding: 0 1.5rem;
         border-radius: 10px;
-        // box-shadow: var(--main-color);
         position: sticky;
 
        .toc-wrap {
@@ -426,28 +420,31 @@
 
 .post-content {
     color: var(--main-color);
-    // font-weight: var(--base-font-weight);
+    transition: all 0.4s ease-in-out;
+    
 
     h1, h2, h3, h4, h5, h6 {
         a[href^="#"] {
           /* Remove usual link styles */
+          display: block;
           color: inherit;
           text-decoration: none;
           position: relative;
-    
           /* Add different styles */
           &:hover:before {
               content: "#";
               position: absolute;
               right: 100%;
               margin-inline-end: 0.313rem;
-              color: var(--secondary-color);
+              transform: scale(1.09);
+
           }
 
           [dir="rtl"] & {
             &:hover:before {
               left: 100%;
               right: auto;
+              transform: scale(1.09);
             }
           }
         }

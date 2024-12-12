@@ -12,17 +12,24 @@ fonts:
 
 colors:
   card_color: "#ffffff"
+  highlight_color: "#fff0c4"
+  code_color: "#ffffff"
+  code_background_color: "#4b4b4b"
+
+  
   light:
     background_color: "#000000"
     main_color: "#ffffff"
     overlay_color: "#58585866"
-    tag_color: "#269486"
+    tag_color: "#000000"
+    dropdown_background_color: "#212121"
 
   dark:
     background_color: "#ffffff"
     main_color: "#000000"
     overlay_color: "#2b2b2b6e"
     tag_color: "#ffffff"
+    dropdown_background_color: "#ffffff"
 
 
 settings:
