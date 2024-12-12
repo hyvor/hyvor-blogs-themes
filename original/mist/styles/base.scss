@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: var(--base-line-height);
+    font-family: var(--base-font-family);
+    font-weight: var(--base-font-weight);
+    color: var(--main-color);
+    background-color: var(--background-color);
+    font-size: 1rem;
+    margin: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--strong-font-weight);
+}
+
+
+h1 {
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1.125rem;
+}
+
+h6 {
+    font-size: 1rem;
+}

@@ -1,0 +1,19 @@
+<!-- begin hero -->
+<section class="hero">
+  <div class="container">
+    <div class="inner">
+      <div class="title">
+        {% if _blog.name %}
+            <h1 class="title">{{ _blog.name }}</h1>
+        {% endif %}
+      </div>
+
+      <div class="description">
+        {% if _blog.description %}
+            <div class="hero__description">{{ _blog.description }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end hero -->

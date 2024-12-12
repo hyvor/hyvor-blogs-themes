@@ -1,0 +1,175 @@
+fonts:
+  $name: Font
+
+  size:
+    $name: Font Size
+    $description: in px
+    $type: number
+
+  base_font_weight:
+    $name: Base Font Weight
+    $description: Font weight of the base font
+    $type: number
+
+  strong_font_weight:
+    $name: Strong Font Weight
+    $description: Font weight of the strong font
+    $type: number
+  
+  base_font_family:
+    $name: Font Family
+    $description: Font family name
+    $type: text
+
+  line_height:
+    $name: Line Height
+    $description: Height of lines
+    $type: number
+
+colors:
+  $name: Colors
+  
+  card_color:
+    $name: Card Color
+    $description: Color of the card
+    $type: color
+  
+  highlight_color:
+    $name: Highlight Color
+    $description: Color of the highlight
+    $type: color
+
+  code_color:
+    $name: Code Color
+    $description: Color of the code
+    $type: color
+
+  code_background_color:
+    $name: Code Background Color
+    $description: Background color of the code
+    $type: color
+
+  light:
+    $name: Light Mode
+
+    background_color:
+      $name: Background Color
+      $description: Color of the background
+      $type: color
+
+    main_color:
+      $name: Main Color
+      $description: Color of the main text
+      $type: color
+
+    overlay_color:
+      $name: Overlay Color
+      $description: Color of the overlay
+      $type: color
+
+    tag_color:
+      $name: Tag Color
+      $description: Color of the tag
+      $type: color
+
+    dropdown_background_color:
+      $name: Dropdown Background Color
+      $description: Background color of the dropdown
+      $type: color
+
+  dark:
+    $name: Dark Mode
+
+    background_color:
+      $name: Background Color
+      $description: Color of the background
+      $type: color
+
+    main_color:
+      $name: Main Color
+      $description: Color of the main text
+      $type: color
+
+    overlay_color:
+      $name: Overlay Color
+      $description: Color of the overlay
+      $type: color
+
+    tag_color:
+      $name: Tag Color
+      $description: Color of the tag
+      $type: color
+
+    dropdown_background_color:
+      $name: Dropdown Background Color
+      $description: Background color of the dropdown
+      $type: color
+
+
+
+settings:
+  $name: Settings
+
+  loop:
+    $name: "Posts Loop"
+    $description: "In the posts loop. Ex: index page"
+
+    featured_image:
+      $name: Featured Image
+      $description: "Show/hide featured image"
+      $type: checkbox
+
+    tags:
+      $name: Tags
+      $description: "Show/hide tags"
+      $type: checkbox
+
+    authors:
+      $name: Authors
+      $description: "Show/hide authors"
+      $type: checkbox
+
+    published_date:
+      $name: Published Date
+      $description: "Show/hide published date"
+      $type: checkbox
+
+  footer:
+    $name: Footer
+
+    feed_icon:
+      $name: RSS Feed
+      $type: checkbox
+
+  post:
+    $name: Post Page
+
+    authors:
+      $name: Authors
+      $description: "Show/hide authors"
+      $type: checkbox
+
+    tags:
+      $name: Tags
+      $description: "Show/hide tags"
+      $type: checkbox
+
+    featured_image:
+      $name: Featured Image
+      $description: "Show/hide featured image"
+      $type: checkbox
+
+    variants:
+      $name: Language Variants
+      $description: "Show/hide language variants"
+      $type: checkbox
+
+    toc:
+      $name: Table of Contents
+      $description: "Show/hide table of content"
+      $type: checkbox
+
+    published_date:
+      $name: Published Date
+      $description: "Show/hide published date"
+      $type: checkbox

@@ -1,0 +1,28 @@
+@import 'header.scss';
+@import 'base.scss';
+@import 'hero.scss';
+@import 'tag_head.scss';
+@import 'loop.scss';
+@import 'pagination.scss';
+@import 'footer.scss';
+@import 'post.scss';
+@import 'tag.scss';
+@import 'author.scss';
+@import 'search.scss';
+@import '404.scss';
+
+.container {
+    // padding: 0 20px;
+    
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}

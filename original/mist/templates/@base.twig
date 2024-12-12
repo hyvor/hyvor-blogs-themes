@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="{{ _lang.code }}" dir="{{ _lang.direction }}">
+	<head>
+
+		<style>
+		:root {
+			--base-font-family: {{ _config.fonts.base_font_family | raw }};
+			--base-font-size: {{ _config.fonts.size }}px;
+			--base-font-weight: {{ _config.fonts.base_font_weight }};
+			--base-line-height: {{ _config.fonts.line_height }};
+			--strong-font-weight: {{ _config.fonts.strong_font_weight }};
+			--card-color: {{ _config.colors.card_color }};
+			--highlight-color: {{ _config.colors.highlight_color }};
+			--code-color: {{ _config.colors.code_color }};
+			--code-background-color: {{ _config.colors.code_background_color }}
+			
+			}
+			
+
+		.mode-light:root {
+			--background-color: {{ _config.colors.light.background_color }};
+			--main-color: {{ _config.colors.light.main_color }};
+			--overlay-color: {{ _config.colors.light.overlay_color }};
+			--tag-color: {{ _config.colors.light.tag_color }};
+			--dropdown-background-color: {{ _config.colors.light.dropdown_background_color }};
+		}
+
+		.mode-dark:root {
+			--background-color: {{ _config.colors.dark.background_color }};
+			--main-color: {{ _config.colors.dark.main_color }};
+			--overlay-color: {{ _config.colors.dark.overlay_color }};
+			--tag-color: {{ _config.colors.dark.tag_color }};
+			--dropdown-background-color: {{ _config.colors.dark.dropdown_background_color }};
+		}
+		
+		
+		
+	</style>
+	{{ _head | template }}
+	  <script src="{{ 'script.js' | asset_url }}"></script> 
+	
+</head>
+
+<body>
+	{% include '_header.twig' %}
+
+	{% block body %}{% endblock %}
+
+	{% include '_search.twig' %}
+
+	{% include '_footer.twig' %}
+
+{{ _foot | template }}
+
+</body>
+</html>

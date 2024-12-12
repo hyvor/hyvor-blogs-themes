@@ -1,0 +1,254 @@
+.post-container {
+    width: 80rem;
+    margin: 1.875rem auto;
+    max-width: 100%;
+
+}
+
+.post-grid {
+   
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(6, 1fr);
+    
+}
+
+
+
+/* General styles for all post cards */
+.post-card {
+    background-size: cover;
+    background-position: center;
+    // color: var(--main-color);
+    // color: var(--card-color); 
+    border-radius: 0.625rem;
+    overflow: hidden;
+    position: relative;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // height: 400px;
+    min-height: 12.5rem;
+    transition: all 0.4s ease-in-out; 
+}
+
+
+.post-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+}
+
+.post-card.has-featured-image {
+  &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--overlay-color); /* Dark overlay for readability */
+      z-index: 1;
+  }
+}
+
+.post-card:not(.has-featured-image) {
+  background-color: #2f2f2f; /* Fallback for posts without a featured image  TODO: Add this as a customizable color*/
+}
+
+.post-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+   
+}
+
+.post-date,
+.post-reading-time {
+    font-size: 0.875rem;
+    margin: 0;
+    line-height: 1.2;
+    color: var(--card-color);
+}
+
+/* Title styling */
+.post-title {
+    // font-size: 1.5rem;
+    margin: 0.625rem 0;
+    color: var(--card-color);
+}
+
+/* Excerpt styling */
+.post-excerpt {
+    margin: 0.625rem 0;
+    color: var(--card-color);
+}
+
+/* Tag styles */
+.post-tags {
+    display: flex;
+    // margin-inline-end: 5px;
+    flex-wrap: wrap;
+    color: var(--card-color);
+}
+
+// first tag no margin
+.post-tag:first-child {
+    margin-inline-end: 0;
+}
+
+.post-tag {
+    
+  border: 0.063rem solid rgb(255, 255, 255);
+    border-radius: 0.938rem;
+    padding: 0.313rem 0.563rem;
+    font-size: 0.75rem;
+    margin-inline-end: 0.313rem;
+    transition: all 0.4s ease-in-out;
+}
+
+// hover transition
+.post-tag:hover {
+  transform: scale(1.09);
+}
+
+.post-card-large {
+
+  grid-column: span 3; 
+  min-height: 25rem; 
+}
+
+.post-card-small {
+ 
+  grid-column: span 2; 
+}
+
+/* Post link styles */
+.post-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.author-block{
+    margin-top: auto; /* Pushes the author section to the bottom */
+    padding-top: 0.625rem;
+    color: var(--card-color);
+   
+}
+
+.article-authors {
+    display: flex;
+    align-items: center;
+    margin-top: 1.25rem;
+  
+    .article-author-avatar {
+      display: flex;
+      align-items: center;
+      margin-inline-end: 0.75rem;
+  
+      a {
+        position: relative;
+        display: inline-block;
+        transform: translate(0);
+        width: 1.813rem;
+        height: 1.813rem;
+        border: 0.063rem solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        overflow: hidden;
+        transition: all 0.4s ease-in-out;
+       
+  
+        &:not(:first-child) {
+          margin-inline-start: -0.75rem;
+        }
+    
+        &:nth-child(1) {
+          z-index: 5;
+        }
+    
+        &:nth-child(2) {
+          z-index: 4;
+        }
+    
+        &:nth-child(3) {
+          z-index: 3;
+        }
+    
+        &:nth-child(4) {
+          z-index: 2;
+        }
+    
+        &:nth-child(5) {
+          z-index: 1;
+        }
+    
+        &:hover {
+          transform: scale(1.09);
+        }
+    
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  
+    .article-author {
+      font-size: 0.813rem;
+      font-weight: 500;
+      line-height: 1.4;
+      text-align: inherit;
+      
+
+      
+  
+      .article-author-link {
+        display: inline-block;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          transform: scale(1.09);
+        }
+      }
+  
+    }
+  }
+
+
+
+  // mobile styles
+  @media (max-width: 768px) {
+    .post-container {
+      width: 95%;
+      margin: 1.875rem auto;
+    }
+  
+  // one card per row
+    .post-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .post-card-large {
+      grid-column: span 1;
+    }
+
+    .post-card-small {
+      grid-column: span 1;
+    }
+   
+  }
+
+  // max width 1330px
+  @media (max-width: 1330px) {
+
+    .post-container {
+      width: 95%;
+      margin: 1.875rem 1.125rem;
+    }
+  }
+
