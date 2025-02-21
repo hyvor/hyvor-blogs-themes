@@ -1,0 +1,67 @@
+<div class="post-container">
+    <div class="post-grid">
+        {% for post in _posts %}
+            {# <div class="post-card {% if loop.index <= 2 %}post-card-large{% else %}post-card-small{% endif %}" style="background-image: url('{{ post.featured_image_url }}');"> #}
+            <div class="post-card {% if post.featured_image_url %}has-featured-image{% endif %} {% if loop.index <= 2 %}post-card-large{% else %}post-card-small{% endif %}" 
+                 {% if post.featured_image_url %}style="background-image: url('{{ post.featured_image_url }}');"{% endif %}>
+                <a href="{{ post.url }}" class="post-link">
+                    <div class="post-content">
+                        
+                        <!-- Post Info: Published Date and Reading Time -->
+                        <div class="post-info">
+                            {% if post.published_at %}
+                                <time class="post-date" datetime="{{ post.published_at | date('d-m-Y') }}">
+                                    {{ post.published_at | format_date('medium', locale=_lang.code) }}
+                                </time>
+                            {% endif %}
+                            
+                            {% if post.reading_time %}
+                                <p class="post-reading-time">{{ post.reading_time }} min read</p>
+                            {% endif %}
+                        </div>
+
+                        <!-- Post Title -->
+                        <h2 class="post-title">{{ post.title }}</h2>
+                        
+                        <!-- Post Description -->
+                        {% if post.description %}
+                            <p class="post-excerpt">{{ post.description }}</p>
+                        {% endif %}
+                        
+                        <!-- Tags -->
+                        <div class="post-tags">
+                            {% for tag in post.tags %}
+                                <a class="post-tag" href="{{ tag.url }}">{{ tag.name }}</a>
+                            {% endfor %}
+                        </div>
+
+                        <!-- Author Info -->
+                        <div class="author-block">
+                        {% if (_config.settings.loop.authors) %}
+					<div class="article-authors">
+						<div class="article-author-avatar">
+							{% for author in post.authors %}
+								<a href="{{ author.url }}">
+									{% if author.picture_url %}
+										<img src="{{ author.picture_url }}" alt="{{ author.name }}">
+									{% endif %}
+								</a>
+							{% endfor %}
+						</div>
+						<div class="article-author">
+							{% for author in post.authors %}
+								<a href="{{ author.url }}" class="article-author-link">{{ author.name }}</a>
+								{% if not loop.last %},
+								{% endif %}
+							{% endfor %}
+						</div>
+					</div>
+				{% endif %}
+                        </div>
+                       
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
