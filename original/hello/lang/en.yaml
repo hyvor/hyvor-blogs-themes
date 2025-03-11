@@ -4,6 +4,9 @@ previous_page: Previous Page
 next_page: Next Page
 of: "{current} of {total}"
 
+# logo
+logo: Logo
+
 # footer
 feed: RSS Feed
 
