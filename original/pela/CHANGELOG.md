@@ -1,3 +1,7 @@
+## [1.0.4] - 2025-10-21
+
+- Search icon issue fixed
+
 ## [1.0.3] - 2024-10-10
 
 - 404 page added
