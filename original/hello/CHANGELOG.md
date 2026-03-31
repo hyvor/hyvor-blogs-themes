@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.0.8] - 2026-03-31
+
+- Added H1 to tag and author pages
+
 ## [1.0.7] - 2024-10-10
 
 - 404 page added

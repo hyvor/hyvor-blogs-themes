@@ -23,13 +23,11 @@
                     <div class="author-description">{{ _author.bio }}</div>
                 {% endif %}
 
-                <div class="grid">{% include '_social.twig' with {social: _author.social} %}
-                <div class="social-link">
-                    {% if _author.website_url %}
-                        <a href="{{ _author.website_url }}" target="_blank">{{ icon('ionicons', 'link', 22) }}</a>
-                    {% endif %}
-                    </div>
-                </div>
+                <div class="grid">{% include '_social.twig' with {social: _author.social} %}</div>
+
+                {% if _author.website_url %}
+                    {{ macro.social_icon('website' | lang, _author.website_url, 'link', 22) }} 
+                {% endif %}
 
                 {% if _author.location %}
                 <div class="author-location"><span class="author-location">{{ icon('ionicons', 'navigate', 22) }} {{ _author.location }}</span></div>

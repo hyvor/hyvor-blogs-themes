@@ -1,5 +1,5 @@
 THEME_NAME: MIST
-THEME_VERSION: 1.0.0
+THEME_VERSION: 1.0.1
 THEME_FONTS: "Arima:400,700"
 POSTS_PER_PAGINATION: 11
 
@@ -16,7 +16,6 @@ colors:
   code_color: "#ffffff"
   code_background_color: "#4b4b4b"
 
-  
   light:
     background_color: "#000000"
     main_color: "#ffffff"
@@ -30,7 +29,6 @@ colors:
     overlay_color: "#2b2b2b6e"
     tag_color: "#ffffff"
     dropdown_background_color: "#ffffff"
-
 
 settings:
   loop:
