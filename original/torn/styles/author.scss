@@ -1,114 +1,120 @@
 .author-page {
-  .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 68.75rem;
-    max-width: 100%;
-    padding-top: 1.25rem;
-    margin: auto;
 
-    .row {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%;
-      margin: 0;
-      padding: 0;
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 68.75rem;
+        max-width: 100%;
+        padding-top: 1.25rem;
+        margin: auto;
 
-      .author-head {
-        padding-top: 2.813rem;
-        padding-bottom: 1.875rem;
-
-        .author-image {
-          border-radius: 50%;
-          overflow: hidden;
-          width: 9.375rem;
-          height: 9.375rem;
-          filter: var(--image-filter);
-
-          //center align
-          margin: auto;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-
-          img {
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
             width: 100%;
-            height: 100%;
-          }
+            margin: 0;
+            padding: 0;
+
+            .author-head {
+                padding-top: 2.813rem;
+                padding-bottom: 1.875rem;
+
+                .author-image {
+                    border-radius: 50%;
+                    overflow: hidden;
+                    width: 9.375rem;
+                    height: 9.375rem;
+                    filter: var(--image-filter);
+
+                    //center align
+                    margin: auto;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+
+                   
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .author-title {
+                    padding: 0.938rem 0.625rem;
+                    text-align: center;
+                    font-size: 1.875rem;
+                    font-weight: var(--strong-font-weight);
+                }
+
+                .author-description {
+                    padding: 0.938rem 0.625rem;
+                    text-align: center;
+                }   
+
+                    .grid {
+                        margin-inline-start: auto;
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        height: 2.5rem;
+                        width: 100%;
+
+                        &:empty {
+                            display: none !important;
+                        }
+                    }
+    
+    
+                    .social-link {
+                        // border-left: 1px solid var(--border-color);
+                        border-inline-start: var(--border-thickness) solid var(--border-color);
+                
+                        border-top: var(--border-thickness) solid var(--border-color);
+                        border-bottom: var(--border-thickness) solid var(--border-color);
+                        padding: 0 18px; /* Add padding for better visual appeal */
+                        height: 100%;
+                        display: inline-flex;
+                        align-items: center;
+                        text-decoration: none;
+                        color: var(--accent);
+                
+                        //border right for last child
+                        &:last-child {
+                            border-inline-end: var(--border-thickness) solid var(--border-color);
+                        }
+                
+                         /*hover effect*/
+                         &:hover {
+                            background-color: var(--background-hover-color);
+                        }
+                    }
+                
+
+                .author-location {
+                    padding: 0.938rem 0.625rem;
+                    text-align: center;
+                    font-weight: var(--strong-font-weight);
+                }
+
+                .posts-count{
+                    padding: 0.938rem 0.625rem;
+                    //align the child elements to center
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;  
+                }
+                
+                .posts-count-span {
+                    margin-inline-end: 0.313rem;
+                }
+            }
+
         }
-
-        .author-title {
-          padding: 0.938rem 0.625rem;
-          text-align: center;
-          font-size: 1.875rem;
-          font-weight: var(--strong-font-weight);
-        }
-
-        .author-description {
-          padding: 0.938rem 0.625rem;
-          text-align: center;
-        }
-
-        .grid {
-          margin-inline-start: auto;
-          display: flex;
-          align-items: center;
-          height: 100%;
-          height: 2.5rem;
-          width: 100%;
-
-          &:empty {
-            display: none !important;
-          }
-        }
-
-        .social-link {
-          border-inline-start: var(--border-thickness) solid var(--border-color);
-          border-top: var(--border-thickness) solid var(--border-color);
-          border-bottom: var(--border-thickness) solid var(--border-color);
-          padding: 0 18px; /* Add padding for better visual appeal */
-          height: 100%;
-          display: inline-flex;
-          align-items: center;
-          text-decoration: none;
-          color: var(--accent);
-          text-decoration: none;
-
-          //border right for last child
-          &:last-child {
-            border-inline-end: var(--border-thickness) solid var(--border-color);
-          }
-
-          /*hover effect*/
-          &:hover {
-            background-color: var(--background-hover-color);
-          }
-        }
-
-        .author-location {
-          padding: 0.938rem 0.625rem;
-          text-align: center;
-          font-weight: var(--strong-font-weight);
-        }
-
-        .posts-count {
-          padding: 0.938rem 0.625rem;
-          //align the child elements to center
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .posts-count-span {
-          margin-inline-end: 0.313rem;
-        }
-      }
     }
-  }
 }
