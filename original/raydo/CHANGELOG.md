@@ -1,3 +1,7 @@
+## [0.0.5] - 2064-03-31
+
+- Newsletter margin issue fixed
+
 ## [0.0.4] - 2024-10-10
 
 - 404 page added
