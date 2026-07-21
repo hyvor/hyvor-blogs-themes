@@ -1,3 +1,7 @@
+## [1.0.5] - 2026-07-21
+
+- Published date issue fixed
+
 ## [1.0.4] - 2024-10-10
 
 - 404 page added
