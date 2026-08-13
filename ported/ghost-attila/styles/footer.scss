@@ -115,3 +115,16 @@
         font-weight: 500;
     }
 }
+
+.branding {
+    padding: 0 4rem 4rem;
+    margin-top: 3rem;
+    font-size: 1.4em;
+    line-height: 2rem;
+    text-align: center;
+    color: var(--color-content-secondary);
+
+    a {
+        color: var(--color-content-secondary);
+    }
+}

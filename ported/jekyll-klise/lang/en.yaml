@@ -46,3 +46,6 @@ rss: rss
 tags: Tags
 error_phrase: 😕 Hmm... Seems you lost from my journey.
 back_home: back home
+
+#branding
+made_with: Made with {link}

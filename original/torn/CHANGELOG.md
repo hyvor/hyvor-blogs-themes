@@ -1,3 +1,7 @@
+## [1.0.6] - 2026-08-13
+
+- Added branding
+
 ## [1.0.5] - 2026-03-31
 
 - Language selector border issue fixed

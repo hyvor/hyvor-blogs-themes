@@ -29,3 +29,15 @@ footer {
         }
     }
 }
+
+.branding {
+    text-align: center;
+    padding: 0 0 20px 0;
+    font-size: 0.85rem;
+    margin: auto;
+    color: var(--color-text);
+    opacity: 0.5;
+    a {
+        color: var(--color-text);
+    }
+}

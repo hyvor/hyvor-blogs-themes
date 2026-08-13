@@ -23,6 +23,18 @@
     }
 }
 
+.branding {
+    text-align: center;
+    padding: 0 0 20px 0;
+    font-size: 0.85rem;
+    margin: auto;
+    color: var(--secondary);
+    a {
+        color: var(--secondary);
+        border-bottom: none;
+    }
+}
+
 #footer-menu {
     align-items: center;
     display: flex;

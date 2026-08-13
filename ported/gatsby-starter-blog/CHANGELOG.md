@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.0.7] - 2026-08-13
+
+- Added branding
+
 ## [1.0.6] - 2024-10-10
 
 - Audio added

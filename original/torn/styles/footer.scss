@@ -134,10 +134,21 @@
                 &:first-child {
                     border-inline-start: none;
                 }
-                  
+
             }
 
         }
+    }
+}
+
+.branding {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    margin: auto;
+    color: var(--secondary-color);
+    a {
+        color: var(--secondary-color);
     }
 }
     

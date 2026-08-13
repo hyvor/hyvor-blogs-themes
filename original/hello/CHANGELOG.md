@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.0.9] - 2026-08-13
+
+- Added branding
+
 ## [1.0.8] - 2026-03-31
 
 - Added H1 to tag and author pages

@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [0.0.9] - 2026-08-13
+
+- Added branding
+
 ## [0.0.8] - 2024-10-10
 
 - 404 page added

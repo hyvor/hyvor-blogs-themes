@@ -352,3 +352,16 @@
     }
   }
 }
+
+/* Branding */
+.branding {
+  text-align: center;
+  padding: 0 0 20px 0;
+  font-size: 0.85rem;
+  margin: auto;
+  color: var(--text-alt-color);
+
+  a {
+    color: var(--text-alt-color);
+  }
+}

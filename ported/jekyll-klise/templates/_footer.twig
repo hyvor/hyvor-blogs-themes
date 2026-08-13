@@ -10,3 +10,9 @@
 		{{ 'now' | date('Y') }}
 	</span>
 </footer>
+
+{% if _branding %}
+	<div class="branding">
+		{{ 'made_with' | lang(link='<a href="https://blogs.hyvor.com?source=branding" target="_blank">Hyvor Blogs</a>') | raw }}
+	</div>
+{% endif %}
