@@ -15,10 +15,14 @@
                     {% endif %}
                 </div>
             </nav>
-</footer>
 
-{% if _branding %}
-    <div class="branding">
-        {{ 'made_with' | lang(link='<a href="https://blogs.hyvor.com?source=branding" target="_blank">Hyvor Blogs</a>') | raw }}
-    </div>
-{% endif %}
+            {% if _branding %}
+                <div class="branding-line">
+                    <div class="branding-row">
+                        <div class="branding">
+                            {{ 'made_with' | lang(link='<a href="https://blogs.hyvor.com?source=branding" target="_blank">Hyvor Blogs</a>') | raw }}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+</footer>

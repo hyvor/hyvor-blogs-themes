@@ -34,6 +34,19 @@
     }
 }
 
+.nav-footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding: 0 4rem;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 .nav-footer ul {
     position: relative;
     display: flex;
@@ -117,14 +130,23 @@
 }
 
 .branding {
-    padding: 0 4rem 4rem;
-    margin-top: 3rem;
-    font-size: 1.4em;
+    display: block;
+    font-family: var(--font-primary);
+    font-size: 1.6em;
     line-height: 2rem;
-    text-align: center;
     color: var(--color-content-secondary);
 
     a {
         color: var(--color-content-secondary);
+        cursor: pointer;
+
+        &:focus,
+        &:hover {
+            color: var(--color-content-main);
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint-medium) {
+        margin-top: 1.5rem;
     }
 }

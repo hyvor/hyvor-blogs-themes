@@ -102,6 +102,11 @@
         </div>
 
         <div class="footer__info__right">
+          {% if _branding %}
+            <div class="branding">
+              {{ 'made_with' | lang(link='<a href="https://blogs.hyvor.com?source=branding" target="_blank">Hyvor Blogs</a>') | raw }}
+            </div>
+          {% endif %}
           <div class="top" title="Top" onclick="btnScrollToTop()">
             {{ icon('fontawesome', 'arrow-up-solid', 13) }} <span class="top__text">{{ 'top' | lang }}</span>
           </div>
@@ -115,9 +120,3 @@
 
 </footer>
 <!-- end footer -->
-
-{% if _branding %}
-    <div class="branding">
-        {{ 'made_with' | lang(link='<a href="https://blogs.hyvor.com?source=branding" target="_blank">Hyvor Blogs</a>') | raw }}
-    </div>
-{% endif %}

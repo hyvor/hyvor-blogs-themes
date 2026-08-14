@@ -33,8 +33,15 @@
                     }
                 }
 
-                .social {
+                .footer-right {
                     margin-inline-start: auto;
+                    display: flex;
+                    align-items: center;
+                    gap: 1.125rem;
+                    height: 100%;
+                }
+
+                .social {
                     display: flex;
                     align-items: center;
                     height: 100%;
@@ -86,25 +93,29 @@
 
     
 
-    .social {
-        flex-direction: row; 
+    .footer-right {
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         margin-inline-start: 0 !important;
-       
-        .social-link{
+
+        .social-link {
             margin-bottom: 1rem !important;
         }
     }
 }
 
 .branding {
-    text-align: center;
-    padding: 0 0 20px 0;
-    font-size: 0.85rem;
-    margin: auto;
+    font-family: var(--base-font-family);
     color: var(--main-color);
-    opacity: 0.5;
     a {
+        display: inline-flex;
         color: var(--main-color);
+        text-decoration: none;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+            transform: scale(1.09);
+        }
     }
 }

@@ -92,14 +92,24 @@
 
       <div class="footer__inner">
 
-        <div class="logo">
-          <a class="logo__link" href="{{ _blog.url }}">
-            {% if _blog.logo_url %}
-              <img class="logo__image" src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}" />
-            {% else %}
-              <span class="logo__name">{{ _blog.name }}</span>
-            {% endif %}
-          </a>
+        <div class="logo-row">
+          <div class="logo">
+            <a class="logo__link" href="{{ _blog.url }}">
+              {% if _blog.logo_url %}
+                <img class="logo__image" src="{{ _blog.logo_url }}" alt="{{ 'logo' | lang }}" />
+              {% else %}
+                <span class="logo__name">{{ _blog.name }}</span>
+              {% endif %}
+            </a>
+          </div>
+
+          {% if _branding %}
+            <div class="branding">
+              <a href="https://blogs.hyvor.com?source=branding" target="_blank">
+                {{ 'made_with' | lang(link='Hyvor Blogs') | raw }}
+              </a>
+            </div>
+          {% endif %}
         </div>
 
         <div class="footer__info">
@@ -122,9 +132,3 @@
 
 </footer>
 <!-- end footer -->
-
-{% if _branding %}
-    <div class="branding">
-        {{ 'made_with' | lang(link='<a href="https://blogs.hyvor.com?source=branding" target="_blank">Hyvor Blogs</a>') | raw }}
-    </div>
-{% endif %}

@@ -16,6 +16,12 @@ footer {
             color: var(--color-text);
         }
     }
+
+    .branding {
+        clear: both;
+        padding-top: 12px;
+        text-align: left;
+    }
 }
 
 [dir="rtl"] {
@@ -28,16 +34,7 @@ footer {
             left: -10px;
         }
     }
-}
-
-.branding {
-    text-align: center;
-    padding: 0 0 20px 0;
-    font-size: 0.85rem;
-    margin: auto;
-    color: var(--color-text);
-    opacity: 0.5;
-    a {
-        color: var(--color-text);
+    footer .branding {
+        text-align: right;
     }
 }

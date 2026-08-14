@@ -338,6 +338,10 @@
 }
 
 .footer__info__right {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 
   .top {
     display: flex;
@@ -355,13 +359,22 @@
 
 /* Branding */
 .branding {
-  text-align: center;
-  padding: 0 0 20px 0;
-  font-size: 0.85rem;
-  margin: auto;
-  color: var(--text-alt-color);
+  font-family: var(--base-font-family);
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
 
   a {
     color: var(--text-alt-color);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: transparent;
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--link-color);
+      text-decoration-color: var(--link-color);
+    }
   }
 }

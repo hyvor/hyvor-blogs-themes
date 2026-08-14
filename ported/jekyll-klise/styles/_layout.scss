@@ -401,18 +401,24 @@
         color: var(--color-gray);
         opacity: 0.8;
     }
-}
 
-.branding {
-    text-align: center;
-    padding: 0 0 20px 0;
-    @include relative-font-size(0.85);
-    margin: auto;
-    color: var(--color-gray);
-    opacity: 0.8;
+    span.footer_item.branding {
+        font-family: var(--fontFamily-sans);
+        font-size: $small-font-size - 1;
+        font-weight: normal;
+        color: var(--text_content_secondary);
+        opacity: 0.8;
 
-    a {
-        color: var(--color-gray);
+        a {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            transition: all 0.3s;
+
+            &:hover {
+                text-decoration-color: currentColor;
+            }
+        }
     }
 }
 

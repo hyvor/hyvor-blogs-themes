@@ -3,6 +3,12 @@
 
         {% include '_nav-footer.twig' %}
 
+        {% if _branding %}
+        <div class="branding">
+            {{ 'made_with' | lang(link='<a href="https://blogs.hyvor.com?source=branding" target="_blank">Hyvor Blogs</a>') | raw }}
+        </div>
+        {% endif %}
+
         {% if _config.settings.social %}
         <div class="hy-social-icons">
             {% include '_social.twig' with {social: _blog.social} %}
@@ -15,12 +21,6 @@
 
         {% if _config.settings.copyright.show_hide %}
         <div class="hy-copyright">{{ _config.settings.copyright.copy_text | template }}</div>
-        {% endif %}
-
-        {% if _branding %}
-        <div class="branding">
-            {{ 'made_with' | lang(link='<a href="https://blogs.hyvor.com?source=branding" target="_blank">Hyvor Blogs</a>') | raw }}
-        </div>
         {% endif %}
     </div>
 </footer>

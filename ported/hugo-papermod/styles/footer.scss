@@ -6,9 +6,9 @@
     padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
     text-align: center;
     line-height: 24px;
-    span {
-        margin-inline-start: 1px;
-        margin-inline-end: 1px;
+    > span {
+        margin-inline-start: 8px;
+        margin-inline-end: 8px;
         &:last-child {
             white-space: nowrap;
         }
@@ -20,18 +20,6 @@
             border-bottom: 1px solid var(--primary);
             color: var(--primary);
         }
-    }
-}
-
-.branding {
-    text-align: center;
-    padding: 0 0 20px 0;
-    font-size: 0.85rem;
-    margin: auto;
-    color: var(--secondary);
-    a {
-        color: var(--secondary);
-        border-bottom: none;
     }
 }
 
