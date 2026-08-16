@@ -1,3 +1,9 @@
 $breakpoint: 960px;
 $breakpoint-small: 640px;
-$inner: calc(64rem + 8vw);
+
+// Shared outer width for header, footer and main content, so all three
+// align to the same edges instead of the header/footer overhanging the
+// content column.
+$container: 900px;
+$container-padding: 28px;
+$container-padding-mobile: 16px;

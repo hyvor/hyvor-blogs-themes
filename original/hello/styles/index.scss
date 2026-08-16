@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family);
   font-size: var(--font-size);
@@ -21,9 +25,10 @@ body {
 }
 
 main {
-  width: 720px;
+  width: $container;
   max-width: 100%;
-  margin: 40px auto auto;
+  padding: 0 $container-padding;
+  margin: 48px auto auto;
   min-height: calc(100vh - 200px);
 }
 
@@ -31,14 +36,16 @@ main {
 .page-data {
   margin-bottom: 40px;
   text-align: center;
+  animation: fade-in-up 0.5s ease both;
   .page-title {
-    font-weight: 600;
-    font-size: 2rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 2.2rem;
     margin: 0;
   }
   .page-description {
     color: var(--color-text-content-secondary);
-    margin: 5px 0;
+    margin: 8px 0;
     font-size: 1.2rem;
   }
 }
@@ -52,29 +59,54 @@ main {
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 600;
+  transition:
+    0.2s transform ease,
+    0.2s background-color ease,
+    0.2s color ease;
+  &:is(a):hover {
+    transform: translateY(-2px);
+    background-color: var(--color-accent);
+    color: #fff;
+  }
 }
 
 .global-opacity-link {
   display: inline-block;
   opacity: 1;
   transition:
-    0.1s opacity,
-    0.1s color;
+    0.15s opacity ease,
+    0.15s color ease,
+    0.15s transform ease;
   &:not(.active):hover {
     opacity: 0.9;
     color: var(--color-accent) !important;
   }
 }
 
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .global-post-authors {
+  display: flex;
+  align-items: center;
   font-size: 0.85rem;
 
   img,
   .avatar-placeholder {
+    display: block;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    vertical-align: middle;
+    object-fit: cover;
+    flex-shrink: 0;
 
     &:not(:first-child) {
       margin-inline-start: -25px;
@@ -82,12 +114,12 @@ main {
   }
 
   .avatar-placeholder {
-    display: inline-block;
     background-color: var(--color-background-contrast);
   }
 
-  span {
-    vertical-align: middle;
+  .author-pictures {
+    display: inline-flex;
+    align-items: center;
   }
 
   .author-names {
@@ -96,7 +128,12 @@ main {
   }
 
   .authors {
+    display: inline-flex;
+    align-items: center;
+
     .author {
+      display: inline-flex;
+      align-items: center;
       margin-inline-end: 10px;
       text-decoration: none;
       font-weight: 600;

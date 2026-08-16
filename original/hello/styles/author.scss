@@ -7,6 +7,7 @@
             height: 120px;
             border-radius: 50%;
             margin-bottom: 10px;
+            box-shadow: var(--box-shadow);
         }
         .avatar-placeholder {
             display: inline-block;
@@ -19,6 +20,10 @@
             display: inline-block;
             color: var(--color-accent);
             margin: 10px 4px;
+            transition: 0.2s transform ease;
+            &:hover {
+                transform: translateY(-2px);
+            }
         }
     }
 

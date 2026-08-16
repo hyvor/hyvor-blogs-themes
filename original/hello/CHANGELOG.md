@@ -3,6 +3,9 @@
 ## [1.0.9] - 2026-08-13
 
 - Added branding
+- UI redesign (no functionality/config changes)
+- Headings use "Source Serif 4" for an editorial feel
+- Subtle animations added to buttons, links, and images
 
 ## [1.0.8] - 2026-03-31
 
