@@ -9,4 +9,10 @@
 	<span class="footer_item">&copy;
 		{{ 'now' | date('Y') }}
 	</span>
+
+	{% if _branding %}
+		<span class="footer_item branding">
+			<a href="https://blogs.hyvor.com?source=branding" target="_blank">{{ 'made_with' | lang }}</a>
+		</span>
+	{% endif %}
 </footer>

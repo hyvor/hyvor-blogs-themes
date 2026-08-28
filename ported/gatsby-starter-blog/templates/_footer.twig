@@ -27,5 +27,15 @@
                 <a href="{{ _blog.social.tiktok }}" target="_blank" rel="noopener noreferrer">tiktok</a>
             {% endif %}
         </div>
+
+        <div class="footer__bottom">
+            <a class="footer__blog-name" href="{{ _blog.base_url }}">{{ _blog.name }}</a>
+
+            {% if _branding %}
+                <div class="branding">
+                    <a href="https://blogs.hyvor.com?source=branding" target="_blank">{{ 'made_with' | lang }}</a>
+                </div>
+            {% endif %}
+        </div>
     </footer>
 </footer>

@@ -136,3 +136,29 @@ footer {
   left: 0;
   right: initial;
 }
+
+.footer-bottom {
+  width: $container;
+  max-width: 100%;
+  margin: auto;
+  padding: 22px $container-padding;
+  border-top: 1px solid
+    color-mix(in srgb, var(--color-text-content-secondary) 18%, transparent);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 16px;
+  font-size: 0.85rem;
+
+  .footer-bottom__name,
+  .branding a {
+    color: color-mix(in srgb, var(--color-text-content) 55%, transparent);
+    text-decoration: none;
+    transition: 0.15s color ease;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}

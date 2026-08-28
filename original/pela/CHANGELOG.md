@@ -1,3 +1,7 @@
+## [1.0.5] - 2026-08-13
+
+- Added branding
+
 ## [1.0.4] - 2025-10-21
 
 - Search icon not toggling fixed

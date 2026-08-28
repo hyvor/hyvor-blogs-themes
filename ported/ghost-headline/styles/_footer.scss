@@ -61,6 +61,20 @@
         letter-spacing: -0.006em;
     }
 
+    .branding {
+        font-family: var(--font-body);
+        color: var(--color-secondary-text-light);
+        letter-spacing: -0.006em;
+
+        a {
+            color: var(--color-white);
+
+            &:hover {
+                color: var(--color-secondary-text-light);
+            }
+        }
+    }
+
     .hy-social-icons a:not(:last-of-type) {
         margin-inline-end: 12px;
     }

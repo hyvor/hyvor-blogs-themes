@@ -1,6 +1,9 @@
 <footer class="footer">
     {% include '_nav-footer.twig' %}
     <span>© {{ "now"|date("Y") }} <a href="{{ _blog.url }}">{{ _blog.name }}</a></span>
+    {% if _branding %}
+        <span><a href="https://blogs.hyvor.com?source=branding" target="_blank">{{ 'made_with' | lang }}</a></span>
+    {% endif %}
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g" style="">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">

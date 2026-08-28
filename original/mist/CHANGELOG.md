@@ -1,3 +1,7 @@
+## [1.0.2] - 2026-08-13
+
+- Added branding
+
 ## [1.0.1] - 2026-03-31
 
 - Tag header margin issue fixed

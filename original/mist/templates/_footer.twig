@@ -7,12 +7,21 @@
                     {% endfor %}
                 </div>
 
-                <div class="social">
-                    {% include '_social.twig' with { social: _blog.social } %}
-
-                    {% if _config.settings.footer.feed_icon %}
-                        {{ macro.social_icon("feed" | lang, _blog.url ~ "/feed", 'logo-rss') }}
+                <div class="footer-right">
+                    {% if _branding %}
+                        <div class="branding">
+                            <a href="https://blogs.hyvor.com?source=branding" target="_blank">
+                                {{ 'made_with' | lang }}
+                            </a>
+                        </div>
                     {% endif %}
+                    <div class="social">
+                        {% include '_social.twig' with { social: _blog.social } %}
+
+                        {% if _config.settings.footer.feed_icon %}
+                            {{ macro.social_icon("feed" | lang, _blog.url ~ "/feed", 'logo-rss') }}
+                        {% endif %}
+                    </div>
                 </div>
             </nav>
 </footer>

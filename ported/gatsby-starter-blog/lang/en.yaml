@@ -5,3 +5,6 @@ byAuthor: "Written by {name}"
 #404
 not_found: "Page not found"
 back_home: "Back to home"
+
+#branding
+made_with: Made with Hyvor Blogs

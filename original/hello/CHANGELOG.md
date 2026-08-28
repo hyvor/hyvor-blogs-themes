@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-28
+
+- Added branding
+
 ## [1.0.9] - 2026-08-28
 
 - UI redesign (no functionality/config changes)
