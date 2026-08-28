@@ -1,6 +1,6 @@
 ## [Unreleased]
 
-## [1.1.0] - 2026-08-28
+## [1.1.9] - 2026-08-28
 
 - UI redesign (no functionality/config changes)
 - Headings use "Source Serif 4" for an editorial feel
