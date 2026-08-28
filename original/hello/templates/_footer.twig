@@ -42,8 +42,12 @@
     
 </footer>
 
-{% if _branding %}
-    <div class="branding">
-        <a href="https://blogs.hyvor.com?source=branding" target="_blank">{{ 'made_with' | lang }}</a>
-    </div>
-{% endif %}
+<div class="footer-bottom">
+    <a class="footer-bottom__name" href="{{ _blog.url }}">{{ _blog.name }}</a>
+
+    {% if _branding %}
+        <div class="branding">
+            <a href="https://blogs.hyvor.com?source=branding" target="_blank">{{ 'made_with' | lang }}</a>
+        </div>
+    {% endif %}
+</div>
