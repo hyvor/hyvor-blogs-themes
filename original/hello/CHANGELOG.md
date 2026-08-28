@@ -1,5 +1,11 @@
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-28
+
+- UI redesign (no functionality/config changes)
+- Headings use "Source Serif 4" for an editorial feel
+- Subtle animations added to buttons, links, and images
+
 ## [1.0.8] - 2026-03-31
 
 - Added H1 to tag and author pages
