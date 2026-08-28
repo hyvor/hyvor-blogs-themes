@@ -5,6 +5,7 @@
     background: var(--color-background-box);
     border-radius: var(--box-radius);
     box-shadow: var(--box-shadow);
+    animation: fade-in-up 0.5s ease both;
 }
 
 .post-box {
@@ -35,9 +36,11 @@
     }
 
     h1.post-title {
-        font-size: 2rem;
-        font-weight: 600;
-        letter-spacing: -0.03em;
+        font-family: var(--font-heading);
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
         margin: 0 0 2rem;
         position: relative;
         display: table;
@@ -51,6 +54,7 @@
             max-width: 100%;
             height: 3px;
             background: var(--color-accent);
+            animation: grow-line 0.6s 0.15s cubic-bezier(0.4, 0, 0.2, 1) both;
         }
     }
 
@@ -76,6 +80,8 @@
         h4,
         h5,
         h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
             line-height: 1.25em;
             margin-top: 2.5rem;
             margin-bottom: 0;
@@ -119,7 +125,7 @@
         h5,
         h6 {
             font-size: 1.1rem;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         ol,
@@ -224,11 +230,19 @@
             box-shadow: var(--box-shadow);
             border-radius: var(--box-radius);
             overflow: hidden;
+            transition: 0.25s transform ease, 0.25s box-shadow ease;
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: var(--box-shadow), 0 10px 25px rgba(0, 0, 0, 0.08);
+            }
+
             .bookmark-details {
                 padding: 1rem 1.5rem;
                 flex: 2;
                 .bookmark-title {
-                    font-weight: 600;
+                    font-family: var(--font-heading);
+                    font-weight: 700;
                 }
                 .bookmark-description {
                     color: var(--color-text-content-secondary);
@@ -242,11 +256,17 @@
             }
             .bookmark-thumbnail {
                 flex:1;
+                overflow: hidden;
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                    transition: 0.4s transform ease;
                 }
+            }
+
+            &:hover .bookmark-thumbnail img {
+                transform: scale(1.05);
             }
 
             @media screen and (max-width: $breakpoint-small) {
@@ -320,6 +340,8 @@
 
 .comments-box, .newsletter-box {
     h3 {
+        font-family: var(--font-heading);
+        font-weight: 700;
         margin-top: 0;
         font-size: 1.5rem;
         margin-bottom: 2rem;
@@ -335,5 +357,14 @@
             height: 2px;
             background: var(--color-accent);
         }
+    }
+}
+
+@keyframes grow-line {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100px;
     }
 }
