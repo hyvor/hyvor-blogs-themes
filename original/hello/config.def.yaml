@@ -79,6 +79,9 @@ font:
   family:
     $name: Font Family
 
+  heading_family:
+    $name: Heading Font Family
+
 line_height:
   $name: Line Height
   $description: Space between two lines in pixels
