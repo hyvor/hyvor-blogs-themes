@@ -1,5 +1,9 @@
 @media only screen and (max-width: 640px) {
 
+    main {
+        padding: 0 $container-padding-mobile;
+    }
+
     .post-box {
         padding: 40px 20px;
     }
@@ -31,21 +35,25 @@
 
     header {
 
+        nav {
+            padding: 0 $container-padding-mobile;
+        }
+
         .nav-links-inner {
 
             display: flex;
             position: absolute;
-            top: 60px;
+            top: 76px;
             width: 200px;
-            right: 40px;
+            right: $container-padding-mobile;
             flex-direction: column;
             background: var(--color-background-box);
             border-radius: var(--box-radius);
             box-shadow: var(--box-shadow);
-            transition: .2s;
+            transition: .2s cubic-bezier(0.4, 0, 0.2, 1);
             opacity: 0;
             pointer-events: none;
-            transform: translateY(-25px);
+            transform: translateY(-15px);
             z-index: 100;
             padding: 20px;
             text-align: left;

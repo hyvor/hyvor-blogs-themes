@@ -83,9 +83,15 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transform: translateY(-10px) scale(0.98);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     @media only screen and (max-width: 960px) {
         top: 6rem;
     }
+}
+
+.search-active .search {
+    transform: translateY(0) scale(1);
 }
 
 .search-form {
@@ -195,6 +201,7 @@
             }
 
             .search-result-row-title {
+                font-family: var(--font-heading);
                 font-size: 1.2em;
                 line-height: 1.2em;
                 font-weight: 700;
@@ -222,6 +229,7 @@
 
 .popular-wrapper {
     .popular-title {
+        font-family: var(--font-heading);
         font-size: 1.2em;
         line-height: 1.25em;
         font-weight: 700;

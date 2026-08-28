@@ -17,7 +17,7 @@
 				{% endfor %}
 
 				<a title="{{ 'search' | lang }}" href="#" id="search" class="nav-search global-opacity-link" aria-label="search" role="button">
-					<i aria-hidden="true">{{ icon('fontawesome', 'magnifying-glass-solid', 14) }}</i>
+					<i aria-hidden="true">{{ icon('fontawesome', 'magnifying-glass-solid', 16) }}</i>
 					<span class="mobile-title">{{ 'search' | lang }}</span>
 				</a>
 			</div>
@@ -29,8 +29,8 @@
 
 		{% if (_blog.color_modes == 'both') %}
 			<div class="color-mode-toggler">
-				<a class="global-opacity-link" onclick="_hb.changeColorMode('light')" role="button" aria-label="light-mode" href="javascript:void(0)">{{ icon('fontawesome', 'sun-solid', 18) }}</a>
-				<a class="global-opacity-link" onclick="_hb.changeColorMode('dark')" role="button" aria-label="dark-mode" href="javascript:void(0)">{{ icon('fontawesome', 'moon-solid', 18) }}</a>
+				<a class="global-opacity-link" onclick="_hb.changeColorMode('light')" role="button" aria-label="light-mode" href="javascript:void(0)"><i aria-hidden="true">{{ icon('fontawesome', 'sun-solid', 16) }}</i></a>
+				<a class="global-opacity-link" onclick="_hb.changeColorMode('dark')" role="button" aria-label="dark-mode" href="javascript:void(0)"><i aria-hidden="true">{{ icon('fontawesome', 'moon-solid', 16) }}</i></a>
 			</div>
 		{% endif %}
 
