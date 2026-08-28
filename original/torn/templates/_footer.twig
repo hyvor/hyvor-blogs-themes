@@ -1,4 +1,11 @@
 {% import "_macro.twig" as macro %}
+
+{% if _branding %}
+    <div class="branding">
+        <a href="https://blogs.hyvor.com?source=branding" target="_blank">{{ 'made_with' | lang }}</a>
+    </div>
+{% endif %}
+
 <footer class="footer">
             <nav class="nav-main" aria-label="Main-Menu" id="menuList">
                 <div class="box">
@@ -15,14 +22,4 @@
                     {% endif %}
                 </div>
             </nav>
-
-            {% if _branding %}
-                <div class="branding-line">
-                    <div class="branding-row">
-                        <div class="branding">
-                            {{ 'made_with' | lang(link='<a href="https://blogs.hyvor.com?source=branding" target="_blank">Hyvor Blogs</a>') | raw }}
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
 </footer>

@@ -1,5 +1,5 @@
 footer {
-  padding: 40px 0;
+  padding: 40px 0 22px;
 
   .container {
     display: flex;
@@ -106,13 +106,20 @@ footer {
 }
 
 .branding {
-  text-align: center;
-  padding: 0 0 20px 0;
-  font-size: 0.85rem;
+  width: 1140px;
+  max-width: 100%;
   margin: auto;
+  padding: 22px 35px;
+  border-top: 1px solid color-mix(in srgb, var(--color-text-content-secondary) 50%, transparent);
+  text-align: center;
+  font-size: 0.85rem;
   color: var(--color-text-content);
   opacity: 0.5;
   a {
     color: var(--color-text-content);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
