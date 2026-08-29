@@ -1,6 +1,7 @@
-## [0.0.6] - 2026-08-13
+## [0.0.6] - 2026-08-28
 
 - Added branding
+- Added styles for the button block
 
 ## [0.0.5] - 2064-03-31
 

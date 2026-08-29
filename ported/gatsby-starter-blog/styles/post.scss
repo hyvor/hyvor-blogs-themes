@@ -39,6 +39,29 @@ main #post-content {
         background: #e1e1ff;
     }
 
+    .button-wrap {
+        margin: var(--spacing-10) 0;
+        text-align: center;
+
+        .button {
+            display: inline-block;
+            padding: var(--spacing-3) var(--spacing-6);
+            font-family: var(--font-heading);
+            font-weight: var(--fontWeight-bold);
+            font-size: var(--fontSize-1);
+            text-decoration: none;
+            color: var(--color-background);
+            background: var(--color-primary);
+            border-radius: 2rem;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+                opacity: 0.95;
+            }
+        }
+    }
+
     aside {
         display: flex;
         padding: 20px;

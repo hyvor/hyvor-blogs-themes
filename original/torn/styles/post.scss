@@ -170,6 +170,26 @@ img {
     color: var(--main-color)
   }
 
+  .button-wrap {
+    margin: 2.5rem 0;
+    text-align: center;
+
+    .button {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      font-weight: var(--strong-font-weight);
+      text-decoration: none;
+      color: var(--main-color);
+      background: var(--background-color);
+      border: var(--border-thickness) solid var(--main-color);
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: var(--background-hover-color);
+      }
+    }
+  }
+
   hr {
     display: block;
     height: 0.063rem;

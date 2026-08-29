@@ -1,6 +1,8 @@
-## [1.0.5] - 2026-08-13
+## [1.0.5] - 2026-08-28
 
 - Added branding
+- Added styles for the button block
+- Added "Accent Text Color" config option
 
 ## [1.0.4] - 2025-10-21
 

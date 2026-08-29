@@ -4,13 +4,17 @@ Headline is a [Hyvor](https://blogs.hyvor.com) theme ported from Headline Ghost 
 
 ## Changelog
 
-## [1.0.4] - 2026-08-13
+## [1.0.4] - 2026-08-28
+
 - Added branding
+- Added styles for the button block
 
 ## [1.0.3] - 2024-11-27
+
 - Light/dark mode issue solved
 
 ## [1.0.2] - 2024-11-05
+
 - Language variants updated for tags
 
 ## [1.0.1] - 2024-10-10

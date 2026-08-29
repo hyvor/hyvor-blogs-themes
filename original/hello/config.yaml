@@ -5,6 +5,7 @@ POSTS_PER_PAGINATION: 10
 
 colors:
   accent: "#896c6b"
+  accent_text: "#ffffff"
   light:
     background_body: "#fcfcfc"
     background_box: "#ffffff"

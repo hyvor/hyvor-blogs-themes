@@ -90,6 +90,30 @@
             box-shadow: 0 -1px 0 var(--primary) inset;
         }
     }
+
+    .button-wrap {
+        margin: 32px 0;
+        text-align: center;
+
+        .button {
+            display: inline-block;
+            padding: 10px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.5;
+            text-decoration: none;
+            box-shadow: none;
+            color: var(--theme);
+            background: var(--primary);
+            border-radius: 40px;
+            transition: transform 0.1s ease, opacity 0.2s ease;
+
+            &:hover {
+                opacity: 0.85;
+                transform: translateY(-2px);
+            }
+        }
+    }
     del {
         text-decoration: none;
         background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0 50%/1px 1px repeat-x;
