@@ -15,6 +15,7 @@ line_height: 1.6
 colors:
   light:
     accent: "#f6bf3e"
+    accent_text: "#04070b"
     background_color: "#fff"
     background_alt_color: "#f3f1f3"
     text_color: "#04070b"
@@ -27,6 +28,7 @@ colors:
     code_background_color: "#eaeaea"
   dark:
     accent: "#e40e14"
+    accent_text: "#f0f0f0"
     background_color: "#111016"
     background_alt_color: "#1e1e23"
     text_color: "#f0f0f0"

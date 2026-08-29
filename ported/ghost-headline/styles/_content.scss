@@ -56,6 +56,29 @@
         word-break: break-word;
     }
 
+    .button-wrap {
+        text-align: center;
+
+        .button {
+            display: inline-block;
+            padding: 1.1rem 2.6rem;
+            font-family: var(--font-heading);
+            font-size: 1.7rem;
+            font-weight: 600;
+            line-height: 1.4;
+            text-decoration: none;
+            color: var(--color-white);
+            background-color: var(--color-accent);
+            border-radius: 4rem;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+
+            &:hover {
+                opacity: 0.9;
+                transform: translateY(-2px);
+            }
+        }
+    }
+
     ul {
         padding-inline-start: 2.8rem;
     }

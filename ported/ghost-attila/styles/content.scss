@@ -15,6 +15,31 @@
         }
     }
 
+    .button-wrap {
+        margin: 3rem 0;
+        text-align: center;
+
+        .button {
+            display: inline-block;
+            padding: 1.1rem 2.5rem;
+            border-radius: 2rem;
+            font-family: var(--font-primary);
+            font-weight: 500;
+            font-size: 1.7rem;
+            line-height: 1.4;
+            text-decoration: none;
+            color: #fff;
+            background: var(--color-primary);
+            transition: all ease-out 0.15s;
+
+            &:focus,
+            &:hover {
+                opacity: 0.9;
+                transform: translateY(-2px);
+            }
+        }
+    }
+
     h1,
     h2,
     h3,

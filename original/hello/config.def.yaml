@@ -4,6 +4,11 @@ colors:
     $name: Accent Color
     $type: color
 
+  accent_text:
+    $name: Accent Text Color
+    $description: Text color shown on top of the accent color (e.g. buttons)
+    $type: color
+
   light:
     $name: Light Scheme
 

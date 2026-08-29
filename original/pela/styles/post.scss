@@ -243,6 +243,28 @@
     text-underline-offset: 3px;
   }
 
+  .button-wrap {
+    margin: 40px 0;
+    text-align: center;
+
+    .button {
+      display: inline-block;
+      padding: 14px 32px;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.6;
+      text-decoration: none;
+      border-radius: 30px;
+      color: var(--color-accent-text);
+      background: var(--color-accent);
+      transition: $global-transition;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+
   hr {
     display: block;
     height: 1px;

@@ -3,6 +3,8 @@
 ## [1.1.0] - 2026-08-28
 
 - Added branding
+- Added styles for the button block
+- Added "Button Text Color" config option
 
 ## [1.0.9] - 2026-08-28
 

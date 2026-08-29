@@ -38,6 +38,15 @@ html.mode-dark body {
             }
         }
 
+        .button-wrap .button {
+            color: var(--color-black);
+            background-color: var(--color-white);
+
+            &:hover {
+                color: var(--color-black);
+            }
+        }
+
         h3 {
             border-color: var(--color-light);
         }
